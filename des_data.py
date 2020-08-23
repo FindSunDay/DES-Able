@@ -171,9 +171,10 @@ des = des[['Name','Program','Speciality','Rating','Address','Street',\
            'Latitude','Longitude','Phone','Email','Website','URL']]
 
 
-des_name = des[['Name','Website']]
+des_name = des[['Name','Website']].copy()
+des_name.drop_duplicates(keep='first',inplace=True)
 des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email']]
-des_service = des[['Name','Website','Program','Speciality','Rating']]
+des_service = des[['Name','Website','Latitude','Longitude','Program','Speciality','Rating']]
 
 
 des.to_csv('Dataset/DES_full_list.csv',index=False)
