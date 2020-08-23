@@ -170,13 +170,42 @@ des = des[['Name','Program','Speciality','Rating','Address','Street',\
            'Route','City','Site_Location','State','Country','Postal',\
            'Latitude','Longitude','Phone','Email','Website','URL']]
 
+# generate ID
+
+# des_name - DES_ID
 
 des_name = des[['Name','Website']].copy()
 des_name.drop_duplicates(keep='first',inplace=True)
-des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email']]
-des_service = des[['Name','Website','Latitude','Longitude','Program','Speciality','Rating']]
+des_name.reset_index(inplace = True)
+des_name.drop('index',axis=1,inplace = True)
+des_name.reset_index(inplace = True)
+des_name['index'] = des_name['index'].apply(lambda x: x+1)
+des_name.rename(columns={'index':'DES_ID'},inplace=True)
+
+# des_site - SITE_ID
+des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email','Speciality']].copy()
+des_site.drop_duplicates(keep='first',inplace=True)
+des_site.reset_index(inplace = True)
+des_site.drop('index',axis=1,inplace = True)
+des_site.reset_index(inplace = True)
+des_site['index'] = des_site['index'].apply(lambda x: x+1)
+des_site.rename(columns={'index':'SITE_ID'},inplace=True)
+des_site = des_site.merge(des_name, on=['Name','Website'])
 
 
+# des_service
+des_service = des[['Name','Website','Latitude','Longitude','Program','Speciality','Rating']].copy()
+des_service.drop_duplicates(keep='first',inplace=True)
+des_service = des_service.merge(des_site[['Latitude','Longitude','SITE_ID','Speciality']],\
+                                on =['Latitude','Longitude','Speciality'])
+des_service = des_service.merge(des_name, on=['Name','Website'])
+
+# drop unnecessary columns
+des_site.drop(['Name','Website','Speciality'],axis=1, inplace=True)
+des_service.drop(['Name','Website','Latitude','Longitude'],axis=1, inplace=True)
+
+
+# save to files
 des.to_csv('Dataset/DES_full_list.csv',index=False)
 des_name.to_csv('Dataset/DES_NAME.csv',index=False)
 des_site.to_csv('Dataset/DES_SITE.csv',index=False)
