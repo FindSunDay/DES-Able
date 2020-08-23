@@ -165,8 +165,18 @@ des.rename(columns={'Org Name': 'Name','Speciality Description':'Speciality','St
                    'route':'Route','administrative_area_level_2':'City','Site Location':'Site_Location','country':'Country',\
                    'postal_code':'Postal','New Website':'Website'},inplace = True)
 
+
 des = des[['Name','Program','Speciality','Rating','Address','Street',\
            'Route','City','Site_Location','State','Country','Postal',\
            'Latitude','Longitude','Phone','Email','Website','URL']]
 
+
+des_name = des[['Name','Website']]
+des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email']]
+des_service = des[['Name','Website','Program','Speciality','Rating']]
+
+
 des.to_csv('Dataset/DES_full_list.csv',index=False)
+des_name.to_csv('Dataset/DES_NAME.csv',index=False)
+des_site.to_csv('Dataset/DES_SITE.csv',index=False)
+des_service.to_csv('Dataset/DES_SERVICE.csv', index=False)
