@@ -2,6 +2,7 @@ import sys
 import logging
 import rds_config
 import pymysql
+import json
 # rds settings
 rds_host = "des.clicumjxzjdj.us-east-1.rds.amazonaws.com"
 name = rds_config.db_username
@@ -35,8 +36,19 @@ def lambda_handler(event, context):
 
         rows = cur.fetchall()
 
+        resp = {}
+        provider = []
+        resp['DES_Provider'] = provider
+
         for row in rows:
-            print("{0} {1} {2}".format(row[0], row[1], row[2]))
+            info = {}
+            info['name'] = row[1]
+            info['website'] = row[2]
+            provider.append(info)
+
+            # print("{0} {1} {2}".format(row[0], row[1], row[2]))
+
+        # print(resp)
 
         # for row in cur:
         #     item_count += 1
@@ -44,4 +56,7 @@ def lambda_handler(event, context):
             # print(row)
     # conn.commit()
 
-    return "Added %d items from RDS MySQL table" % (item_count)
+    return {
+        'statusCode': 200,
+        'body': json.dumps(resp)
+    }
