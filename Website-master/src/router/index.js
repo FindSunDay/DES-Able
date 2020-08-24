@@ -3,38 +3,45 @@
  * @Author: 任录
  * @Date: 2019-07-22 15:13:52
  * @LastEditTime: 2019-07-26 22:38:03
-*/
+ */
 
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-import aboutRoutes from './about'
-import customerRoutes from './customer'
-import homeRoutes from './home'
-import productRoutes from './product'
-import solutionRoutes from './solution'
-import errorRoutes from './error'
+import aboutRoutes from "./about";
+import customerRoutes from "./customer";
+import homeRoutes from "./home";
+import productRoutes from "./product";
+import solutionRoutes from "./solution";
+import errorRoutes from "./error";
 
-Vue.use(Router)
+Vue.use(Router);
 
-const children = [...aboutRoutes, ...customerRoutes, ...homeRoutes, ...productRoutes, ...solutionRoutes]
+const children = [
+  ...aboutRoutes,
+  ...customerRoutes,
+  ...homeRoutes,
+  ...productRoutes,
+  ...solutionRoutes,
+];
 
 const router = new Router({
-  mode: 'history',
+  mode: "history",
+  base: "/iteration1",
   routes: [
     {
-      path: '/',
-      name: '',
-      component: resolve => require(['@/views/Main'], resolve),
-      children
+      path: "/",
+      name: "",
+      component: (resolve) => require(["@/views/Main"], resolve),
+      children,
     },
-    ...errorRoutes
-  ]
-})
+    ...errorRoutes,
+  ],
+});
 
 router.beforeEach((to, from, next) => {
-    window.scroll(0,0);
-    next();
-})
+  window.scroll(0, 0);
+  next();
+});
 
-export default router
+export default router;
