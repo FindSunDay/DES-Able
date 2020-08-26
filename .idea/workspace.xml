@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/1.1DMS_Providers_Export_2020_08_20_23_56_29.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/1.1ESS_Providers_Export_2020_08_20_23_57_16.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/1.2DES Monthly Report - 31 May 2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/1.3des-star-ratings-march-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/des_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/des_data.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/des_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3960">
-              <caret line="264" column="41" selection-start-line="264" selection-start-column="41" selection-end-line="264" selection-end-column="41" />
-              <folding>
-                <element signature="e#377#398#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -166,11 +156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/des_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3960">
-          <caret line="264" column="41" selection-start-line="264" selection-start-column="41" selection-end-line="264" selection-end-column="41" />
-          <folding>
-            <element signature="e#377#398#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
