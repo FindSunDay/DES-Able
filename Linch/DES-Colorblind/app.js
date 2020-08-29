@@ -64,8 +64,8 @@ new Vue({
           //   this.specialityList.push({ value: info });
           // }
 
-          console.log(this.nameList);
-          console.log(this.specialityList);
+          // console.log(this.nameList);
+          // console.log(this.specialityList);
           // console.log("info:", this.infoList);
           // console.log(this.homepage);
         })
@@ -87,6 +87,8 @@ new Vue({
         this.infoList = JSON.parse(result).All_Info;
         this.showList = this.infoList;
         // console.log(this.infoList);
+        // let names = [];
+        // let specialities = [];
         let names = JSON.parse(result).Name_List;
         let specialities = JSON.parse(result).Speciality_List;
         names.sort();
