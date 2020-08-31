@@ -8,7 +8,7 @@ new Vue({
       nameList: [{ value: "All Providers" }],
       specialityList: [{ value: "All Specialities" }],
       ratingList: [
-        { value: "Rating" },
+        { value: "All Ratings" },
         { value: 5 },
         { value: 4 },
         { value: 3 },
@@ -18,7 +18,7 @@ new Vue({
       postInput: "",
       providerName: "All Providers",
       specialityName: "All Specialities",
-      rating: "Rating",
+      rating: "All Ratings",
     };
   },
   methods: {
@@ -39,6 +39,7 @@ new Vue({
       this.infoList = [];
       this.showList = [];
 
+      console.log("1", this.rating);
       fetch(
         `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=${this.rating}&postal=${this.postInput}`,
         requestOptions1

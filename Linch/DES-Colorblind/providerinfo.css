@@ -114,6 +114,7 @@
   margin: 20px 294px 0 0;
 }
 .u-section-2 .u-text-9 {
+  width: auto;
   margin: -25px auto 0 93px;
 }
 .u-section-2 .u-text-10 {
@@ -342,7 +343,7 @@
   }
   .u-section-2 .u-text-10 {
     margin-top: 9px;
-    margin-right: 261px;
+    margin-right: auto;
     margin-left: 0;
   }
   .u-section-2 .u-text-11 {

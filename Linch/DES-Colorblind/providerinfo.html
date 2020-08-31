@@ -251,7 +251,7 @@
               <div class="u-form-group u-form-select u-form-group-3">
                 <div class="u-form-select-wrapper">
                   <el-select
-                    placeholder="Rating"
+                    placeholder="All Ratings"
                     style="width: 100%; height: 100%"
                     v-model="rating"
                     filterable
@@ -467,7 +467,12 @@
                             >
                               Website:
                             </p>
-                            <p class="u-text u-text-11">{{ item.website }}</p>
+                            <a
+                              :href="item.website"
+                              target="_blank"
+                              class="u-text u-text-11"
+                              >{{ item.website }}</a
+                            >
                           </div>
                         </div>
                         <div
@@ -613,5 +618,5 @@ l-16.605-2.413c-0.326-0.047-0.607-0.252-0.753-0.547L27.934,4.578l-7.427,15.047c-
       </section>
     </div>
   </body>
-  <script src="app.js"></script>
+  <script src="app.js?v=1.1"></script>
 </html>

@@ -8,7 +8,7 @@ new Vue({
       nameList: [{ value: "All Providers" }],
       specialityList: [{ value: "All Specialities" }],
       ratingList: [
-        { value: "Rating" },
+        { value: "All Ratings" },
         { value: 5 },
         { value: 4 },
         { value: 3 },
@@ -18,7 +18,7 @@ new Vue({
       postInput: "",
       providerName: "All Providers",
       specialityName: "All Specialities",
-      rating: "Rating",
+      rating: "All Ratings",
     };
   },
   methods: {
