@@ -19,6 +19,7 @@ new Vue({
       providerName: "All Providers",
       specialityName: "All Specialities",
       rating: "All Ratings",
+      selectedRatings: [],
     };
   },
   methods: {
@@ -39,14 +40,34 @@ new Vue({
       this.infoList = [];
       this.showList = [];
 
+      // console.log("1", this.rating);
+
       fetch(
-        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=${this.rating}&postal=${this.postInput}`,
+        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
         requestOptions1
       )
         .then((response) => response.text())
         .then((result) => {
           this.infoList = JSON.parse(result).All_Info;
-          this.showList = this.infoList;
+          console.log("infoList", this.infoList);
+
+          //filter the results based on the values of selected ratings
+          console.log("selectedRatings", this.selectedRatings);
+          let resultData = [];
+          for (let selectedRating of this.selectedRatings) {
+            //  combine filtered results
+            resultData = resultData.concat(
+              this.infoList.filter((info) => info.rating == selectedRating)
+            );
+            console.log("resultData", resultData);
+          }
+          if (this.selectedRatings.length === 0) {
+            resultData = this.infoList;
+          }
+          this.showList = resultData;
+          console.log("showlist", this.showList);
+
+          // this.showList = this.infoList;
 
           // // remove duplicated values
           // names = [...new Set(names)];
@@ -64,8 +85,8 @@ new Vue({
           //   this.specialityList.push({ value: info });
           // }
 
-          // console.log(this.nameList);
-          // console.log(this.specialityList);
+          console.log(this.nameList);
+          console.log(this.specialityList);
           // console.log("info:", this.infoList);
           // console.log(this.homepage);
         })
@@ -87,8 +108,6 @@ new Vue({
         this.infoList = JSON.parse(result).All_Info;
         this.showList = this.infoList;
         // console.log(this.infoList);
-        // let names = [];
-        // let specialities = [];
         let names = JSON.parse(result).Name_List;
         let specialities = JSON.parse(result).Speciality_List;
         names.sort();

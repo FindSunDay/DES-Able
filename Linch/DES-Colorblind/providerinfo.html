@@ -253,8 +253,9 @@
                   <el-select
                     placeholder="All Ratings"
                     style="width: 100%; height: 100%"
-                    v-model="rating"
+                    v-model="selectedRatings"
                     filterable
+                    multiple
                   >
                     <el-option
                       v-for="item in ratingList"
