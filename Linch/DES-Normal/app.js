@@ -61,7 +61,11 @@ new Vue({
             );
             console.log("resultData", resultData);
           }
-          if (this.selectedRatings.length === 0) {
+
+          //use array.indexOf() to determine whether the ratings contains "All Ratings"
+          let isAllRatings = this.selectedRatings.indexOf("All Ratings");
+          console.log("x", isAllRatings);
+          if (this.selectedRatings.length === 0 || isAllRatings != -1) {
             resultData = this.infoList;
           }
           this.showList = resultData;
