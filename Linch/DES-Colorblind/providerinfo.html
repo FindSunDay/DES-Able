@@ -479,11 +479,13 @@
                     >
                       Website:
                     </p>
-                    <a
+                    <p
                       class="u-align-left-sm u-align-left-xs u-custom-font u-font-ubuntu u-text u-text-11"
                     >
-                      {{item.website}}
-                    </a>
+                      <a :href="item.website" target="_blank"
+                        >{{item.website}}</a
+                      >
+                    </p>
                   </div>
                 </div>
                 <div
