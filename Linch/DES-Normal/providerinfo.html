@@ -303,9 +303,15 @@
               <div class="u-form-send-error u-form-send-message"></div> -->
               <!-- <input type="hidden" value="" name="recaptchaResponse" /> -->
             </form>
+            <el-alert
+              v-if="showListLength == 0"
+              title="No results"
+              type="error"
+            ></el-alert>
           </div>
         </div>
       </section>
+
       <section
         class="u-border-1 u-border-grey-75 u-clearfix u-section-2"
         id="carousel_5c47"

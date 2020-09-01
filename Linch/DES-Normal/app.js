@@ -20,6 +20,7 @@ new Vue({
       specialityName: "All Specialities",
       rating: "All Ratings",
       selectedRatings: [],
+      showListLength: 1,
     };
   },
   methods: {
@@ -69,6 +70,7 @@ new Vue({
             resultData = this.infoList;
           }
           this.showList = resultData;
+          this.showListLength = this.showList.length;
           console.log("showlist", this.showList);
 
           // this.showList = this.infoList;
