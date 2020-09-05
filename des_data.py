@@ -3,6 +3,8 @@
 
 IE - Team 32 Bright - DES-Able
 
+By: Supawee
+
 
 This file is to collect contact details of DES providers via Google Places APIs
 *** Due to limited of APIs budget, the APIs connection will only be used to update new data.
@@ -198,10 +200,10 @@ for key, info in new_web.items():
 
 
 # replace NaN values
-des.loc[(des['Email'].isna()), 'Email'] = 'No'
-des.loc[des['Phone'].isna(),'Phone'] = 'N/A'
-des.loc[des['route'].isna(),'route'] = 'N/A'
-des.loc[des['street_number'].isna(),'street_number'] = 'N/A'
+des.loc[(des['Email'].isna()), 'Email'] = 'Not Available'
+des.loc[des['Phone'].isna(),'Phone'] = 'Not Available'
+des.loc[des['route'].isna(),'route'] = ''
+des.loc[des['street_number'].isna(),'street_number'] = ''
 
 # rename columns
 des.rename(columns={'Org Name': 'Name','Speciality Description':'Speciality','Star Rating':'Rating','street_number':'Street',\
@@ -234,15 +236,15 @@ des_name.rename(columns={'index':'DES_ID'},inplace=True)
 # des_site - SITE_ID
 des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email','Speciality']].copy()
 # drop duplicates
-des_site.drop_duplicates(keep='first',inplace=True)
+des_site.drop_duplicates(subset=['Latitude','Longitude'],keep='first',inplace=True)
 des_site.reset_index(inplace = True)
 des_site.drop('index',axis=1,inplace = True)
 des_site.reset_index(inplace = True)
-# generate ID
-des_site['index'] = des_site['index'].apply(lambda x: x+1)
-des_site.rename(columns={'index':'SITE_ID'},inplace=True)
 # refer DES_ID from des_name dataframe
+des_site.rename(columns={'index':'SITE_ID'},inplace=True)
 des_site = des_site.merge(des_name, on=['Name','Website'])
+# generate ID
+des_site['SITE_ID'] = des_site['SITE_ID'].apply(lambda x: x+1)
 
 
 # des_service
@@ -258,7 +260,7 @@ des_service = des_service.merge(des_name, on=['Name','Website'])
 # drop unnecessary columns
 des_site.drop(['Name','Website','Speciality'],axis=1, inplace=True)
 des_service.drop(['Name','Website','Latitude','Longitude'],axis=1, inplace=True)
-
+des_service['Program'] = des_service['Program'].apply(lambda x : x.replace('DES-',''))
 
 # save to files
 des.to_csv('Dataset/DES_full_list.csv',index=False)
