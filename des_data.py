@@ -234,7 +234,7 @@ des_name['index'] = des_name['index'].apply(lambda x: x+1)
 des_name.rename(columns={'index':'DES_ID'},inplace=True)
 
 # des_site - SITE_ID
-des_site = des[['Name','Website','Latitude','Longitude','Address','Street','Route','City','State','Country','Postal','URL','Phone','Email','Speciality']].copy()
+des_site = des[['Name','Website','Latitude','Longitude','Address','Site_Location','Street','Route','City','State','Country','Postal','URL','Phone','Email','Speciality']].copy()
 # drop duplicates
 des_site.drop_duplicates(subset=['Latitude','Longitude'],keep='first',inplace=True)
 des_site.reset_index(inplace = True)
