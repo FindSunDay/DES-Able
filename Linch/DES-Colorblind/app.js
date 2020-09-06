@@ -31,6 +31,32 @@ new Vue({
     //   }
     // }
     // },
+    debounce() {
+      let timer;
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        console.log("防抖...");
+        timer = undefined;
+      }, 2000);
+    },
+    throttle: () => {
+      if (lastTime && now - lastTime < 200) {
+        clearTimeout(timer);
+        console.log("....");
+        timer = setTimeout(() => {
+          console.log("点击...");
+          lastTime = +new Date();
+        }, 2000);
+      } else {
+        lastTime = now;
+        timer = setTimeout(() => {
+          console.log("点击...");
+          lastTime = +new Date();
+        }, 200);
+      }
+    },
     handleSearch() {
       var requestOptions1 = {
         method: "GET",
