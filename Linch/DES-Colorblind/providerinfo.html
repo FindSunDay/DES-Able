@@ -281,6 +281,7 @@
                   v-model="postInput"
                   clearable
                   style="width: 100%"
+                  @keyup.native="debounce()"
                 />
               </div>
               <div class="u-form-group u-form-submit u-form-group-5">
