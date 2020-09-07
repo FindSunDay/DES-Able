@@ -188,6 +188,8 @@
       <section class="u-align-center u-clearfix u-section-1" id="sec-805d">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <div class="u-expanded-width u-form u-form-1">
+            <h2 class="u-custom-font u-font-ubuntu u-valign-middle u-text u-text-palette-1-dark-2 u-text-default u-text-1">Search for all DES
+              providers in Victoria</h2>
             <form
               action="#"
               method="POST"
@@ -321,37 +323,32 @@
         </div>
       </section>
 
-      <section
-        class="u-border-1 u-border-grey-75 u-clearfix u-section-2"
-        id="carousel_5c47"
-        v-for="item in showList"
-        :key="item.name"
-      >
-        <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
-          <div class="u-clearfix u-gutter-100 u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
-              <div class="u-layout-row">
-                <div class="u-size-60">
+
+          <section class="u-align-left u-clearfix u-section-2" id="carousel_5c47" v-for="item in showList"
+          :key="item.name">
+            <div class="u-clearfix u-sheet u-sheet-1">
+              <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                <div class="u-gutter-0 u-layout">
                   <div class="u-layout-row">
                     <div
-                      class="u-align-left u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-right-cell u-size-60 u-layout-cell-1"
-                    >
-                      <div class="u-container-layout u-container-layout-1">
-                        <h3
-                          class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-1"
-                        >
-                          {{item.name}}
-                        </h3>
-                        <h5 class="u-custom-font u-font-ubuntu u-text u-text-2">
-                          {{item.program}}&nbsp;
-                        </h5>
+                      class="u-align-left u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-size-40-md u-size-40-sm u-size-40-xs u-size-43-lg u-size-43-xl u-layout-cell-1">
+                      <div class="u-container-layout u-valign-top u-container-layout-1">
+                        <h3 class=" u-align-center-xs u-custom-font u-font-ubuntu u-text  u-text-palette-1-dark-2 u-text-default u-text-1">
+                          {{item.name}} </h3>
+                        <h5 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-2">{{item.program}}&nbsp;</h5>
+                      </div>
+                    </div>
+                    <div
+                      class="u-align-center-sm u-align-right-lg u-align-right-md u-align-right-xl u-container-style u-layout-cell u-palette-5-light-3 u-right-cell u-size-17-lg u-size-17-xl u-size-20-md u-size-16-sm u-size-16-xs u-layout-cell-2">
+                      <div class="u-container-layout u-valign-top-xl u-container-layout-2">
+                        <h3 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-palette-5-dark-3 u-text-3">
+                          SITELOCATION</h3>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+
           <div
             class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-gutter-16 u-layout-wrap u-layout-wrap-2"
           >
@@ -406,9 +403,9 @@
                       </svg>
                     </span>
                     <h5
-                      class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-3"
+                      class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-5"
                     >
-                      Address
+                    <b>Address</b>
                     </h5>
                     <p
                       class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-4"

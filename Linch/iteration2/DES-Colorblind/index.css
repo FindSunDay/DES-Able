@@ -51,17 +51,17 @@
 .u-section-3 .u-container-layout-1 {padding: 30px 60px}
 .u-section-3 .u-text-1 {font-size: 2.375rem; margin: 0 30px}
 .u-section-3 .u-btn-1 {padding: 0}
-.u-section-3 .u-btn-2 {border-style: solid; background-image: none; font-size: 1.5rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 20px auto 0; padding: 10px 61px 11px 59px}
+.u-section-3 .u-btn-2 {border-style: solid; background-image: none; font-size: 1.5rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 22px auto 0; padding: 10px 79px 11px 78px} 
 .u-section-3 .u-layout-cell-2 {min-height: 279px}
 .u-section-3 .u-container-layout-2 {padding: 30px 60px}
 .u-section-3 .u-text-2 {font-size: 2.375rem; background-image: none; margin: 18px 30px 0}
 .u-section-3 .u-btn-3 {padding: 0}
-.u-section-3 .u-btn-4 {border-style: solid; background-image: none; font-size: 1.5rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 20px auto 0; padding: 10px 79px 11px 78px} 
+.u-section-3 .u-btn-4 {border-style: solid; background-image: none; font-size: 1.5rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 22px auto 0; padding: 10px 79px 11px 78px} 
 
 @media (max-width: 1199px){ .u-section-3 .u-layout-wrap-1 {width: 940px; min-height: 88px}
 .u-section-3 .u-layout-cell-1 {min-height: 230px}
 .u-section-3 .u-text-1 {margin-right: 0; margin-left: 0}
-.u-section-3 .u-btn-2 {width: 223px; height: 69px}
+.u-section-3 .u-btn-2 {height: 69px}
 .u-section-3 .u-layout-cell-2 {min-height: 230px}
 .u-section-3 .u-text-2 {margin-top: 0; margin-left: 22px; margin-right: 22px}
 .u-section-3 .u-btn-4 {height: 69px} }
@@ -81,11 +81,12 @@
 
 @media (max-width: 575px){ .u-section-3 .u-sheet-1 {min-height: 217px}
 .u-section-3 .u-layout-wrap-1 {margin-right: initial; margin-left: initial; width: auto}
-.u-section-3 .u-layout-cell-1 {min-height: 108px}
-.u-section-3 .u-text-1 {font-size: 1.875rem; margin-left: 0; margin-right: 0; width: 320px}
+.u-section-3 .u-text-1 {font-size: 1.5rem}
 .u-section-3 .u-layout-cell-2 {min-height: 81px}
 .u-section-3 .u-container-layout-2 {padding-bottom: 18px}
-.u-section-3 .u-btn-1 {font-size: 1.125rem; margin-top: -49px; padding-top: 9px; padding-right: 39px; padding-left: 37px} }
+.u-section-3 .u-text-2 {margin-left: 43px; margin-right: 43px; font-size: 1.5rem}}
+
+
 
 .u-section-4 {margin-top: 0; margin-bottom: 0}
 .u-section-4 .u-sheet-1 {min-height: 405px}
