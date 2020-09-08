@@ -252,8 +252,8 @@ des_service = des[['Name','Website','Latitude','Longitude','Program','Speciality
 # drop duplicates
 des_service.drop_duplicates(keep='first',inplace=True)
 # refer SITE_ID from des_site
-des_service = des_service.merge(des_site[['Latitude','Longitude','SITE_ID','Speciality']],\
-                                on =['Latitude','Longitude','Speciality'])
+des_service = des_service.merge(des_site[['Latitude','Longitude','SITE_ID']],\
+                                on =['Latitude','Longitude'])
 # refer DES_ID from des_name
 des_service = des_service.merge(des_name, on=['Name','Website'])
 

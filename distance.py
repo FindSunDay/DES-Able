@@ -7,7 +7,9 @@ location. The top 5 nearest DES providers are then recommended to the user along
 
 
 Note:
-For MacOS user, in case the program raise SSL:CERTIFICATE_VERIFY_FAILED Error,type the following command in the terminal
+For MacOS user, in case the program raised 'SSL:CERTIFICATE_VERIFY_FAILED' Error,
+type the following command in the terminal
+
 pip install certifi
 /Applications/Python\ 3.6/Install\ Certificates.command
 
@@ -24,25 +26,35 @@ from math import radians, acos, sin, cos, sqrt, asin, log
 
 # read data
 des_site = pd.read_csv("./Dataset/DES_SITE.csv")
-des_name = pd.read_csv("./Dataset/DES_name.csv")
+des_name = pd.read_csv("./Dataset/DES_NAME.csv")
+des_serv = pd.read_csv("./Dataset/DES_SERVICE.csv")
 
+
+# -- Get input from Web
 # user_loc = input('Please type down your address:', )
 # user_loc = '5 Dudley street 3145'
 user_loc = '17 Darling Road 3145'
 
-# Google Place API to gt user longitude and latitude
-api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
+def get_user_loc(text):
+    # Google Place API to gt user longitude and latitude
+    api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
 
-find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
-                 + user_loc+'&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='
-                 + api_place).replace(" ", "%20")
+    find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
+                     + text+'%20Victoria%20Australia'+'&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='
+                     + api_place).replace(" ", "%20")
 
-user_response = urllib.request.urlopen(find_user_loc).read()
-user_loc_detail = json.loads(user_response)
+    user_response = urllib.request.urlopen(find_user_loc).read()
+    user_loc_detail = json.loads(user_response)
 
+    return user_loc_detail
+
+user_loc_detail = get_user_loc(user_loc)
 # retrieve Latitude and Longitude
-access_loc = user_loc_detail['candidates'][0]['geometry']['location']
-(user_lat, user_lng) = access_loc['lat'], access_loc['lng']
+try:
+    access_loc = user_loc_detail['candidates'][0]['geometry']['location']
+    (user_lat,user_lng) = access_loc['lat'], access_loc['lng']
+except:
+    print('No Result')
 
 user_lat_lng = (user_lat, user_lng)
 
@@ -79,8 +91,26 @@ for inx, row in des_site.iterrows():
 
 # sort Radial distance by ascending order
 des_site = des_site.sort_values(by=['Radial_distance'])
-des_site.reset_index(inplace=True)
-des_site.drop('index', axis=1, inplace=True)
+
+
+# SPECIALITY FILTER
+
+# get the set of speciality
+spec = set(des_serv['Speciality'])
+
+# -- Get input from web.
+# default value
+# user_spec = 'All Client Types'
+
+# random value
+user_spec = spec.pop()
+
+des_serv = des_serv.merge(des_site[['SITE_ID','Radial_distance','Latitude','Longitude','Site_Location']], on ='SITE_ID')
+des_site_10 = des_serv[des_serv['Speciality']==user_spec].sort_values(by='Radial_distance')
+
+
+des_site_10.reset_index(inplace=True)
+des_site_10.drop('index',axis=1,inplace = True)
 
 
 # select the top 10 DES with the shortest radial distance
@@ -125,8 +155,8 @@ for inx, row in des_site_10.iterrows():
     travel_mode = str(set(re.findall(
         r"travel_mode': '(\w+)\'}|'name': '(\w+)\'", str(des_site_10.loc[inx, 'Direction_API']))))
 
-    travel_mode = set(re.findall(r"(\w+)", travel_mode)) - {'PTV', 'TRANSIT'}
-    travel_mode = set([x.upper() for x in travel_mode])
+    travel_mode = set(re.findall(r"(\w+)", travel_mode))
+    travel_mode = set([x.upper() for x in travel_mode if x.upper() in {'TRAIN','BUS','TRAM','WALKING','DRIVING'}])
 
     des_site_10.loc[inx, 'Travel_mode'] = [travel_mode]
 
@@ -138,6 +168,6 @@ des_site_10.drop('index', axis=1, inplace=True)
 # select the top 5 nearest DES providers based on travelling distance
 des_top_5 = des_site_10.loc[0:4, :]
 # get the DES provider names from des_name dataframe
-des_top_5.merge(des_name, on='DES_ID')
+des_top_5 = des_top_5.merge(des_name[['DES_ID','Name']], on='DES_ID')
 
-print(des_top_5['Direction_API'][0])
+result = des_top_5.to_dict()
