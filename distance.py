@@ -125,6 +125,7 @@ des_site_10['Direction_API'] = ''
 
 direction_api = 'AIzaSyC43uAA_FBmpqw5mcarSzlOs16pwDG6aXs'
 start = 'origin=' + str(user_lat) + ',' + str(user_lng)
+
 for inx, row in des_site_10.iterrows():
     des_lat = des_site_10.loc[inx, 'Latitude']
     des_lng = des_site_10.loc[inx, 'Longitude']
