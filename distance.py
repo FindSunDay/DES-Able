@@ -15,7 +15,7 @@ pip install certifi
 
 '''
 
-from math import radians, acos, sin, cos, sqrt, asin, log
+from math import radians, sin, cos, sqrt, asin
 import urllib.request
 import json
 import csv
@@ -34,21 +34,6 @@ def to_dict(filename):
         key += 1
     return result
 
-
-des_site = to_dict("./Dataset/DES_SITE.csv")
-des_name = to_dict("./Dataset/DES_NAME.csv")
-des_serv = to_dict("./Dataset/DES_SERVICE.csv")
-
-
-### IDENTIFY USER LOCATION
-
-
-# -- Get input from Web
-
-# user_loc = input('Please type down your address:', )
-user_loc = '5 Dudley street 3145'
-
-
 def get_user_loc(text):
     # Google Place API to gt user longitude and latitude
     api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
@@ -61,22 +46,6 @@ def get_user_loc(text):
     user_loc_detail = json.loads(user_response)
 
     return user_loc_detail
-
-
-user_loc_detail = get_user_loc(user_loc)
-
-# retrieve Latitude and Longitude
-try:
-    access_loc = user_loc_detail['candidates'][0]['geometry']['location']
-    (user_lat,user_lng) = access_loc['lat'], access_loc['lng']
-except:
-    print('No Result')
-
-user_lat_lng = (user_lat,user_lng)
-
-
-### CALCULATE RADIAL DISTANCE
-
 
 # distance is calculated with Haversine formula with the radius of the earth equal to 6,378 km.
 
@@ -96,99 +65,126 @@ def get_radial_distance(user_lat_lng, des_lat_lng):
     arc_dist = asin(sqrt(arc)) * 6378 * 2
     return round(arc_dist, 2)
 
-for key, val in des_site.items():
-    des_lat_lng = (float(val['Latitude']), float(val['Longitude']))
-    val['Radial_distance'] = get_radial_distance(user_lat_lng, des_lat_lng)
+
+# main algorithm
+def main():
+
+    des_site = to_dict("./Dataset/DES_SITE.csv")
+    des_name = to_dict("./Dataset/DES_NAME.csv")
+    des_serv = to_dict("./Dataset/DES_SERVICE.csv")
+
+    ### IDENTIFY USER LOCATION
+
+    # -- Get input from Web
+
+    # user_loc = input('Please type down your address:', )
+    user_loc = '5 Dudley street 3145'
+
+    user_loc_detail = get_user_loc(user_loc)
+
+    # retrieve Latitude and Longitude
+    try:
+        access_loc = user_loc_detail['candidates'][0]['geometry']['location']
+        (user_lat, user_lng) = access_loc['lat'], access_loc['lng']
+    except:
+        print('No Result')
+
+    user_lat_lng = (user_lat, user_lng)
+
+    ### CALCULATE RADIAL DISTANCE
+
+    for key, val in des_site.items():
+        des_lat_lng = (float(val['Latitude']), float(val['Longitude']))
+        val['Radial_distance'] = get_radial_distance(user_lat_lng, des_lat_lng)
+
+    # update des service with distance and location information
+    for key, val in des_serv.items():
+        for row, data in des_site.items():
+            # check the site_id (key)
+            if val['SITE_ID'] == data['SITE_ID']:
+                for item in data.keys():
+                    des_serv[key][item] = data[item]
+
+    ### CREATE SPECIALITY FILTER
+
+    # -- Get input from Web
+
+    # default value
+    user_spec = 'All Client Types'
+
+    # get the set of speciality
+    spec = {i['Speciality'] for i in des_serv.values()}
+    # random value
+    # user_spec = spec.pop()
+
+    # filter matching speciality
+    des_spec = dict((i, j) for i, j in des_serv.items() if j['Speciality'] == user_spec)
+
+    ### IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE
+
+    find_min_dist = []
+    for key, val in des_spec.items():
+        find_min_dist.append((key, val['Radial_distance']))
+    find_min_dist.sort(key=lambda x: x[1])
+
+    top_10 = [i[0] for i in find_min_dist[:10]]
+    des_site_10 = dict((i, j) for i, j in des_spec.items() if i in top_10)
+
+    ### CALLING GOOGLE 'Distance Matrix API' to get travelling distance
+
+    # travel mode = transit
+
+    distance_api = 'AIzaSyDqCivn3sqBZLcraRZ5cwSp63BSYuqFZl0'
+    start = 'origins=' + str(user_lat) + ',' + str(user_lng)
+
+    find_top_5 = []
+
+    for key, val in des_site_10.items():
+        des_lat = val['Latitude']
+        des_lng = val['Longitude']
+
+        stop = '&destinations=' + str(des_lat) + ',' + str(des_lng)
+
+        distance = ('https://maps.googleapis.com/maps/api/distancematrix/json?' \
+                    + start + stop + '&mode=transit' + '&key=' \
+                    + distance_api)
+
+        distance_response = urllib.request.urlopen(distance).read()
+        distance_detail = json.loads(distance_response)
+
+        val['Distance_API'] = distance_detail
+
+        val['Distance'] = float(val['Distance_API']['rows'][0]['elements'][0] \
+                                    ['distance']['text'].replace('km', ''))
+        # val['Duration'] = float(val['Distance_API']['rows'][0]['elements'][0] \
+        #                             ['duration']['text'].replace('mins', ''))
+
+        find_top_5.append((key, val['Distance']))
+
+    ### SELECT THE TOP 5 DES PROVIDERS WITH THE SHORTEST TRAVELLING DISTANCE
+
+    find_top_5.sort(key=lambda x: x[1])
+    top_5 = [i[0] for i in find_top_5[:5]]
+
+    des_site_5 = {}
+    index = 0
+    for key, val in des_site_10.items():
+        if index < 5 and key == top_5[index]:
+            des_site_5[index + 1] = val
+        else:
+            break
+        index += 1
+
+    ### Collect name and website from des_name
+    for key, val in des_site_5.items():
+        for row, data in des_name.items():
+            if val['DES_ID'] == data['DES_ID']:
+                val['Name'] = data['Name']
+                val['Website'] = data['Website']
+
+    # result
+    return(des_site_5)
 
 
-# update des service with distance and location information
-for key, val in des_serv.items():
-    for row, data in des_site.items():
-        # check the site_id (key)
-        if val['SITE_ID'] == data['SITE_ID']:
-            for item in data.keys():
-                des_serv[key][item] = data[item]
-
-
-
-### CREATE SPECIALITY FILTER
-
-# -- Get input from Web
-
-# default value
-user_spec = 'All Client Types'
-
-# get the set of speciality
-spec = {i['Speciality'] for i in des_serv.values()}
-# random value
-# user_spec = spec.pop()
-
-# filter matching speciality
-des_spec = dict((i,j) for i,j in des_serv.items() if j['Speciality'] == user_spec)
-
-
-### IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE
-
-find_min_dist = []
-for key, val in des_spec.items():
-    find_min_dist.append((key, val['Radial_distance']))
-find_min_dist.sort(key = lambda x: x[1])
-
-top_10 = [i[0] for i in find_min_dist[:10]]
-des_site_10 = dict((i,j) for i,j in des_spec.items() if i in top_10)
-
-
-### CALLING GOOGLE 'Distance Matrixs API' to get travelling distance
-
-# travel mode = transit
-
-distance_api = 'AIzaSyDqCivn3sqBZLcraRZ5cwSp63BSYuqFZl0'
-start = 'origins=' + str(user_lat) + ',' + str(user_lng)
-
-find_top_5 = []
-
-for key, val in des_site_10.items():
-    des_lat = val['Latitude']
-    des_lng = val['Longitude']
-
-    stop = '&destinations=' + str(des_lat) + ',' + str(des_lng)
-
-    distance = ('https://maps.googleapis.com/maps/api/distancematrix/json?' \
-                + start + stop + '&mode=transit' + '&key=' \
-                + distance_api)
-
-    distance_response = urllib.request.urlopen(distance).read()
-    distance_detail = json.loads(distance_response)
-
-    val['Distance_API'] = distance_detail
-
-    val['Distance'] = float(val['Distance_API']['rows'][0]['elements'][0] \
-                                ['distance']['text'].replace('km', ''))
-    # val['Duration'] = float(val['Distance_API']['rows'][0]['elements'][0] \
-    #                             ['duration']['text'].replace('mins', ''))
-
-    find_top_5.append((key, val['Distance']))
-
-### SELECT THE TOP 5 DES PROVIDERS WITH THE SHORTEST TRAVELLING DISTANCE
-
-find_top_5.sort(key = lambda x: x[1])
-top_5 = [i[0] for i in find_top_5[:5]]
-
-des_site_5 = {}
-index = 0
-for key, val in des_site_10.items():
-    if index < 5 and key == top_5[index]:
-        des_site_5[index + 1] = val
-    else:
-        break
-    index += 1
-
-### Collect name and website from des_name
-for key, val in des_site_5.items():
-    for row, data in des_name.items():
-        if val['DES_ID'] == data['DES_ID']:
-            val['Name'] = data['Name']
-            val['Website'] = data['Website']
-
-# result
-print(des_site_5)
+if __name__ == '__main__':
+    main()
