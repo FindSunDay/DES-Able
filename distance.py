@@ -21,6 +21,8 @@ import json
 import csv
 
 # read csv as dictionary (key = row)
+
+
 def to_dict(filename):
     key = 0
     data = csv.DictReader(open(filename), delimiter=",")
@@ -34,12 +36,14 @@ def to_dict(filename):
         key += 1
     return result
 
+
 def get_user_loc(text):
     # Google Place API to gt user longitude and latitude
     api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
 
     find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
-                     + text + '%20Victoria%20Australia' + '&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='
+                     + text + '%20Victoria%20Australia' +
+                     '&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='
                      + api_place).replace(" ", "%20")
 
     user_response = urllib.request.urlopen(find_user_loc).read()
@@ -48,6 +52,7 @@ def get_user_loc(text):
     return user_loc_detail
 
 # distance is calculated with Haversine formula with the radius of the earth equal to 6,378 km.
+
 
 def get_radial_distance(user_lat_lng, des_lat_lng):
     # converts to spherical coordinates in radians
@@ -59,7 +64,8 @@ def get_radial_distance(user_lat_lng, des_lat_lng):
     dist_lat = lat2 - lat1
 
     # calculate the arc using Haversine formula
-    arc = (sin(dist_lat / 2) ** 2) + (cos(lat1) * cos(lat2) * (sin(dist_lon / 2) ** 2))
+    arc = (sin(dist_lat / 2) ** 2) + (cos(lat1)
+                                      * cos(lat2) * (sin(dist_lon / 2) ** 2))
 
     # calculate the arc distance in km.
     arc_dist = asin(sqrt(arc)) * 6378 * 2
@@ -73,7 +79,7 @@ def main():
     des_name = to_dict("./Dataset/DES_NAME.csv")
     des_serv = to_dict("./Dataset/DES_SERVICE.csv")
 
-    ### IDENTIFY USER LOCATION
+    # IDENTIFY USER LOCATION
 
     # -- Get input from Web
 
@@ -91,7 +97,7 @@ def main():
 
     user_lat_lng = (user_lat, user_lng)
 
-    ### CALCULATE RADIAL DISTANCE
+    # CALCULATE RADIAL DISTANCE
 
     for key, val in des_site.items():
         des_lat_lng = (float(val['Latitude']), float(val['Longitude']))
@@ -105,7 +111,7 @@ def main():
                 for item in data.keys():
                     des_serv[key][item] = data[item]
 
-    ### CREATE SPECIALITY FILTER
+    # CREATE SPECIALITY FILTER
 
     # -- Get input from Web
 
@@ -118,9 +124,10 @@ def main():
     # user_spec = spec.pop()
 
     # filter matching speciality
-    des_spec = dict((i, j) for i, j in des_serv.items() if j['Speciality'] == user_spec)
+    des_spec = dict((i, j) for i, j in des_serv.items()
+                    if j['Speciality'] == user_spec)
 
-    ### IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE
+    # IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE
 
     find_min_dist = []
     for key, val in des_spec.items():
@@ -130,7 +137,7 @@ def main():
     top_10 = [i[0] for i in find_min_dist[:10]]
     des_site_10 = dict((i, j) for i, j in des_spec.items() if i in top_10)
 
-    ### CALLING GOOGLE 'Distance Matrix API' to get travelling distance
+    # CALLING GOOGLE 'Distance Matrix API' to get travelling distance
 
     # travel mode = transit
 
@@ -145,8 +152,8 @@ def main():
 
         stop = '&destinations=' + str(des_lat) + ',' + str(des_lng)
 
-        distance = ('https://maps.googleapis.com/maps/api/distancematrix/json?' \
-                    + start + stop + '&mode=transit' + '&key=' \
+        distance = ('https://maps.googleapis.com/maps/api/distancematrix/json?'
+                    + start + stop + '&mode=transit' + '&key='
                     + distance_api)
 
         distance_response = urllib.request.urlopen(distance).read()
@@ -154,14 +161,14 @@ def main():
 
         val['Distance_API'] = distance_detail
 
-        val['Distance'] = float(val['Distance_API']['rows'][0]['elements'][0] \
-                                    ['distance']['text'].replace('km', ''))
+        val['Distance'] = float(val['Distance_API']['rows'][0]['elements'][0]
+                                ['distance']['text'].replace('km', ''))
         # val['Duration'] = float(val['Distance_API']['rows'][0]['elements'][0] \
         #                             ['duration']['text'].replace('mins', ''))
 
         find_top_5.append((key, val['Distance']))
 
-    ### SELECT THE TOP 5 DES PROVIDERS WITH THE SHORTEST TRAVELLING DISTANCE
+    # SELECT THE TOP 5 DES PROVIDERS WITH THE SHORTEST TRAVELLING DISTANCE
 
     find_top_5.sort(key=lambda x: x[1])
     top_5 = [i[0] for i in find_top_5[:5]]
@@ -175,7 +182,7 @@ def main():
             break
         index += 1
 
-    ### Collect name and website from des_name
+    # Collect name and website from des_name
     for key, val in des_site_5.items():
         for row, data in des_name.items():
             if val['DES_ID'] == data['DES_ID']:
@@ -187,4 +194,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    resp = main()
+    print(resp)
