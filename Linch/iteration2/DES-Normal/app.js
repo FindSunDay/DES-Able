@@ -104,6 +104,21 @@ new Vue({
         })
         .catch((error) => console.log("error", error));
     },
+    handleSearchNearby() {
+      console.log("123");
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map",
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    },
   },
   mounted() {
     var requestOptions = {
@@ -117,6 +132,7 @@ new Vue({
     )
       .then((response) => response.text())
       .then((result) => {
+        // console.log(result);
         this.infoList = JSON.parse(result).All_Info;
         this.showList = this.infoList;
         // console.log(this.infoList);
