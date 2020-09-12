@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Linch/iteration2/DES-Colorblind/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Linch/iteration2/DES-Colorblind/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/distance.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="374">
               <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
               <folding>
                 <element signature="e#484#541#0" expanded="true" />
@@ -164,7 +161,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="710" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960127" />
@@ -172,7 +169,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20350876" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20422535" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -200,7 +197,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="374">
           <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
           <folding>
             <element signature="e#484#541#0" expanded="true" />
