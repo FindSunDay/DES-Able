@@ -300,7 +300,9 @@
 .u-section-3 .u-image-1 {min-height: 178px} }
 
 
-/* Sweep To Right */
+/* Sweep To Right 
+Source: from Hover.css GitHub under MIT License
+*/
 .hvr-sweep-to-right {
     align-items: center;
     text-align: center;

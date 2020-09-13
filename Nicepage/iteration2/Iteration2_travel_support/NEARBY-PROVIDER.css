@@ -54,7 +54,7 @@
 .u-section-2 .u-text-1 {font-size: 4.0625rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); width: 176px; margin: 17px auto 0}
 .u-section-2 .u-text-2 {animation-duration: 1000ms; font-size: 1.25rem; margin: 0 126px 0 auto}
 .u-section-2 .u-text-3 {font-size: 1.25rem; font-weight: 700; margin: 14px 0 0}
-.u-section-2 .u-text-4 {margin: 5px 8px 0 0}
+.u-section-2 .u-text-4 {margin: 5px 8px 0px 0px}
 .u-section-2 .u-text-5 {animation-duration: 1000ms; margin: 4px 7px 0 0}
 .u-section-2 .u-repeater-item-2 {background-image: none; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-2 {padding: 20px 20px 10px}
@@ -224,3 +224,4 @@
 .u-section-5 .u-btn-1 {margin-right: 0} }
 
 @media (max-width: 575px){ .u-section-5 .u-sheet-1 {min-height: 106px} }
+
