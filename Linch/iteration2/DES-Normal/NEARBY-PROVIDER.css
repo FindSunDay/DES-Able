@@ -45,10 +45,12 @@
 .u-section-1 .u-form-group-2 {width: 100%}
 .u-section-1 .u-form-group-3 {width: 100%}
 .u-section-1 .u-text-2 {width: 320px; font-size: 1.5rem}
-.u-section-1 .u-text-3 {width: 320px} }.u-section-2 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("images/verne-ho-0LAJfSNa-xQ-unsplash.jpg"); background-position: 50% 50%}
+.u-section-1 .u-text-3 {width: 320px} }
+
+.u-section-2 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("images/verne-ho-0LAJfSNa-xQ-unsplash.jpg"); background-position: 50% 50%}
 .u-section-2 .u-sheet-1 {min-height: 869px}
 .u-section-2 .u-repeater-1 {min-height: 286.054px; min-width: 286.054px;grid-template-columns: calc(33.3333% - 13px) calc(33.3333% - 13px) calc(33.3333% - 13px); grid-gap: 19px 19px; width: 1018px; margin: 90px auto 0}
-.u-section-2 .u-repeater-item-1 {min-height: 305px; background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
+.u-section-2 .u-repeater-item-1 {min-height: 305px; max-height: 305px;background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-1 {padding: 20px 20px 20px ; background-color:#a3cae4}
 .u-section-2 .u-icon-1 {height: 50px; width: 50px; margin: 0 auto 0 1px}
 .u-section-2 .u-text-1 {font-size: 4.0625rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); width: 176px; margin: 17px auto 0}
