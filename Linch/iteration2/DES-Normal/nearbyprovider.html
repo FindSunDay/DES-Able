@@ -39,8 +39,15 @@
     />
     <!-- 引入组件库 -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2dJ6ySPRixCoQpY-WQsbrBWQ_6CIxfos&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    
   </head>
   <body class="u-body">
+    <!-- <div id="map" style="width: 100%; height: 100px;"></div> -->
     <div id="vue-app">
     <header
     class="u-align-center-xs u-clearfix u-header u-sticky u-white u-header"
@@ -372,7 +379,7 @@
         </div><!--/blog-->
       </div>
     </section>
-    <section v-if="show_site_location_info" class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-white u-section-3" id="carousel_c0c9">
+    <section v-show="show_site_location_info" class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-white u-section-3" id="carousel_c0c9">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-1">AMP Employment....</h2>
         <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-2">Sitelocation</h2>
@@ -439,7 +446,7 @@
                     <div class="u-container-layout u-container-layout-5">
                       <div class="u-expanded u-grey-light-2 u-map">
                         <div class="embed-responsive">
-                          <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m" data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIyTWFuaGF0dGFuJTJDJTIwTmV3JTIwWW9yayUyMiUyQyUyMnpvb20lMjIlM0ExMCUyQyUyMnR5cGVJZCUyMiUzQSUyMnJvYWQlMjIlMkMlMjJsYW5nJTIyJTNBJTIyJTIyJTdE"></iframe>
+                          <div id="google-map" style="width: 100%; height: 100%;"></div>
                         </div>
                       </div>
                     </div>
@@ -450,7 +457,9 @@
           </div>
         </div>
       </div>
+      
     </section>
+    <!-- <div id="google-map" style="width: 100%; height: 500px;"></div> -->
     <section class="u-clearfix u-section-4" id="sec-ab95">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-custom-color-2 u-text-default u-text-1">Need <font class="u-text-palette-1-dark-1">an assistance</font> to get there ?
@@ -492,7 +501,9 @@
         <span>Nicepage</span>
       </a>. 
     </section>
+    
   </div>
+  
   </body>
   <script src="app.js?v=1.2"></script>
 </html>
