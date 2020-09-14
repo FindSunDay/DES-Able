@@ -129,6 +129,7 @@ def lambda_handler():
         # filter matching speciality
         des_spec = dict((i, j) for i, j in des_serv.items()
                         if j['Speciality'] == user_spec)
+
     elif user_spec == 'All Specialities':
         des_spec = des_serv
 
