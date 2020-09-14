@@ -99,21 +99,21 @@
 .u-section-2 .u-text-4 {margin-right: 0; width: auto; height: 25px}
 .u-section-2 .u-text-5 {margin-right: 0}
 .u-section-2 .u-text-7 {height: 25px; margin-right: 116px}
-.u-section-2 .u-text-9 {margin-right: 0; width: 70px; height: 25px}
+.u-section-2 .u-text-9 {margin-right: 0; width: auto; height: 25px}
 .u-section-2 .u-text-10 {margin-right: 0}
 .u-section-2 .u-text-12 {height: 25px; margin-right: 116px}
-.u-section-2 .u-text-14 {margin-right: 0; width: 70px; height: 25px}
+.u-section-2 .u-text-14 {margin-right: 0; width: auto; height: 25px}
 .u-section-2 .u-text-15 {margin-right: 0}
 .u-section-2 .u-repeater-2 {grid-template-columns: repeat(2, calc(((100% - 940px) / 2)  + 460px)); min-width: 320px;min-height: 320px;  grid-gap: 19px 19px}
 .u-section-2 .u-text-16 {height: 78px}
 .u-section-2 .u-text-17 {height: 32px}
 .u-section-2 .u-text-18 {height: 32px}
-.u-section-2 .u-text-19 {width: 70px}
+.u-section-2 .u-text-19 {width: auto}
 .u-section-2 .u-text-20 {margin-right: 7px}
 .u-section-2 .u-text-21 {height: 78px}
 .u-section-2 .u-text-22 {height: 32px}
 .u-section-2 .u-text-23 {height: 32px}
-.u-section-2 .u-text-24 {width: 70px}
+.u-section-2 .u-text-24 {width: auto}
 .u-section-2 .u-text-25 {margin-right: 7px} }
 
 @media (max-width: 991px){ .u-section-2 .u-sheet-1 {min-height: 1000px}
@@ -184,6 +184,9 @@
 .u-section-3 .u-icon-3 {height: 80px; width: 80px; margin: 0 auto}
 .u-section-3 .u-text-6 {font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 30px -1px 0}
 .u-section-3 .u-text-7 {margin: 21px -1px 0}
+.u-section-3 .u-icon-4 {height: 80px; width: 80px; margin: 0 auto}
+.u-section-3 .u-text-8 {font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 30px -1px 0}
+.u-section-3 .u-btn-2 {margin-left: auto; margin-right: auto; background-image: none; border-style: solid}
 .u-section-3 .u-layout-cell-4 {min-height: 290px}
 .u-section-3 .u-container-layout-4 {padding: 30px}
 .u-section-3 .u-layout-cell-5 {min-height: 590px}
@@ -227,26 +230,31 @@
 .u-section-3 .u-layout-wrap-1 {width: 340px}
 .u-section-3 .u-container-layout-3 {padding-left: 10px; padding-right: 10px}
 .u-section-3 .u-layout-cell-4 {min-height: 342px}
-.u-section-3 .u-layout-cell-5 {min-height: 363px} }.u-section-4 {margin-top: 0; margin-bottom: 0}
+.u-section-3 .u-layout-cell-5 {min-height: 363px} }
+
+.u-section-4 {margin-top: 0; margin-bottom: 0}
 .u-section-4 .u-sheet-1 {min-height: 104px}
 .u-section-4 .u-text-1 {font-weight: 700; font-size: 2.25rem; margin: 21px auto 40px} 
 
 @media (max-width: 575px){ .u-section-4 .u-text-1 {font-size: 1.5rem} }.u-section-5 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/dil-H3yxl7t2oNE-unsplash.jpg")}
 .u-section-5 .u-sheet-1 {min-height: 323px}
 .u-section-5 .u-text-1 {font-weight: 700; margin: 60px 20px 0}
-.u-section-5 .u-btn-1 {border-style: none; background-image: none; font-weight: 700; margin: 50px 497px 60px auto} 
+.u-section-5 .u-btn-1 {border-style: none; background-image: none; font-weight: 700; margin: 50px 497px 60px auto; justify-self: center} 
 
 @media (max-width: 1199px){ .u-section-5 .u-sheet-1 {min-height: 266px}
 .u-section-5 .u-text-1 {margin-left: 0; margin-right: 0}
-.u-section-5 .u-btn-1 {margin-left: auto; margin-right: auto;justify-self: center;} }
+.u-section-5 .u-btn-1 {margin-left: auto; margin-right: auto;justify-self: center }}
 
 @media (max-width: 991px){ .u-section-5 .u-sheet-1 {min-height: 204px}
-.u-section-5 .u-btn-1 {margin-left: 0;margin-right: 77px;justify-self: center;} }
+.u-section-5 .u-btn-1 {margin-left: 0;margin-right: 77px;justify-self: center }}
 
 @media (max-width: 767px){ .u-section-5 .u-sheet-1 {min-height: 175px}
-.u-section-5 .u-btn-1 {margin-left: auto; margin-right: auto;justify-self: center;} }
+.u-section-5 .u-btn-1 {margin-left: auto; margin-right: auto;justify-self: center }}
 
-@media (max-width: 575px){ .u-section-5 .u-sheet-1 {min-height: 106px} }
+@media (max-width: 575px){ .u-section-5 .u-sheet-1 {min-height: 106px} 
+.u-section-5 .u-btn-1 {margin-left: auto; margin-right: auto;justify-self: center }
+}
+
 
 
 /* Sweep To Right 
@@ -293,4 +301,3 @@ Source: from Hover.css GitHub under MIT License
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-  
