@@ -116,16 +116,21 @@ def lambda_handler():
     # -- Get input from Web
 
     # default value
-    user_spec = 'All Client Types'
+
+    # user_spec = 'All Client Types'
+    user_spec = 'All Specialities'
 
     # get the set of speciality
     spec = {i['Speciality'] for i in des_serv.values()}
     # random value
     # user_spec = spec.pop()
 
-    # filter matching speciality
-    des_spec = dict((i, j) for i, j in des_serv.items()
-                    if j['Speciality'] == user_spec)
+    if user_spec != 'All Specialities':
+        # filter matching speciality
+        des_spec = dict((i, j) for i, j in des_serv.items()
+                        if j['Speciality'] == user_spec)
+    elif user_spec == 'All Specialities':
+        des_spec = des_serv
 
     # IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE
 
@@ -193,6 +198,8 @@ def lambda_handler():
     return(des_site_5)
 
 
+
 # if __name__ == '__main__':
 resp = lambda_handler()
 print(resp)
+
