@@ -41,7 +41,7 @@
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2dJ6ySPRixCoQpY-WQsbrBWQ_6CIxfos&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls&callback=initMap&libraries=places&v=weekly"
       defer
     ></script>
     
@@ -197,9 +197,9 @@
         </h4>
         <div class="u-form u-form-1">
           <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
-            <div class="u-form-group u-form-name u-form-group-1">
+            <div id="locationField" class="u-form-group u-form-name u-form-group-1">
               <label for="name-1c08" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">Address</label>
-              <el-input v-model="entered_address" placeholder="Enter your address" style="border: none;"></el-input>
+              <el-input id="autocomplete" v-model="entered_address" placeholder="Enter your address" style="border: none;"></el-input>
             </div>
             <div class="u-form-group u-form-select u-form-group-2">
               <label for="select-e0ce" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">Speciality</label>
@@ -381,8 +381,8 @@
     </section>
     <section v-show="show_site_location_info" class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-white u-section-3" id="carousel_c0c9">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-1">AMP Employment....</h2>
-        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-2">Sitelocation</h2>
+        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-1">{{ provider_map_name }}</h2>
+        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-2">{{ provider_map_site }}</h2>
         <div class="u-clearfix u-gutter-0 u-layout-wrap u-palette-1-base u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">

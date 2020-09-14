@@ -21,263 +21,16 @@ new Vue({
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
-      des_site_five: {
-        site_one: {
-          Program: "Disability Management Service",
-          Speciality: "All Client Types",
-          Rating: "2",
-          SITE_ID: "6",
-          DES_ID: "1",
-          Latitude: "-37.89991440000001",
-          Longitude: "145.0890916",
-          Address: "9-11 Portman St, Oakleigh VIC 3166, Australia",
-          Site_Location: "OAKLEIGH",
-          Street: "9-11",
-          Route: "Portman Street",
-          City: "Monash City",
-          State: "VIC",
-          Country: "Australia",
-          Postal: "3166",
-          URL: "https://maps.google.com/?cid=11453817125495033597",
-          Phone: "(03) 9569 4927",
-          Email: "apm4jobs@apm.net.au",
-          Radial_distance: 4.21,
-          Distance_API: {
-            destination_addresses: [
-              "9 Portman St, Oakleigh VIC 3166, Australia",
-            ],
-            origin_addresses: [
-              "5 Dudley St, Caulfield East VIC 3145, Australia",
-            ],
-            rows: [
-              {
-                elements: [
-                  {
-                    distance: {
-                      text: "5.6 km",
-                      value: 5642,
-                    },
-                    duration: {
-                      text: "19 mins",
-                      value: 1142,
-                    },
-                    status: "OK",
-                  },
-                ],
-              },
-            ],
-            status: "OK",
-          },
-          Distance: 5.6,
-          Name: "APM Employment Services",
-          Website: "https://apm.net.au",
-        },
-        site_two: {
-          Program: "Employment Support Service",
-          Speciality: "All Client Types",
-          Rating: "3",
-          SITE_ID: "6",
-          DES_ID: "1",
-          Latitude: "-37.89991440000001",
-          Longitude: "145.0890916",
-          Address: "9-11 Portman St, Oakleigh VIC 3166, Australia",
-          Site_Location: "OAKLEIGH",
-          Street: "9-11",
-          Route: "Portman Street",
-          City: "Monash City",
-          State: "VIC",
-          Country: "Australia",
-          Postal: "3166",
-          URL: "https://maps.google.com/?cid=11453817125495033597",
-          Phone: "(03) 9569 4927",
-          Email: "apm4jobs@apm.net.au",
-          Radial_distance: 4.21,
-          Distance_API: {
-            destination_addresses: [
-              "9 Portman St, Oakleigh VIC 3166, Australia",
-            ],
-            origin_addresses: [
-              "5 Dudley St, Caulfield East VIC 3145, Australia",
-            ],
-            rows: [
-              {
-                elements: [
-                  {
-                    distance: {
-                      text: "5.6 km",
-                      value: 5642,
-                    },
-                    duration: {
-                      text: "19 mins",
-                      value: 1142,
-                    },
-                    status: "OK",
-                  },
-                ],
-              },
-            ],
-            status: "OK",
-          },
-          Distance: 5.6,
-          Name: "APM Employment Services",
-          Website: "https://apm.net.au",
-        },
-        site_three: {
-          Program: "Disability Management Service",
-          Speciality: "All Client Types",
-          Rating: "1",
-          SITE_ID: "24",
-          DES_ID: "5",
-          Latitude: "-37.8990345",
-          Longitude: "145.0884724",
-          Address: "11 Station St, Oakleigh VIC 3166, Australia",
-          Site_Location: "OAKLEIGH",
-          Street: "11",
-          Route: "Station Street",
-          City: "Monash City",
-          State: "VIC",
-          Country: "Australia",
-          Postal: "3166",
-          URL: "https://maps.google.com/?cid=2107608628032716906",
-          Phone: "1300 385 738",
-          Email: "dvjs@dvjs.com.au",
-          Radial_distance: 4.11,
-          Distance_API: {
-            destination_addresses: [
-              "11 Station St, Oakleigh VIC 3166, Australia",
-            ],
-            origin_addresses: [
-              "5 Dudley St, Caulfield East VIC 3145, Australia",
-            ],
-            rows: [
-              {
-                elements: [
-                  {
-                    distance: {
-                      text: "5.7 km",
-                      value: 5714,
-                    },
-                    duration: {
-                      text: "20 mins",
-                      value: 1194,
-                    },
-                    status: "OK",
-                  },
-                ],
-              },
-            ],
-            status: "OK",
-          },
-          Distance: 5.7,
-          Name: "DVJS Employment Solutions",
-          Website: "https://www.dvjs.com.au",
-        },
-        site_four: {
-          Program: "Employment Support Service",
-          Speciality: "All Client Types",
-          Rating: "4",
-          SITE_ID: "24",
-          DES_ID: "5",
-          Latitude: "-37.8990345",
-          Longitude: "145.0884724",
-          Address: "11 Station St, Oakleigh VIC 3166, Australia",
-          Site_Location: "OAKLEIGH",
-          Street: "11",
-          Route: "Station Street",
-          City: "Monash City",
-          State: "VIC",
-          Country: "Australia",
-          Postal: "3166",
-          URL: "https://maps.google.com/?cid=2107608628032716906",
-          Phone: "1300 385 738",
-          Email: "dvjs@dvjs.com.au",
-          Radial_distance: 4.11,
-          Distance_API: {
-            destination_addresses: [
-              "11 Station St, Oakleigh VIC 3166, Australia",
-            ],
-            origin_addresses: [
-              "5 Dudley St, Caulfield East VIC 3145, Australia",
-            ],
-            rows: [
-              {
-                elements: [
-                  {
-                    distance: {
-                      text: "5.7 km",
-                      value: 5714,
-                    },
-                    duration: {
-                      text: "20 mins",
-                      value: 1194,
-                    },
-                    status: "OK",
-                  },
-                ],
-              },
-            ],
-            status: "OK",
-          },
-          Distance: 5.7,
-          Name: "DVJS Employment Solutions",
-          Website: "https://www.dvjs.com.au",
-        },
-        site_five: {
-          Program: "NULL",
-          Speciality: "NULL",
-          Rating: "NULL",
-          SITE_ID: "NULL",
-          DES_ID: "NULL",
-          Latitude: "NULL",
-          Longitude: "NULL",
-          Address: "NULL",
-          Site_Location: "NULL",
-          Street: "NULL",
-          Route: "NULL",
-          City: "NULL",
-          State: "NULL",
-          Country: "NULL",
-          Postal: "NULL",
-          URL: "NULL",
-          Phone: "NULL",
-          Email: "NULL",
-          Radial_distance: "NULL",
-          Distance_API: {
-            destination_addresses: [
-              "20-22 Atherton Rd, Oakleigh VIC 3166, Australia",
-            ],
-            origin_addresses: [
-              "5 Dudley St, Caulfield East VIC 3145, Australia",
-            ],
-            rows: [
-              {
-                elements: [
-                  {
-                    distance: {
-                      text: "5.8 km",
-                      value: 5831,
-                    },
-                    duration: {
-                      text: "21 mins",
-                      value: 1283,
-                    },
-                    status: "OK",
-                  },
-                ],
-              },
-            ],
-            status: "OK",
-          },
-          Distance: "NULL",
-          Name: "NULL",
-          Website: "NULL",
-        },
-      },
+      des_site_five: {},
       null_des_site: false,
       show_des_site: false,
       site_location_info: {},
       show_site_location_info: false,
       entered_address: "",
+      placeSearch: undefined,
+      autocomplete: undefined,
+      provider_map_name: "",
+      provider_map_site: "",
     };
   },
   methods: {
@@ -288,6 +41,21 @@ new Vue({
     //   }
     // }
     // },
+    geolocate() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const geolocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          const circle = new google.maps.Circle({
+            center: geolocation,
+            radius: position.coords.accuracy,
+          });
+          this.autocomplete.setBounds(circle.getBounds());
+        });
+      }
+    },
     handleClear() {
       this.providerName = "All Providers";
       this.specialityName = "All Specialities";
@@ -363,30 +131,38 @@ new Vue({
     },
     handleSearchNearby() {
       console.log("123", this.entered_address, this.specialityName);
-      var requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
+      if (this.entered_address != "" && this.specialityName != "") {
+        var requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
 
-      fetch(
-        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
-        // "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
-        requestOptions
-      )
-        .then((response) => response.text())
-        .then((result) => {
-          // this.des_site_five = {};
-          this.des_site_five = JSON.parse(result);
-          console.log(this.des_site_five);
-          if (JSON.stringify(this.des_site_five) === "{}") {
+        fetch(
+          `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
+          // "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .then((result) => {
+            // this.des_site_five = {};
+            this.des_site_five = JSON.parse(result);
+            console.log(this.des_site_five);
+            if (JSON.stringify(this.des_site_five) === "{}") {
+              // if (!this.des_site_five.hasOwnProperty("site_one")) {
+              this.null_des_site = true;
+              this.show_des_site = false;
+            } else {
+              this.null_des_site = false;
+              this.show_des_site = true;
+            }
+          })
+          .catch((error) => {
+            console.log("error", error);
             this.null_des_site = true;
-            this.show_des_site = false;
-          } else {
-            this.null_des_site = false;
-            this.show_des_site = true;
-          }
-        })
-        .catch((error) => console.log("error", error));
+          });
+      } else {
+        this.null_des_site = true;
+      }
     },
     selectProvider1() {
       // console.log("click");
@@ -397,7 +173,13 @@ new Vue({
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
-      this.initMap();
+      this.initMap(
+        this.des_site_five.site_one.Latitude,
+        this.des_site_five.site_one.Longitude,
+        this.des_site_five.site_one.URL
+      );
+      this.provider_map_name = this.des_site_five.site_one.Name;
+      this.provider_map_site = this.des_site_five.site_one.Site_Location;
     },
     selectProvider2() {
       // console.log("click");
@@ -408,6 +190,13 @@ new Vue({
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_two.Latitude,
+        this.des_site_five.site_two.Longitude,
+        this.des_site_five.site_two.URL
+      );
+      this.provider_map_name = this.des_site_five.site_two.Name;
+      this.provider_map_site = this.des_site_five.site_two.Site_Location;
     },
     selectProvider3() {
       // console.log("click");
@@ -418,6 +207,13 @@ new Vue({
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_three.Latitude,
+        this.des_site_five.site_three.Longitude,
+        this.des_site_five.site_three.URL
+      );
+      this.provider_map_name = this.des_site_five.site_three.Name;
+      this.provider_map_site = this.des_site_five.site_three.Site_Location;
     },
     selectProvider4() {
       // console.log("click");
@@ -428,6 +224,13 @@ new Vue({
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_four.Latitude,
+        this.des_site_five.site_four.Longitude,
+        this.des_site_five.site_four.URL
+      );
+      this.provider_map_name = this.des_site_five.site_four.Name;
+      this.provider_map_site = this.des_site_five.site_four.Site_Location;
     },
     selectProvider5() {
       // console.log("click");
@@ -438,17 +241,25 @@ new Vue({
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_five.Latitude,
+        this.des_site_five.site_five.Longitude,
+        this.des_site_five.site_five.URL
+      );
+      this.provider_map_name = this.des_site_five.site_five.Name;
+      this.provider_map_site = this.des_site_five.site_five.Site_Location;
     },
-    initMap() {
+    initMap(lat, lng, url) {
       const uluru = {
-        lat: -25.363,
-        lng: 131.044,
+        lat: Number(lat),
+        lng: Number(lng),
       };
+      // console.log(lat, lng);
       const mapDiv = document.getElementById("google-map");
       console.log(mapDiv);
       const map = new google.maps.Map(mapDiv, {
         // const map = new google.maps.Map(document.querySelector("#google-map"), {
-        zoom: 4,
+        zoom: 15,
         center: uluru,
       });
       console.log(map);
@@ -482,9 +293,27 @@ new Vue({
         title: "Uluru (Ayers Rock)",
       });
       marker.addListener("click", () => {
-        infowindow.open(map, marker);
+        // infowindow.open(map, marker);
+        window.open(url, "_blank");
       });
       console.log(uluru);
+      // this.initAutocomplete();
+    },
+    initAutocomplete() {
+      // Create the autocomplete object, restricting the search predictions to
+      // geographical location types.
+      this.autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("autocomplete"),
+        {
+          types: ["geocode"],
+        }
+      ); // Avoid paying for data that you don't need by restricting the set of
+      // place fields that are returned to just the address components.
+
+      // this.autocomplete.setFields(["address_component"]); // When the user selects an address from the drop-down, populate the
+      // address fields in the form.
+
+      // autocomplete.addListener("place_changed", fillInAddress);
     },
   },
   mounted() {
@@ -529,6 +358,7 @@ new Vue({
         console.log(this.nameList);
         console.log(this.specialityList);
         // console.log(this.homepage);
+        this.initAutocomplete();
       })
       .catch((error) => console.log("error", error));
   },
