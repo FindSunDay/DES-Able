@@ -73,7 +73,7 @@ def get_radial_distance(user_lat_lng, des_lat_lng):
 
 
 # main algorithm
-def main():
+def lambda_handler():
 
     des_site = to_dict("./Dataset/DES_SITE.csv")
     des_name = to_dict("./Dataset/DES_NAME.csv")
@@ -193,6 +193,6 @@ def main():
     return(des_site_5)
 
 
-if __name__ == '__main__':
-    resp = main()
-    print(resp)
+# if __name__ == '__main__':
+resp = lambda_handler()
+print(resp)

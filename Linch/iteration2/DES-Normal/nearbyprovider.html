@@ -192,16 +192,22 @@
           <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
             <div class="u-form-group u-form-name u-form-group-1">
               <label for="name-1c08" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">Address</label>
-              <input type="text" placeholder="Enter your address" id="name-1c08" name="Address" class="u-border-1 u-border-grey-30 u-border-radius-50 u-input u-input-round u-white u-input-1" required="">
+              <el-input v-model="entered_address" placeholder="Enter your address" style="border: none;"></el-input>
             </div>
             <div class="u-form-group u-form-select u-form-group-2">
               <label for="select-e0ce" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">Speciality</label>
               <div class="u-form-select-wrapper">
-                <select id="select-e0ce" name="select" class="u-border-1 u-border-grey-30 u-border-radius-50 u-input u-input-round u-white u-input-2">
-                  <option value="Item 1">Item 1</option>
-                  <option value="Item 2">Item 2</option>
-                  <option value="Item 3">Item 3</option>
-                </select>
+                <el-select placeholder="All Specialities"
+                style="width: 100%; height: 100%"
+                v-model="specialityName"
+                filterable>
+                  <el-option
+                      v-for="item in specialityList"
+                      :key="item.value"
+                      :value="item.value"
+                    >
+                    </el-option>
+                </el-select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
@@ -264,7 +270,7 @@
       <div class="u-clearfix u-sheet u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-1"><!--blog_post-->
           
-          <div class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-1">
+          <div v-if="des_site_five.site_one" class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-1">
             <!-- <el-button @click="selectProvider()" native-type="button" style="opacity: 0.0; border: none;"> -->
               <a href="#carousel_c0c9" @click="selectProvider1" style="width: 100%;">
               <div class=" hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-1">
@@ -287,7 +293,7 @@
           </div><!--/blog_post--><!--blog_post-->
         
         <!-- </el-button> -->
-          <div class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-2">
+          <div v-if="des_site_five.site_two" class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-2">
             <a href="#carousel_c0c9" @click="selectProvider2" style="width: 100%;">
             <div class="hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-2">
               <span class="u-icon u-icon-circle u-text-white u-icon-2">
@@ -305,7 +311,7 @@
             </div>
           </a>
           </div><!--/blog_post--><!--blog_post-->
-          <div class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-3" data-href="HOME-PAGE.html">
+          <div v-if="des_site_five.site_three" class="u-align-left u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-repeater-item-3" data-href="HOME-PAGE.html">
             <a href="#carousel_c0c9" @click="selectProvider3" style="width: 100%;">
             <div class="hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-3">
               <span class="u-icon u-icon-circle u-text-white u-icon-3">
@@ -327,7 +333,7 @@
         </div><!--/blog--><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-video-cover u-repeater-2"><!--blog_post-->
           
-          <div class="u-blog-post u-container-style u-custom-background  u-repeater-item u-shape-rectangle u-video-cover u-repeater-item-4">
+          <div v-if="des_site_five.site_four" class="u-blog-post u-container-style u-custom-background  u-repeater-item u-shape-rectangle u-video-cover u-repeater-item-4">
             <a href="#carousel_c0c9" @click="selectProvider4" style="width: 100%;">
             <div class="hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-4">
               <span class="u-icon u-icon-circle u-text-white u-icon-4">
@@ -345,7 +351,7 @@
             </div>
             </a>
           </div><!--/blog_post--><!--blog_post-->
-          <div class="u-blog-post u-container-style u-custom-background  u-repeater-item u-shape-rectangle u-video-cover u-repeater-item-5">
+          <div v-if="des_site_five.site_five" class="u-blog-post u-container-style u-custom-background  u-repeater-item u-shape-rectangle u-video-cover u-repeater-item-5">
             <a href="#carousel_c0c9" @click="selectProvider2" style="width: 100%;">
             <div class="hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-5">
               <span class="u-icon u-icon-circle u-text-white u-icon-5">

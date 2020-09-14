@@ -21,11 +21,263 @@ new Vue({
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
-      des_site_five: {},
+      des_site_five: {
+        site_one: {
+          Program: "Disability Management Service",
+          Speciality: "All Client Types",
+          Rating: "2",
+          SITE_ID: "6",
+          DES_ID: "1",
+          Latitude: "-37.89991440000001",
+          Longitude: "145.0890916",
+          Address: "9-11 Portman St, Oakleigh VIC 3166, Australia",
+          Site_Location: "OAKLEIGH",
+          Street: "9-11",
+          Route: "Portman Street",
+          City: "Monash City",
+          State: "VIC",
+          Country: "Australia",
+          Postal: "3166",
+          URL: "https://maps.google.com/?cid=11453817125495033597",
+          Phone: "(03) 9569 4927",
+          Email: "apm4jobs@apm.net.au",
+          Radial_distance: 4.21,
+          Distance_API: {
+            destination_addresses: [
+              "9 Portman St, Oakleigh VIC 3166, Australia",
+            ],
+            origin_addresses: [
+              "5 Dudley St, Caulfield East VIC 3145, Australia",
+            ],
+            rows: [
+              {
+                elements: [
+                  {
+                    distance: {
+                      text: "5.6 km",
+                      value: 5642,
+                    },
+                    duration: {
+                      text: "19 mins",
+                      value: 1142,
+                    },
+                    status: "OK",
+                  },
+                ],
+              },
+            ],
+            status: "OK",
+          },
+          Distance: 5.6,
+          Name: "APM Employment Services",
+          Website: "https://apm.net.au",
+        },
+        site_two: {
+          Program: "Employment Support Service",
+          Speciality: "All Client Types",
+          Rating: "3",
+          SITE_ID: "6",
+          DES_ID: "1",
+          Latitude: "-37.89991440000001",
+          Longitude: "145.0890916",
+          Address: "9-11 Portman St, Oakleigh VIC 3166, Australia",
+          Site_Location: "OAKLEIGH",
+          Street: "9-11",
+          Route: "Portman Street",
+          City: "Monash City",
+          State: "VIC",
+          Country: "Australia",
+          Postal: "3166",
+          URL: "https://maps.google.com/?cid=11453817125495033597",
+          Phone: "(03) 9569 4927",
+          Email: "apm4jobs@apm.net.au",
+          Radial_distance: 4.21,
+          Distance_API: {
+            destination_addresses: [
+              "9 Portman St, Oakleigh VIC 3166, Australia",
+            ],
+            origin_addresses: [
+              "5 Dudley St, Caulfield East VIC 3145, Australia",
+            ],
+            rows: [
+              {
+                elements: [
+                  {
+                    distance: {
+                      text: "5.6 km",
+                      value: 5642,
+                    },
+                    duration: {
+                      text: "19 mins",
+                      value: 1142,
+                    },
+                    status: "OK",
+                  },
+                ],
+              },
+            ],
+            status: "OK",
+          },
+          Distance: 5.6,
+          Name: "APM Employment Services",
+          Website: "https://apm.net.au",
+        },
+        site_three: {
+          Program: "Disability Management Service",
+          Speciality: "All Client Types",
+          Rating: "1",
+          SITE_ID: "24",
+          DES_ID: "5",
+          Latitude: "-37.8990345",
+          Longitude: "145.0884724",
+          Address: "11 Station St, Oakleigh VIC 3166, Australia",
+          Site_Location: "OAKLEIGH",
+          Street: "11",
+          Route: "Station Street",
+          City: "Monash City",
+          State: "VIC",
+          Country: "Australia",
+          Postal: "3166",
+          URL: "https://maps.google.com/?cid=2107608628032716906",
+          Phone: "1300 385 738",
+          Email: "dvjs@dvjs.com.au",
+          Radial_distance: 4.11,
+          Distance_API: {
+            destination_addresses: [
+              "11 Station St, Oakleigh VIC 3166, Australia",
+            ],
+            origin_addresses: [
+              "5 Dudley St, Caulfield East VIC 3145, Australia",
+            ],
+            rows: [
+              {
+                elements: [
+                  {
+                    distance: {
+                      text: "5.7 km",
+                      value: 5714,
+                    },
+                    duration: {
+                      text: "20 mins",
+                      value: 1194,
+                    },
+                    status: "OK",
+                  },
+                ],
+              },
+            ],
+            status: "OK",
+          },
+          Distance: 5.7,
+          Name: "DVJS Employment Solutions",
+          Website: "https://www.dvjs.com.au",
+        },
+        site_four: {
+          Program: "Employment Support Service",
+          Speciality: "All Client Types",
+          Rating: "4",
+          SITE_ID: "24",
+          DES_ID: "5",
+          Latitude: "-37.8990345",
+          Longitude: "145.0884724",
+          Address: "11 Station St, Oakleigh VIC 3166, Australia",
+          Site_Location: "OAKLEIGH",
+          Street: "11",
+          Route: "Station Street",
+          City: "Monash City",
+          State: "VIC",
+          Country: "Australia",
+          Postal: "3166",
+          URL: "https://maps.google.com/?cid=2107608628032716906",
+          Phone: "1300 385 738",
+          Email: "dvjs@dvjs.com.au",
+          Radial_distance: 4.11,
+          Distance_API: {
+            destination_addresses: [
+              "11 Station St, Oakleigh VIC 3166, Australia",
+            ],
+            origin_addresses: [
+              "5 Dudley St, Caulfield East VIC 3145, Australia",
+            ],
+            rows: [
+              {
+                elements: [
+                  {
+                    distance: {
+                      text: "5.7 km",
+                      value: 5714,
+                    },
+                    duration: {
+                      text: "20 mins",
+                      value: 1194,
+                    },
+                    status: "OK",
+                  },
+                ],
+              },
+            ],
+            status: "OK",
+          },
+          Distance: 5.7,
+          Name: "DVJS Employment Solutions",
+          Website: "https://www.dvjs.com.au",
+        },
+        site_five: {
+          Program: "NULL",
+          Speciality: "NULL",
+          Rating: "NULL",
+          SITE_ID: "NULL",
+          DES_ID: "NULL",
+          Latitude: "NULL",
+          Longitude: "NULL",
+          Address: "NULL",
+          Site_Location: "NULL",
+          Street: "NULL",
+          Route: "NULL",
+          City: "NULL",
+          State: "NULL",
+          Country: "NULL",
+          Postal: "NULL",
+          URL: "NULL",
+          Phone: "NULL",
+          Email: "NULL",
+          Radial_distance: "NULL",
+          Distance_API: {
+            destination_addresses: [
+              "20-22 Atherton Rd, Oakleigh VIC 3166, Australia",
+            ],
+            origin_addresses: [
+              "5 Dudley St, Caulfield East VIC 3145, Australia",
+            ],
+            rows: [
+              {
+                elements: [
+                  {
+                    distance: {
+                      text: "5.8 km",
+                      value: 5831,
+                    },
+                    duration: {
+                      text: "21 mins",
+                      value: 1283,
+                    },
+                    status: "OK",
+                  },
+                ],
+              },
+            ],
+            status: "OK",
+          },
+          Distance: "NULL",
+          Name: "NULL",
+          Website: "NULL",
+        },
+      },
       null_des_site: false,
       show_des_site: false,
       site_location_info: {},
       show_site_location_info: false,
+      entered_address: "",
     };
   },
   methods: {
@@ -110,21 +362,22 @@ new Vue({
         .catch((error) => console.log("error", error));
     },
     handleSearchNearby() {
-      console.log("123");
+      console.log("123", this.entered_address, this.specialityName);
       var requestOptions = {
         method: "GET",
         redirect: "follow",
       };
 
       fetch(
-        "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map",
+        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
+        // "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
         requestOptions
       )
         .then((response) => response.text())
         .then((result) => {
           // this.des_site_five = {};
           this.des_site_five = JSON.parse(result);
-          // console.log(this.des_site_five);
+          console.log(this.des_site_five);
           if (JSON.stringify(this.des_site_five) === "{}") {
             this.null_des_site = true;
             this.show_des_site = false;
