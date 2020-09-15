@@ -122,6 +122,14 @@
                 >NEARBY PROVIDER</a
               >
             </li>
+            <li class="u-nav-item">
+              <a
+                class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                href="./travelsupport.html"
+                style="padding: 10px 40px"
+                >TRAVEL SUPPORT</a
+              >
+            </li>
           </ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse">
@@ -154,6 +162,14 @@
                   href="./nearbyprovider.html"
                   style="padding: 10px 40px"
                   >NEARBY PROVIDER</a
+                >
+              </li>
+              <li class="u-nav-item">
+                <a
+                  class="u-button-style u-nav-link"
+                  href="./travelsupport.html"
+                  style="padding: 10px 40px"
+                  >TRAVEL SUPPORT</a
                 >
               </li>
             </ul>
@@ -224,6 +240,7 @@
                   size="medium"
                   icon="el-icon-search"
                   @click="handleSearchNearby()"
+                  :loading="is_nearby_button_loading"
                   >Submit</el-button
                 >
             </div>
@@ -273,7 +290,7 @@
       </div>
     </section>
 
-    <section v-if="show_des_site" class="u-align-center u-clearfix u-image u-shading u-section-2" id="sec-b6d8" data-image-width="1600" data-image-height="1600">
+    <section v-show="show_des_site" class="u-align-center u-clearfix u-image u-shading u-section-2" id="sec-b6d8" data-image-width="1600" data-image-height="1600">
       <div class="u-clearfix u-sheet u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-1"><!--blog_post-->
           

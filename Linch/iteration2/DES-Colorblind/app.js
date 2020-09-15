@@ -31,6 +31,7 @@ new Vue({
       autocomplete: undefined,
       provider_map_name: "",
       provider_map_site: "",
+      is_nearby_button_loading: false,
     };
   },
   methods: {
@@ -42,21 +43,36 @@ new Vue({
     // }
     // },
     geolocate() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-          const geolocation = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          const circle = new google.maps.Circle({
-            center: geolocation,
-            radius: position.coords.accuracy,
-            // radius: 50,
-            // language: en,
-          });
-          this.autocomplete.setBounds(circle.getBounds());
-        });
-      }
+      // if (navigator.geolocation) {
+      //   navigator.geolocation.getCurrentPosition((position) => {
+      //     const geolocation = {
+      //       // lat: position.coords.latitude,
+      //       // lng: position.coords.longitude,
+      //       lat: -37.881812,
+      //       lng: 145.058236,
+      //     };
+      //     const circle = new google.maps.Circle({
+      //       center: geolocation,
+      //       radius: position.coords.accuracy,
+      //       // radius: 50,
+      //       // language: en,
+      //     });
+      //     this.autocomplete.setBounds(circle.getBounds());
+      //   });
+      // }
+      const geolocation = {
+        // lat: position.coords.latitude,
+        // lng: position.coords.longitude,
+        lat: -37.881812,
+        lng: 145.058236,
+      };
+      const circle = new google.maps.Circle({
+        center: geolocation,
+        radius: 250000,
+        // radius: 50,
+        // language: en,
+      });
+      this.autocomplete.setBounds(circle.getBounds());
     },
     handleClear() {
       this.providerName = "All Providers";
@@ -132,12 +148,19 @@ new Vue({
         .catch((error) => console.log("error", error));
     },
     handleSearchNearby() {
+      try {
+        this.fillInAddress();
+      } catch {
+        this.null_des_site = true;
+      }
       console.log("123", this.entered_address, this.specialityName);
       if (this.entered_address != "" && this.specialityName != "") {
         var requestOptions = {
           method: "GET",
           redirect: "follow",
         };
+
+        this.is_nearby_button_loading = true;
 
         fetch(
           `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
@@ -156,15 +179,21 @@ new Vue({
             } else {
               this.null_des_site = false;
               this.show_des_site = true;
+              // document.getElementById("sec-b6d8").scrollIntoView();
+              document.querySelector("#sec-b6d8").scrollTo();
+              // window.open("#sec-b6d8");
+              this.is_nearby_button_loading = false;
             }
           })
           .catch((error) => {
             console.log("error", error);
             this.null_des_site = true;
+            this.is_nearby_button_loading = false;
           });
       } else {
         this.null_des_site = true;
       }
+      // this.is_nearby_button_loading = false;
     },
     selectProvider1() {
       // console.log("click");
@@ -354,10 +383,27 @@ new Vue({
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
 
-      // this.autocomplete.setFields(["address_component"]); // When the user selects an address from the drop-down, populate the
-      // address fields in the form.
+      // this.autocomplete.setFields(["address_component"]);
+      // // When the user selects an address from the drop-down, populate the
+      // // address fields in the form.
 
-      // autocomplete.addListener("place_changed", fillInAddress);
+      // this.autocomplete.addListener("place_changed", this.fillInAddress());
+    },
+    fillInAddress() {
+      const place = this.autocomplete.getPlace();
+      console.log(place);
+      let str =
+        place.address_components[0].short_name +
+        " " +
+        place.address_components[1].short_name +
+        " " +
+        place.address_components[2].short_name +
+        " " +
+        // place.address_components[3].short_name +
+        // " " +
+        place.address_components[4].short_name;
+      console.log("str", str);
+      this.entered_address = str;
     },
   },
   mounted() {
