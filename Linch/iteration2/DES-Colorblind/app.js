@@ -21,6 +21,16 @@ new Vue({
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
+      des_site_five: {},
+      null_des_site: false,
+      show_des_site: false,
+      site_location_info: {},
+      show_site_location_info: false,
+      entered_address: "",
+      placeSearch: undefined,
+      autocomplete: undefined,
+      provider_map_name: "",
+      provider_map_site: "",
     };
   },
   methods: {
@@ -31,30 +41,21 @@ new Vue({
     //   }
     // }
     // },
-    debounce() {
-      let timer;
-      if (timer) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(() => {
-        console.log("防抖...");
-        timer = undefined;
-      }, 2000);
-    },
-    throttle: () => {
-      if (lastTime && now - lastTime < 200) {
-        clearTimeout(timer);
-        console.log("....");
-        timer = setTimeout(() => {
-          console.log("点击...");
-          lastTime = +new Date();
-        }, 2000);
-      } else {
-        lastTime = now;
-        timer = setTimeout(() => {
-          console.log("点击...");
-          lastTime = +new Date();
-        }, 200);
+    geolocate() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const geolocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          const circle = new google.maps.Circle({
+            center: geolocation,
+            radius: position.coords.accuracy,
+            // radius: 50,
+            // language: en,
+          });
+          this.autocomplete.setBounds(circle.getBounds());
+        });
       }
     },
     handleClear() {
@@ -130,8 +131,237 @@ new Vue({
         })
         .catch((error) => console.log("error", error));
     },
+    handleSearchNearby() {
+      console.log("123", this.entered_address, this.specialityName);
+      if (this.entered_address != "" && this.specialityName != "") {
+        var requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
+
+        fetch(
+          `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
+          // "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .then((result) => {
+            // this.des_site_five = {};
+            this.des_site_five = JSON.parse(result);
+            console.log(this.des_site_five);
+            if (JSON.stringify(this.des_site_five) === "{}") {
+              // if (!this.des_site_five.hasOwnProperty("site_one")) {
+              this.null_des_site = true;
+              this.show_des_site = false;
+            } else {
+              this.null_des_site = false;
+              this.show_des_site = true;
+            }
+          })
+          .catch((error) => {
+            console.log("error", error);
+            this.null_des_site = true;
+          });
+      } else {
+        this.null_des_site = true;
+      }
+    },
+    selectProvider1() {
+      // console.log("click");
+      let temp = {};
+      temp.address = this.des_site_five.site_one.Address;
+      temp.email = this.des_site_five.site_one.Email;
+      temp.phone = this.des_site_five.site_one.Phone;
+      temp.website = this.des_site_five.site_one.Website;
+      this.site_location_info = temp;
+      console.log(this.site_location_info);
+
+      this.initMap(
+        this.des_site_five.site_one.Latitude,
+        this.des_site_five.site_one.Longitude,
+        this.des_site_five.site_one.URL,
+        this.des_site_five.site_one.Name
+      );
+      this.show_site_location_info = true;
+      this.provider_map_name = this.des_site_five.site_one.Name;
+      this.provider_map_site = this.des_site_five.site_one.Site_Location;
+    },
+    selectProvider2() {
+      // console.log("click");
+      let temp = {};
+      temp.address = this.des_site_five.site_two.Address;
+      temp.email = this.des_site_five.site_two.Email;
+      temp.phone = this.des_site_five.site_two.Phone;
+      temp.website = this.des_site_five.site_two.Website;
+      this.site_location_info = temp;
+      console.log(this.site_location_info);
+      this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_two.Latitude,
+        this.des_site_five.site_two.Longitude,
+        this.des_site_five.site_two.URL,
+        this.des_site_five.site_two.Name
+      );
+      this.provider_map_name = this.des_site_five.site_two.Name;
+      this.provider_map_site = this.des_site_five.site_two.Site_Location;
+    },
+    selectProvider3() {
+      // console.log("click");
+      let temp = {};
+      temp.address = this.des_site_five.site_three.Address;
+      temp.email = this.des_site_five.site_three.Email;
+      temp.phone = this.des_site_five.site_three.Phone;
+      temp.website = this.des_site_five.site_three.Website;
+      this.site_location_info = temp;
+      console.log(this.site_location_info);
+      this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_three.Latitude,
+        this.des_site_five.site_three.Longitude,
+        this.des_site_five.site_three.URL,
+        this.des_site_five.site_three.Name
+      );
+      this.provider_map_name = this.des_site_five.site_three.Name;
+      this.provider_map_site = this.des_site_five.site_three.Site_Location;
+    },
+    selectProvider4() {
+      // console.log("click");
+      let temp = {};
+      temp.address = this.des_site_five.site_four.Address;
+      temp.email = this.des_site_five.site_four.Email;
+      temp.phone = this.des_site_five.site_four.Phone;
+      temp.website = this.des_site_five.site_four.Website;
+      this.site_location_info = temp;
+      console.log(this.site_location_info);
+      this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_four.Latitude,
+        this.des_site_five.site_four.Longitude,
+        this.des_site_five.site_four.URL,
+        this.des_site_five.site_four.Name
+      );
+      this.provider_map_name = this.des_site_five.site_four.Name;
+      this.provider_map_site = this.des_site_five.site_four.Site_Location;
+    },
+    selectProvider5() {
+      // console.log("click");
+      let temp = {};
+      temp.address = this.des_site_five.site_five.Address;
+      temp.email = this.des_site_five.site_five.Email;
+      temp.phone = this.des_site_five.site_five.Phone;
+      temp.website = this.des_site_five.site_five.Website;
+      this.site_location_info = temp;
+      console.log(this.site_location_info);
+      this.show_site_location_info = true;
+      this.initMap(
+        this.des_site_five.site_five.Latitude,
+        this.des_site_five.site_five.Longitude,
+        this.des_site_five.site_five.URL,
+        this.des_site_five.site_five.Name
+      );
+      this.provider_map_name = this.des_site_five.site_five.Name;
+      this.provider_map_site = this.des_site_five.site_five.Site_Location;
+    },
+    initMap(lat, lng, url, name) {
+      const provider = {
+        lat: Number(lat),
+        lng: Number(lng),
+      };
+
+      const user = {
+        lat: Number(this.des_site_five.cur_lat),
+        lng: Number(this.des_site_five.cur_lng),
+      };
+
+      const center = {
+        lat: (provider.lat + user.lat) / 2,
+        lng: (provider.lng + user.lng) / 2,
+      };
+
+      // console.log(lat, lng);
+      const mapDiv = document.getElementById("google-map");
+      console.log(mapDiv);
+      const map = new google.maps.Map(mapDiv, {
+        // const map = new google.maps.Map(document.querySelector("#google-map"), {
+        zoom: 13,
+        center: center,
+      });
+      console.log(map);
+      // const contentString =
+      //   '<div id="content">' +
+      //   '<div id="siteNotice">' +
+      //   "</div>" +
+      //   '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
+      //   '<div id="bodyContent">' +
+      //   "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+      //   "sandstone rock formation in the southern part of the " +
+      //   "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
+      //   "south west of the nearest large town, Alice Springs; 450&#160;km " +
+      //   "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
+      //   "features of the Uluru - Kata Tjuta National Park. Uluru is " +
+      //   "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
+      //   "Aboriginal people of the area. It has many springs, waterholes, " +
+      //   "rock caves and ancient paintings. Uluru is listed as a World " +
+      //   "Heritage Site.</p>" +
+      //   '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+      //   "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+      //   "(last visited June 22, 2009).</p>" +
+      //   "</div>" +
+      //   "</div>";
+      const infowindow = new google.maps.InfoWindow({
+        // content: contentString,
+        content: name,
+      });
+
+      const infowindow2 = new google.maps.InfoWindow({
+        // content: contentString,
+        content: "Your Location",
+      });
+
+      const marker = new google.maps.Marker({
+        position: provider,
+        map,
+        title: name,
+        // label: name,
+      });
+
+      const marker2 = new google.maps.Marker({
+        position: user,
+        map,
+        title: "Your location",
+        // label: "You",
+      });
+
+      infowindow.open(map, marker);
+      infowindow2.open(map, marker2);
+      marker.addListener("click", () => {
+        // infowindow.open(map, marker);
+        window.open(url, "_blank");
+      });
+      console.log(provider);
+      // this.initAutocomplete();
+    },
+    initAutocomplete() {
+      // Create the autocomplete object, restricting the search predictions to
+      // geographical location types.
+      this.autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("autocomplete"),
+        {
+          types: ["geocode"],
+          // types: ["(cities)"],
+          componentRestrictions: { country: "au" },
+        }
+      ); // Avoid paying for data that you don't need by restricting the set of
+      // place fields that are returned to just the address components.
+
+      // this.autocomplete.setFields(["address_component"]); // When the user selects an address from the drop-down, populate the
+      // address fields in the form.
+
+      // autocomplete.addListener("place_changed", fillInAddress);
+    },
   },
   mounted() {
+    // this.initMap();
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -143,6 +373,7 @@ new Vue({
     )
       .then((response) => response.text())
       .then((result) => {
+        // console.log(result);
         this.infoList = JSON.parse(result).All_Info;
         this.showList = this.infoList;
         // console.log(this.infoList);
@@ -171,6 +402,7 @@ new Vue({
         console.log(this.nameList);
         console.log(this.specialityList);
         // console.log(this.homepage);
+        this.initAutocomplete();
       })
       .catch((error) => console.log("error", error));
   },

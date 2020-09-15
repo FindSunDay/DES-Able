@@ -51,7 +51,7 @@ new Vue({
           const circle = new google.maps.Circle({
             center: geolocation,
             radius: position.coords.accuracy,
-            // radius: 5000,
+            // radius: 50,
             // language: en,
           });
           this.autocomplete.setBounds(circle.getBounds());
@@ -172,6 +172,7 @@ new Vue({
       temp.address = this.des_site_five.site_one.Address;
       temp.email = this.des_site_five.site_one.Email;
       temp.phone = this.des_site_five.site_one.Phone;
+      temp.website = this.des_site_five.site_one.Website;
       this.site_location_info = temp;
       console.log(this.site_location_info);
 
@@ -191,6 +192,7 @@ new Vue({
       temp.address = this.des_site_five.site_two.Address;
       temp.email = this.des_site_five.site_two.Email;
       temp.phone = this.des_site_five.site_two.Phone;
+      temp.website = this.des_site_five.site_two.Website;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -209,6 +211,7 @@ new Vue({
       temp.address = this.des_site_five.site_three.Address;
       temp.email = this.des_site_five.site_three.Email;
       temp.phone = this.des_site_five.site_three.Phone;
+      temp.website = this.des_site_five.site_three.Website;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -227,6 +230,7 @@ new Vue({
       temp.address = this.des_site_five.site_four.Address;
       temp.email = this.des_site_five.site_four.Email;
       temp.phone = this.des_site_five.site_four.Phone;
+      temp.website = this.des_site_five.site_four.Website;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -245,6 +249,7 @@ new Vue({
       temp.address = this.des_site_five.site_five.Address;
       temp.email = this.des_site_five.site_five.Email;
       temp.phone = this.des_site_five.site_five.Phone;
+      temp.website = this.des_site_five.site_five.Website;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -303,9 +308,16 @@ new Vue({
       //   "(last visited June 22, 2009).</p>" +
       //   "</div>" +
       //   "</div>";
-      // const infowindow = new google.maps.InfoWindow({
-      //   content: contentString,
-      // });
+      const infowindow = new google.maps.InfoWindow({
+        // content: contentString,
+        content: name,
+      });
+
+      const infowindow2 = new google.maps.InfoWindow({
+        // content: contentString,
+        content: "Your Location",
+      });
+
       const marker = new google.maps.Marker({
         position: provider,
         map,
@@ -317,9 +329,11 @@ new Vue({
         position: user,
         map,
         title: "Your location",
-        label: "You",
+        // label: "You",
       });
 
+      infowindow.open(map, marker);
+      infowindow2.open(map, marker2);
       marker.addListener("click", () => {
         // infowindow.open(map, marker);
         window.open(url, "_blank");
@@ -334,6 +348,7 @@ new Vue({
         document.getElementById("autocomplete"),
         {
           types: ["geocode"],
+          // types: ["(cities)"],
           componentRestrictions: { country: "au" },
         }
       ); // Avoid paying for data that you don't need by restricting the set of
