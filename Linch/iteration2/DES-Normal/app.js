@@ -51,6 +51,8 @@ new Vue({
           const circle = new google.maps.Circle({
             center: geolocation,
             radius: position.coords.accuracy,
+            // radius: 5000,
+            // language: en,
           });
           this.autocomplete.setBounds(circle.getBounds());
         });
@@ -172,12 +174,14 @@ new Vue({
       temp.phone = this.des_site_five.site_one.Phone;
       this.site_location_info = temp;
       console.log(this.site_location_info);
-      this.show_site_location_info = true;
+
       this.initMap(
         this.des_site_five.site_one.Latitude,
         this.des_site_five.site_one.Longitude,
-        this.des_site_five.site_one.URL
+        this.des_site_five.site_one.URL,
+        this.des_site_five.site_one.Name
       );
+      this.show_site_location_info = true;
       this.provider_map_name = this.des_site_five.site_one.Name;
       this.provider_map_site = this.des_site_five.site_one.Site_Location;
     },
@@ -193,7 +197,8 @@ new Vue({
       this.initMap(
         this.des_site_five.site_two.Latitude,
         this.des_site_five.site_two.Longitude,
-        this.des_site_five.site_two.URL
+        this.des_site_five.site_two.URL,
+        this.des_site_five.site_two.Name
       );
       this.provider_map_name = this.des_site_five.site_two.Name;
       this.provider_map_site = this.des_site_five.site_two.Site_Location;
@@ -210,7 +215,8 @@ new Vue({
       this.initMap(
         this.des_site_five.site_three.Latitude,
         this.des_site_five.site_three.Longitude,
-        this.des_site_five.site_three.URL
+        this.des_site_five.site_three.URL,
+        this.des_site_five.site_three.Name
       );
       this.provider_map_name = this.des_site_five.site_three.Name;
       this.provider_map_site = this.des_site_five.site_three.Site_Location;
@@ -227,7 +233,8 @@ new Vue({
       this.initMap(
         this.des_site_five.site_four.Latitude,
         this.des_site_five.site_four.Longitude,
-        this.des_site_five.site_four.URL
+        this.des_site_five.site_four.URL,
+        this.des_site_five.site_four.Name
       );
       this.provider_map_name = this.des_site_five.site_four.Name;
       this.provider_map_site = this.des_site_five.site_four.Site_Location;
@@ -244,59 +251,80 @@ new Vue({
       this.initMap(
         this.des_site_five.site_five.Latitude,
         this.des_site_five.site_five.Longitude,
-        this.des_site_five.site_five.URL
+        this.des_site_five.site_five.URL,
+        this.des_site_five.site_five.Name
       );
       this.provider_map_name = this.des_site_five.site_five.Name;
       this.provider_map_site = this.des_site_five.site_five.Site_Location;
     },
-    initMap(lat, lng, url) {
-      const uluru = {
+    initMap(lat, lng, url, name) {
+      const provider = {
         lat: Number(lat),
         lng: Number(lng),
       };
+
+      const user = {
+        lat: Number(this.des_site_five.cur_lat),
+        lng: Number(this.des_site_five.cur_lng),
+      };
+
+      const center = {
+        lat: (provider.lat + user.lat) / 2,
+        lng: (provider.lng + user.lng) / 2,
+      };
+
       // console.log(lat, lng);
       const mapDiv = document.getElementById("google-map");
       console.log(mapDiv);
       const map = new google.maps.Map(mapDiv, {
         // const map = new google.maps.Map(document.querySelector("#google-map"), {
-        zoom: 15,
-        center: uluru,
+        zoom: 13,
+        center: center,
       });
       console.log(map);
-      const contentString =
-        '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
-        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
-        '<div id="bodyContent">' +
-        "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
-        "sandstone rock formation in the southern part of the " +
-        "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
-        "south west of the nearest large town, Alice Springs; 450&#160;km " +
-        "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
-        "features of the Uluru - Kata Tjuta National Park. Uluru is " +
-        "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
-        "Aboriginal people of the area. It has many springs, waterholes, " +
-        "rock caves and ancient paintings. Uluru is listed as a World " +
-        "Heritage Site.</p>" +
-        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-        "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
-        "(last visited June 22, 2009).</p>" +
-        "</div>" +
-        "</div>";
-      const infowindow = new google.maps.InfoWindow({
-        content: contentString,
-      });
+      // const contentString =
+      //   '<div id="content">' +
+      //   '<div id="siteNotice">' +
+      //   "</div>" +
+      //   '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
+      //   '<div id="bodyContent">' +
+      //   "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+      //   "sandstone rock formation in the southern part of the " +
+      //   "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
+      //   "south west of the nearest large town, Alice Springs; 450&#160;km " +
+      //   "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
+      //   "features of the Uluru - Kata Tjuta National Park. Uluru is " +
+      //   "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
+      //   "Aboriginal people of the area. It has many springs, waterholes, " +
+      //   "rock caves and ancient paintings. Uluru is listed as a World " +
+      //   "Heritage Site.</p>" +
+      //   '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+      //   "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+      //   "(last visited June 22, 2009).</p>" +
+      //   "</div>" +
+      //   "</div>";
+      // const infowindow = new google.maps.InfoWindow({
+      //   content: contentString,
+      // });
       const marker = new google.maps.Marker({
-        position: uluru,
+        position: provider,
         map,
-        title: "Uluru (Ayers Rock)",
+        title: name,
+        // label: name,
       });
+
+      const marker2 = new google.maps.Marker({
+        position: user,
+        map,
+        title: "Your location",
+        label: "You",
+      });
+
       marker.addListener("click", () => {
         // infowindow.open(map, marker);
         window.open(url, "_blank");
       });
-      console.log(uluru);
+      console.log(provider);
       // this.initAutocomplete();
     },
     initAutocomplete() {
@@ -306,6 +334,7 @@ new Vue({
         document.getElementById("autocomplete"),
         {
           types: ["geocode"],
+          componentRestrictions: { country: "au" },
         }
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
