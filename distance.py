@@ -84,7 +84,8 @@ def lambda_handler():
     # -- Get input from Web
 
     # user_loc = input('Please type down your address:', )
-    user_loc = '5 Dudley street 3145'
+    # user_loc = '5 Dudley street 3145'
+    user_loc = '52 Osullivan Rd Glen Waverley VIC'
 
     user_loc_detail = get_user_loc(user_loc)
 
@@ -181,12 +182,14 @@ def lambda_handler():
 
     des_site_5 = {}
     index = 0
-    for key, val in des_site_10.items():
-        if index < 5 and key == top_5[index]:
-            des_site_5[index + 1] = val
-        else:
-            break
-        index += 1
+    for item in top_5:
+        for key, val in des_site_10.items():
+            if index < 5 and key == item:
+                des_site_5[index + 1] = val
+                index += 1
+            # else:
+            #     break
+            # index += 1
 
     # Collect name and website from des_name
     for key, val in des_site_5.items():
@@ -199,8 +202,6 @@ def lambda_handler():
     return(des_site_5)
 
 
-
 # if __name__ == '__main__':
 resp = lambda_handler()
 print(resp)
-

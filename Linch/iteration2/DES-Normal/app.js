@@ -189,6 +189,8 @@ new Vue({
             console.log("error", error);
             this.null_des_site = true;
             this.is_nearby_button_loading = false;
+            this.show_site_location_info = false;
+            this.show_des_site = false;
           });
       } else {
         this.null_des_site = true;

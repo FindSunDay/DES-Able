@@ -383,11 +383,11 @@ new Vue({
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
 
-      // this.autocomplete.setFields(["address_component"]);
+      this.autocomplete.setFields(["address_component"]);
       // // When the user selects an address from the drop-down, populate the
       // // address fields in the form.
 
-      // this.autocomplete.addListener("place_changed", this.fillInAddress());
+      this.autocomplete.addListener("place_changed", this.fillInAddress());
     },
     fillInAddress() {
       const place = this.autocomplete.getPlace();
@@ -404,6 +404,7 @@ new Vue({
         place.address_components[4].short_name;
       console.log("str", str);
       this.entered_address = str;
+      this.initAutocomplete;
     },
   },
   mounted() {
