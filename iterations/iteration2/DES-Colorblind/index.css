@@ -4,7 +4,7 @@
 .u-block-e78f-2 {position: absolute; bottom: 10px}
 .u-block-e78f-3 {position: absolute; left: 0}
 .u-block-e78f-4 {position: absolute; right: 0}.u-section-2-1 {background-image: url("images/ColorBlindWeb1.jpg"); background-position: 50% 50%}
-.u-section-2-1 .u-sheet-1 {min-height: 500px} 
+.u-section-2-1 .u-sheet-1 {min-height: 750px} 
 
 @media (max-width: 1199px){ .u-section-2-1 .u-sheet-1 {min-height: 604px} }
 
@@ -14,7 +14,7 @@
 
 @media (max-width: 575px){ .u-section-2-1 {background-position: 50% 36.92%}
 .u-section-2-1 .u-sheet-1 {min-height: 217px} }.u-section-2-2 {background-image: linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url("images/ColorBlindWeb2.jpeg"); background-position: 50% 100%}
-.u-section-2-2 .u-sheet-1 {min-height: 500px} 
+.u-section-2-2 .u-sheet-1 {min-height: 750px} 
 
 @media (max-width: 1199px){ .u-section-2-2 .u-sheet-1 {min-height: 604px} }
 
@@ -23,7 +23,7 @@
 @media (max-width: 767px){ .u-section-2-2 .u-sheet-1 {min-height: 347px} }
 
 @media (max-width: 575px){ .u-section-2-2 .u-sheet-1 {min-height: 287px} }.u-section-2-3 {background-image: url("images/ColorBlindWeb3.jpg"); background-position: 50% 50%}
-.u-section-2-3 .u-sheet-1 {min-height: 500px} 
+.u-section-2-3 .u-sheet-1 {min-height: 750px} 
 
 @media (max-width: 1199px){ .u-section-2-3 .u-sheet-1 {min-height: 604px} }
 
@@ -31,12 +31,12 @@
 
 @media (max-width: 767px){ .u-section-2-3 .u-sheet-1 {min-height: 347px} }
 
-@media (max-width: 575px){ .u-section-2-3 .u-sheet-1 {min-height: 287px} }.u-section-2-4 {background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("images/ColorBlindWeb4.jpeg"); background-position: 50% 50%; min-height: 500px} 
+@media (max-width: 575px){ .u-section-2-3 .u-sheet-1 {min-height: 287px} }.u-section-2-4 {background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("images/ColorBlindWeb4.jpeg"); background-position: 50% 50%; min-height: 750px} 
 
 @media (max-width: 1199px){ .u-section-2-4 {min-height: 604px} }
 
 @media (max-width: 991px){ .u-section-2-4 {min-height: 660px} }.u-section-2-5 {background-image: url("images/ColorBlindWeb5.jpeg"); background-position: 50% 50%}
-.u-section-2-5 .u-sheet-1 {min-height: 500px} 
+.u-section-2-5 .u-sheet-1 {min-height: 750px} 
 
 @media (max-width: 1199px){ .u-section-2-5 .u-sheet-1 {min-height: 604px} }
 
