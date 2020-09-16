@@ -181,12 +181,11 @@ def lambda_handler():
 
     des_site_5 = {}
     index = 0
-    for key, val in des_site_10.items():
-        if index < 5 and key == top_5[index]:
-            des_site_5[index + 1] = val
-        else:
-            break
-        index += 1
+    for item in top_5:
+        for key, val in des_site_10.items():
+            if index < 5 and key == item:
+                des_site_5[index + 1] = val
+                index += 1
 
     # Collect name and website from des_name
     for key, val in des_site_5.items():
