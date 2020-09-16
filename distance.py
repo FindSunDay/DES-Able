@@ -84,7 +84,7 @@ def lambda_handler():
     # -- Get input from Web
 
     # user_loc = input('Please type down your address:', )
-    user_loc = '5 Dudley street 3145'
+    user_loc = '5 Dudley street Brighton'
 
     user_loc_detail = get_user_loc(user_loc)
 
