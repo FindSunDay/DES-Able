@@ -23,6 +23,8 @@ How to run Iteration 2 website locally.
 2. Go to 'iteration2' folder.
 3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'. 
 
+Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
+
 
 How to run Iteration 1 website locally.
 1. Download 'Iterations' folder. 
