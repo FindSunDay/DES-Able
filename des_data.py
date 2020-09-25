@@ -215,8 +215,7 @@ des = des[['Name','Program','Speciality','Rating','Address','Street',\
            'Route','City','Site_Location','State','Country','Postal',\
            'Latitude','Longitude','Phone','Email','Website','URL']]
 
-
-
+des = des[des['Speciality'] != 'Gay, Lesbian, Bisexual, Transgender and Intersex']
 
 
 # to generate ID and divide the main dataframe into three dataframe based on relational structure
@@ -261,6 +260,55 @@ des_service = des_service.merge(des_name, on=['Name','Website'])
 des_site.drop(['Name','Website','Speciality'],axis=1, inplace=True)
 des_service.drop(['Name','Website','Latitude','Longitude'],axis=1, inplace=True)
 des_service['Program'] = des_service['Program'].apply(lambda x : x.replace('DES-',''))
+
+# rename / grouping speciality
+def rename_speciality(original):
+    new = ''
+    if original == 'Youth at Risk':
+        new = 'All Client Types'
+    elif original == 'Psychiatric Disability':
+        new = 'Mental Health'
+    elif original == 'Physical (Musculoskeletal)':
+        new = 'Physical Disability'
+    elif original == '(IQ<=60) - Moderate Intellectual Disability':
+        new = 'Intellectual Disability'
+    elif original == 'Neurological, ABI, Psych, Intellectual & Learning' or \
+    original == 'Mental Health, Intellectual Disability, ExOffender':
+        new = 'Mental Health, Intellectual Disability'
+    elif original == 'Psychiatric Disability/Mental Illness':
+        new = 'Mental Health'
+    elif original == 'Hearing impaired and deaf job seekers':
+        new = 'Deaf and Hearing Impaired'
+    elif original == 'Sensory Impairment (Hearing or Vision Loss)':
+        new = 'Deaf and Hearing Impaired, Vision Loss'
+    else:
+        new = original
+    return new
+
+
+des_service['Speciality_New'] = des_service['Speciality'].apply(rename_speciality)
+
+# Specility_Group is only to be used for drop down options.
+des_service['Speciality_Group'] = des_service['Speciality_New'].apply(lambda x : x if ',' not in x else 'Mental Health')
+
+# add rating description
+def rating_des(rating):
+    result =''
+    if rating == 1:
+        result = 'Very Poor'
+    elif rating == 2:
+        result = 'Poor'
+    elif rating == 3:
+        result = 'Average'
+    elif rating == 4:
+        result = 'Good'
+    elif rating == 5:
+        result = 'Very Good'
+    else:
+        result = rating
+    return result
+
+des_service['Rating_Info'] = des_service['Rating'].apply(rating_des)
 
 # save to files
 des.to_csv('Dataset/DES_full_list.csv',index=False)
