@@ -156,7 +156,7 @@ def lambda_handler():
 
     # travel mode = transit
 
-    distance_api = 'AIzaSyDqCivn3sqBZLcraRZ5cwSp63BSYuqFZl0'
+    distance_api = 'AIzaSyDO2l7Az6IJTCP4IHFmvWxdYsNBVcR56B8'
     start = 'origins=' + str(user_lat) + ',' + str(user_lng)
 
     find_top_5 = []

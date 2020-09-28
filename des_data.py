@@ -60,7 +60,7 @@ des_unique['API_Place_Detail'] = ''
 
 
 
-api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
+api_place = 'AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk'
 
 # Loop through every rows
 
@@ -291,24 +291,6 @@ des_service['Speciality_New'] = des_service['Speciality'].apply(rename_specialit
 # Specility_Group is only to be used for drop down options.
 des_service['Speciality_Group'] = des_service['Speciality_New'].apply(lambda x : x if ',' not in x else 'Mental Health')
 
-# add rating description
-def rating_des(rating):
-    result =''
-    if rating == 1:
-        result = 'Very Poor'
-    elif rating == 2:
-        result = 'Poor'
-    elif rating == 3:
-        result = 'Average'
-    elif rating == 4:
-        result = 'Good'
-    elif rating == 5:
-        result = 'Very Good'
-    else:
-        result = rating
-    return result
-
-des_service['Rating_Info'] = des_service['Rating'].apply(rating_des)
 
 # save to files
 des.to_csv('Dataset/DES_full_list.csv',index=False)

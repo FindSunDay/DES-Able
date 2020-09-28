@@ -53,7 +53,7 @@ user_loc = '5 Dudley street 3145'
 
 def get_user_loc(text):
     # Google Place API to gt user longitude and latitude
-    api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
+    api_place = 'AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk'
 
     find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
                      + text + '%20Victoria%20Australia' +
@@ -147,7 +147,7 @@ des_site_10 = dict((i, j) for i, j in des_spec.items() if i in top_10)
 
 # travel mode = transit
 
-distance_api = 'AIzaSyDqCivn3sqBZLcraRZ5cwSp63BSYuqFZl0'
+distance_api = 'AIzaSyDO2l7Az6IJTCP4IHFmvWxdYsNBVcR56B8'
 start = 'origins=' + str(user_lat) + ',' + str(user_lng)
 
 find_top_5 = []
