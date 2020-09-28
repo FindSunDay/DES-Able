@@ -84,21 +84,12 @@ def lambda_handler():
     # -- Get input from Web
 
     # user_loc = input('Please type down your address:', )
-<<<<<<< Updated upstream
-<< << << < HEAD
-  # user_loc = '5 Dudley street 3145'
-  user_loc = '52 Osullivan Rd Glen Waverley VIC'
-== == == =
-  user_loc = '5 Dudley street Brighton'
->>>>>> > 53b46004d545962c4ebc5997197e9e2d8fce1c9a
-=======
-    user_loc = '52 Osullivan Rd Glen Waverley VIC'
->>>>>>> Stashed changes
 
-  user_loc_detail = get_user_loc(user_loc)
+    user_loc = '52 Osullivan Rd Glen Waverley VIC'
+    user_loc_detail = get_user_loc(user_loc)
 
    # retrieve Latitude and Longitude
-   try:
+    try:
         access_loc = user_loc_detail['candidates'][0]['geometry']['location']
         (user_lat, user_lng) = access_loc['lat'], access_loc['lng']
     except:
