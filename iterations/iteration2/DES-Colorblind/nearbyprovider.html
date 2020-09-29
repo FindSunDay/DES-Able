@@ -873,8 +873,9 @@
                             class="u-container-layout u-valign-top u-container-layout-1"
                           >
                             <span
-                              class="u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-1"
+                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-1"
                             >
+                            <a href=site_location_info.url target="_blank" >
                               <svg
                                 class="u-svg-link"
                                 preserveAspectRatio="xMidYMin slice"
@@ -885,7 +886,7 @@
                                   xmlns:xlink="http://www.w3.org/1999/xlink"
                                   xlink:href="#svg-7ee5"
                                 ></use>
-                              </svg>
+                              </svg> </a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -934,11 +935,13 @@
                             >
                               Address:
                             </h5>
-                            <p
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-4"
-                            >
-                              {{ site_location_info.address }}
-                            </p>
+                            <a href="site_location_info.url" target="_blank" 
+                              class="narrow u-align-center u-none u-custom-address-color"
+                            ><br>
+                              <!-- <font style="color:#05092b"> -->
+                                {{ site_location_info.address }}
+                              <!-- </font> -->
+                          </a> 
                           </div>
                         </div>
                         <div
@@ -948,8 +951,10 @@
                             class="u-container-layout u-valign-top u-container-layout-2"
                           >
                             <span
-                              class="u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-2"
-                            >
+                              class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-2"
+                            > 
+                            <a :href="'mailto:'+site_location_info.email" target="_blank">
+
                               <svg
                                 class="u-svg-link"
                                 preserveAspectRatio="xMidYMin slice"
@@ -960,7 +965,7 @@
                                   xmlns:xlink="http://www.w3.org/1999/xlink"
                                   xlink:href="#svg-b327"
                                 ></use>
-                              </svg>
+                              </svg> </a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 id="svg-b327"
@@ -980,8 +985,8 @@
                             </h5>
                             <a
                               :href="'mailto:'+site_location_info.email"
-                              class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-none u-text-body-alt-color u-text-hover-palette-3-light-3 u-btn-1"
-                              >{{ site_location_info.email }}</a
+                              class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3"
+                              ><br>{{ site_location_info.email }}</a
                             >
                           </div>
                         </div>
@@ -996,8 +1001,9 @@
                             class="u-container-layout u-valign-top u-container-layout-3"
                           >
                             <span
-                              class="u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-3"
+                              class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-3"
                             >
+                            <a href="tel:site_location_info.phone" >
                               <svg
                                 class="u-svg-link"
                                 preserveAspectRatio="xMidYMin slice"
@@ -1008,7 +1014,7 @@
                                   xmlns:xlink="http://www.w3.org/1999/xlink"
                                   xlink:href="#svg-2291"
                                 ></use>
-                              </svg>
+                              </svg></a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1051,10 +1057,11 @@
                               Call us:
                             </h5>
                             <a href="tel:site_location_info.phone"
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-7"
-                            >
+                            class="u-align-center u-custom-font u-font-ubuntu u-none u-text-alt-color u-text-hover-palette-3-light-3"
+
+                            > <br>
+
                               {{ site_location_info.phone }}
-                              <br />
                           </a>
                           </div>
                         </div>
@@ -1063,8 +1070,8 @@
                         >
                           <div class="u-container-layout u-container-layout-4">
                             <span
-                              class="u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-4"
-                            >
+                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-4"
+                            ><a :href="site_location_info.website" target="_blank">
                               <svg
                                 class="u-svg-link"
                                 preserveAspectRatio="xMidYMin slice"
@@ -1075,7 +1082,7 @@
                                   xmlns:xlink="http://www.w3.org/1999/xlink"
                                   xlink:href="#svg-eb6d"
                                 ></use>
-                              </svg>
+                              </svg></a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"

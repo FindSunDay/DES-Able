@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/distance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Colorblind/nearbyprovider.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Colorblind/nearbyprovider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Colorblind/nearbyprovider.html" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Colorblind/nearbyprovider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/NEARBY-PROVIDER.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/NEARBY-PROVIDER.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/nearbyprovider.html" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/nearbyprovider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/nicepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration2/DES-Normal/nicepage.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-620">
-              <caret line="149" column="51" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="51" />
+            <state relative-caret-position="252">
+              <caret line="195" column="17" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/des_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="179">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -67,13 +71,14 @@
     <option name="x" value="88" />
     <option name="y" value="23" />
     <option name="width" value="1192" />
-    <option name="height" value="710" />
+    <option name="height" value="706" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,7 +90,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.des_data">
+  <component name="RunManager" selected="Python.distance">
     <configuration name="des_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DES-Able" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.des_data" />
         <item itemvalue="Python.distance" />
+        <item itemvalue="Python.des_data" />
       </list>
     </recent_temporary>
   </component>
@@ -167,15 +171,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="23" width="1192" height="710" extended-state="0" />
+    <frame x="88" y="23" width="1192" height="706" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2684391" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2684391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38917977" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3886926" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,17 +239,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-620">
-          <caret line="149" column="51" selection-start-line="149" selection-start-column="51" selection-end-line="149" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/des_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="195" column="17" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
         </state>
       </provider>
     </entry>
