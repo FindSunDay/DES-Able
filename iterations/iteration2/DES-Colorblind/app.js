@@ -179,9 +179,9 @@ new Vue({
             } else {
               this.null_des_site = false;
               this.show_des_site = true;
-              // document.getElementById("sec-b6d8").scrollIntoView();
-              document.querySelector("#sec-b6d8").scrollTo();
-              // window.open("#sec-b6d8");
+              // document.getElementById("sec-b6d8").scrollIntoView(true);
+              // document.querySelector("#sec-b6d8").scrollTo();
+              // window.scrollTo("#sec-b6d8");
               this.is_nearby_button_loading = false;
             }
           })
@@ -189,6 +189,8 @@ new Vue({
             console.log("error", error);
             this.null_des_site = true;
             this.is_nearby_button_loading = false;
+            this.show_site_location_info = false;
+            this.show_des_site = false;
           });
       } else {
         this.null_des_site = true;
@@ -202,6 +204,7 @@ new Vue({
       temp.email = this.des_site_five.site_one.Email;
       temp.phone = this.des_site_five.site_one.Phone;
       temp.website = this.des_site_five.site_one.Website;
+      temp.url = this.des_site_five.site_one.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
 
@@ -222,6 +225,7 @@ new Vue({
       temp.email = this.des_site_five.site_two.Email;
       temp.phone = this.des_site_five.site_two.Phone;
       temp.website = this.des_site_five.site_two.Website;
+      temp.url = this.des_site_five.site_two.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -241,6 +245,7 @@ new Vue({
       temp.email = this.des_site_five.site_three.Email;
       temp.phone = this.des_site_five.site_three.Phone;
       temp.website = this.des_site_five.site_three.Website;
+      temp.url = this.des_site_five.site_three.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -260,6 +265,7 @@ new Vue({
       temp.email = this.des_site_five.site_four.Email;
       temp.phone = this.des_site_five.site_four.Phone;
       temp.website = this.des_site_five.site_four.Website;
+      temp.url = this.des_site_five.site_four.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -279,6 +285,7 @@ new Vue({
       temp.email = this.des_site_five.site_five.Email;
       temp.phone = this.des_site_five.site_five.Phone;
       temp.website = this.des_site_five.site_five.Website;
+      temp.url = this.des_site_five.site_five.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -383,11 +390,11 @@ new Vue({
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
 
-      this.autocomplete.setFields(["address_component"]);
+      // this.autocomplete.setFields(["address_component"]);
       // // When the user selects an address from the drop-down, populate the
       // // address fields in the form.
 
-      this.autocomplete.addListener("place_changed", this.fillInAddress());
+      // this.autocomplete.addListener("place_changed", this.fillInAddress());
     },
     fillInAddress() {
       const place = this.autocomplete.getPlace();
@@ -404,7 +411,6 @@ new Vue({
         place.address_components[4].short_name;
       console.log("str", str);
       this.entered_address = str;
-      this.initAutocomplete;
     },
   },
   mounted() {
