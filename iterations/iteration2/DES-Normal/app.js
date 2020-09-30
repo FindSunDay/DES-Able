@@ -204,6 +204,7 @@ new Vue({
       temp.email = this.des_site_five.site_one.Email;
       temp.phone = this.des_site_five.site_one.Phone;
       temp.website = this.des_site_five.site_one.Website;
+      temp.url = this.des_site_five.site_one.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
 
@@ -224,6 +225,7 @@ new Vue({
       temp.email = this.des_site_five.site_two.Email;
       temp.phone = this.des_site_five.site_two.Phone;
       temp.website = this.des_site_five.site_two.Website;
+      temp.url = this.des_site_five.site_two.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -243,6 +245,7 @@ new Vue({
       temp.email = this.des_site_five.site_three.Email;
       temp.phone = this.des_site_five.site_three.Phone;
       temp.website = this.des_site_five.site_three.Website;
+      temp.url = this.des_site_five.site_three.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -262,6 +265,7 @@ new Vue({
       temp.email = this.des_site_five.site_four.Email;
       temp.phone = this.des_site_five.site_four.Phone;
       temp.website = this.des_site_five.site_four.Website;
+      temp.url = this.des_site_five.site_four.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;
@@ -281,6 +285,7 @@ new Vue({
       temp.email = this.des_site_five.site_five.Email;
       temp.phone = this.des_site_five.site_five.Phone;
       temp.website = this.des_site_five.site_five.Website;
+      temp.url = this.des_site_five.site_five.URL;
       this.site_location_info = temp;
       console.log(this.site_location_info);
       this.show_site_location_info = true;

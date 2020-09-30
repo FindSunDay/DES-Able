@@ -478,7 +478,7 @@
                     class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-2"
                   >
                     <span
-                      class="u-icon u-icon-circle u-text-custom-color-7 u-icon-1"
+                      class="hvr-grow u-icon u-icon-circle u-text-custom-color-7 u-icon-1"
                     >
                       <a :href="item.url" target="_blank">
                       <svg
@@ -526,8 +526,8 @@
                     </h5>
                     <p
                       class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-4"
-                    >
-                      {{item.address}}
+                    >  <a :href="item.url" target="_blank">
+                      {{item.address}} </a>
                     </p>
                   </div>
                 </div>

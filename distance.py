@@ -39,7 +39,7 @@ def to_dict(filename):
 
 def get_user_loc(text):
     # Google Place API to gt user longitude and latitude
-    api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
+    api_place = 'AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk'
 
     find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
                      + text + '%20Victoria%20Australia' +
