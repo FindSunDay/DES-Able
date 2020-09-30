@@ -875,18 +875,19 @@
                             <span
                               class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-1"
                             >
-                            <a href=site_location_info.url target="_blank" >
-                              <svg
-                                class="u-svg-link"
-                                preserveAspectRatio="xMidYMin slice"
-                                viewBox="0 0 512 512"
-                                style=""
-                              >
-                                <use
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  xlink:href="#svg-7ee5"
-                                ></use>
-                              </svg> </a>
+                              <a :href="site_location_info.url" target="_blank">
+                                <svg
+                                  class="u-svg-link"
+                                  preserveAspectRatio="xMidYMin slice"
+                                  viewBox="0 0 512 512"
+                                  style=""
+                                >
+                                  <use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="#svg-7ee5"
+                                  ></use>
+                                </svg>
+                              </a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -935,13 +936,15 @@
                             >
                               Address:
                             </h5>
-                            <a href="site_location_info.url" target="_blank" 
+                            <a
+                              :href="site_location_info.url"
+                              target="_blank"
                               class="narrow u-align-center u-none u-custom-address-color"
-                            ><br>
+                              ><br />
                               <!-- <font style="color:#05092b"> -->
-                                {{ site_location_info.address }}
+                              {{ site_location_info.address }}
                               <!-- </font> -->
-                          </a> 
+                            </a>
                           </div>
                         </div>
                         <div
@@ -952,20 +955,23 @@
                           >
                             <span
                               class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-2"
-                            > 
-                            <a :href="'mailto:'+site_location_info.email" target="_blank">
-
-                              <svg
-                                class="u-svg-link"
-                                preserveAspectRatio="xMidYMin slice"
-                                viewBox="0 0 479.058 479.058"
-                                style=""
+                            >
+                              <a
+                                :href="'mailto:'+site_location_info.email"
+                                target="_blank"
                               >
-                                <use
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  xlink:href="#svg-b327"
-                                ></use>
-                              </svg> </a>
+                                <svg
+                                  class="u-svg-link"
+                                  preserveAspectRatio="xMidYMin slice"
+                                  viewBox="0 0 479.058 479.058"
+                                  style=""
+                                >
+                                  <use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="#svg-b327"
+                                  ></use>
+                                </svg>
+                              </a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 id="svg-b327"
@@ -986,7 +992,7 @@
                             <a
                               :href="'mailto:'+site_location_info.email"
                               class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3"
-                              ><br>{{ site_location_info.email }}</a
+                              ><br />{{ site_location_info.email }}</a
                             >
                           </div>
                         </div>
@@ -1001,20 +1007,20 @@
                             class="u-container-layout u-valign-top u-container-layout-3"
                           >
                             <span
-                              class="hvr-grow u-border-3 u-border-custom-color-5  u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-3"
+                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-3"
                             >
-                            <a href="tel:site_location_info.phone" >
-                              <svg
-                                class="u-svg-link"
-                                preserveAspectRatio="xMidYMin slice"
-                                viewBox="0 0 384 384"
-                                style=""
-                              >
-                                <use
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  xlink:href="#svg-2291"
-                                ></use>
-                              </svg></a>
+                              <a :href="'tel:' + site_location_info.phone">
+                                <svg
+                                  class="u-svg-link"
+                                  preserveAspectRatio="xMidYMin slice"
+                                  viewBox="0 0 384 384"
+                                  style=""
+                                >
+                                  <use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="#svg-2291"
+                                  ></use></svg
+                              ></a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1056,13 +1062,14 @@
                             >
                               Call us:
                             </h5>
-                            <a href="tel:site_location_info.phone"
-                            class="u-align-center u-custom-font u-font-ubuntu u-none u-text-alt-color u-text-hover-palette-3-light-3"
-
-                            > <br>
+                            <a
+                              :href="'tel:' + site_location_info.phone"
+                              class="u-align-center u-custom-font u-font-ubuntu u-none u-text-alt-color u-text-hover-palette-3-light-3"
+                            >
+                              <br />
 
                               {{ site_location_info.phone }}
-                          </a>
+                            </a>
                           </div>
                         </div>
                         <div
@@ -1071,18 +1078,21 @@
                           <div class="u-container-layout u-container-layout-4">
                             <span
                               class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-4"
-                            ><a :href="site_location_info.website" target="_blank">
-                              <svg
-                                class="u-svg-link"
-                                preserveAspectRatio="xMidYMin slice"
-                                viewBox="0 0 512.418 512.418"
-                                style=""
+                              ><a
+                                :href="site_location_info.website"
+                                target="_blank"
                               >
-                                <use
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  xlink:href="#svg-eb6d"
-                                ></use>
-                              </svg></a>
+                                <svg
+                                  class="u-svg-link"
+                                  preserveAspectRatio="xMidYMin slice"
+                                  viewBox="0 0 512.418 512.418"
+                                  style=""
+                                >
+                                  <use
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="#svg-eb6d"
+                                  ></use></svg
+                              ></a>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"

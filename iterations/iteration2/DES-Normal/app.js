@@ -182,6 +182,8 @@ new Vue({
               // document.getElementById("sec-b6d8").scrollIntoView(true);
               // document.querySelector("#sec-b6d8").scrollTo();
               // window.scrollTo("#sec-b6d8");
+
+              window.scrollTo(0, 600);
               this.is_nearby_button_loading = false;
             }
           })
