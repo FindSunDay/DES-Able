@@ -417,7 +417,8 @@
                             type="checkbox"
                             id="checkbox-9940"
                             name="checkbox-6"
-                            value="On"
+                            value="5"
+                            v-model="checkedRatings"
                           />
                           <label
                             for="checkbox-9940"
@@ -432,7 +433,8 @@
                             type="checkbox"
                             id="checkbox-59f2"
                             name="checkbox-4"
-                            value="On"
+                            value="4"
+                            v-model="checkedRatings"
                           />
                           <label
                             for="checkbox-59f2"
@@ -468,7 +470,8 @@
                             type="checkbox"
                             id="checkbox-9940"
                             name="checkbox-3"
-                            value="On"
+                            value="3"
+                            v-model="checkedRatings"
                           />
                           <label
                             for="checkbox-9940"
@@ -502,7 +505,8 @@
                             type="checkbox"
                             id="checkbox-9940"
                             name="checkbox-3"
-                            value="On"
+                            value="2"
+                            v-model="checkedRatings"
                           />
                           <label
                             for="checkbox-9940"
@@ -517,7 +521,8 @@
                             type="checkbox"
                             id="checkbox-59f2"
                             name="checkbox-1"
-                            value="On"
+                            value="1"
+                            v-model="checkedRatings"
                           />
                           <label
                             for="checkbox-59f2"
@@ -535,6 +540,7 @@
                   <div class="u-container-layout u-container-layout-4">
                     <p class="u-custom-font u-font-ubuntu u-text u-text-5">
                       <br />
+                      <!-- <span>Checked ratings: {{ checkedRatings }}</span> -->
                     </p>
                     <div class="u-form u-form-4">
                       <form
@@ -551,7 +557,9 @@
                             type="checkbox"
                             id="checkbox-9940"
                             name="checkbox-3"
-                            value="On"
+                            value="All Ratings"
+                            v-model="checkedRatings"
+                            @click="handleCheckAllChange"
                           />
                           <label
                             for="checkbox-9940"
@@ -568,7 +576,7 @@
                 class="u-align-center u-valign-right u-form-group u-form-submit"
               >
                 <a
-                  href="https://nicepage.com"
+                  @click="handleCheckedRatingsChange"
                   class="u-btn u-btn-round u-btn-submit u-border-radius-10 u-button-style u-custom-color-4 u-custom-font u-font-ubuntu u-btn-1"
                   >Submit</a
                 >

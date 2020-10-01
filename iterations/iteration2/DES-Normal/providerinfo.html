@@ -373,11 +373,13 @@
                     <div class="u-form u-form-1">
                       <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
                         <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-1">
-                          <input type="checkbox" id="checkbox-9940" name="checkbox-6" value="On">
+                          <input type="checkbox" id="checkbox-9940" name="checkbox-6" value="5"
+                          v-model="checkedRatings">
                           <label for="checkbox-9940" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">5</label>
                         </div>
                         <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-2">
-                          <input type="checkbox" id="checkbox-59f2" name="checkbox-4" value="On">
+                          <input type="checkbox" id="checkbox-59f2" name="checkbox-4" value="4"
+                          v-model="checkedRatings">
                           <label for="checkbox-59f2" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">4</label>
                         </div>
                     
@@ -391,7 +393,8 @@
                     <div class="u-form u-form-2">
                       <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
                         <div class="u-form-checkbox u-form-group u-form-group-4">
-                          <input type="checkbox" id="checkbox-9940" name="checkbox-3" value="On">
+                          <input type="checkbox" id="checkbox-9940" name="checkbox-3" value="3"
+                          v-model="checkedRatings">
                           <label for="checkbox-9940" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-3">3</label>
                         </div>
                         
@@ -405,11 +408,13 @@
                     <div class="u-form u-form-3">
                       <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
                         <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-6">
-                          <input type="checkbox" id="checkbox-9940" name="checkbox-3" value="On">
+                          <input type="checkbox" id="checkbox-9940" name="checkbox-3" value="2"
+                          v-model="checkedRatings">
                           <label for="checkbox-9940" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-4">2</label>
                         </div>
                         <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-7">
-                          <input type="checkbox" id="checkbox-59f2" name="checkbox-1" value="On">
+                          <input type="checkbox" id="checkbox-59f2" name="checkbox-1" value="1"
+                          v-model="checkedRatings">
                           <label for="checkbox-59f2" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-5">1</label>
                         </div>
                        
@@ -419,11 +424,20 @@
                 </div>
                 <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-15 u-size-30-md u-grey-5 u-layout-cell-4">
                   <div class="u-container-layout u-container-layout-4">
-                    <p class="u-custom-font u-font-ubuntu u-text u-text-5"><br></p>
+                    <p class="u-custom-font u-font-ubuntu u-text u-text-5"><br>
+                    <!-- <span>Checked ratings: {{ checkedRatings }}</span> -->
+                    </p>
                     <div class="u-form u-form-4">
                       <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px" source="custom">
                         <div class="u-form-checkbox u-form-group u-form-group-9">
-                          <!-- <el-checkbox> -->
+                          <input
+                            type="checkbox"
+                            id="checkbox-9940"
+                            name="checkbox-3"
+                            value="All Ratings"
+                            v-model="checkedRatings"
+                            @click="handleCheckAllChange"
+                          />
                           <label for="checkbox-9940" class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-6">Select all</label>
                         </div>
                       
@@ -433,7 +447,7 @@
                 </div>
               </div>
               <div class="u-align-center u-valign-right u-form-group u-form-submit">
-                <a href="https://nicepage.com" class=" u-btn u-btn-round u-btn-submit u-border-radius-10 u-button-style u-custom-color-2  u-custom-font u-font-ubuntu u-btn-1">Submit</a>
+                <a @click="handleCheckedRatingsChange" class=" u-btn u-btn-round u-btn-submit u-border-radius-10 u-button-style u-custom-color-2  u-custom-font u-font-ubuntu u-btn-1">Submit</a>
                 <input type="submit" value="submit" class="u-form-control-hidden"> </div>
             </div>
           </div>

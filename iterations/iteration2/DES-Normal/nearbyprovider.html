@@ -472,7 +472,7 @@
                         <div class="u-container-layout u-valign-top u-container-layout-1">
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-1">
-                            <a href=site_location_info.url target="_blank" >
+                            <a :href=site_location_info.url target="_blank" >
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7ee5"></use> 
                             </svg> </a>
@@ -513,7 +513,7 @@
                           </span>
                           <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-white u-text-3">Address:
                           </h5>                            
-                            <a href="site_location_info.url" target="_blank" 
+                            <a :href="site_location_info.url" target="_blank" 
                             class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3 "> <br>{{ site_location_info.address }}
                           </a>
                         </div>
@@ -551,7 +551,7 @@
                         <div class="u-container-layout u-valign-top u-container-layout-3">
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-3">
-                            <a href="tel:site_location_info.phone" >
+                            <a :href="'tel:' + site_location_info.phone" >
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384" style="">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2291"></use>
                             </svg> </a>
@@ -584,7 +584,7 @@
                           </span>
                           <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-white u-text-6">Call us:
                           </h5>
-                          <a href="tel:site_location_info.phone"
+                          <a :href="'tel:' + site_location_info.phone"
                             class="u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3"><br>{{ site_location_info.phone }}
                             <br>
                           </a>

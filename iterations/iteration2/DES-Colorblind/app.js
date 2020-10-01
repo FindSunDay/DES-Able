@@ -32,6 +32,7 @@ new Vue({
       provider_map_name: "",
       provider_map_site: "",
       is_nearby_button_loading: false,
+      checkedRatings: [],
     };
   },
   methods: {
@@ -42,6 +43,33 @@ new Vue({
     //   }
     // }
     // },
+    handleCheckAllChange() {
+      console.log("test");
+      if (this.checkedRatings.length !== 6) {
+        this.checkedRatings = ["5", "4", "3", "2", "1", "All Ratings"];
+      } else this.checkedRatings = [];
+    },
+    handleCheckedRatingsChange() {
+      console.log("submit");
+      let resultData = [];
+      for (let selectedRating of this.checkedRatings) {
+        //  combine filtered results
+        resultData = resultData.concat(
+          this.infoList.filter((info) => info.rating == selectedRating)
+        );
+        console.log("resultData", resultData);
+      }
+
+      //use array.indexOf() to determine whether the ratings contains "All Ratings"
+      let isAllRatings = this.checkedRatings.indexOf("All Ratings");
+      console.log("x", isAllRatings);
+      if (this.checkedRatings.length === 0 || isAllRatings != -1) {
+        resultData = this.infoList;
+      }
+      this.showList = resultData;
+      this.showListLength = this.showList.length;
+      console.log("showlist", this.showList);
+    },
     geolocate() {
       // if (navigator.geolocation) {
       //   navigator.geolocation.getCurrentPosition((position) => {
