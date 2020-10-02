@@ -118,19 +118,19 @@ def lambda_handler():
     # default value
 
     # user_spec = 'All Client Types'
-    user_spec = 'All Specialities'
+    user_spec = 'Intellectual Disability'
 
     # get the set of speciality
-    spec = {i['Speciality'] for i in des_serv.values()}
+    spec = {i['Speciality_Group'] for i in des_serv.values()}
     # random value
     # user_spec = spec.pop()
 
-    if user_spec != 'All Specialities':
+    if user_spec != 'Select All Specialities':
         # filter matching speciality
         des_spec = dict((i, j) for i, j in des_serv.items()
-                        if j['Speciality'] == user_spec)
+                        if j['Speciality_Group'] == user_spec)
 
-    elif user_spec == 'All Specialities':
+    elif user_spec == 'Select All Specialities':
         des_spec = des_serv
 
     # IDENTIFY THE TOP 10 PROVIDERS WITH SHORTEST RADIAL DISTANCE

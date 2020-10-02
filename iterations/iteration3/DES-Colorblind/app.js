@@ -203,7 +203,7 @@ new Vue({
           .then((result) => {
             // this.des_site_five = {};
             this.des_site_five = JSON.parse(result);
-            console.log("123", this.des_site_five);
+            console.log(this.des_site_five);
             if (JSON.stringify(this.des_site_five) === "{}") {
               // if (!this.des_site_five.hasOwnProperty("site_one")) {
               this.null_des_site = true;
