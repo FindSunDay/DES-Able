@@ -6,7 +6,7 @@ new Vue({
       infoList: [],
       showList: [],
       nameList: [{ value: "All Providers" }],
-      specialityList: [{ value: "All Specialities" }],
+      specialityList: [{ value: "Select All Specialities" }],
       ratingList: [
         { value: "All Ratings" },
         { value: 5 },
@@ -17,7 +17,7 @@ new Vue({
       ],
       postInput: "",
       providerName: "All Providers",
-      specialityName: "All Specialities",
+      specialityName: "Select All Specialities",
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
@@ -57,6 +57,7 @@ new Vue({
         resultData = resultData.concat(
           this.infoList.filter((info) => info.rating == selectedRating)
         );
+        // resultData.sort((a, b) => b.rating - a.rating);
         console.log("resultData", resultData);
       }
 
@@ -67,6 +68,7 @@ new Vue({
         resultData = this.infoList;
       }
       this.showList = resultData;
+      this.showList.sort((a, b) => b.rating - a.rating);
       this.showListLength = this.showList.length;
       console.log("showlist", this.showList);
     },
@@ -104,7 +106,7 @@ new Vue({
     },
     handleClear() {
       this.providerName = "All Providers";
-      this.specialityName = "All Specialities";
+      this.specialityName = "Select All Specialities";
       this.selectedRatings = [];
       this.postInput = "";
     },
@@ -459,6 +461,7 @@ new Vue({
         // console.log(result);
         this.infoList = JSON.parse(result).All_Info;
         this.showList = this.infoList;
+        this.showList.sort((a, b) => b.rating - a.rating);
         // console.log(this.infoList);
         let names = JSON.parse(result).Name_List;
         let specialities = JSON.parse(result).Speciality_List;

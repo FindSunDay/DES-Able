@@ -294,7 +294,7 @@
               <div class="u-form-group u-form-select u-form-group-2">
                 <div class="u-form-select-wrapper">
                   <el-select
-                    placeholder="All Specialities"
+                    placeholder="Select All Specialities"
                     style="width: 100%; height: 100%"
                     v-model="specialityName"
                     filterable
@@ -375,7 +375,7 @@
             </form>
             <el-alert
               v-if="showListLength == 0"
-              title="No results"
+              title="There is no matched DES Provider"
               type="error"
             ></el-alert>
           </div>
