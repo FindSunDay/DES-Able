@@ -586,6 +586,11 @@
                   class="u-form-control-hidden"
                 />
               </div>
+              <el-alert
+                v-if="showListLength_two == 0"
+                title="There is no matched filter result"
+                type="error"
+              ></el-alert>
             </div>
           </div>
         </div>

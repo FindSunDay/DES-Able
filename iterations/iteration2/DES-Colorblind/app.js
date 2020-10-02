@@ -33,6 +33,7 @@ new Vue({
       provider_map_site: "",
       is_nearby_button_loading: false,
       checkedRatings: [],
+      showListLength_two: 1,
     };
   },
   methods: {
@@ -69,7 +70,7 @@ new Vue({
       }
       this.showList = resultData;
       this.showList.sort((a, b) => b.rating - a.rating);
-      this.showListLength = this.showList.length;
+      this.showListLength_two = this.showList.length;
       console.log("showlist", this.showList);
     },
     geolocate() {
@@ -149,6 +150,7 @@ new Vue({
             resultData = this.infoList;
           }
           this.showList = resultData;
+          this.showList.sort((a, b) => b.rating - a.rating);
           this.showListLength = this.showList.length;
           console.log("showlist", this.showList);
 
