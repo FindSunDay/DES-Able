@@ -25,121 +25,73 @@
 		"url": "index.html",
 		"logo": "images/Logo_HQ1.jpg"
 }</script>
-    <meta property="og:title" content="NEARBY PROVIDER">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
-    <link rel="canonical" href="index.html">
-    <meta property="og:url" content="index.html">
-    <!-- vue dev env -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- vue build env -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-    <!-- import stylesheet -->
-    <!-- 引入样式 -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
-    />
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk&callback=initMap&libraries=places&v=weekly"
-      defer
-    ></script>
-    
-  </head>
-  <body class="u-body">
-    <!-- <div id="map" style="width: 100%; height: 100px;"></div> -->
-    <div id="vue-app">
-    <header
-    class="u-align-center-xs u-clearfix u-header u-sticky u-white u-header"
-    id="sec-05ea"
-  >
-    <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
-      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-        <div
-          class="menu-collapse u-custom-font u-font-ubuntu"
-          style="
-            font-size: 1.125rem;
-            letter-spacing: 0;
-            text-transform: uppercase;
-            font-weight: 700;
-          ">
-            <a class="u-active-palette-1-dark-2 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
-              href="#" style="padding: 4px 0; font-size: calc(1em + 8px)">
-              <svg>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
-              </svg>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                  <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px">
-                    <rect y="1" width="16" height="2"></rect>
-                    <rect y="7" width="16" height="2"></rect>
-                    <rect y="13" width="16" height="2"></rect>
-                  </symbol>
-                </defs>
-              </svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-palette-1-dark-2 u-unstyled u-nav-1">
-              <li class="u-nav-item">
-                <a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
-                  href="index.html" style="padding: 10px 40px">{{ homepage }}</a>
-              </li>
-              <li class="u-nav-item">
-                <a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
-                  href="./providerinfo.html" style="padding: 10px 40px">DES PROVIDER INFO</a>
-              </li>
-              <li class="u-nav-item">
-                <a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
-                  href="./nearbyprovider.html" style="padding: 10px 40px">NEARBY PROVIDER</a>
-              </li>
-              <li class="u-nav-item">
-                <a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
-                  href="./travelsupport.html" style="padding: 10px 40px">TRAVEL SUPPORT</a>
-              </li>
-            </ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-menu-close"></div>
-              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                <li class="u-nav-item">
-                  <a class="u-button-style u-nav-link" href="index.html" style="padding: 10px 40px">HOME PAGE</a>
-                </li>
-                <li class="u-nav-item">
-                  <a class="u-button-style u-nav-link" href="./providerinfo.html" style="padding: 10px 40px">DES
-                    PROVIDER INFO</a>
-                </li>
-                <li class="u-nav-item">
-                  <a class="u-button-style u-nav-link" href="./nearbyprovider.html" style="padding: 10px 40px">NEARBY
-                    PROVIDER</a>
-                </li>
-                <li class="u-nav-item">
-                  <a class="u-button-style u-nav-link" href="./travelsupport.html" style="padding: 10px 40px">TRAVEL
-                    SUPPORT</a>
-                </li>
-              </ul>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-        <a href="index.html" class="u-image u-logo u-image-1" data-image-width="13245" data-image-height="7236">
-          <img src="images/Logo_HQ1.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.561" />
-        </a>
-        <div
-          class="u-border-3 u-border-grey-dark-1 u-expanded-width-xs u-line u-line-horizontal u-opacity u-opacity-55 u-line-1">
+  <meta property="og:title" content="NEARBY PROVIDER">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#478ac9">
+  <link rel="canonical" href="index.html">
+  <meta property="og:url" content="index.html">
+  <!-- vue dev env -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- vue build env -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <!-- import stylesheet -->
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk&callback=initMap&libraries=places&v=weekly"
+    defer></script>
+
+</head>
+
+<body class="u-body">
+  <!-- <div id="map" style="width: 100%; height: 100px;"></div> -->
+  <div id="vue-app">
+    <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea"><div class="u-clearfix u-sheet u-sheet-1">
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+        <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
+          <a class="u-active-palette-1-dark-2 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
+          href="#" style="padding: 4px; font-size: calc(1em + 8px);">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+          </a>
         </div>
-        <a href="../DES-Colorblind/nearbyprovider.html"
-          class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
-          </span>&nbsp; &nbsp; Color Blind Version &nbsp; &nbsp;</a>
-        <h1 class="u-custom-font u-text u-text-font u-text-1">
-          WE ARE HERE TO GUIDE AND SUPPORT
-        </h1>
-      </div>
-    </header>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-palette-1-dark-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./index.html" style="padding: 10px 20px;">HOME PAGE</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./nearbyprovider.html" style="padding: 10px 20px;">NEARBY PROVIDER</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./providerinfo.html" style="padding: 10px 20px;">DES PROVIDER INFO</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./travelsupport.html" style="padding: 10px 20px;">TRAVEL SUPPORT</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./desperformance.html" style="padding: 10px 20px;">DES PERFORMANCE</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./legalrights.html" style="padding: 10px 20px;">LEGAL RIGHTS</a>
+</li></ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-menu-close"></div>
+            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html" style="padding: 10px 20px;">HOME PAGE</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./nearbyprovider.html" style="padding: 10px 20px;">NEARBY PROVIDER</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./providerinfo.html" style="padding: 10px 20px;">DES PROVIDER INFO</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./travelsupport.html" style="padding: 10px 20px;">TRAVEL SUPPORT</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./desperformance.html" style="padding: 10px 20px;">DES PERFORMANCE</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./legalrights.html" style="padding: 10px 20px;">LEGAL RIGHTS</a>
+</li></ul>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+      <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600" data-image-height="875">
+        <img src="images/Logo_HQ1.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
+      </a>
+      <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+      <a href="../DES-Colorblind/index.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
+        <span class="u-text-icon"></span>Normal Version&nbsp; &nbsp;
+      </a>
+      <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
+    </div></header>
     <section class="u-align-center u-border-2 u-border-grey-75 u-clearfix u-section-1" id="carousel_f5bd">
       <div class="u-clearfix u-sheet u-sheet-1">
         <span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1">
@@ -460,6 +412,9 @@
         <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-1">
           {{ provider_map_name }}</h2>
         <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-2">{{ provider_map_site }}</h2>
+        <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-palette-1-dark-2 u-text-2">
+          Program
+        </p>
         <div class="u-clearfix u-gutter-0 u-layout-wrap u-palette-1-base u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
@@ -472,10 +427,11 @@
                         <div class="u-container-layout u-valign-top u-container-layout-1">
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-1">
-                            <a :href=site_location_info.url target="_blank" >
-                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7ee5"></use> 
-                            </svg> </a>
+                            <a :href=site_location_info.url target="_blank">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7ee5"></use>
+                              </svg> </a>
 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                               version="1.1" id="svg-7ee5" x="0px" y="0px" viewBox="0 0 512 512"
@@ -512,9 +468,10 @@
                             </svg>
                           </span>
                           <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-white u-text-3">Address:
-                          </h5>                            
-                            <a :href="site_location_info.url" target="_blank" 
-                            class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3 "> <br>{{ site_location_info.address }}
+                          </h5>
+                          <a :href="site_location_info.url" target="_blank"
+                            class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3 ">
+                            <br>{{ site_location_info.address }}
                           </a>
                         </div>
                       </div>
@@ -523,10 +480,10 @@
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-2">
                             <a :href="'mailto:'+site_location_info.email" target="_blank">
-                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058"
-                              style="">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b327"></use>
-                            </svg>
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b327"></use>
+                              </svg>
                             </a>
                             <svg xmlns="http://www.w3.org/2000/svg" id="svg-b327"
                               enable-background="new 0 0 479.058 479.058" viewBox="0 0 479.058 479.058"
@@ -551,10 +508,11 @@
                         <div class="u-container-layout u-valign-top u-container-layout-3">
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-3">
-                            <a :href="'tel:' + site_location_info.phone" >
-                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384" style="">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2291"></use>
-                            </svg> </a>
+                            <a :href="'tel:' + site_location_info.phone">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2291"></use>
+                              </svg> </a>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                               version="1.1" id="svg-2291" x="0px" y="0px" viewBox="0 0 384 384"
                               style="enable-background:new 0 0 384 384;" xml:space="preserve" class="u-svg-content">
@@ -596,16 +554,16 @@
                           <span
                             class="hvr-grow u-border-3 u-border-white u-icon u-icon-circle u-spacing-20 u-text-white u-icon-4">
                             <a :href="site_location_info.website" target="_blank">
-                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.418 512.418"
-                              style="">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5709"></use>
-                            </svg> </a>
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.418 512.418"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5709"></use>
+                              </svg> </a>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                               version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.418 512.418"
                               id="svg-5709">
                               <path
-                                  d="m437.335 75.082c-100.1-100.102-262.136-100.118-362.252 0-100.103 100.102-100.118 262.136 0 362.253 100.1 100.102 262.136 100.117 362.252 0 100.103-100.102 100.117-262.136 0-362.253zm-10.706 325.739c-11.968-10.702-24.77-20.173-38.264-28.335 8.919-30.809 14.203-64.712 15.452-99.954h75.309c-3.405 47.503-21.657 92.064-52.497 128.289zm-393.338-128.289h75.309c1.249 35.242 6.533 69.145 15.452 99.954-13.494 8.162-26.296 17.633-38.264 28.335-30.84-36.225-49.091-80.786-52.497-128.289zm52.498-160.936c11.968 10.702 24.77 20.173 38.264 28.335-8.919 30.809-14.203 64.712-15.452 99.954h-75.31c3.406-47.502 21.657-92.063 52.498-128.289zm154.097 31.709c-26.622-1.904-52.291-8.461-76.088-19.278 13.84-35.639 39.354-78.384 76.088-88.977zm0 32.708v63.873h-98.625c1.13-29.812 5.354-58.439 12.379-84.632 27.043 11.822 56.127 18.882 86.246 20.759zm0 96.519v63.873c-30.119 1.877-59.203 8.937-86.246 20.759-7.025-26.193-11.249-54.82-12.379-84.632zm0 96.581v108.254c-36.732-10.593-62.246-53.333-76.088-88.976 23.797-10.817 49.466-17.374 76.088-19.278zm32.646 0c26.622 1.904 52.291 8.461 76.088 19.278-13.841 35.64-39.354 78.383-76.088 88.976zm0-32.708v-63.873h98.625c-1.13 29.812-5.354 58.439-12.379 84.632-27.043-11.822-56.127-18.882-86.246-20.759zm0-96.519v-63.873c30.119-1.877 59.203-8.937 86.246-20.759 7.025 26.193 11.249 54.82 12.379 84.632zm0-96.581v-108.254c36.734 10.593 62.248 53.338 76.088 88.977-23.797 10.816-49.466 17.373-76.088 19.277zm73.32-91.957c20.895 9.15 40.389 21.557 57.864 36.951-8.318 7.334-17.095 13.984-26.26 19.931-8.139-20.152-18.536-39.736-31.604-56.882zm-210.891 56.882c-9.165-5.947-17.941-12.597-26.26-19.931 17.475-15.394 36.969-27.801 57.864-36.951-13.068 17.148-23.465 36.732-31.604 56.882zm.001 295.958c8.138 20.151 18.537 39.736 31.604 56.882-20.895-9.15-40.389-21.557-57.864-36.951 8.318-7.334 17.095-13.984 26.26-19.931zm242.494 0c9.165 5.947 17.942 12.597 26.26 19.93-17.475 15.394-36.969 27.801-57.864 36.951 13.067-17.144 23.465-36.729 31.604-56.881zm26.362-164.302c-1.249-35.242-6.533-69.146-15.452-99.954 13.494-8.162 26.295-17.633 38.264-28.335 30.84 36.225 49.091 80.786 52.497 128.289z"
-                                ></path>
+                                d="m437.335 75.082c-100.1-100.102-262.136-100.118-362.252 0-100.103 100.102-100.118 262.136 0 362.253 100.1 100.102 262.136 100.117 362.252 0 100.103-100.102 100.117-262.136 0-362.253zm-10.706 325.739c-11.968-10.702-24.77-20.173-38.264-28.335 8.919-30.809 14.203-64.712 15.452-99.954h75.309c-3.405 47.503-21.657 92.064-52.497 128.289zm-393.338-128.289h75.309c1.249 35.242 6.533 69.145 15.452 99.954-13.494 8.162-26.296 17.633-38.264 28.335-30.84-36.225-49.091-80.786-52.497-128.289zm52.498-160.936c11.968 10.702 24.77 20.173 38.264 28.335-8.919 30.809-14.203 64.712-15.452 99.954h-75.31c3.406-47.502 21.657-92.063 52.498-128.289zm154.097 31.709c-26.622-1.904-52.291-8.461-76.088-19.278 13.84-35.639 39.354-78.384 76.088-88.977zm0 32.708v63.873h-98.625c1.13-29.812 5.354-58.439 12.379-84.632 27.043 11.822 56.127 18.882 86.246 20.759zm0 96.519v63.873c-30.119 1.877-59.203 8.937-86.246 20.759-7.025-26.193-11.249-54.82-12.379-84.632zm0 96.581v108.254c-36.732-10.593-62.246-53.333-76.088-88.976 23.797-10.817 49.466-17.374 76.088-19.278zm32.646 0c26.622 1.904 52.291 8.461 76.088 19.278-13.841 35.64-39.354 78.383-76.088 88.976zm0-32.708v-63.873h98.625c-1.13 29.812-5.354 58.439-12.379 84.632-27.043-11.822-56.127-18.882-86.246-20.759zm0-96.519v-63.873c30.119-1.877 59.203-8.937 86.246-20.759 7.025 26.193 11.249 54.82 12.379 84.632zm0-96.581v-108.254c36.734 10.593 62.248 53.338 76.088 88.977-23.797 10.816-49.466 17.373-76.088 19.277zm73.32-91.957c20.895 9.15 40.389 21.557 57.864 36.951-8.318 7.334-17.095 13.984-26.26 19.931-8.139-20.152-18.536-39.736-31.604-56.882zm-210.891 56.882c-9.165-5.947-17.941-12.597-26.26-19.931 17.475-15.394 36.969-27.801 57.864-36.951-13.068 17.148-23.465 36.732-31.604 56.882zm.001 295.958c8.138 20.151 18.537 39.736 31.604 56.882-20.895-9.15-40.389-21.557-57.864-36.951 8.318-7.334 17.095-13.984 26.26-19.931zm242.494 0c9.165 5.947 17.942 12.597 26.26 19.93-17.475 15.394-36.969 27.801-57.864 36.951 13.067-17.144 23.465-36.729 31.604-56.881zm26.362-164.302c-1.249-35.242-6.533-69.146-15.452-99.954 13.494-8.162 26.295-17.633 38.264-28.335 30.84 36.225 49.091 80.786 52.497 128.289z">
+                              </path>
                             </svg>
                           </span>
                           <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-white u-text-8">Website:
@@ -623,18 +581,12 @@
               </div>
 
               <div class="u-size-30 u-size-60-md">
-                  <div class="u-layout-col">
-                    <div
-                      class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5"
-                    >
-                      <div class="u-container-layout u-container-layout-5">
-                        <div class="u-expanded u-grey-light-2 u-map">
-                          <div class="embed-responsive">
-                            <div
-                              id="google-map"
-                              style="width: 100%; height: 100%"
-                            ></div>
-                          </div>
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout u-container-layout-5">
+                      <div class="u-expanded u-grey-light-2 u-map">
+                        <div class="embed-responsive">
+                          <div id="google-map" style="width: 100%; height: 100%"></div>
                         </div>
                       </div>
                     </div>
@@ -644,7 +596,8 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <section class="u-clearfix u-section-4" id="sec-ab95">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -706,4 +659,6 @@
 </body>
 <script src="app.js?v=1.5"></script>
 
-n</html>
+n
+
+</html>

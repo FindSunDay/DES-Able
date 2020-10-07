@@ -224,5 +224,36 @@ for year in range(2011, 2021):
 
             idx += 1
 
+for index, row in data.iterrows():
+    if index == 0:
+        data.loc[index, 'MOM'] = 0
+
+    elif index > 0:
+        current_month = data.loc[index, 'Total']
+        prev_month = data.loc[index - 1, 'Total']
+        data.loc[index, 'MOM'] = round((current_month - prev_month) * 100 / prev_month, 2)
+
+    if data.loc[index, 'MOM'] == 0:
+        data.loc[index, 'Direction'] = ''
+    elif data.loc[index, 'MOM'] < 0:
+        data.loc[index, 'Direction'] = 'Decreased'
+    elif data.loc[index, 'MOM'] > 0:
+        data.loc[index, 'Direction'] = 'Increased'
+
+    data.loc[index, 'Referred%'] = round(data.loc[index, 'Referred'] * 100 / data.loc[index, 'Total'])
+    data.loc[index, 'Suspended%'] = round(data.loc[index, 'Suspended'] * 100 / data.loc[index, 'Total'])
+    data.loc[index, 'Commenced%'] = round(data.loc[index, 'Commenced'] * 100 / data.loc[index, 'Total'])
+
+    data.loc[index, 'Commenced_Employment%'] = round(
+        data.loc[index, 'Commenced_Employment'] * 100 / data.loc[index, 'Commenced'])
+    data.loc[index, 'Commenced_Placement%'] = round(
+        data.loc[index, 'Commenced_Placement'] * 100 / data.loc[index, 'Commenced'])
+    data.loc[index, 'Commenced_Ongoing%'] = round(
+        data.loc[index, 'Commenced_Ongoing'] * 100 / data.loc[index, 'Commenced'])
+
+
 # save to csv
 data.to_csv('Dataset/DES_PERFORMANCE.csv', index=False)
+
+# save to json
+data.to_json('Dataset/DES_PERFORMANCE.json')
