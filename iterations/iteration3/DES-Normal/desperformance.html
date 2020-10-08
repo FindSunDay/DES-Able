@@ -193,15 +193,15 @@
                     class="u-container-layout u-valign-middle-sm u-valign-middle-xs u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-2">
                     <h3 class="u-align-center u-custom-font u-font-ubuntu u-text  u-text-white u-text-3">Number of total
                       caseloads</h3>
-                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-4">100,000</p>
+                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-4">{{Total}}</p>
                   </div>
                 </div>
                 <div
                   class="u-align-center u-container-style u-layout-cell u-palette-1-light-3 u-size-11 u-layout-cell-3">
                   <div class="u-container-layout u-valign-middle u-container-layout-3">
-                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-5">10%</p>
+                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-5">{{MOM}} %</p>
                     <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-6">
-                      Increased</p>
+                      {{Direction}} </p>
                     <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-7">
                       &nbsp;from previous month</p>
                   </div>
@@ -227,11 +227,13 @@
                     </p>
                     <h3 class="u-align-center u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-8">
                       Expected caseloads</h3>
+
+                      <!-- Change the text to the predicted month -->
                     <h3 class="u-align-center u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-9">
                       September, 2020</h3>
                     <p
                       class="hvr-highlight hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-10" >
-                       200,200
+                       299,013
                     </p>
                     <p class="hvr-highlight u-align-center u-small-text u-text u-font-ubuntu  u-text-11" >
                       The data shown is an expected performance which may be different from the actual outcome.
@@ -313,7 +315,7 @@
                       class="u-align-center u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-2">
                       Referred&nbsp;</p>
                     <div class="u-palette-3-light-1 u-shape u-shape-circle u-shape-1">
-                      <p class="u-align-center u-custom-font u-font-ubuntu u-text-white u-text-11"> XX.XX%            
+                      <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-11" data-hover= {{Referred}}> <span>{{Referred%}} </span>       
                       </p>
                     </div>
                   </div>
@@ -332,7 +334,7 @@
                       class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-3">
                       Commenced</p>
                     <div class="u-palette-4-dark-1 u-shape u-shape-circle u-shape-2">
-                      <p class="u-align-center u-custom-font u-font-ubuntu u-text-white u-text-12"> XX.XX%            
+                      <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-12" data-hover={{Commenced}}> <span> {{Commenced%}} </span>          
                       </p>
                     </div>
                   </div>
@@ -368,8 +370,8 @@
                           <p class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-4">
                             Employment Assistance</p>
                           <p
-                            class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-5">
-                            XX%</p>
+                            class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-5" data-hover = "{{Commenced_Employment}}">
+                            <span>{{Commenced_Employment%}}</span></p>
                         </div>
                       </div>
                       <div
@@ -391,8 +393,8 @@
                           <p class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-6">
                             Post Placment Support</p>
                           <p
-                            class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-7">
-                            XX%</p>
+                            class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-7" data-hover ={{Commenced_Placement}}>
+                            <span>{{Commenced_Placement%}}</span></p>
                         </div>
                       </div>
                       <div class="u-container-style u-list-item u-palette-5-light-3 u-repeater-item u-shape-round">
@@ -416,8 +418,8 @@
                             class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-8">
                             Ongoing&nbsp; Support</p>
                           <p
-                            class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-9">
-                            XX%</p>
+                            class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-9" data-hover = {{Commenced_Ongoing}}>
+                            <span>{{Commenced_Ongoing%}}</span> </p>
                         </div>
                       </div>
                     </div>
@@ -433,9 +435,8 @@
                       class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-10">
                       Suspended</p>
                     <div class="u-palette-2-light-1 u-shape u-shape-circle u-shape-3" > 
-                      <p class="u-align-center u-custom-font u-font-ubuntu u-text-white u-text-13"> XX.XX%            
+                      <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-13" data-hover ={{Suspended}}> <span> {{Suspended%}}  </span>          
                     </p>
-                      
                     </div>
                   </div>
                 </div>
@@ -485,34 +486,34 @@
                         <div class="u-form-group u-form-radiobutton u-form-group-1">
                           <div class="u-form-radio-button-wrapper">
                             <input type="radio" name="radiobutton" value="Item 1">
-                            <label class="u-label" for="radiobutton">Item 1</label>
+                            <label class="u-label" for="radiobutton">2011</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 2">
-                            <label class="u-label" for="radiobutton">Item 2</label>
+                            <label class="u-label" for="radiobutton">2012</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 3">
-                            <label class="u-label" for="radiobutton">Item 3</label>
+                            <label class="u-label" for="radiobutton">2013</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 4">
-                            <label class="u-label" for="radiobutton">Item 4</label>
+                            <label class="u-label" for="radiobutton">2014</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 5">
-                            <label class="u-label" for="radiobutton">Item 5</label>
+                            <label class="u-label" for="radiobutton">2015</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 6">
-                            <label class="u-label" for="radiobutton">Item 6</label>
+                            <label class="u-label" for="radiobutton">2016</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 1">
-                            <label class="u-label" for="radiobutton">Item 1</label>
+                            <label class="u-label" for="radiobutton">2017</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 2">
-                            <label class="u-label" for="radiobutton">Item 2</label>
+                            <label class="u-label" for="radiobutton">2018</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 3">
-                            <label class="u-label" for="radiobutton">Item 3</label>
+                            <label class="u-label" for="radiobutton">2019</label>
                             <br>
                             <input type="radio" name="radiobutton" value="Item 4">
-                            <label class="u-label" for="radiobutton">Item 4</label>
+                            <label class="u-label" for="radiobutton">2020</label>
                             <br>
                           </div>
                         </div>
