@@ -31,6 +31,7 @@ new Vue({
       autocomplete: undefined,
       provider_map_name: "",
       provider_map_site: "",
+      provider_map_program: "",
       is_nearby_button_loading: false,
       checkedRatings: [],
       showListLength_two: 1,
@@ -251,6 +252,7 @@ new Vue({
       this.show_site_location_info = true;
       this.provider_map_name = this.des_site_five.site_one.Name;
       this.provider_map_site = this.des_site_five.site_one.Site_Location;
+      this.provider_map_program = this.des_site_five.site_one.Program;
     },
     selectProvider2() {
       // console.log("click");
@@ -271,6 +273,7 @@ new Vue({
       );
       this.provider_map_name = this.des_site_five.site_two.Name;
       this.provider_map_site = this.des_site_five.site_two.Site_Location;
+      this.provider_map_program = this.des_site_five.site_two.Program;
     },
     selectProvider3() {
       // console.log("click");
@@ -291,6 +294,7 @@ new Vue({
       );
       this.provider_map_name = this.des_site_five.site_three.Name;
       this.provider_map_site = this.des_site_five.site_three.Site_Location;
+      this.provider_map_program = this.des_site_five.site_three.Program;
     },
     selectProvider4() {
       // console.log("click");
@@ -311,6 +315,7 @@ new Vue({
       );
       this.provider_map_name = this.des_site_five.site_four.Name;
       this.provider_map_site = this.des_site_five.site_four.Site_Location;
+      this.provider_map_program = this.des_site_five.site_four.Program;
     },
     selectProvider5() {
       // console.log("click");
@@ -331,6 +336,7 @@ new Vue({
       );
       this.provider_map_name = this.des_site_five.site_five.Name;
       this.provider_map_site = this.des_site_five.site_five.Site_Location;
+      this.provider_map_program = this.des_site_five.site_five.Program;
     },
     initMap(lat, lng, url, name) {
       const provider = {
