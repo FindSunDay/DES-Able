@@ -493,10 +493,71 @@ Source: from Hover.css GitHub under MIT License
     font-weight: 800;
     font-family: Ubuntu;
   }
-
-
   .hvr-button:hover:before, .hvr-button:focus:before, .hvr-button:active:before  {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+
+
+  .hvr-phases {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(52, 63, 105);
+    background-color: white;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-phases:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-phases:hover, .hvr-phases:focus, .hvr-phases:active {
+    color: rgb(247, 247, 248);
+    background-color: rgb(99, 134, 123);
+    font-weight: 500;
+    font-family: Ubuntu;
+    font-size: 0.8rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+  }
+  .hvr-phases:hover:before, .hvr-phases:focus:before, .hvr-phases:active:before  {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .hvr-phases:hover span {display:none;}
   
+  .hvr-phases:hover:after {
+  content: attr(data-hover);
+  
+  }
+
+  
+
+
