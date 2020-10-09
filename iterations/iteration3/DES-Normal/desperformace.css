@@ -205,8 +205,8 @@
 .u-section-4 .u-layout-cell-6 {min-height: 158px}
 .u-section-4 .u-container-layout-9 {padding: 10px}
  /* for text in bubbles  */
-.u-section-4 .u-text-12 {font-size:1.5rem; margin-top: 35px; font-weight: 600;} 
-.u-section-4 .u-text-13 {font-size:1.7rem; margin-top: 55px; font-weight: 600} 
+.u-section-4 .u-text-12 {font-size:1.5rem; margin-top: 30px; font-weight: 600} 
+.u-section-4 .u-text-13 {font-size:1.7rem; margin-top: 10px; font-weight: 600} 
 .u-section-4 .u-text-14 {font-size:1.1rem; margin-top: 25px; font-weight: 600} 
 
 
@@ -379,6 +379,7 @@ Source: from Hover.css GitHub under MIT License
   content: attr(data-hover);
   }
 
+
   .hvr-grow {
     display: flex;
     vertical-align: middle;
@@ -395,7 +396,7 @@ Source: from Hover.css GitHub under MIT License
     transform: scale(1.1);
   }
 
-  
+
   .hvr-text {
     align-items: center;
     text-align: center;
@@ -446,3 +447,55 @@ Source: from Hover.css GitHub under MIT License
   .hvr-text:hover:after {
   content: attr(data-hover);
   }
+
+  .hvr-button {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(52, 63, 105);
+    background-color: white;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-button:hover, .hvr-button:focus, .hvr-button:active {
+    color: rgb(247, 247, 248);
+    background-color: rgb(219, 148, 154);
+
+    /* background-color: rgb(65, 127, 241); */
+    font-weight: 800;
+    font-family: Ubuntu;
+  }
+
+
+  .hvr-button:hover:before, .hvr-button:focus:before, .hvr-button:active:before  {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
