@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/DES_PERFORMANCE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/DES_PERFORMANCE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/DES_PERFORMANCE.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/DES_PERFORMANCE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/des_performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/des_performance.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/des_performance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="250" column="50" lean-forward="true" selection-start-line="250" selection-start-column="50" selection-end-line="250" selection-end-column="50" />
+            <state relative-caret-position="1385">
+              <caret line="249" column="35" lean-forward="true" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -68,16 +63,16 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="y" value="44" />
-    <option name="width" value="1404" />
-    <option name="height" value="950" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +84,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,10 +187,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="44" width="1404" height="950" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="706" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22714078" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22647528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,8 +264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/des_performance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="250" column="50" lean-forward="true" selection-start-line="250" selection-start-column="50" selection-end-line="250" selection-end-column="50" />
+        <state relative-caret-position="1385">
+          <caret line="249" column="35" lean-forward="true" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -253,7 +253,10 @@ for index, row in data.iterrows():
 
 
     # create a column to be parsed as date format in D3
-    data.loc[index,'Year-Month'] = str(data.loc[index,'Year'])+'-'+str(data.loc[index, 'Month'])
+    if len(str(data.loc[index, 'Month'])) == 1:
+        data.loc[index,'Year-Month'] = str(data.loc[index,'Year'])+'-0'+str(data.loc[index, 'Month'])+'-01'
+    else:
+        data.loc[index, 'Year-Month'] = str(data.loc[index, 'Year']) + '-' + str(data.loc[index, 'Month']) + '-01'
 
 
 # change month from number to word to show on the website
