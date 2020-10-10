@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/des_performance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
-              <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+            <state relative-caret-position="1385">
+              <caret line="249" column="35" lean-forward="true" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -63,10 +63,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
     <option name="y" value="23" />
-    <option name="width" value="1192" />
-    <option name="height" value="706" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -188,15 +187,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="23" width="1192" height="706" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="706" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2684391" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22647528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3886926" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38765433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -265,8 +264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/des_performance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+        <state relative-caret-position="1385">
+          <caret line="249" column="35" lean-forward="true" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
         </state>
       </provider>
     </entry>

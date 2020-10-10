@@ -395,7 +395,7 @@
                         <p
                           class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-4"
                         >
-                          {{ performance_total }}
+                          {{ init_performance.total }}
                         </p>
                       </div>
                     </div>
@@ -408,12 +408,12 @@
                         <p
                           class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-5"
                         >
-                          {{ performance_mom }} %
+                          {{ init_performance.mom }} %
                         </p>
                         <p
                           class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-6"
                         >
-                          {{ performance_direction }}
+                          {{ init_performance.direction }}
                         </p>
                         <p
                           class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-7"
@@ -636,7 +636,7 @@
                             class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-11"
                             data-hover="{{Referred}}"
                           >
-                            <span>{{ performance_referred }} </span>
+                            <span>{{ init_performance.referred }} </span>
                           </p>
                         </div>
                       </div>
@@ -670,7 +670,7 @@
                             class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-12"
                             data-hover="{{Commenced}}"
                           >
-                            <span> {{ performance_commenced }} </span>
+                            <span> {{ init_performance.commenced }} </span>
                           </p>
                         </div>
                       </div>
@@ -734,7 +734,8 @@
                                 data-hover="{{Commenced_Employment}}"
                               >
                                 <span
-                                  >{{ performance_commenced_employment }}</span
+                                  >{{ init_performance.commenced_employment
+                                  }}</span
                                 >
                               </p>
                             </div>
@@ -783,7 +784,8 @@
                                 data-hover="{{Commenced_Placement}}"
                               >
                                 <span
-                                  >{{ performance_commenced_placement }}</span
+                                  >{{ init_performance.commenced_placement
+                                  }}</span
                                 >
                               </p>
                             </div>
@@ -834,7 +836,10 @@
                                 class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-9"
                                 data-hover="{{Commenced_Ongoing}}"
                               >
-                                <span>{{ performance_commenced_ongoing }}</span>
+                                <span
+                                  >{{ init_performance.commenced_ongoing
+                                  }}</span
+                                >
                               </p>
                             </div>
                           </div>
@@ -863,7 +868,7 @@
                             class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-13"
                             data-hover="{{Suspended}}"
                           >
-                            <span> {{ performance_suspended }} </span>
+                            <span> {{ init_performance.suspended }} </span>
                           </p>
                         </div>
                       </div>
@@ -1091,6 +1096,21 @@
                     </div>
                   </div>
                 </div>
+                <p
+                  class="u-text u-text-default u-custom-font u-font-ubuntu u-text-black u-text-8"
+                >
+                  The above dataset was created based on the original DES
+                  Monthly Data Reports between July 1, 2011 and August 30, 2020
+                  from
+                  <a
+                    href="https://lmip.gov.au/default.aspx?LMIP/Downloads/DisabilityEmploymentServicesData/MonthlyData"
+                    target="_blank"
+                  >
+                    LMIP: Labour Market Information Portal.</a
+                  >
+                  <br />
+                  The dataset was last updated on October 6, 2020.
+                </p>
               </div>
             </div>
           </div>

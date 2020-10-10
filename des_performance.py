@@ -252,6 +252,20 @@ for index, row in data.iterrows():
         data.loc[index, 'Commenced_Ongoing'] * 100 / data.loc[index, 'Commenced'])
 
 
+    # create a column to be parsed as date format in D3
+    if len(str(data.loc[index, 'Month'])) == 1:
+        data.loc[index,'Year-Month'] = str(data.loc[index,'Year'])+'-0'+str(data.loc[index, 'Month'])+'-01'
+    else:
+        data.loc[index, 'Year-Month'] = str(data.loc[index, 'Year']) + '-' + str(data.loc[index, 'Month']) + '-01'
+
+
+# change month from number to word to show on the website
+month2word = {1:'January', 2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',\
+             10:'October',11:'November',12:'December'}
+
+data.replace({'Month':month2word},inplace=True)
+
+
 # save to csv
 data.to_csv('Dataset/DES_PERFORMANCE.csv', index=False)
 

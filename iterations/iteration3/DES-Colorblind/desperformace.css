@@ -1,4 +1,4 @@
-.u-section-1 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(85,92,102,0.45), rgba(85,92,102,0.45)), url("images/desperformance1_normal.jpg"); background-position: 50% 50%}
+.u-section-1 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(85,92,102,0.45), rgba(85,92,102,0.45)), url("images/desperformance1_colorblind.jpg"); background-position: 50% 50%}
 .u-section-1 .u-sheet-1 {min-height: 259px}
 .u-section-1 .u-text-1 {font-weight: 700; font-size: 2.25rem; margin: 108px auto 60px} 
 @media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 259px}
@@ -205,8 +205,8 @@
 .u-section-4 .u-layout-cell-6 {min-height: 158px}
 .u-section-4 .u-container-layout-9 {padding: 10px}
  /* for text in bubbles  */
-.u-section-4 .u-text-12 {font-size:1.5rem; margin-top: 30px; font-weight: 600} 
-.u-section-4 .u-text-13 {font-size:1.7rem; margin-top: 10px; font-weight: 600} 
+.u-section-4 .u-text-12 {font-size:1.5rem; margin-top: 35px; font-weight: 600;} 
+.u-section-4 .u-text-13 {font-size:1.7rem; margin-top: 55px; font-weight: 600} 
 .u-section-4 .u-text-14 {font-size:1.1rem; margin-top: 25px; font-weight: 600} 
 
 
@@ -276,8 +276,8 @@
 .u-section-5 .u-btn-1 {background-image: none; border-style: none; font-weight: 700; padding-top: 5px; padding-bottom: 5px}
 .u-section-5 .u-layout-cell-4 {min-height: 562px}
 .u-section-5 .u-container-layout-4 {padding: 30px}
-.u-section-5 .u-text-7 {margin-top: 0} 
-.u-section-5 .u-text-8 {font-size: 0.7rem; margin-top: 20px} 
+.u-section-5 .u-text-7 {margin-top: 0}
+
 
 @media (max-width: 1199px){ .u-section-5 .u-sheet-1 {min-height: 796px}
 .u-section-5 .u-text-1 {width: auto}
@@ -380,7 +380,6 @@ Source: from Hover.css GitHub under MIT License
   content: attr(data-hover);
   }
 
-
   .hvr-grow {
     display: flex;
     vertical-align: middle;
@@ -397,7 +396,7 @@ Source: from Hover.css GitHub under MIT License
     transform: scale(1.1);
   }
 
-
+  
   .hvr-text {
     align-items: center;
     text-align: center;
@@ -448,116 +447,3 @@ Source: from Hover.css GitHub under MIT License
   .hvr-text:hover:after {
   content: attr(data-hover);
   }
-
-  .hvr-button {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    color:rgb(52, 63, 105);
-    background-color: white;
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-  }
-  .hvr-button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-family: Ubuntu;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  .hvr-button:hover, .hvr-button:focus, .hvr-button:active {
-    color: rgb(247, 247, 248);
-    background-color: rgb(219, 148, 154);
-
-    /* background-color: rgb(65, 127, 241); */
-    font-weight: 800;
-    font-family: Ubuntu;
-  }
-  .hvr-button:hover:before, .hvr-button:focus:before, .hvr-button:active:before  {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
-
-
-  .hvr-phases {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    color:rgb(52, 63, 105);
-    background-color: white;
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-  }
-  .hvr-phases:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-family: Ubuntu;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  .hvr-phases:hover, .hvr-phases:focus, .hvr-phases:active {
-    color: rgb(247, 247, 248);
-    background-color: rgb(99, 134, 123);
-    font-weight: 500;
-    font-family: Ubuntu;
-    font-size: 0.8rem;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-
-  }
-  .hvr-phases:hover:before, .hvr-phases:focus:before, .hvr-phases:active:before  {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
-
-  .hvr-phases:hover span {display:none;}
-  
-  .hvr-phases:hover:after {
-  content: attr(data-hover);
-  
-  }
-
-  
-
-
