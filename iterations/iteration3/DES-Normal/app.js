@@ -35,6 +35,16 @@ new Vue({
       is_nearby_button_loading: false,
       checkedRatings: [],
       showListLength_two: 1,
+      //performance page
+      performance_total: 0,
+      performance_mom: 0,
+      performance_direction: "",
+      performance_referred: 0,
+      performance_commenced: 0,
+      performance_commenced_employment: 0,
+      performance_commenced_placement: 0,
+      performance_commenced_ongoing: 0,
+      performance_suspended: 0,
     };
   },
   methods: {
@@ -496,6 +506,22 @@ new Vue({
         console.log(this.nameList);
         console.log(this.specialityList);
         // console.log(this.homepage);
+
+        // for performance page
+        let init_performance = JSON.parse(result).Latest_Performance[0];
+        console.log(init_performance);
+        this.performance_total = init_performance.total;
+        this.performance_mom = init_performance.mom;
+        this.performance_direction = init_performance.direction;
+        this.performance_referred = init_performance.referred;
+        this.performance_commenced = init_performance.commenced;
+        this.performance_commenced_employment =
+          init_performance.commenced_employment;
+        this.performance_commenced_placement =
+          init_performance.commenced_placement;
+        this.performance_commenced_ongoing = init_performance.commenced_ongoing;
+        this.performance_suspended = init_performance.suspended;
+
         this.initAutocomplete();
       })
       .catch((error) => console.log("error", error));
