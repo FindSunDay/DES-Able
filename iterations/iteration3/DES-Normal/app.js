@@ -48,6 +48,8 @@ new Vue({
       // performance_commenced_placement: 0,
       // performance_commenced_ongoing: 0,
       // performance_suspended: 0,
+      isShowCaseStatus: false,
+      isShowCaseloadTrend: false,
     };
   },
   methods: {
@@ -58,6 +60,24 @@ new Vue({
     //   }
     // }
     // },
+    switchCaseStatus() {
+      // console.log("111");
+      this.isShowCaseloadTrend = false;
+      if (this.isShowCaseStatus == false) {
+        this.isShowCaseStatus = true;
+      } else {
+        this.isShowCaseStatus = false;
+      }
+    },
+    switchCaseloadTrend() {
+      // console.log("222");
+      this.isShowCaseStatus = false;
+      if (this.isShowCaseloadTrend == false) {
+        this.isShowCaseloadTrend = true;
+      } else {
+        this.isShowCaseloadTrend = false;
+      }
+    },
     searchPerformance() {
       // console.log(this.init_performance.year, this.init_performance.month);
       let requestOptions = {
