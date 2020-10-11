@@ -37,6 +37,8 @@ new Vue({
       showListLength_two: 1,
       //performance page
       init_performance: {},
+      year_list: [],
+      month_list: [],
       // performance_total: 0,
       // performance_mom: 0,
       // performance_direction: "",
@@ -56,6 +58,25 @@ new Vue({
     //   }
     // }
     // },
+    searchPerformance() {
+      // console.log(this.init_performance.year, this.init_performance.month);
+      let requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      fetch(
+        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/performance?year=${this.init_performance.year}&month=${this.init_performance.month}`,
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((result) => {
+          // console.log("performance", result);
+          this.init_performance = JSON.parse(result).Data[0];
+          console.log("performance", this.init_performance);
+        })
+        .catch((error) => console.log("error", error));
+    },
     handleCheckAllChange() {
       console.log("test");
       if (this.checkedRatings.length !== 6) {
@@ -524,6 +545,15 @@ new Vue({
         //   init_performance.commenced_placement;
         // this.performance_commenced_ongoing = init_performance.commenced_ongoing;
         // this.performance_suspended = init_performance.suspended;
+        let y_list = JSON.parse(result).Year_List;
+        let m_list = JSON.parse(result).Month_List;
+        // console.log(y_list, m_list);
+        for (let info of y_list) {
+          this.year_list.push({ value: info });
+        }
+        for (let info of m_list) {
+          this.month_list.push({ value: info });
+        }
 
         this.initAutocomplete();
       })
