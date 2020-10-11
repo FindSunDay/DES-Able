@@ -265,9 +265,21 @@ month2word = {1:'January', 2:'February',3:'March',4:'April',5:'May',6:'June',7:'
 
 data.replace({'Month':month2word},inplace=True)
 
+#### Data to be used for D3
 
 # save to csv
-data.to_csv('Dataset/DES_PERFORMANCE.csv', index=False)
+data.to_csv('Dataset/DES_PERFORMANCE_NUMERICAL.csv', index=False)
 
 # save to json
-data.to_json('Dataset/DES_PERFORMANCE.json')
+data.to_json('Dataset/DES_PERFORMANCE_NUMERICAL.json')
+
+#### Data to be displayed on website
+
+# convert number of cases to string format
+to_string = lambda x : ("{:,}".format(x))
+
+for col in ['Referred','Suspended','Commenced','Total','Commenced_Employment',\
+            'Commenced_Placement','Commenced_Ongoing']:
+    data[col] = data[col].apply(to_string)
+
+data.to_csv('Dataset/DES_PERFORMANCE.csv', index=False)
