@@ -103,7 +103,7 @@
 
   <section class="u-align-center u-border-1 u-border-grey-75 u-clearfix u-section-2" id="carousel_f5bd">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <h3 class="u-text u-text-default u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-1">{{ init_performance.month }}, {{init_performance.year }}</h3>
+      <h3 class="u-text u-text-default u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-1">{{ init_month }}, {{init_year }}</h3>
       <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
         <div class="u-gutter-0 u-layout">
           <div class="u-layout-col">
@@ -120,12 +120,19 @@
                           <label for="select-89cd"
                             class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">Year</label>
                           <div class="u-form-select-wrapper">
-                            <select id="select-89cd" name="year"
-                              class="u-border-1 u-border-palette-1-light-3 u-border-radius-50 u-input u-input-round u-white u-input-1">
-                              <option value="Item 1">Item 1</option>
-                              <option value="Item 2">Item 2</option>
-                              <option value="Item 3">Item 3</option>
-                            </select>
+                            <el-select
+                              placeholder="Year"
+                              style="width: 100%; height: 100%"
+                              v-model="init_performance.year"
+                              filterable
+                            >
+                              <el-option
+                                v-for="item in year_list"
+                                :key="item.value"
+                                :value="item.value"
+                              >
+                              </el-option>
+                            </el-select>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" version="1" class="u-caret">
                               <path fill="currentColor" d="M4 8L0 4h8z"></path>
                             </svg>
@@ -135,19 +142,26 @@
                           <label for="select-e0ce"
                             class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">Month</label>
                           <div class="u-form-select-wrapper">
-                            <select id="select-e0ce" name="Month"
-                              class="u-border-1 u-border-palette-1-light-3 u-border-radius-50 u-input u-input-round u-white u-input-2">
-                              <option value="Item 1">Item 1</option>
-                              <option value="Item 2">Item 2</option>
-                              <option value="Item 3">Item 3</option>
-                            </select>
+                            <el-select
+                              placeholder="Month"
+                              style="width: 100%; height: 100%"
+                              v-model="init_performance.month"
+                              filterable
+                            >
+                              <el-option
+                                v-for="item in month_list"
+                                :key="item.value"
+                                :value="item.value"
+                              >
+                              </el-option>
+                            </el-select>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" version="1" class="u-caret">
                               <path fill="currentColor" d="M4 8L0 4h8z"></path>
                             </svg>
                           </div>
                         </div>
                         <div class="u-align-center u-form-group u-form-submit u-form-group-3">
-                          <a href="https://nicepage.com"
+                          <a @click="searchPerformance()"
                             class="u-border-radius-27 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-custom-font u-font-ubuntu u-btn-1">Submit</a>
                           <input type="submit" value="submit" class="u-form-control-hidden">
                         </div>

@@ -37,6 +37,8 @@ new Vue({
       showListLength_two: 1,
       //performance page
       init_performance: {},
+      init_year: 2020,
+      init_month: "August",
       year_list: [],
       month_list: [],
       // performance_total: 0,
@@ -94,6 +96,8 @@ new Vue({
           // console.log("performance", result);
           this.init_performance = JSON.parse(result).Data[0];
           console.log("performance", this.init_performance);
+          this.init_year = this.init_performance.year;
+          this.init_month = this.init_performance.month;
         })
         .catch((error) => console.log("error", error));
     },
