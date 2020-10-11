@@ -9,7 +9,7 @@
   <meta name="page_type" content="np-template-header-footer-from-plugin">
   <title>DES performance</title>
   <link rel="stylesheet" href="nicepage.css" media="screen">
-  <link rel="stylesheet" href="desperformace.css" media="screen">
+  <link rel="stylesheet" href="desperformance.css" media="screen">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
   <meta name="generator" content="Nicepage 2.23.0, nicepage.com">
@@ -158,6 +158,8 @@
                   <div class="u-align-center  u-container-layout u-valign-top u-container-layout-1">
                     <h3 class="u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-2">Select the
                       period&nbsp;</h3>
+
+                      <!-- update the range of data here -->
                       <p style="color:gray; margin-top: 5px; font-size:0.8rem;font-family: Ubuntu;">
                         July, 2011 - August, 2020
                         </p>
@@ -231,7 +233,7 @@
                 <div
                   class="u-align-center u-container-style u-layout-cell u-palette-1-light-3 u-size-11 u-layout-cell-3">
                   <div class="u-container-layout u-valign-middle u-container-layout-3">
-                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-5">{{ init_performance.mom }} %</p>
+                    <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-5">{{ init_performance.mom }}%</p>
                     <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-6">
                       {{ init_performance.direction }} </p>
                     <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-2 u-text-7">
@@ -342,19 +344,19 @@
           <div class="u-layout-col">
             <div class="u-size-20">
               <div class="u-layout-row">
-                <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
                   <div class="u-container-layout u-valign-middle u-container-layout-1">
                     <p
                       class="u-align-center u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-2">
                       Referred&nbsp;</p>
                     <div class="hvr-grow u-palette-3-light-1 u-shape u-shape-circle u-shape-1">
-                      <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-12" :data-hover=init_performance.referred> <span>{{init_performance.referred_p}}% </span>       
+                      <p class="hvr-text u-custom-font u-align-center  u-font-ubuntu u-text-white u-text-12" :data-hover=init_performance.referred> <span>{{init_performance.referred_p}}% </span>       
                       </p>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-white u-layout-cell-2">
+                  class=" u-container-style u-layout-cell u-right-cell u-size-30 u-white u-layout-cell-2">
                   <div class="u-container-layout u-container-layout-2"></div>
                 </div>
               </div>
@@ -373,7 +375,7 @@
                   </div>
                 </div>
                 <div
-                  class="u-align-left u-container-style u-layout-cell u-right-cell u-size-41 u-palette-4-light-3 u-layout-cell-4">
+                  class=" u-container-style u-layout-cell u-right-cell u-size-41 u-palette-4-light-3 u-layout-cell-4">
                   <div class="u-container-layout u-valign-top u-container-layout-4">
                     <p class="u-align-center u-text u-text-default u-text-palette-1-dark-2 u-text-4">Phases of commenced cases</p>
                     <div class="u-list u-repeater u-list-1">
@@ -388,7 +390,7 @@
                           </span>
                           <p class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-5"><span>Employment Assistance</span></p>
                           <p class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-6" > <span> {{init_performance.commenced_employment_p}}% </span> </p>
-                          <p class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:0.8rem"> <span> {{init_performance.commenced_employment}} </span> </p>
+                          <p class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem"> <span> {{init_performance.commenced_employment}} cases</span> </p>
 
                         </div>
                       </div>
@@ -401,7 +403,7 @@
                           </span>
                           <p class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-7"><span>Post Placment Support</span></p>
                           <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-8" ><span>{{init_performance.commenced_placement_p}}%</span></p>
-                          <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:0.8rem" ><span>{{init_performance.commenced_placement}}</span></p>
+                          <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem" ><span>{{init_performance.commenced_placement}} cases</span></p>
 
                         </div>
                       </div>
@@ -415,7 +417,7 @@
                           </span>
                           <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-9"><span>Ongoing&nbsp; Support</span></p>
                           <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-10"><span>{{init_performance.commenced_ongoing_p}}%</span></p>
-                          <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:0.8rem" ><span>{{init_performance.commenced_ongoing}}</span></p>
+                          <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default" style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem" ><span>{{init_performance.commenced_ongoing}} cases</span></p>
 
                         </div>
                       </div>

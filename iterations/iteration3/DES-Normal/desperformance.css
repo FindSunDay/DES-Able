@@ -205,9 +205,10 @@
 .u-section-4 .u-layout-cell-6 {min-height: 158px}
 .u-section-4 .u-container-layout-9 {padding: 10px}
  /* for text in bubbles  */
-.u-section-4 .u-text-12 {font-size:1.5rem; margin-top: 30px; font-weight: 600} 
-.u-section-4 .u-text-13 {font-size:1.7rem; margin-top: 10px; font-weight: 600} 
-.u-section-4 .u-text-14 {font-size:1.1rem; margin-top: 25px; font-weight: 600} 
+
+.u-section-4 .u-text-12 {font-size:1.5rem;  margin:auto; font-weight: 600} 
+.u-section-4 .u-text-13 {font-size:1.7rem;  margin:auto; font-weight: 600} 
+.u-section-4 .u-text-14 {font-size:1.1rem;  margin:auto; font-weight: 600} 
 
 
 @media (max-width: 1199px){ .u-section-4 .u-sheet-1 {min-height: 346px}
@@ -416,6 +417,7 @@ Source: from Hover.css GitHub under MIT License
   .hvr-text:before {
     content: "";
     position: absolute;
+    text-align: center;
     z-index: -1;
     top: 0;
     left: 0;
@@ -437,6 +439,8 @@ Source: from Hover.css GitHub under MIT License
     color: rgb(52, 111, 238);
     font-weight: 800;
     font-family: Ubuntu;
+    text-align: center;
+
   }
   .hvr-text:hover:before, .hvr-text:focus:before, .hvr-text:active:before {
     -webkit-transform: scaleX(1);
@@ -504,6 +508,7 @@ Source: from Hover.css GitHub under MIT License
     text-align: center;
     justify-content: center;
     display: flex;
+    vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -518,6 +523,7 @@ Source: from Hover.css GitHub under MIT License
   .hvr-phases:before {
     content: "";
     position: absolute;
+    
     z-index: -1;
     top: 0;
     left: 0;
@@ -540,7 +546,7 @@ Source: from Hover.css GitHub under MIT License
     background-color: rgb(99, 134, 123);
     font-weight: 500;
     font-family: Ubuntu;
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     text-align: center;
     align-items: center;
     align-content: center;
