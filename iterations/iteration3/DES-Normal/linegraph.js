@@ -1,14 +1,17 @@
-
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 30, bottom: 30, left: 60 },
 	width = 530 - margin.left - margin.right,
 	height = 400 - margin.top - margin.bottom;
+//	var data1 = document.getElementById('line_div')
+//	console.log(data1)
 
 // append the svg object to the body of the page
 var svg = d3.select("#line_graph")
 	.append("svg")
-	.attr("width", width + margin.left + margin.right)
-	.attr("height", height + margin.top + margin.bottom)
+//	.attr("width", width + margin.left + margin.right)
+//	.attr("height", height + margin.top + margin.bottom)
+	.attr("preserveAspectRatio", "xMidYMid meet")
+    .attr("viewBox", "0 0 530 400")
 	.append("g")
 	.attr("transform",
 		"translate(" + margin.left + "," + margin.top + ")");
@@ -50,15 +53,17 @@ d3.csv("./resources/DES_PERFORMANCE_NUMERICAL.csv", function (data) {
 
 	function draw() {
 		svg.selectAll('*').remove();
-		var x = d3.scaleLinear()
-			.domain(d3.extent(data, function (d) { return d.Year_Month.getMonth() + 1; }))
-			//	var x = d3.scaleBand()
-			//  	.domain(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])
+//		var x = d3.scaleLinear()
+//			.domain(d3.extent(data, function (d) { return d.Year_Month.getMonth() + 1; }))
+		var x = d3.scaleBand()
+//		var x = d3.scaleOrdinal().range([0,1,2,3,4,5,6,7,8,9,10,11])
+			.domain(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])
 			.range([0, width]);
 		svg.append("g")
+//			.attr('class', 'xAxisis')
 			.attr("transform", "translate(0," + height + ")")
 			.call(d3.axisBottom(x)
-				.ticks(5)
+//				.ticks(5)
 			);
 
 		// Add Y axis
@@ -82,9 +87,9 @@ d3.csv("./resources/DES_PERFORMANCE_NUMERICAL.csv", function (data) {
 					return d3.line()
 						.x(function (d) {
 							//			  				console.log(d.Year_Month.getMonth());
-							return x(d.Year_Month.getMonth() + 1);
+//							return x(d.Year_Month.getMonth() + 1);
 							//			  				return x('Feb')
-							//			  				return x(d.Month); 
+										  				return x(d.Month); 
 						})
 						.y(function (d) { return y(+d.Total); })
 						(d.values)
@@ -151,7 +156,8 @@ d3.csv("./resources/DES_PERFORMANCE_NUMERICAL.csv", function (data) {
 					.transition()
 					.duration(1000)
 					.attr("d", d3.line()
-						.x(function (d) { return x(d.Year_Month.getMonth() + 1) })
+//						.x(function (d) { return x(d.Year_Month.getMonth() + 1) })
+						.x(function (d) { return x(d.Month) })
 						.y(function (d) { return y(+d.Total) })
 					)
 					.attr("stroke", function (d) { return myColor(selectedGroup) })
