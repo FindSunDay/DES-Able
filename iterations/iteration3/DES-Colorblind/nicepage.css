@@ -28590,6 +28590,36 @@ a.u-link.u-text-hover-grey-90:hover {
         }
 
         
+               
+        .u-custom-color-20,
+        .u-body.u-custom-color-20,
+        .u-container-style.u-custom-color-20:before,
+        .u-table-alt-custom-color-20 tr:nth-child(even)
+        {
+            color: #ffffff;
+            background-color: #426a92;
+        }
+
+        .u-button-style.u-custom-color-20,
+        .u-button-style.u-custom-color-20[class*="u-border-"]
+        {
+            color: #ffffff !important;
+            background-color: #426a92 !important;
+        }
+
+        .u-button-style.u-custom-color-20:hover,
+        .u-button-style.u-custom-color-20[class*="u-border-"]:hover,
+        .u-button-style.u-custom-color-20:focus,
+        .u-button-style.u-custom-color-20[class*="u-border-"]:focus,
+        .u-button-style.u-button-style.u-custom-color-20:active,
+        .u-button-style.u-button-style.u-custom-color-20[class*="u-border-"]:active,
+        .u-button-style.u-button-style.u-custom-color-20.active,
+        .u-button-style.u-button-style.u-custom-color-20[class*="u-border-"].active
+        {
+            color: #ffffff !important;
+            background-color: #3b5f83 !important;
+        }
+
 
         
         .u-border-custom-color-2,
