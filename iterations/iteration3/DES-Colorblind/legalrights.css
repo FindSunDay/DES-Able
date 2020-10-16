@@ -680,7 +680,7 @@
 .u-section-8 {min-height: 1290px}
 .u-section-8 .u-text-1 {font-size: 3rem; font-weight: 700; margin: 70px calc(((100% - 1140px) / 2) + 423px) 0 calc(((100% - 1140px) / 2) + 441px)}
 .u-section-8 .u-layout-wrap-1 {width: calc(((100% - 1140px) / 2) + 1140px); margin: 58px 0 0 auto}
-.u-section-8 .u-image-1 {min-height: 1008px; background-image: url("images/73266121-0.png")}
+.u-section-8 .u-image-1 {min-height: 1000px; background-image: url("images/73266121-0.png"); height:50%; width:50%}
 .u-section-8 .u-container-layout-1 {padding: 30px 30px 30px 70px}
 .u-section-8 .u-layout-cell-2 {min-height: 691px}
 .u-section-8 .u-container-layout-2 {padding: 30px 50px}
