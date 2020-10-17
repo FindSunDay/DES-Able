@@ -53,6 +53,8 @@ new Vue({
       isShowCaseStatus: false,
       isShowCaseloadTrend: false,
       btnFlag: false,
+      des_lat: 0.0,
+      des_lng: 0.0,
     };
   },
   methods: {
@@ -479,19 +481,19 @@ new Vue({
       console.log(provider);
       // this.initAutocomplete();
       
-      // const directionsRenderer = new google.maps.DirectionsRenderer();
-      // const directionsService = new google.maps.DirectionsService();
-      // directionsRenderer.setMap(map)
-      // this.calculateAndDisplayRoute(directionsService, directionsRenderer,lat, lng);
+      const directionsRenderer = new google.maps.DirectionsRenderer();
+      const directionsService = new google.maps.DirectionsService();
+      directionsRenderer.setMap(map);
+      this.calculateAndDisplayRoute(directionsService, directionsRenderer,provider.lat, provider.lng);
     },
-    calculateAndDisplayRoute(directionsService, directionsRenderer, lat, lng) {
+    calculateAndDisplayRoute(directionsService, directionsRenderer, des_lat, des_lng) {
       // const selectedMode = document.getElementById("mode").value;
-      console.log("123", lat, lng)
+      console.log("123", des_lat, des_lng)
       const selectedMode = "DRIVING";
       directionsService.route(
         {
           origin: { lat: this.des_site_five.cur_lat, lng: this.des_site_five.cur_lng },
-          destination: { lat: 37.768, lng: -122.511 },
+          destination: { lat: des_lat, lng: des_lng },
           // Note that Javascript allows us to access the constant
           // using square brackets and a string value as its
           // "property."
@@ -499,6 +501,7 @@ new Vue({
         },
         (response, status) => {
           if (status == "OK") {
+            console.log(response);
             directionsRenderer.setDirections(response);
           } else {
             window.alert("Directions request failed due to " + status);
