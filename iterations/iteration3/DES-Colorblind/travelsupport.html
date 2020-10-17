@@ -47,9 +47,23 @@
     <meta name="theme-color" content="#478ac9" />
     <link rel="canonical" href="index.html" />
     <meta property="og:url" content="index.html" />
+    <!-- vue dev env -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- vue build env -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
   </head>
 
   <body class="u-body">
+    <div id="vue-app">
+      <img v-if="btnFlag" class="go-top" src="./images/top.png" @click="backTop" style="position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 99;">
     <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea"><div class="u-clearfix u-sheet u-sheet-1">
       <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
         <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
@@ -1506,5 +1520,7 @@
         <span>Nicepage</span> </a
       >.
     </section>
+    </div>
   </body>
+  <script src="app.js"></script>
 </html>

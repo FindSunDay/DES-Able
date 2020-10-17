@@ -14,15 +14,7 @@
     <meta name="generator" content="Nicepage 2.27.3, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Oswald:200,300,400,500,600,700">
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -35,9 +27,22 @@
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
+    <!-- vue dev env -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- vue build env -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
   </head>
   <body class="u-body">
-    
+    <div id="vue-app">
+      <img v-if="btnFlag" class="go-top" src="./images/top.png" @click="backTop" style="position: fixed;
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 99;">
     <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea">
       <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -802,5 +807,7 @@ by the <a href="https://humanrights.gov.au/" class="u-active-none u-border-none 
         <span>Website Builder Software</span>
       </a>. 
     </section>
+    </div>
   </body>
+  <script src="app.js"></script>
 </html>
