@@ -7,17 +7,16 @@ Username and password are required.
 
 # How to run the file locally.
 
-1. Download 'Iterations' folder. 
-
-- *For **Iteration 3** and iteration 2.*
-    2. Go to prefer iteration folder; 'iteration2' or **'iteration3'** .
+*For **Iteration 3** and iteration 2.*
+    1. Download 'Iterations' folder.
+    2. Go to prefer iteration folder; 'iteration2' or **'iteration3'**.
     3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'. 
 
       Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
 
-- *For iteration 1 website*
-    2. Download 'Iterations' folder. 
-    3. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
+*For iteration 1 website*
+    1. Download 'Iterations' folder.
+    2. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
 
       Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
       
@@ -46,22 +45,22 @@ For the dataset and processing python script used in this project, see Dataset f
       9) DES_PERFORMANCE_NUMERICAL.csv - Similar to 8) but the number of caseloads are in numerical types which to be used for line graph visualisation. 
       10) DES_PERFORMANCE_NUMERICAL.json - Similar to 9) but in json. 
 
-## Collect DES providers detail from Google API -`des_data.py` (Python)
+### Collect DES providers detail from Google API -`des_data.py` (Python)
 This file is to collect contact details of DES providers via Google Places APIs (saved as `API_RESPONSE.csv`), then perform wrangling and integrated data from `1.1.des-star-ratings-march-2020.xlsx` and `DES Contact list.xlsx`. It produces 4 output files; `DES_full_list`, `DES_NAME`, `DES_SITE`, and `DES_SERVICE`.
 
-## Algorithm for Nearby Provider function - `distance.py` (Python)
+### Algorithm for Nearby Provider function - `distance.py` (Python)
 This file is to calculate the radial distance and retrieve travelling distance from user's location and DES providers
 location. The top 5 nearest DES providers are then recommended to the user along with the distance information.
 
-## DES Performance detail - `des_performance.py` (Python)
+### DES Performance detail - `des_performance.py` (Python)
 This file is to integrate 110 files (excel and PDF) in DES_monthly_reports into a single dataframe. It produces `DES_PERFORMANCE.csv`, `DES_PERFORMANCE_NUMERICAL.csv` and `DES_PERFORMANCE_NUMERICAL.json` as outputs. 
 
-## Modeling and analysis on DES Performance - Folder 'analysis_model'.
+### Modeling and analysis on DES Performance - Folder 'analysis_model'.
 It contains 2 Jupyter notebooks. 
 1) `caseload_prediction_model.ipynb` (Python) - Train and evaluate 3 models, and select the best model for DES provider's caseload projection. 
 2) `identify_high_low_season.ipynb` (R) - Perform analysis on the trends and identify hign and low application seasons.
 
-## DES Performance Data Visualisation - Folder Tableau - `DESPerformanceVisualisation`
+### DES Performance Data Visualisation - Folder Tableau - `DESPerformanceVisualisation`
 The dashboard is created locally and published to Tableau Public in order to embed view on the website. 
 
 
