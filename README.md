@@ -10,15 +10,13 @@ Username and password are required.
 *For **Iteration 3** and iteration 2.*
     1. Download 'Iterations' folder.
     2. Go to prefer iteration folder; 'iteration2' or **'iteration3'**.
-    3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'. 
-
-      Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
+    3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
+    Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
 
 *For iteration 1 website*
     1. Download 'Iterations' folder.
     2. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
-
-      Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
+    Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
       
 ## Frontend Development
 The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 are stored in this folder.   
@@ -64,3 +62,4 @@ It contains 2 Jupyter notebooks.
 The dashboard is created locally and published to Tableau Public in order to embed view on the website. 
 
 
+## Api code deployed on AWS Lambda
