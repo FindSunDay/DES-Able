@@ -9,17 +9,27 @@ Username and password are required.
 
 1. Download 'Iterations' folder. 
 
-For **Iteration 3** and iteration 2.
-  2. Go to prefer iteration folder; 'iteration2' or **'iteration3'** .
-  3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'. 
+- *For **Iteration 3** and iteration 2.*
+    2. Go to prefer iteration folder; 'iteration2' or **'iteration3'** .
+    3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'. 
 
-  Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
+      Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
 
-For iteration 1 website
-  2. Download 'Iterations' folder. 
-  3. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
+- *For iteration 1 website*
+    2. Download 'Iterations' folder. 
+    3. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
 
-  Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
+      Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
+      
+## Frontend Development
+The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 are stored in this folder.   
+      - 'DES-Normal' contains normal version of iteration 1 website.
+      - 'DES-Colorblind' contains colorblind version of iteration 1 website. 
+      - 'iteration2' contains the build of iteration 2 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
+      - 'iteration2_api'
+      - 'iteration3' contains the build of iteration 3 website which including 3 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
+          
+For api code deployed on AWS Lambda, see informationProcessor folder.
 
 ## Dataset
 For the dataset and processing python script used in this project, see Dataset folder which contains the followings.
@@ -35,17 +45,23 @@ For the dataset and processing python script used in this project, see Dataset f
       8) DES_PERFORMANCE.csv - Number of caseloads, statuses and phases from 2011 to 2020. The number of caseloads are in string format which to be shown on the web.  
       9) DES_PERFORMANCE_NUMERICAL.csv - Similar to 8) but the number of caseloads are in numerical types which to be used for line graph visualisation. 
       10) DES_PERFORMANCE_NUMERICAL.json - Similar to 9) but in json. 
-  
-## Directory Guide
-### 1.Iterations 
-  The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 are stored in this folder.   
-      - 'DES-Normal' contains normal version of iteration 1 website.
-      - 'DES-Colorblind' contains colorblind version of iteration 1 website. 
-      - 'iteration2' contains the build of iteration 2 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
-      - 'iteration2_api'
 
-For api code deployed on AWS Lambda, see informationProcessor folder.
+## Collect DES providers detail from Google API -`des_data.py` (Python)
+This file is to collect contact details of DES providers via Google Places APIs (saved as `API_RESPONSE.csv`), then perform wrangling and integrated data from `1.1.des-star-ratings-march-2020.xlsx` and `DES Contact list.xlsx`. It produces 4 output files; `DES_full_list`, `DES_NAME`, `DES_SITE`, and `DES_SERVICE`.
 
+## Algorithm for Nearby Provider function - `distance.py` (Python)
+This file is to calculate the radial distance and retrieve travelling distance from user's location and DES providers
+location. The top 5 nearest DES providers are then recommended to the user along with the distance information.
 
+## DES Performance detail - `des_performance.py` (Python)
+This file is to integrate 110 files (excel and PDF) in DES_monthly_reports into a single dataframe. It produces `DES_PERFORMANCE.csv`, `DES_PERFORMANCE_NUMERICAL.csv` and `DES_PERFORMANCE_NUMERICAL.json` as outputs. 
+
+## Modeling and analysis on DES Performance - Folder 'analysis_model'.
+It contains 2 Jupyter notebooks. 
+1) `caseload_prediction_model.ipynb` (Python) - Train and evaluate 3 models, and select the best model for DES provider's caseload projection. 
+2) `identify_high_low_season.ipynb` (R) - Perform analysis on the trends and identify hign and low application seasons.
+
+## DES Performance Data Visualisation - Folder Tableau - `DESPerformanceVisualisation`
+The dashboard is created locally and published to Tableau Public in order to embed view on the website. 
 
 
