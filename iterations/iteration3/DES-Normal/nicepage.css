@@ -15405,6 +15405,14 @@ p {
 .u-button-style.u-black {
   border-width: 0;
 }
+
+.u-button-style-1[class*="u-custom-color-"],
+.u-button-style-1[class*="u-palette-"],
+.u-button-style-1[class*="u-gray-"],
+.u-button-style-1.u-white,
+.u-button-style-1.u-black {
+  border-width: 0;
+}
 .u-search-left .u-search-icon[class*="u-custom-color-"],
 .u-search-left .u-search-icon[class*="u-palette-"],
 .u-search-left .u-search-icon[class*="u-gray-"],
@@ -25964,7 +25972,7 @@ a.u-button-style.u-button-style.u-text-palette-1-dark-2:active,
 a.u-button-style.u-button-style.u-text-palette-1-dark-2[class*="u-border-"]:active,
 a.u-button-style.u-button-style.u-text-palette-1-dark-2.active,
 a.u-button-style.u-button-style.u-text-palette-1-dark-2[class*="u-border-"].active {
-  color: #3b4c5b !important;
+  color: #eb7777 !important;
 }
 a.u-button-style.u-button-style.u-text-hover-palette-1-dark-2:hover,
 a.u-button-style.u-button-style.u-text-hover-palette-1-dark-2[class*="u-border-"]:hover,
@@ -26192,7 +26200,7 @@ a.u-button-style.u-button-style.u-text-palette-1-base:active,
 a.u-button-style.u-button-style.u-text-palette-1-base[class*="u-border-"]:active,
 a.u-button-style.u-button-style.u-text-palette-1-base.active,
 a.u-button-style.u-button-style.u-text-palette-1-base[class*="u-border-"].active {
-  color: #387cbd !important;
+  color: #eb7777 !important;
 }
 a.u-button-style.u-button-style.u-text-hover-palette-1-base:hover,
 a.u-button-style.u-button-style.u-text-hover-palette-1-base[class*="u-border-"]:hover,

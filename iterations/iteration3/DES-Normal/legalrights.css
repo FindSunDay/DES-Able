@@ -302,7 +302,7 @@
 
 .u-section-5 {background-image: none}
 .u-section-5 .u-sheet-1 {min-height: 800px}
-.u-section-5 .u-group-1 {width: 550px; min-height: 261px; margin: 50px auto 0 }
+.u-section-5 .u-group-1 { min-height: 261px; margin: 50px auto 0 }
 .u-section-5 .u-container-layout-1 {padding: 30px}
 .u-section-5 .u-text-1 {font-size: 1.875rem; font-weight: 700; font-family: Ubuntu; margin: 0px  0 0}
 .u-section-5 .u-text-2 {font-size: 1.5rem; font-weight: 700; margin: 22px 0 0 50px}
@@ -516,7 +516,7 @@
 .u-section-7 .u-sheet-1 {min-height: 800px}
 .u-section-7 .u-group-1 {width: 550px; min-height: 200px; margin: 50px auto 0 }
 .u-section-7 .u-container-layout-1 {padding: 30px}
-.u-section-7 .u-text-1 {font-size: 1.875rem; font-weight: 700; font-family: Ubuntu; margin: 0; width: 600px}
+.u-section-7 .u-text-1 {font-size: 1.875rem; font-weight: 700; font-family: Ubuntu; margin: 0px}
 .u-section-7 .u-btn-1 {font-weight: 700; padding: 0}
 .u-section-7 .u-btn-2 {padding: 0; }
 .u-section-7 .u-list-1 {min-height: 800px; grid-template-columns: calc(33.3333% - 29px) calc(33.3333%  - 29px) calc(33.3333% - 29px); grid-template-rows: auto; grid-gap: 44px 44px; margin: -70px auto 60px 0}
@@ -637,6 +637,7 @@
 .u-section-7 .u-text-13 {width: auto} }
 
 .u-section-8 .u-sheet-1 {min-height: 774px}
+.u-section-4 .u-btn-1 {padding: 0}
 .u-section-8 .u-text-1 {font-size: 1.875rem; font-weight: 700; font-family: Ubuntu; margin-top: 50px;}
 .u-section-8 .u-layout-wrap-1 {margin: 30px 0 -435px}
 .u-section-8 .u-layout-cell-1 {min-height: 637px}
@@ -740,3 +741,73 @@
 .u-section-8 .u-icon-4 {margin-right: 256px}
 .u-section-8 .u-text-8 {margin-left: 80px}
 .u-section-8 .u-text-9 {width: auto; margin-left: 80px} }
+
+/* Source: Hover.css Github under MIT license */
+.hvr-grow {
+    display: flex;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .hvr-text {
+   
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-text:before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-text:hover, .hvr-text:focus, .hvr-textt:active {
+    color:#eb7777;
+    font-weight: 600;
+    font-family: Ubuntu;
+  
+  }
+  .hvr-text:hover:before, .hvr-text:focus:before, .hvr-text:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  .hvr-text:hover span {display:none;}
+  
+  .hvr-text:hover:after {
+  content: attr(data-hover);
+
+
+  }
+  
