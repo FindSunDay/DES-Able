@@ -268,11 +268,14 @@ new Vue({
         .catch((error) => console.log("error", error));
     },
     handleSearchNearby() {
-      // try {
-      //   this.fillInAddress();
-      // } catch {
-      //   this.null_des_site = true;
-      // }
+      if (this.entered_address == ""){
+        try {
+          this.fillInAddress();
+        } catch {
+          this.null_des_site = true;
+          this.show_des_site = false;
+        }
+      }
       console.log("123", this.entered_address, this.specialityName);
       if (this.entered_address != "" && this.specialityName != "") {
         var requestOptions = {
@@ -546,20 +549,24 @@ new Vue({
       // // address fields in the form.
 
       // this.autocomplete.addListener("place_changed", this.fillInAddress());
+      console.log("auto-complete", this.autocomplete);
     },
     fillInAddress() {
       const place = this.autocomplete.getPlace();
-      console.log(place);
-      let str =
-        place.address_components[0].short_name +
-        " " +
-        place.address_components[1].short_name +
-        " " +
-        place.address_components[2].short_name +
-        " " +
-        // place.address_components[3].short_name +
-        // " " +
-        place.address_components[4].short_name;
+      console.log("fill",place);
+      // let str =
+      //   place.address_components[0].short_name +
+      //   " " +
+      //   place.address_components[1].short_name +
+      //   ", " +
+      //   place.address_components[2].short_name +
+      //   " " +
+      //   // place.address_components[3].short_name +
+      //   // " " +
+      //   place.address_components[4].long_name +
+      //   ", " +
+      //   place.address_components[5].long_name;
+      let str = place.formatted_address;
       console.log("str", str);
       this.entered_address = str;
     },
