@@ -65,28 +65,32 @@ new Vue({
     //   }
     // }
     // },
-    
+
     // Click on the picture to go back to the top method, adding a timer is for smooth transition
-    backTop () {
-        const that = this
-        let timer = setInterval(() => {
-          let ispeed = Math.floor(-that.scrollTop / 5)
-          document.documentElement.scrollTop = document.body.scrollTop = that.scrollTop + ispeed
-          if (that.scrollTop === 0) {
-            clearInterval(timer)
-          }
-        }, 16)
+    backTop() {
+      const that = this;
+      let timer = setInterval(() => {
+        let ispeed = Math.floor(-that.scrollTop / 5);
+        document.documentElement.scrollTop = document.body.scrollTop =
+          that.scrollTop + ispeed;
+        if (that.scrollTop === 0) {
+          clearInterval(timer);
+        }
+      }, 16);
     },
 
     // In order to calculate the height from the top, when the height is greater than 60, the top icon will be displayed, and the icon will be hidden if it is less than 60.
-    scrollToTop () {
-      const that = this
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      that.scrollTop = scrollTop
+    scrollToTop() {
+      const that = this;
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      that.scrollTop = scrollTop;
       if (that.scrollTop > 0) {
-        that.btnFlag = true
+        that.btnFlag = true;
       } else {
-        that.btnFlag = false
+        that.btnFlag = false;
       }
     },
     switchCaseStatus() {
@@ -447,7 +451,6 @@ new Vue({
       });
       console.log(map);
 
-
       const infowindow = new google.maps.InfoWindow({
         // content: contentString,
         content: name,
@@ -480,19 +483,32 @@ new Vue({
       });
       console.log(provider);
       // this.initAutocomplete();
-      
+
       const directionsRenderer = new google.maps.DirectionsRenderer();
       const directionsService = new google.maps.DirectionsService();
       directionsRenderer.setMap(map);
-      this.calculateAndDisplayRoute(directionsService, directionsRenderer,provider.lat, provider.lng);
+      this.calculateAndDisplayRoute(
+        directionsService,
+        directionsRenderer,
+        provider.lat,
+        provider.lng
+      );
     },
-    calculateAndDisplayRoute(directionsService, directionsRenderer, des_lat, des_lng) {
+    calculateAndDisplayRoute(
+      directionsService,
+      directionsRenderer,
+      des_lat,
+      des_lng
+    ) {
       // const selectedMode = document.getElementById("mode").value;
-      console.log("123", des_lat, des_lng)
+      console.log("123", des_lat, des_lng);
       const selectedMode = "DRIVING";
       directionsService.route(
         {
-          origin: { lat: this.des_site_five.cur_lat, lng: this.des_site_five.cur_lng },
+          origin: {
+            lat: this.des_site_five.cur_lat,
+            lng: this.des_site_five.cur_lng,
+          },
           destination: { lat: des_lat, lng: des_lng },
           // Note that Javascript allows us to access the constant
           // using square brackets and a string value as its
@@ -544,7 +560,7 @@ new Vue({
       console.log("str", str);
       this.entered_address = str;
     },
-    getAddress(){
+    getAddress() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -558,32 +574,34 @@ new Vue({
             // map.setCenter(pos);
             // console.log("current location:",pos)
             var requestOptions = {
-              method: 'GET',
-              redirect: 'follow'
+              method: "GET",
+              redirect: "follow",
             };
-            
-            fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8&language=en_AU`, requestOptions)
-              .then(response => response.text())
-              .then(result => {
+
+            fetch(
+              `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8&language=en_AU`,
+              requestOptions
+            )
+              .then((response) => response.text())
+              .then((result) => {
                 // console.log("address",result);
                 let res = JSON.parse(result);
                 // console.log("address", res.results[0].formatted_address);
                 this.entered_address = res.results[0].formatted_address;
-            })
-              .catch(error => console.log('error', error));
-          },
-          () => {
-            handleLocationError(true, infoWindow, map.getCenter());
+              })
+              .catch((error) => console.log("error", error));
           }
+          // () => {
+          //   handleLocationError(true, infoWindow, map.getCenter());
+          // }
         );
       } else {
         // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
+        // handleLocationError(false, infoWindow, map.getCenter());
       }
     },
   },
   mounted() {
-
     // if (navigator.geolocation) {
     //   navigator.geolocation.getCurrentPosition(
     //     (position) => {
@@ -606,7 +624,7 @@ new Vue({
     //   handleLocationError(false, infoWindow, map.getCenter());
     // }
 
-    window.addEventListener('scroll', this.scrollToTop)
+    window.addEventListener("scroll", this.scrollToTop);
     // this.initMap();
     var requestOptions = {
       method: "GET",
@@ -680,7 +698,7 @@ new Vue({
       })
       .catch((error) => console.log("error", error));
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.scrollToTop)
+  destroyed() {
+    window.removeEventListener("scroll", this.scrollToTop);
   },
 });
