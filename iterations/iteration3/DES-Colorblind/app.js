@@ -281,6 +281,8 @@ new Vue({
         };
 
         this.is_nearby_button_loading = true;
+        this.null_des_site = false;
+        this.show_des_site = false;
 
         fetch(
           `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
@@ -316,6 +318,7 @@ new Vue({
           });
       } else {
         this.null_des_site = true;
+        this.show_des_site = false;
       }
       // this.is_nearby_button_loading = false;
     },
