@@ -18,7 +18,7 @@ Username and password are required.
     2. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
     Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
       
-## Frontend Development
+## Frontend Development - Folder 'iterations'
 The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 are stored in this folder.   
       - 'DES-Normal' contains normal version of iteration 1 website.
       - 'DES-Colorblind' contains colorblind version of iteration 1 website. 
@@ -62,4 +62,9 @@ It contains 2 Jupyter notebooks.
 The dashboard is created locally and published to Tableau Public in order to embed view on the website. 
 
 
-## Api code deployed on AWS Lambda
+## Api code deployed on AWS Lambda - Folder 'AWS'
+It contains 4 folders deployed on AWS Lambda as apis.
+1) `informationProcessor` - Provide general information which will initially display on the website includes DES PROVIDER INFO page, NEARBY PROVIDER page and DES PERFORMANCE page.
+2) `desQueryProcessor` - Provide search interface which allow user to input name, speciality, rating and postal to retrieve the filtered data for DES PROVIDER INFO page.
+3) `desMapProcessor` - Provide search interface which allow user to input user_loc and user_spec to generate five nearest providers information together with routes to the inputed address.
+4) `desPerformanceProcessor` - Provide search interface which allow user to input year and month to generate the selected performance data filtered by year and month.
