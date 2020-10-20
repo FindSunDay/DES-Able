@@ -6,7 +6,7 @@ new Vue({
       infoList: [],
       showList: [],
       nameList: [{ value: "All Providers" }],
-      specialityList: [{ value: "All Specialities" }],
+      specialityList: [{ value: "Select All Specialities" }],
       ratingList: [
         { value: "All Ratings" },
         { value: 5 },
@@ -17,7 +17,7 @@ new Vue({
       ],
       postInput: "",
       providerName: "All Providers",
-      specialityName: "All Specialities",
+      specialityName: "Select All Specialities",
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
@@ -70,7 +70,7 @@ new Vue({
       // console.log("1", this.rating);
 
       fetch(
-        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
+        `https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
         requestOptions1
       )
         .then((response) => response.text())
@@ -132,7 +132,7 @@ new Vue({
     };
 
     fetch(
-      "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/allinfo",
+      "https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/allinfo",
       requestOptions
     )
       .then((response) => response.text())

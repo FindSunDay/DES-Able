@@ -6,7 +6,7 @@ new Vue({
       infoList: [],
       showList: [],
       nameList: [{ value: "All Providers" }],
-      specialityList: [{ value: "All Specialities" }],
+      specialityList: [{ value: "Select All Specialities" }],
       ratingList: [
         { value: "All Ratings" },
         { value: 5 },
@@ -17,7 +17,7 @@ new Vue({
       ],
       postInput: "",
       providerName: "All Providers",
-      specialityName: "All Specialities",
+      specialityName: "Select All Specialities",
       rating: "All Ratings",
       selectedRatings: [],
       showListLength: 1,
@@ -31,6 +31,32 @@ new Vue({
     //   }
     // }
     // },
+    debounce() {
+      let timer;
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        console.log("防抖...");
+        timer = undefined;
+      }, 2000);
+    },
+    throttle: () => {
+      if (lastTime && now - lastTime < 200) {
+        clearTimeout(timer);
+        console.log("....");
+        timer = setTimeout(() => {
+          console.log("点击...");
+          lastTime = +new Date();
+        }, 2000);
+      } else {
+        lastTime = now;
+        timer = setTimeout(() => {
+          console.log("点击...");
+          lastTime = +new Date();
+        }, 200);
+      }
+    },
     handleSearch() {
       var requestOptions1 = {
         method: "GET",
@@ -44,7 +70,7 @@ new Vue({
       // console.log("1", this.rating);
 
       fetch(
-        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
+        `https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
         requestOptions1
       )
         .then((response) => response.text())
@@ -106,7 +132,7 @@ new Vue({
     };
 
     fetch(
-      "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/allinfo",
+      "https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/allinfo",
       requestOptions
     )
       .then((response) => response.text())
