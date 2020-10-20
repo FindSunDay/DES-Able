@@ -124,7 +124,7 @@ new Vue({
       // console.log("1", this.rating);
 
       fetch(
-        `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
+        `https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/search?name=${this.providerName}&speciality=${this.specialityName}&rating=All Ratings&postal=${this.postInput}`,
         requestOptions1
       )
         .then((response) => response.text())
@@ -195,15 +195,15 @@ new Vue({
         this.is_nearby_button_loading = true;
 
         fetch(
-          `https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
-          // "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
+          `https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=${this.entered_address}&user_spec=${this.specialityName}`,
+          // "https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/map?user_loc=5 Dudley street 3145&user_spec=All Client Types",
           requestOptions
         )
           .then((response) => response.text())
           .then((result) => {
             // this.des_site_five = {};
             this.des_site_five = JSON.parse(result);
-            console.log("123", this.des_site_five);
+            console.log(this.des_site_five);
             if (JSON.stringify(this.des_site_five) === "{}") {
               // if (!this.des_site_five.hasOwnProperty("site_one")) {
               this.null_des_site = true;
@@ -455,7 +455,7 @@ new Vue({
     };
 
     fetch(
-      "https://g7n5ifjzkj.execute-api.us-east-1.amazonaws.com/api/allinfo",
+      "https://bsdtx4tahj.execute-api.us-east-1.amazonaws.com/api/allinfo",
       requestOptions
     )
       .then((response) => response.text())
