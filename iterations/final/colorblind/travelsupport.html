@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html style="font-size: 16px">
   <head>
+    <!-- meta data, import stylesheet and related component -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
@@ -50,10 +51,10 @@
     <meta property="og:url" content="index.html" />
     <!-- vue dev env -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- vue build env -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+   
   </head>
 
+  <!-- return to the top button  -->
   <body class="u-body">
     <div id="vue-app">
       <img v-if="btnFlag" class="go-top" src="./images/top_button.png" @click="backTop" style="position: fixed;
@@ -65,6 +66,8 @@
         background: #fff;
         border-radius: 50%;
         z-index: 99;">
+
+  <!-- Menu navigation bar  -->
     <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea"><div class="u-clearfix u-sheet u-sheet-1">
       <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
         <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
@@ -76,6 +79,8 @@
           </a>
         </div>
         <div class="u-custom-menu u-nav-container">
+          <!-- name the tab and link tab to relevant page and  -->
+          <!-- change padding to adjust the margin of the tabs-->
           <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-custom-color-4 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
           </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
           </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
@@ -98,15 +103,19 @@
           <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
         </div>
       </nav>
+      <!-- link logo to home page -->
       <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600" data-image-height="875">
         <img src="images/logo_colorblind.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
       </a>
+      <!-- link to normal version -->
       <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
       <a href="../travelsupport.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
         <span class="u-text-icon"></span>Normal Version&nbsp; &nbsp;
       </a>
       <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
     </div></header>
+
+    <!-- top banner -->
     <section class="u-clearfix u-white u-section-1" id="sec-d862">
       <div
         class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1"
@@ -114,6 +123,7 @@
         <div
           class="u-clearfix u-expanded-width-sm u-expanded-width-xs u-gutter-16 u-layout-wrap u-layout-wrap-1"
         >
+        <!-- images -->
           <div class="u-layout">
             <div class="u-layout-row">
               <div
@@ -153,6 +163,7 @@
                   </div>
                 </div>
               </div>
+              <!-- page discription -->
               <p class="u-align-center u-custom-font u-text-palette-1-dark-2  u-text" style="font-family: Ubuntu; font-weight: 600; font-size:1.19rem; width:100%">
                 The best disability transport services in Victoria are just a click away. 
                 <font style="font-family: Ubuntu; font-weight: 500; font-size:1rem; width:100%;" >
@@ -164,6 +175,10 @@
         </div>
       </div>
     </section>
+
+    <!-- Travel support information -->
+    <!-- 10 providers with brief description-->
+    <!-- all website url is embeded and phone number is callable  -->
     <section
       class="u-align-center u-clearfix u-image u-shading u-section-2"
       id="sec-aa56"
@@ -177,12 +192,15 @@
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-1"
           >
+
+          <!-- 1st provider -->
             <div
               class="u-container-layout u-similar-container u-container-layout-1"
             >
               <div
                 class="u-align-center u-container-style u-expanded-width u-group u-white u-video-cover u-group-1"
               >
+              <!-- data to show when hover -->
                 <div
                   class="u-container-layout u-valign-middle u-container-layout-2 hvr-sweep-to-right"
                   data-hover="Cosy Home and Community Care provide specialised assistance for travel in every way you need. They can get help to prepare and plan for travel, choose pick-up and drop services and get a travel companion.
@@ -291,6 +309,7 @@
               </p>
             </div>
           </div>
+          <!-- 2nd provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-2"
           >
@@ -411,6 +430,7 @@
               </p>
             </div>
           </div>
+          <!-- 3th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-3"
           >
@@ -528,6 +548,8 @@
               </p>
             </div>
           </div>
+
+            <!-- 4th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-4"
           >
@@ -646,6 +668,8 @@
               </p>
             </div>
           </div>
+
+          <!-- 5th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-5"
           >
@@ -761,6 +785,8 @@
               </p>
             </div>
           </div>
+
+          <!-- 6th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-6"
           >
@@ -881,7 +907,9 @@
                 >
               </p>
             </div>
-          </div>
+          </div>          
+  
+          <!-- 7th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-7"
           >
@@ -999,6 +1027,8 @@
               </p>
             </div>
           </div>
+
+          <!-- 8th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-8"
           >
@@ -1118,6 +1148,7 @@
             </div>
           </div>
 
+          <!-- 9th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-9"
           >
@@ -1259,13 +1290,13 @@
               </h3>
               <a
                 href="https://play.google.com/store/apps/details?id=com.yarratrams.tramtracker&hl=en_AU" target="_blank"
-                class="u-btn u-btn-rectangle u-button-style u-btn-3"
+                class="u-btn u-btn-rectangle u-button-style u-btn-1"
               >
                 <font style="font-size: 0.875rem; font-family: ubuntu;">For Android</font>
               </a>
               <a
                 href="https://apps.apple.com/au/app/tramtracker/id317312510" target="_blank"
-                class="u-btn u-btn-rectangle u-button-style u-btn-4"
+                class="u-btn u-btn-rectangle u-button-style u-btn-2"
               >
                 <font style="font-size: 0.875rem; font-family:ubuntu;"
                   >&nbsp; &nbsp;For IOS&nbsp; &nbsp;</font
@@ -1273,6 +1304,7 @@
               </a>
             </div>
           </div>
+          <!-- 10th provider -->
           <div
             class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-10"
           >
@@ -1383,7 +1415,8 @@
                       ></path>
                     </g>
                   </svg> </span
-                >&nbsp;&nbsp;&nbsp;<a href="https://www.coloplast.com.au/about-us/Landing-pages/wheelmate/" target="_blank" class = "u-text-white">Visit Website</a>
+                >&nbsp;&nbsp;&nbsp;
+                <a href="https://www.coloplast.com.au/about-us/Landing-pages/wheelmate/" target="_blank" class = "u-text-white">Visit Website</a>
               </p>
               <h3
                 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-white u-text-31"
@@ -1392,13 +1425,13 @@
               </h3>
               <a
                 href="ttps://play.google.com/store/apps/details?id=com.novasa.wheelmate&hl=en_AU" target="_blank"
-                class="u-btn u-btn-rectangle u-button-style u-btn-5"
+                class="u-btn u-btn-rectangle u-button-style u-btn-3"
               >
                 <font style="font-size: 0.875rem; font-family: ubuntu;">For Android</font>
               </a>
               <a
                 href="https://apps.apple.com/app/wheelmate/id515277627" target="_blank"
-                class="u-btn u-btn-rectangle u-button-style u-btn-6"
+                class="u-btn u-btn-rectangle u-button-style u-btn-4"
               >
                 <font style="font-size: 0.875rem; font-family: ubuntu;"
                   >&nbsp; &nbsp;For IOS&nbsp; &nbsp;</font
@@ -1409,7 +1442,7 @@
         </div>
       </div>
     </section>
-
+    <!-- bottom banner -->
     <section class="u-clearfix u-section-3" id="sec-7a03">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div

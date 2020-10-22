@@ -1,13 +1,24 @@
+/* Travel support - Color Blind version */
+
+/* 
+u-section-1: Top banner
+u-section-2: Travel support info card
+u-section-3: Bottom banner
+ */
+
+ /* top banner */
 .u-section-1 .u-sheet-1 {min-height: 419px}
 .u-section-1 .u-layout-wrap-1 {width: 1038px; margin: 37px 51px 37px auto}
+/* left image */
 .u-section-1 .u-image-1 {min-height: 362px; background-image: linear-gradient(0deg, rgba(173,204,233,0.2), rgba(173,204,233,0.2)), url("images/travelsupport_colorblind1.jpg"); background-position: 14.94% 50%}
 .u-section-1 .u-container-layout-1 {padding: 30px}
+/* right image */
 .u-section-1 .u-image-2 {min-height: 362px; background-image: linear-gradient(0deg, rgba(173,204,233,0.2), rgba(173,204,233,0.2)), url("images/travelsupport_colorblind2.jpg"); background-position: 50% 50%}
 .u-section-1 .u-container-layout-2 {padding: 30px}
 .u-section-1 .u-group-1 {min-height: 149px; width: 600px; margin: 0 auto 0 -337px}
 .u-section-1 .u-container-layout-3 {padding: 23px 30px 20px}
 .u-section-1 .u-text-1 {line-height: 1.6; font-size: 1.875rem; font-weight: 700; margin: 0} 
-
+/* set layout for different devices */
 @media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 500px}
 .u-section-1 .u-layout-wrap-1 {width: 940px; margin-right: 0}
 .u-section-1 .u-image-1 {min-height: 328px}
@@ -33,9 +44,12 @@
 .u-section-1 .u-group-1 {margin-top: 0; width: auto; margin-right: initial; margin-left: initial}
 .u-section-1 .u-text-1 {font-size: 1.5rem} }
 
+/* Travel support info card */
+/* background design */
 .u-section-2 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(85,92,102,0.8), rgba(85,92,102,0.8)), url("images/travelsupport_colorblind3.jpg"); background-position: 50% 50%}
 .u-section-2 .u-sheet-1 {min-height: 2014px}
 .u-section-2 .u-list-1 {min-height: 958px; grid-template-columns: calc(33.3333% - 20px) calc(33.3333% - 20px) calc(33.3333% - 20px); grid-gap: 30px 30px; width: 1016px; margin: 48px auto 20px}
+/* 1 cosy home */
 .u-section-2 .u-list-item-1 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-1 {padding: 20px 20px 30px}
 .u-section-2 .u-group-1 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -43,6 +57,7 @@
 .u-section-2 .u-text-1 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-2 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-3 {font-size: 1.25rem; margin: 20px 0 0}
+/* 2 advanced care */
 .u-section-2 .u-list-item-2 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-3 {padding: 20px 20px 30px}
 .u-section-2 .u-group-2 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -50,6 +65,7 @@
 .u-section-2 .u-text-4 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-5 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-6 {font-size: 1.25rem; margin: 20px 0 0}
+/* 3 edison wheelchair */
 .u-section-2 .u-list-item-3 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-5 {padding: 20px 20px 30px}
 .u-section-2 .u-group-3 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -57,6 +73,7 @@
 .u-section-2 .u-text-7 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-8 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-9 {font-size: 1.25rem; margin: 20px 0 0}
+/* 4 link community support */
 .u-section-2 .u-list-item-4 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-7 {padding: 20px 20px 30px}
 .u-section-2 .u-group-4 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -64,6 +81,7 @@
 .u-section-2 .u-text-10 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-11 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-12 {font-size: 1.25rem; margin: 20px 0 0}
+/* 5 scope*/
 .u-section-2 .u-list-item-5 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-9 {padding: 20px 20px 30px}
 .u-section-2 .u-group-5 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -71,6 +89,7 @@
 .u-section-2 .u-text-13 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-14 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-15 {font-size: 1.25rem; margin: 20px 0 0}
+/* 6 red cross */
 .u-section-2 .u-list-item-6 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-11 {padding: 20px 20px 30px}
 .u-section-2 .u-group-6 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -78,6 +97,7 @@
 .u-section-2 .u-text-16 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-17 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-18 {font-size: 1.25rem; margin: 20px 0 0}
+/* 7 13cabs */
 .u-section-2 .u-list-item-7 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-13 {padding: 20px 20px 30px}
 .u-section-2 .u-group-7 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -85,6 +105,7 @@
 .u-section-2 .u-text-19 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-20 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-21 {font-size: 1.25rem; margin: 20px 0 0}
+/* 8 nurse next door */
 .u-section-2 .u-list-item-8 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-15 {padding: 20px 20px 30px}
 .u-section-2 .u-group-8 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -92,6 +113,7 @@
 .u-section-2 .u-text-22 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-23 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-24 {font-size: 1.25rem; margin: 20px 0 0}
+/* 9 TramTracker */
 .u-section-2 .u-list-item-9 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-17 {padding: 20px 20px 30px}
 .u-section-2 .u-group-9 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -99,6 +121,7 @@
 .u-section-2 .u-text-25 {font-size: 1.875rem; width: 199px; margin: 0 auto}
 .u-section-2 .u-text-26 {font-size: 1.25rem; margin: 20px 0 0}
 .u-section-2 .u-text-27 {font-size: 1.25rem; margin: 20px 0 0}
+/* 10  wheelmate*/
 .u-section-2 .u-list-item-10 {width: 319px; margin-right: auto; margin-left: auto}
 .u-section-2 .u-container-layout-19 {padding: 20px 20px 30px}
 .u-section-2 .u-group-10 {min-height: 291px; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4); background-size: auto; margin: 15px auto 0 0}
@@ -107,12 +130,14 @@
 .u-section-2 .u-text-29 {font-size: 1.25rem; margin: 20px 0 0 3px}
 .u-section-2 .u-text-30 {font-size: 1.25rem; margin: 1px 0 0 3px}
 .u-section-2 .u-text-31 {font-size: 1.25rem; font-weight: 700; margin: 9px 0 0 5px}
+/* download buttons */
+/* tramtracker */
 .u-section-2 .u-btn-1 { border-style: none; font-weight: 700; margin: 12px auto 0 0; padding: 10px 20px ;background: #1D3F61; color:white}
 .u-section-2 .u-btn-2 { border-style: none; font-weight: 700; margin: -45px 0 0 auto; padding: 10px 26px 10px 25px;background: #1D3F61; color:white} 
+/* wheelmate */
 .u-section-2 .u-btn-3 { border-style: none; font-weight: 700; margin: 12px auto 0 0; padding: 10px 20px ;background: #1D3F61; color:white}
 .u-section-2 .u-btn-4 { border-style: none; font-weight: 700; margin: -45px 0 0 auto; padding: 10px 26px 10px 25px;background: #1D3F61; color:white} 
-.u-section-2 .u-btn-5 { border-style: none; font-weight: 700; margin: 12px auto 0 0; padding: 10px 20px ;background: #1D3F61; color:white}
-.u-section-2 .u-btn-6 { border-style: none; font-weight: 700; margin: -45px 0 0 auto; padding: 10px 26px 10px 25px;background: #1D3F61; color:white} 
+/* icons on cards */
 .u-section-2 .u-icon-1 {color: #1D3F61; height: 55px; width: 55px; background-image: none; margin: 5px auto 20px auto}
 .u-section-2 .u-icon-2 {color: #1D3F61; height: 55px; width: 55px; background-image: none; margin: 5px auto 20px auto}
 .u-section-2 .u-icon-3 {color: #1D3F61; height: 55px; width: 55px; background-image: none; margin: 5px auto 20px auto}
@@ -125,8 +150,7 @@
 .u-section-2 .u-icon-10 {color: #1D3F61; height: 55px; width: 55px; background-image: none; margin: 5px auto 20px auto}
 
 
-
-
+/* desktop */
 @media (max-width: 1199px){ .u-section-2 .u-sheet-1 {min-height: 1062px}
 .u-section-2 .u-list-1 {min-height: 464px; height: auto; margin-top: 67px; margin-right: initial; margin-left: initial; width: auto}
 .u-section-2 .u-group-1 {margin-right: initial; margin-left: initial}
@@ -170,6 +194,7 @@
 .u-section-2 .u-text-29 {width: 200px; margin-right: 121px}
 .u-section-2 .u-text-30 {width: 200px} }
 
+/* small screen, labtop */
 @media (max-width: 991px){ .u-section-2 .u-list-1 {min-height: 1066px; grid-template-columns: repeat(2, calc(((100% - 720px) / 2)  + 345px)); width: auto; margin-right: initial; margin-left: initial}
 .u-section-2 .u-list-item-1 {background-size: auto}
 .u-section-2 .u-group-1 {margin-top: 16px; margin-right: initial; margin-left: initial}
@@ -203,6 +228,7 @@
 .u-section-2 .u-text-29 {margin-top: 19px; margin-right: 50px ; width:200px}
 .u-section-2 .u-text-30 {width:200px}}
 
+/* tablets */
 @media (max-width: 767px){ .u-section-2 .u-list-1 {grid-template-columns: 100%; width: auto; margin-right: initial; margin-left: initial}
 .u-section-2 .u-container-layout-1 {padding-right: 30px; padding-left: 10px}
 .u-section-2 .u-group-1 {background-size: auto; margin-right: initial; margin-left: initial}
@@ -264,6 +290,7 @@
 .u-section-2 .u-text-29 {height: 34px; width:200px}
 .u-section-2 .u-text-30 {height: 34px; width:200px} }
 
+/* mobile */
 @media (max-width: 575px){ .u-section-2 .u-container-layout-1 {padding-right: 10px}
 .u-section-2 .u-text-1 {font-size: 1.5rem}
 .u-section-2 .u-container-layout-3 {padding-right: 10px}
@@ -294,12 +321,14 @@
 .u-section-2 .u-text-30 {margin-right: auto; width:200px} }
 
 
+/* bottom banner */
 .u-section-3 {min-height: 448px}
 .u-section-3 .u-layout-wrap-1 {width: 1140px; margin: 20px auto 30px}
 .u-section-3 .u-layout-cell-1 {min-height: 398px}
 .u-section-3 .u-container-layout-1 {padding: 30px}
 .u-section-3 .u-text-1 {margin-top: 108px; margin-bottom: 0}
 .u-section-3 .u-text-2 {margin: 20px 0 0}
+/* image */
 .u-section-3 .u-image-1 {min-height: 398px; background-image: linear-gradient(0deg, rgba(173,204,233,0.3), rgba(173,204,233,0.3)), url("images/travelsupport_colorblind4.jpg"); background-position: 50% 40.05%}
 .u-section-3 .u-container-layout-2 {padding: 30px 60px} 
 
@@ -327,7 +356,7 @@
 .u-section-3 .u-layout-wrap-1 {width: 340px}
 .u-section-3 .u-image-1 {min-height: 178px} }
 
-
+/* Source: Hover.css Github under MIT license */
 /* Sweep To Right */
 .hvr-sweep-to-right {
     color: #1D3F61;
