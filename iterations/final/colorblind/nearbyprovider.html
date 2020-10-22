@@ -1,39 +1,25 @@
+<!-- Nearby Provider - Color Blind version -->
 <!DOCTYPE html>
 <html style="font-size: 16px">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="page_type" content="np-template-header-footer-from-plugin" />
-    <title>NEARBY colorblind</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen" />
-    <link rel="stylesheet" href="./nearbyprovider.css?v=1.5" media="screen" />
-    <script
-      class="u-script"
-      type="text/javascript"
-      src="jquery.js"
-      defer=""
-    ></script>
-    <script
-      class="u-script"
-      type="text/javascript"
-      src="nicepage.js"
-      defer=""
-    ></script>
-    <meta name="generator" content="Nicepage 2.23.0, nicepage.com" />
 
-    <link
-      id="u-theme-google-font"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    />
-    <link
-      id="u-page-google-font"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i"
-    />
-    <script type="application/ld+json">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="page_type" content="np-template-header-footer-from-plugin" />
+  <title>NEARBY colorblind</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen" />
+  <link rel="stylesheet" href="./nearbyprovider.css?v=1.5" media="screen" />
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 2.23.0, nicepage.com" />
+
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" />
+  <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "Organization",
@@ -42,33 +28,29 @@
         "logo": "images/logo_colorblind.jpg"
       }
     </script>
-    <meta property="og:title" content="NEARBY colorblind" />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#478ac9" />
-    <link rel="canonical" href="index.html" />
-    <meta property="og:url" content="index.html" />
+  <meta property="og:title" content="NEARBY colorblind" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#478ac9" />
+  <link rel="canonical" href="index.html" />
+  <meta property="og:url" content="index.html" />
 
-    <!-- vue dev env -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- vue build env -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-    <!-- import stylesheet -->
-    <!-- 引入样式 -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
-    />
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8&callback=initMap&libraries=places&v=weekly&language=en_AU"
-      defer
-    ></script>
-  </head>
-  <body class="u-body">
-    <div id="vue-app">
-      <img v-if="btnFlag" class="go-top" src="./images/top_button.png" @click="backTop" style="position: fixed;
+  <!-- vue dev env -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- import stylesheet -->
+
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <!-- import relevant component -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8&callback=initMap&libraries=places&v=weekly&language=en_AU"
+    defer></script>
+</head>
+
+<body class="u-body">
+  <div id="vue-app">
+    <img v-if="btnFlag" class="go-top" src="./images/top_button.png" @click="backTop" style="position: fixed;
         bottom: 50px;
         right: 50px;
         width: 50px;
@@ -77,1166 +59,636 @@
         background: #fff;
         border-radius: 50%;
         z-index: 99;">
-      <!-- <header
-        class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header"
-        id="sec-05ea"
-      >
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-            <div
-              class="menu-collapse u-custom-font u-font-ubuntu"
-              style="
-                font-size: 0.75rem;
-                letter-spacing: 0;
-                text-transform: uppercase;
-                font-weight: 700;
-              "
-            >
-              <a
-                class="u-active-custom-color-4 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
-                href="#"
-                style="padding: 4px; font-size: calc(1em + 8px)"
-              >
-                <svg>
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="#menu-hamburger"
-                  ></use>
-                </svg>
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <symbol
-                      id="menu-hamburger"
-                      viewBox="0 0 16 16"
-                      style="width: 16px; height: 16px"
-                    >
-                      <rect y="1" width="16" height="2"></rect>
-                      <rect y="7" width="16" height="2"></rect>
-                      <rect y="13" width="16" height="2"></rect>
-                    </symbol>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-            <div class="u-custom-menu u-nav-container">
-              <ul
-                class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-custom-color-4 u-unstyled u-nav-1"
-              >
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./index.html"
-                    style="padding: 10px 12px"
-                    >HOME PAGE</a
-                  >
-                </li>
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./providerinfo.html"
-                    style="padding: 10px 12px"
-                    >DES PROVIDER INFO</a
-                  >
-                </li>
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./nearbyprovider.html"
-                    style="padding: 10px 12px"
-                    >NEARBY PROVIDER</a
-                  >
-                </li>
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./travelsupport.html"
-                    style="padding: 10px 12px"
-                    >TRAVEL SUPPORT</a
-                  >
-                </li>
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./desperformance.html"
-                    style="padding: 10px 12px"
-                    >DES PERFORMANCE</a
-                  >
-                </li>
-                <li class="u-nav-item">
-                  <a
-                    class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
-                    href="./legalrights.html"
-                    style="padding: 10px 12px"
-                    >LEGAL RIGHTS</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="u-custom-menu u-nav-container-collapse">
-              <div
-                class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav"
-              >
-                <div class="u-menu-close"></div>
-                <ul
-                  class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"
-                >
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./index.html"
-                      style="padding: 10px 12px"
-                      >HOME PAGE</a
-                    >
-                  </li>
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./providerinfo.html"
-                      style="padding: 10px 12px"
-                      >DES PROVIDER INFO</a
-                    >
-                  </li>
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./nearbyprovider.html"
-                      style="padding: 10px 12px"
-                      >NEARBY PROVIDER</a
-                    >
-                  </li>
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./travelsupport.html"
-                      style="padding: 10px 12px"
-                      >TRAVEL SUPPORT</a
-                    >
-                  </li>
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./desperformance.html"
-                      style="padding: 10px 12px"
-                      >DES PERFORMANCE</a
-                    >
-                  </li>
-                  <li class="u-nav-item">
-                    <a
-                      class="u-button-style u-nav-link"
-                      href="./legalrights.html"
-                      style="padding: 10px 12px"
-                      >LEGAL RIGHTS</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-            </div>
-          </nav>
-          <a
-            href="./index.html"
-            class="u-image u-image-default u-logo u-image-1"
-            data-image-width="1600"
-            data-image-height="875"
-          >
-            <img
-              src="images/logo_colorblind.jpg"
-              class="u-logo-image u-logo-image-1"
-              data-image-width="186.2813"
-            />
-          </a>
-          <div
-            class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"
-          ></div>
-          <a
-            href="../nearbyprovider.html"
-            class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1"
-          >
-            <span class="u-text-icon"></span>Normal Version&nbsp; &nbsp;
-          </a>
-          <h1 class="u-custom-font u-text u-text-font u-text-1">
-            WE ARE HERE TO GUIDE AND SUPPORT
-          </h1>
-        </div>
-      </header> -->
 
-      <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea">
-        <div class="u-clearfix u-sheet u-sheet-1">
+    <!-- Menu navigation bar  -->
+    <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-          <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
-            <a class="u-active-custom-color-4 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white" href="#" style="padding: 4px; font-size: calc(1em + 8px);">
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-  </symbol>
-  </defs></svg>
+          <div class="menu-collapse u-custom-font u-font-ubuntu"
+            style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
+            <a class="u-active-custom-color-4 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
+              href="#" style="padding: 4px; font-size: calc(1em + 8px);">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                    <rect y="1" width="16" height="2"></rect>
+                    <rect y="7" width="16" height="2"></rect>
+                    <rect y="13" width="16" height="2"></rect>
+                  </symbol>
+                </defs>
+              </svg>
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-custom-color-4 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
-            </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
-            </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
-  </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
-  </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
-  </li><li class="u-nav-item"><a class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white" href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
-  </li></ul>
+            <!-- name the tab and link tab to relevant page and  -->
+            <!-- change padding to adjust the margin of the tabs-->
+            <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-custom-color-4 u-unstyled u-nav-1">
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-custom-color-4 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-custom-color-4 u-text-hover-black u-white"
+                  href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
+              </li>
+            </ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-menu-close"></div>
-              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
-              </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
-              </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
-  </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
-  </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
-  </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
-  </li></ul>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html"
+                    style="padding: 10px 12px;">HOME PAGE</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./providerinfo.html"
+                    style="padding: 10px 12px;">DES PROVIDER INFO</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./nearbyprovider.html"
+                    style="padding: 10px 12px;">NEARBY PROVIDER</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./travelsupport.html"
+                    style="padding: 10px 12px;">TRAVEL SUPPORT</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./desperformance.html"
+                    style="padding: 10px 12px;">DES PERFORMANCE</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./legalrights.html"
+                    style="padding: 10px 12px;">LEGAL RIGHTS</a>
+                </li>
+              </ul>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600" data-image-height="875">
+        <!-- link to home page -->
+        <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600"
+          data-image-height="875">
           <img src="images/logo_colorblind.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
         </a>
         <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
-        <a href="../nearbyprovider.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
+        <!-- link to normal version of nearby provider -->
+        <a href="../nearbyprovider.html"
+          class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
           <span class="u-text-icon"></span>Normal Version&nbsp; &nbsp;
         </a>
         <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
-    </div>
-  </header>
+      </div>
+    </header>
+    <!-- Find DES providers near you -->
+    <section class="u-align-center u-border-2 u-border-grey-75 u-clearfix u-section-1" id="carousel_f5bd">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <span
+          class="u-border-2 u-border-custom-color-5 u-icon u-icon-circle u-spacing-10 u-text-custom-color-5 u-icon-1">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d14"></use>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+            xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-1d14"
+            style="enable-background: new 0 0 512 512">
+            <g>
+              <g>
+                <path
+                  d="M255.998,0c-88.235,0-160,71.765-160,160c0,85.12,145.344,275.755,151.531,283.819c2.027,2.645,5.141,4.181,8.469,4.181    s6.443-1.536,8.469-4.181C270.654,435.755,415.998,245.12,415.998,160C415.998,71.765,344.233,0,255.998,0z M255.998,234.667    c-41.173,0-74.667-33.493-74.667-74.667s33.493-74.667,74.667-74.667s74.667,33.493,74.667,74.667    S297.171,234.667,255.998,234.667z">
+                </path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M499.539,495.424l-85.333-128c-1.984-2.965-5.312-4.757-8.875-4.757h-57.707c-30.912,47.552-59.52,85.397-66.219,94.123    c-5.995,7.829-15.509,12.544-25.408,12.544c-9.899,0-19.413-4.715-25.429-12.565c-6.677-8.725-35.307-46.571-66.197-94.101    h-57.707c-3.563,0-6.891,1.792-8.875,4.757l-85.333,128c-2.176,3.264-2.389,7.488-0.533,10.965    c1.856,3.435,5.461,5.611,9.408,5.611h469.333c3.947,0,7.552-2.176,9.387-5.632C501.929,502.891,501.737,498.688,499.539,495.424z    ">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <h4 class="u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-1">
+          Find DES providers near you
+        </h4>
+        <div class="u-form u-form-1">
+          <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
+            style="padding: 15px" source="custom">
+            <div class="u-form-group u-form-name u-form-group-1">
+              <label for="name-1c08"
+                class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">Address</label>
+              <el-input id="autocomplete" v-model="entered_address" placeholder="Enter your address" @focus="geolocate"
+                style="border: none">
+                <el-button slot="append" icon="el-icon-location-outline" @click="getAddress()"></el-button>
+              </el-input>
+              </el-input>
+            </div>
+            <div class="u-form-group u-form-select u-form-group-2">
+              <label for="select-e0ce"
+                class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">Speciality</label>
+              <div class="u-form-select-wrapper">
+                <el-select placeholder="All Specialities" style="width: 100%; height: 100%" v-model="specialityName"
+                  filterable>
+                  <el-option v-for="item in specialityList" :key="item.value" :value="item.value">
+                  </el-option>
+                </el-select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                  <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="u-align-center u-form-group u-form-submit u-form-group-3">
+              <!-- change button color -->
+              <!-- add loading symbol -->
+              <el-button style="background-color:rgb(27, 27, 122); border-style: none;" type="primary" size="medium"
+                icon="el-icon-search" @click="handleSearchNearby()" :loading="is_nearby_button_loading">Submit
+              </el-button>
+            </div>
+            <!-- add error message -->
+            <el-alert v-if="null_des_site" title="Sorry there is no result, please try another address or speciality."
+              type="error"></el-alert>
 
-      <section
-        class="u-align-center u-border-2 u-border-grey-75 u-clearfix u-section-1"
-        id="carousel_f5bd"
-      >
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <span
-            class="u-border-2 u-border-custom-color-5 u-icon u-icon-circle u-spacing-10 u-text-custom-color-5 u-icon-1"
-          >
-            <svg
-              class="u-svg-link"
-              preserveAspectRatio="xMidYMin slice"
-              viewBox="0 0 512 512"
-              style=""
-            >
-              <use
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="#svg-1d14"
-              ></use>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              xml:space="preserve"
-              class="u-svg-content"
-              viewBox="0 0 512 512"
-              x="0px"
-              y="0px"
-              id="svg-1d14"
-              style="enable-background: new 0 0 512 512"
-            >
-              <g>
-                <g>
-                  <path
-                    d="M255.998,0c-88.235,0-160,71.765-160,160c0,85.12,145.344,275.755,151.531,283.819c2.027,2.645,5.141,4.181,8.469,4.181    s6.443-1.536,8.469-4.181C270.654,435.755,415.998,245.12,415.998,160C415.998,71.765,344.233,0,255.998,0z M255.998,234.667    c-41.173,0-74.667-33.493-74.667-74.667s33.493-74.667,74.667-74.667s74.667,33.493,74.667,74.667    S297.171,234.667,255.998,234.667z"
-                  ></path>
-                </g>
-              </g>
-              <g>
-                <g>
-                  <path
-                    d="M499.539,495.424l-85.333-128c-1.984-2.965-5.312-4.757-8.875-4.757h-57.707c-30.912,47.552-59.52,85.397-66.219,94.123    c-5.995,7.829-15.509,12.544-25.408,12.544c-9.899,0-19.413-4.715-25.429-12.565c-6.677-8.725-35.307-46.571-66.197-94.101    h-57.707c-3.563,0-6.891,1.792-8.875,4.757l-85.333,128c-2.176,3.264-2.389,7.488-0.533,10.965    c1.856,3.435,5.461,5.611,9.408,5.611h469.333c3.947,0,7.552-2.176,9.387-5.632C501.929,502.891,501.737,498.688,499.539,495.424z    "
-                  ></path>
-                </g>
-              </g>
-            </svg>
-          </span>
-          <h4
-            class="u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-1"
-          >
-            Find DES providers near you
-          </h4>
-          <div class="u-form u-form-1">
-            <form
-              action="#"
-              method="POST"
-              class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
-              style="padding: 15px"
-              source="custom"
-            >
-              <div class="u-form-group u-form-name u-form-group-1">
-                <label
-                  for="name-1c08"
-                  class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1"
-                  >Address</label
-                >
-                <el-input
-                  id="autocomplete"
-                  v-model="entered_address"
-                  placeholder="Enter your address"
-                  @focus="geolocate"
-                  style="border: none"
-                ><el-button slot="append" icon="el-icon-location-outline" @click="getAddress()"></el-button></el-input></el-input>
-              </div>
-              <div class="u-form-group u-form-select u-form-group-2">
-                <label
-                  for="select-e0ce"
-                  class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2"
-                  >Speciality</label
-                >
-                <div class="u-form-select-wrapper">
-                  <el-select
-                    placeholder="All Specialities"
-                    style="width: 100%; height: 100%"
-                    v-model="specialityName"
-                    filterable
-                  >
-                    <el-option
-                      v-for="item in specialityList"
-                      :key="item.value"
-                      :value="item.value"
-                    >
-                    </el-option>
-                  </el-select>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="12"
-                    version="1"
-                    class="u-caret"
-                  >
-                    <path fill="currentColor" d="M4 8L0 4h8z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="u-align-center u-form-group u-form-submit u-form-group-3"
-              >
-                <el-button
-                style="background-color:rgb(27, 27, 122); border-style: none;"
-                  type="primary"
-                  size="medium"
-                  icon="el-icon-search"
-                  @click="handleSearchNearby()"
-                  :loading="is_nearby_button_loading"
-                  >Submit</el-button
-                >
-              </div>
-              <el-alert
-                v-if="null_des_site"
-                title="Sorry there is no result, please try another address or speciality."
-                type="error"
-              ></el-alert>
-              <div class="u-form-send-message u-form-send-success">
-                Thank you! Your message has been sent.
-              </div>
-              <div class="u-form-send-error u-form-send-message">
-                Unable to send your message. Please fix errors then try again.
-              </div>
-              <input type="hidden" value="" name="recaptchaResponse" />
-            </form>
-          </div>
-          <div
-            id="carousel-c7ca"
-            data-interval="5000"
-            data-u-ride="carousel"
-            class="u-carousel u-expanded-width u-slider u-slider-1"
-          >
-            <ol
-              class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1"
-            >
-              <li
-                data-u-target="#carousel-c7ca"
-                class="u-active u-grey-30"
-                data-u-slide-to="0"
-              ></li>
-              <li
-                data-u-target="#carousel-c7ca"
-                class="u-grey-30"
-                data-u-slide-to="1"
-              ></li>
-            </ol>
-            <div class="u-carousel-inner" role="listbox">
-              <div
-                class="active u-active u-align-center u-carousel-item u-container-style u-slide"
-              >
-                <div
-                  class="u-container-layout u-valign-middle u-container-layout-1"
-                >
-                  <h3
-                    class="u-align-center u-text u-text-custom-color-5 u-custom-font u-font-ubuntu u-text-2"
-                  >
-                    How far are they ?
-                  </h3>
-                </div>
-              </div>
-              <div class="u-carousel-item u-container-style u-slide">
-                <div
-                  class="u-container-layout u-valign-middle u-container-layout-2"
-                >
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-3"
-                  >
-                    See the travelling distance and choose the DES provider you
-                    like to find out more.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a
-              class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-5 u-text-grey-30 u-carousel-control-1"
-              href="#carousel-c7ca"
-              role="button"
-              data-u-slide="prev"
-            >
-              <span aria-hidden="true">
-                <svg viewBox="0 0 477.175 477.175">
-                  <path
-                    d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-5 u-text-grey-30 u-carousel-control-2"
-              href="#carousel-c7ca"
-              role="button"
-              data-u-slide="next"
-            >
-              <span aria-hidden="true">
-                <svg viewBox="0 0 477.175 477.175">
-                  <path
-                    d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+          </form>
         </div>
-      </section>
-      <section
-        v-show="show_des_site"
-        class="u-align-center u-clearfix u-image u-shading u-section-2"
-        id="sec-b6d8"
-        data-image-width="1600"
-        data-image-height="1067"
-      >
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":""}--><!--/blog_options_json-->
-          <div
-            class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-1"
-          >
-            <!--blog_post-->
-            <div
-              v-if="des_site_five.site_one"
-              class="u-align-center u-blog-post u-container-style u-custom-background u-white u-repeater-item u-shape-rectangle u-repeater-item-1"
-            >
-              <a
-                href="#carousel_c0c9"
-                @click="selectProvider1"
-                style="width: 100%"
-                title="Click to show on map"
-              >
-                <div
-                  class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-1"
-                >
-                  <span class="u-icon u-icon-circle u-icon-1">
-                    <svg
-                      class="u-svg-link"
-                      preserveAspectRatio="xMidYMin slice"
-                      viewBox="0 0 286.054 286.054"
-                      style=""
-                    >
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#svg-7cd5"
-                      ></use>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      xml:space="preserve"
-                      class="u-svg-content"
-                      viewBox="0 0 286.054 286.054"
-                      x="0px"
-                      y="0px"
-                      id="svg-7cd5"
-                      style="enable-background: new 0 0 286.054 286.054"
-                    >
-                      <g>
-                        <path
-                          style="fill: currentColor"
-                          d="M143.027,0C64.031,0,0,64.04,0,143.027c0,78.996,64.031,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.022,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z"
-                        ></path>
-                        <path
-                          style="fill: currentColor"
-                          d="M150.026,80.39h-22.84c-6.91,0-10.933,7.044-10.933,13.158c0,5.936,3.209,13.158,10.933,13.158   h7.259v85.36c0,8.734,6.257,13.605,13.176,13.605s13.185-4.881,13.185-13.605V92.771C160.798,85.789,156.945,80.39,150.026,80.39z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </span>
-                  <h3
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-1"
-                  >
-                    {{ des_site_five.site_one.Distance }}
-                  </h3>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-2"
-                  >
-                    km.
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-3">
-                    <span style="font-weight: bold"
-                      >{{ des_site_five.site_one.Name }}</span
-                    >
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-4" style="font-weight: 600;">
-                    {{ des_site_five.site_one.Program }}
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-4">
-                    {{ des_site_five.site_one.Speciality_New }}
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-5">
-                    Rating: {{ des_site_five.site_one.Rating }}
-                  </p>
-                </div>
-              </a>
+        <div id="carousel-c7ca" data-interval="5000" data-u-ride="carousel"
+          class="u-carousel u-expanded-width u-slider u-slider-1">
+          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+            <li data-u-target="#carousel-c7ca" class="u-active u-grey-30" data-u-slide-to="0"></li>
+            <li data-u-target="#carousel-c7ca" class="u-grey-30" data-u-slide-to="1"></li>
+          </ol>
+          <div class="u-carousel-inner" role="listbox">
+            <div class="active u-active u-align-center u-carousel-item u-container-style u-slide">
+              <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h3 class="u-align-center u-text u-text-custom-color-5 u-custom-font u-font-ubuntu u-text-2">
+                  How far are they ?
+                </h3>
+              </div>
             </div>
-            <!--/blog_post--><!--blog_post-->
-            <div
-              v-if="des_site_five.site_two"
-              class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-2"
-            >
-              <a
-                href="#carousel_c0c9"
-                @click="selectProvider2"
-                style="width: 100%"
-                title="Click to show on map"
-              >
-                <div
-                  class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-2"
-                >
-                  <span class="u-icon u-icon-circle u-icon-2">
-                    <svg
-                      class="u-svg-link"
-                      preserveAspectRatio="xMidYMin slice"
-                      viewBox="0 0 286.054 286.054"
-                      style=""
-                    >
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#svg-b72e"
-                      ></use>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      xml:space="preserve"
-                      class="u-svg-content"
-                      viewBox="0 0 286.054 286.054"
-                      x="0px"
-                      y="0px"
-                      id="svg-b72e"
-                      style="enable-background: new 0 0 286.054 286.054"
-                    >
-                      <g>
-                        <path
-                          style="fill: currentColor"
-                          d="M143.027,0C64.031,0,0,64.04,0,143.027c0,78.996,64.031,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.022,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M173.232,180.205h-32.038   c15.661-18.459,40.852-39.753,40.852-63.736c0-21.91-16.564-35.882-39.216-35.882c-22.661,0-43.847,17.977-43.847,39.717   c0,6.731,4.604,12.586,13.445,12.586c17.691,0,8.108-28.498,29.294-28.498c7.554,0,13.266,6.204,13.266,13.284   c0,6.204-3.138,11.558-6.454,16.046c-13.999,18.969-30.581,34.496-45.867,51.579c-1.841,2.065-4.246,5.176-4.246,8.796   c0,7.938,6.266,11.38,14.365,11.38h61.528c6.999,0,13.266-4.568,13.266-12.497C187.58,185.05,181.331,180.205,173.232,180.205z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </span>
-                  <h3
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-6"
-                  >
-                    {{ des_site_five.site_two.Distance }}
-                  </h3>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-7"
-                  >
-                    km.
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-8">
-                    {{ des_site_five.site_two.Name }}
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-9" style="font-weight: 600;">
-                    {{ des_site_five.site_two.Program}}
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-9">
-                    {{ des_site_five.site_two.Speciality_New }}
-                  </p>
-                  <p class="u-custom-font u-font-ubuntu u-text u-text-10">
-                    Rating: {{ des_site_five.site_two.Rating }}
-                  </p>
-                </div>
-              </a>
+            <div class="u-carousel-item u-container-style u-slide">
+              <div class="u-container-layout u-valign-middle u-container-layout-2">
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-3">
+                  See the travelling distance and choose the DES provider you
+                  like to find out more.
+                </p>
+              </div>
             </div>
-            <!--/blog_post--><!--blog_post-->
-            <div
-              v-if="des_site_five.site_three"
-              class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-3"
-              data-href="HOME-PAGE.html"
-            >
-              <a
-                href="#carousel_c0c9"
-                @click="selectProvider3"
-                style="width: 100%"
-                title="Click to show on map"
-              >
-                <div
-                  class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-3"
-                >
-                  <span class="u-icon u-icon-circle u-icon-3">
-                    <svg
-                      class="u-svg-link"
-                      preserveAspectRatio="xMidYMin slice"
-                      viewBox="0 0 286.054 286.054"
-                      style=""
-                    >
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#svg-e2a6"
-                      ></use>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      xml:space="preserve"
-                      class="u-svg-content"
-                      viewBox="0 0 286.054 286.054"
-                      x="0px"
-                      y="0px"
-                      id="svg-e2a6"
-                      style="enable-background: new 0 0 286.054 286.054"
-                    >
-                      <g>
-                        <path
-                          style="fill: currentColor"
-                          d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M167.717,137.637   c8.966-5.936,13.364-15.277,13.364-25.977c0-13.239-11.254-31.082-34.729-31.082c-18.093,0-35.542,14.276-35.542,27.515   c0,6.284,3.915,12.56,10.602,12.56c11.085,0,8.966-16.636,24.449-16.636c7.339,0,11.737,4.925,11.737,11.371   c0,18.853-23.152,6.794-23.152,24.627c0,20.033,27.72,2.548,27.72,26.317c0,9.002-6.856,15.796-15.331,15.796   c-18.424,0-15.813-19.872-26.898-19.872c-5.873,0-12.551,4.756-12.551,11.38c0,13.418,15,31.922,39.127,31.922   c23.152,0,41.084-17.154,41.084-37.527C187.598,154.621,179.445,143.25,167.717,137.637z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </span>
-                  <h3
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-11"
-                  >
-                    {{ des_site_five.site_three.Distance }}
-                  </h3>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-12"
-                  >
-                    km.
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-13"
-                  >
-                    {{ des_site_five.site_three.Name }}
-                  </p>
-                  <p
-                  class="u-align-center u-custom-font u-font-ubuntu u-text u-text-14" style="font-weight: 600;"
-                >
+          </div>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-5 u-text-grey-30 u-carousel-control-1"
+            href="#carousel-c7ca" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175">
+                <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
+              </svg>
+            </span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-5 u-text-grey-30 u-carousel-control-2"
+            href="#carousel-c7ca" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175">
+                <path
+                  d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z">
+                </path>
+              </svg>
+            </span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- condition to show and direct user to this section once the address is submited -->
+    <section v-show="show_des_site" class="u-align-center u-clearfix u-image u-shading u-section-2" id="sec-b6d8"
+      data-image-width="1600" data-image-height="1067">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-1">
+          <!-- 1st card (apply to all cards) -->
+          <!-- showing distance, name, program, rating and speciality -->
+          <div v-if="des_site_five.site_one"
+            class="u-align-center u-blog-post u-container-style u-custom-background u-white u-repeater-item u-shape-rectangle u-repeater-item-1">
+            <a href="#carousel_c0c9" @click="selectProvider1" style="width: 100%" title="Click to show on map">
+              <div
+                class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <span class="u-icon u-icon-circle u-icon-1">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 286.054 286.054" style="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7cd5"></use>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    xml:space="preserve" class="u-svg-content" viewBox="0 0 286.054 286.054" x="0px" y="0px"
+                    id="svg-7cd5" style="enable-background: new 0 0 286.054 286.054">
+                    <g>
+                      <path style="fill: currentColor"
+                        d="M143.027,0C64.031,0,0,64.04,0,143.027c0,78.996,64.031,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.022,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z">
+                      </path>
+                      <path style="fill: currentColor"
+                        d="M150.026,80.39h-22.84c-6.91,0-10.933,7.044-10.933,13.158c0,5.936,3.209,13.158,10.933,13.158   h7.259v85.36c0,8.734,6.257,13.605,13.176,13.605s13.185-4.881,13.185-13.605V92.771C160.798,85.789,156.945,80.39,150.026,80.39z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <h3 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-1">
+                  {{ des_site_five.site_one.Distance }}
+                </h3>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-2">
+                  km.
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-3">
+                  <span style="font-weight: bold">{{ des_site_five.site_one.Name }}</span>
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-4" style="font-weight: 600;">
+                  {{ des_site_five.site_one.Program }}
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-4">
+                  {{ des_site_five.site_one.Speciality_New }}
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-5">
+                  Rating: {{ des_site_five.site_one.Rating }}
+                </p>
+              </div>
+            </a>
+          </div>
+          <!-- 2nd card  -->
+          <div v-if="des_site_five.site_two"
+            class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-2">
+            <a href="#carousel_c0c9" @click="selectProvider2" style="width: 100%" title="Click to show on map">
+              <div
+                class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <span class="u-icon u-icon-circle u-icon-2">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 286.054 286.054" style="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b72e"></use>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    xml:space="preserve" class="u-svg-content" viewBox="0 0 286.054 286.054" x="0px" y="0px"
+                    id="svg-b72e" style="enable-background: new 0 0 286.054 286.054">
+                    <g>
+                      <path style="fill: currentColor"
+                        d="M143.027,0C64.031,0,0,64.04,0,143.027c0,78.996,64.031,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.022,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M173.232,180.205h-32.038   c15.661-18.459,40.852-39.753,40.852-63.736c0-21.91-16.564-35.882-39.216-35.882c-22.661,0-43.847,17.977-43.847,39.717   c0,6.731,4.604,12.586,13.445,12.586c17.691,0,8.108-28.498,29.294-28.498c7.554,0,13.266,6.204,13.266,13.284   c0,6.204-3.138,11.558-6.454,16.046c-13.999,18.969-30.581,34.496-45.867,51.579c-1.841,2.065-4.246,5.176-4.246,8.796   c0,7.938,6.266,11.38,14.365,11.38h61.528c6.999,0,13.266-4.568,13.266-12.497C187.58,185.05,181.331,180.205,173.232,180.205z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <h3 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-6">
+                  {{ des_site_five.site_two.Distance }}
+                </h3>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-7">
+                  km.
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-8">
+                  {{ des_site_five.site_two.Name }}
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-9" style="font-weight: 600;">
+                  {{ des_site_five.site_two.Program}}
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-9">
+                  {{ des_site_five.site_two.Speciality_New }}
+                </p>
+                <p class="u-custom-font u-font-ubuntu u-text u-text-10">
+                  Rating: {{ des_site_five.site_two.Rating }}
+                </p>
+              </div>
+            </a>
+          </div>
+          <!-- 3th card -->
+          <div v-if="des_site_five.site_three"
+            class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-3"
+            data-href="HOME-PAGE.html">
+            <a href="#carousel_c0c9" @click="selectProvider3" style="width: 100%" title="Click to show on map">
+              <div
+                class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <span class="u-icon u-icon-circle u-icon-3">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 286.054 286.054" style="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e2a6"></use>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    xml:space="preserve" class="u-svg-content" viewBox="0 0 286.054 286.054" x="0px" y="0px"
+                    id="svg-e2a6" style="enable-background: new 0 0 286.054 286.054">
+                    <g>
+                      <path style="fill: currentColor"
+                        d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M167.717,137.637   c8.966-5.936,13.364-15.277,13.364-25.977c0-13.239-11.254-31.082-34.729-31.082c-18.093,0-35.542,14.276-35.542,27.515   c0,6.284,3.915,12.56,10.602,12.56c11.085,0,8.966-16.636,24.449-16.636c7.339,0,11.737,4.925,11.737,11.371   c0,18.853-23.152,6.794-23.152,24.627c0,20.033,27.72,2.548,27.72,26.317c0,9.002-6.856,15.796-15.331,15.796   c-18.424,0-15.813-19.872-26.898-19.872c-5.873,0-12.551,4.756-12.551,11.38c0,13.418,15,31.922,39.127,31.922   c23.152,0,41.084-17.154,41.084-37.527C187.598,154.621,179.445,143.25,167.717,137.637z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <h3 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-11">
+                  {{ des_site_five.site_three.Distance }}
+                </h3>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-12">
+                  km.
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-13">
+                  {{ des_site_five.site_three.Name }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-14" style="font-weight: 600;">
                   {{ des_site_five.site_three.Program }}
                 </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-14"
-                  >
-                    {{ des_site_five.site_three.Speciality_New }}
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-15"
-                  >
-                    Rating: {{ des_site_five.site_three.Rating }}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <!--/blog_post-->
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-14">
+                  {{ des_site_five.site_three.Speciality_New }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-15">
+                  Rating: {{ des_site_five.site_three.Rating }}
+                </p>
+              </div>
+            </a>
           </div>
-          <!--/blog--><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":""}--><!--/blog_options_json-->
-          <div
-            class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-2"
-          >
-            <!--blog_post-->
-            <div
-              v-if="des_site_five.site_four"
-              class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-4"
-            >
-              <a
-                href="#carousel_c0c9"
-                @click="selectProvider4"
-                style="width: 100%"
-                title="Click to show on map"
-              >
-                <div
-                  class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-4"
-                >
-                  <span class="u-icon u-icon-circle u-icon-4">
-                    <svg
-                      class="u-svg-link"
-                      preserveAspectRatio="xMidYMin slice"
-                      viewBox="0 0 286.054 286.054"
-                      style=""
-                    >
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#svg-3a7b"
-                      ></use>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      xml:space="preserve"
-                      class="u-svg-content"
-                      viewBox="0 0 286.054 286.054"
-                      x="0px"
-                      y="0px"
-                      id="svg-3a7b"
-                      style="enable-background: new 0 0 286.054 286.054"
-                    >
-                      <g>
-                        <path
-                          style="fill: currentColor"
-                          d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M175.065,155.122h-5.042v-52.607   c0-15.59-8.394-21.937-18.933-21.937c-9.449,0-14.535,3.093-18.531,9.94l-40.7,69.565c-1.091,1.707-2.548,3.772-2.548,7.545   c0,4.452,3.817,10.11,12.72,10.11h43.793V192.3c0,9.091,1.85,13.364,11.12,13.364s13.078-4.282,13.078-13.364v-14.562h5.042   c7.089,0,12.72-4.452,12.72-11.317C187.785,159.573,182.154,155.122,175.065,155.122z M146.379,155.122h-24.896l24.529-47.816   h0.367V155.122z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </span>
-                  <h3
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-16"
-                  >
-                    {{ des_site_five.site_four.Distance }}
-                  </h3>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-17"
-                  >
-                    km.
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-18"
-                  >
-                    {{ des_site_five.site_four.Name }}
-                  </p>
-                  <p
-                  class="u-align-center u-custom-font u-font-ubuntu u-text u-text-19" style="font-weight: 600;"
-                >
+        </div>
+        <div class="u-blog u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-repeater u-repeater-2">
+          <!-- 4th card -->
+          <div v-if="des_site_five.site_four"
+            class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-4">
+            <a href="#carousel_c0c9" @click="selectProvider4" style="width: 100%" title="Click to show on map">
+              <div
+                class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <span class="u-icon u-icon-circle u-icon-4">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 286.054 286.054" style="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3a7b"></use>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    xml:space="preserve" class="u-svg-content" viewBox="0 0 286.054 286.054" x="0px" y="0px"
+                    id="svg-3a7b" style="enable-background: new 0 0 286.054 286.054">
+                    <g>
+                      <path style="fill: currentColor"
+                        d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M175.065,155.122h-5.042v-52.607   c0-15.59-8.394-21.937-18.933-21.937c-9.449,0-14.535,3.093-18.531,9.94l-40.7,69.565c-1.091,1.707-2.548,3.772-2.548,7.545   c0,4.452,3.817,10.11,12.72,10.11h43.793V192.3c0,9.091,1.85,13.364,11.12,13.364s13.078-4.282,13.078-13.364v-14.562h5.042   c7.089,0,12.72-4.452,12.72-11.317C187.785,159.573,182.154,155.122,175.065,155.122z M146.379,155.122h-24.896l24.529-47.816   h0.367V155.122z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <h3 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-16">
+                  {{ des_site_five.site_four.Distance }}
+                </h3>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-17">
+                  km.
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-18">
+                  {{ des_site_five.site_four.Name }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-19" style="font-weight: 600;">
                   {{ des_site_five.site_four.Program}}
                 </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-19"
-                  >
-                    {{ des_site_five.site_four.Speciality_New }}
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-20"
-                  >
-                    Rating: {{ des_site_five.site_four.Rating }}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <!--/blog_post--><!--blog_post-->
-            <div
-              v-if="des_site_five.site_five"
-              class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-5"
-            >
-              <a
-                href="#carousel_c0c9"
-                @click="selectProvider5"
-                style="width: 100%"
-                title="Click to show on map"
-              >
-                <div
-                  class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-5"
-                >
-                  <span class="u-icon u-icon-circle u-icon-5">
-                    <svg
-                      class="u-svg-link"
-                      preserveAspectRatio="xMidYMin slice"
-                      viewBox="0 0 286.054 286.054"
-                      style=""
-                    >
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#svg-c9a4"
-                      ></use>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      xml:space="preserve"
-                      class="u-svg-content"
-                      viewBox="0 0 286.054 286.054"
-                      x="0px"
-                      y="0px"
-                      id="svg-c9a4"
-                      style="enable-background: new 0 0 286.054 286.054"
-                    >
-                      <g>
-                        <path
-                          style="fill: currentColor"
-                          d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M149.678,120.849   c-4.613,0-9.395,0.867-13.811,1.716l2.762-18.325h34.63c3.316,0,12.89-1.037,12.89-12.971c0-6.222-4.979-10.888-13.445-10.888   h-44.401c-8.832,0-12.712,2.941-14.365,16.43l-4.604,36.481c-0.188,1.895-0.554,3.629-0.554,5.873   c0,2.941,3.683,8.126,10.861,8.126c9.395,0,11.049-5.703,21.74-5.703c11.424,0,17.691,7.08,17.691,17.458   c0,10.897-6.633,22.643-19.523,22.643c-12.345,0-21.195-11.058-28.561-11.058c-6.812,0-12.515,5.364-12.515,11.755   c0,15.214,27.443,23.17,40.521,23.17c31.859,0,48.817-19.023,48.817-47.896C187.812,137.44,171.972,120.849,149.678,120.849z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </span>
-                  <h3
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-21"
-                  >
-                    {{ des_site_five.site_five.Distance }}
-                  </h3>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-22"
-                  >
-                    km.
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-23"
-                  >
-                    {{ des_site_five.site_five.Name }}
-                  </p>
-                  <p
-                  class="u-align-center u-custom-font u-font-ubuntu u-text u-text-24" style="font-weight: 600;"
-                >
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-19">
+                  {{ des_site_five.site_four.Speciality_New }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-20">
+                  Rating: {{ des_site_five.site_four.Rating }}
+                </p>
+              </div>
+            </a>
+          </div>
+          <!-- 5th card -->
+          <div v-if="des_site_five.site_five"
+            class="u-align-center u-blog-post u-container-style u-custom-background u-repeater-item u-shape-rectangle u-white u-repeater-item-5">
+            <a href="#carousel_c0c9" @click="selectProvider5" style="width: 100%" title="Click to show on map">
+              <div
+                class="hvr-grow hvr-sweep-to-right u-container-layout u-similar-container u-valign-top u-container-layout-5">
+                <span class="u-icon u-icon-circle u-icon-5">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 286.054 286.054" style="">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c9a4"></use>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    xml:space="preserve" class="u-svg-content" viewBox="0 0 286.054 286.054" x="0px" y="0px"
+                    id="svg-c9a4" style="enable-background: new 0 0 286.054 286.054">
+                    <g>
+                      <path style="fill: currentColor"
+                        d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027   s143.027-64.031,143.027-143.027C286.054,64.04,222.014,0,143.027,0z M143.027,259.236c-64.183,0-116.209-52.026-116.209-116.209   S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209S207.21,259.236,143.027,259.236z M149.678,120.849   c-4.613,0-9.395,0.867-13.811,1.716l2.762-18.325h34.63c3.316,0,12.89-1.037,12.89-12.971c0-6.222-4.979-10.888-13.445-10.888   h-44.401c-8.832,0-12.712,2.941-14.365,16.43l-4.604,36.481c-0.188,1.895-0.554,3.629-0.554,5.873   c0,2.941,3.683,8.126,10.861,8.126c9.395,0,11.049-5.703,21.74-5.703c11.424,0,17.691,7.08,17.691,17.458   c0,10.897-6.633,22.643-19.523,22.643c-12.345,0-21.195-11.058-28.561-11.058c-6.812,0-12.515,5.364-12.515,11.755   c0,15.214,27.443,23.17,40.521,23.17c31.859,0,48.817-19.023,48.817-47.896C187.812,137.44,171.972,120.849,149.678,120.849z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <h3 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-21">
+                  {{ des_site_five.site_five.Distance }}
+                </h3>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-22">
+                  km.
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-23">
+                  {{ des_site_five.site_five.Name }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-24" style="font-weight: 600;">
                   {{ des_site_five.site_five.Program }}
                 </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-24"
-                  >
-                    {{ des_site_five.site_five.Speciality_New }}
-                  </p>
-                  <p
-                    class="u-align-center u-custom-font u-font-ubuntu u-text u-text-25"
-                  >
-                    Rating: {{ des_site_five.site_five.Rating }}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <!--/blog_post-->
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-24">
+                  {{ des_site_five.site_five.Speciality_New }}
+                </p>
+                <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-25">
+                  Rating: {{ des_site_five.site_five.Rating }}
+                </p>
+              </div>
+            </a>
           </div>
-          <!--/blog-->
         </div>
-      </section>
-      <section
-        v-show="show_site_location_info"
-        class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-white u-section-3"
-        id="carousel_c0c9"
-      >
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <h2
-            class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-1"
-          >
-            {{ provider_map_name }}
-          </h2>
-          <p
-          class="u-align-center u-custom-font u-font-ubuntu u-text u-text-palette-1-dark-2 u-text-2" style="margin-top: 10px; font-size:1rem"
-        >
+      </div>
+    </section>
+
+    <!-- Contact info of selected DES provider-->
+    <!-- show name, program, site location, address, email, phone, website and google map  -->
+    <!-- add condition to show and direct user to this section once the card is clicked -->
+    <section v-show="show_site_location_info"
+      class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-white u-section-3"
+      id="carousel_c0c9">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-1">
+          {{ provider_map_name }}
+        </h2>
+        <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-palette-1-dark-2 u-text-2"
+          style="margin-top: 10px; font-size:1rem">
           {{ provider_map_program }}
         </p>
-          <h2
-            class="u-align-center u-custom-font u-font-ubuntu u-text u-text-palette-5-dark-2 u-text-2"
-          >
-            {{ provider_map_site }}
-          </h2>
-        
+        <h2 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-palette-5-dark-2 u-text-2">
+          {{ provider_map_site }}
+        </h2>
 
-          <div
-            class="u-clearfix u-gutter-0 u-layout-wrap u-palette-1-base u-layout-wrap-1"
-          >
-            <div class="u-gutter-0 u-layout">
-              <div class="u-layout-row">
-                <div class="u-size-30 u-size-60-md">
-                  <div class="u-layout-col">
-                    <div class="u-size-30">
-                      <div class="u-layout-row">
-                        <div
-                          class="u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-size-30 u-layout-cell-1"
-                        >
-                          <div
-                            class="u-container-layout u-valign-top u-container-layout-1"
-                          >
-                            <span
-                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-1"
-                            >
-                              <a :href="site_location_info.url" target="_blank">
-                                <svg
-                                  class="u-svg-link"
-                                  preserveAspectRatio="xMidYMin slice"
-                                  viewBox="0 0 512 512"
-                                  style=""
-                                >
-                                  <use
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xlink:href="#svg-7ee5"
-                                  ></use>
-                                </svg>
-                              </a>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                version="1.1"
-                                id="svg-7ee5"
-                                x="0px"
-                                y="0px"
-                                viewBox="0 0 512 512"
-                                style="enable-background: new 0 0 512 512"
-                                xml:space="preserve"
-                                class="u-svg-content"
-                              >
-                                <g>
-                                  <g>
-                                    <path
-                                      d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z"
-                                    ></path>
-                                  </g>
-                                </g>
-                                <g>
-                                  <g>
-                                    <path
-                                      d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z"
-                                    ></path>
-                                  </g>
-                                </g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
+
+        <div class="u-clearfix u-gutter-0 u-layout-wrap u-palette-1-base u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div
+                        class="u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-top u-container-layout-1">
+                          <span
+                            class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-1">
+                            <a :href="site_location_info.url" target="_blank">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7ee5"></use>
                               </svg>
-                            </span>
-                            <h5
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-3"
-                            >
-                              Address:
-                            </h5>
-                            <a
-                              :href="site_location_info.url"
-                              target="_blank"
-                              class="narrow u-align-center u-none u-custom-address-color"
-                              ><br />
-                              <!-- <font style="color:#05092b"> -->
-                              {{ site_location_info.address }}
-                              <!-- </font> -->
                             </a>
-                          </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              version="1.1" id="svg-7ee5" x="0px" y="0px" viewBox="0 0 512 512"
+                              style="enable-background: new 0 0 512 512" xml:space="preserve" class="u-svg-content">
+                              <g>
+                                <g>
+                                  <path
+                                    d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z">
+                                  </path>
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path
+                                    d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z">
+                                  </path>
+                                </g>
+                              </g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                            </svg>
+                          </span>
+                          <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-3">
+                            Address:
+                          </h5>
+                          <a :href="site_location_info.url" target="_blank"
+                            class="narrow u-align-center u-none u-custom-address-color"><br />
+                            {{ site_location_info.address }}
+                          </a>
                         </div>
-                        <div
-                          class="u-container-style u-layout-cell u-palette-1-dark-2 u-size-30 u-layout-cell-2"
-                        >
-                          <div
-                            class="u-container-layout u-valign-top u-container-layout-2"
-                          >
-                            <span
-                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-2"
-                            >
-                              <a
-                                :href="'mailto:'+site_location_info.email"
-                                target="_blank"
-                              >
-                                <svg
-                                  class="u-svg-link"
-                                  preserveAspectRatio="xMidYMin slice"
-                                  viewBox="0 0 479.058 479.058"
-                                  style=""
-                                >
-                                  <use
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xlink:href="#svg-b327"
-                                  ></use>
-                                </svg>
-                              </a>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                id="svg-b327"
-                                enable-background="new 0 0 479.058 479.058"
-                                viewBox="0 0 479.058 479.058"
-                                class="u-svg-content"
-                              >
-                                <path
-                                  d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                ></path>
+                      </div>
+                      <div class="u-container-style u-layout-cell u-palette-1-dark-2 u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-top u-container-layout-2">
+                          <span
+                            class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-2">
+                            <a :href="'mailto:'+site_location_info.email" target="_blank">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b327"></use>
                               </svg>
-                            </span>
-                            <h5
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-5"
-                            >
-                              Email:
-                            </h5>
-                            <a
-                              :href="'mailto:'+site_location_info.email"
-                              class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3"
-                              ><br />{{ site_location_info.email }}</a
-                            >
-                          </div>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="svg-b327"
+                              enable-background="new 0 0 479.058 479.058" viewBox="0 0 479.058 479.058"
+                              class="u-svg-content">
+                              <path
+                                d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z">
+                              </path>
+                            </svg>
+                          </span>
+                          <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-5">
+                            Email:
+                          </h5>
+                          <a :href="'mailto:'+site_location_info.email"
+                            class="narrow u-align-center u-custom-font u-font-ubuntu u-none u-text-hover-palette-3-light-3"><br />{{ site_location_info.email }}</a>
                         </div>
                       </div>
                     </div>
-                    <div class="u-size-30">
-                      <div class="u-layout-row">
-                        <div
-                          class="u-container-style u-layout-cell u-left-cell u-palette-5-dark-2 u-size-30 u-layout-cell-3"
-                        >
-                          <div
-                            class="u-container-layout u-valign-top u-container-layout-3"
-                          >
-                            <span
-                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-3"
-                            >
-                              <a :href="'tel:' + site_location_info.phone">
-                                <svg
-                                  class="u-svg-link"
-                                  preserveAspectRatio="xMidYMin slice"
-                                  viewBox="0 0 384 384"
-                                  style=""
-                                >
-                                  <use
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xlink:href="#svg-2291"
-                                  ></use></svg
-                              ></a>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                version="1.1"
-                                id="svg-2291"
-                                x="0px"
-                                y="0px"
-                                viewBox="0 0 384 384"
-                                style="enable-background: new 0 0 384 384"
-                                xml:space="preserve"
-                                class="u-svg-content"
-                              >
+                  </div>
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div
+                        class="u-container-style u-layout-cell u-left-cell u-palette-5-dark-2 u-size-30 u-layout-cell-3">
+                        <div class="u-container-layout u-valign-top u-container-layout-3">
+                          <span
+                            class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-3">
+                            <a :href="'tel:' + site_location_info.phone">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2291"></use>
+                              </svg></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              version="1.1" id="svg-2291" x="0px" y="0px" viewBox="0 0 384 384"
+                              style="enable-background: new 0 0 384 384" xml:space="preserve" class="u-svg-content">
+                              <g>
                                 <g>
-                                  <g>
-                                    <path
-                                      d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479    V353.188z"
-                                    ></path>
-                                  </g>
+                                  <path
+                                    d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479    V353.188z">
+                                  </path>
                                 </g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                              </svg>
-                            </span>
-                            <h5
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-6"
-                            >
-                              Call us:
-                            </h5>
-                            <a
-                              :href="'tel:' + site_location_info.phone"
-                              class="u-align-center u-custom-font u-font-ubuntu u-none u-text-alt-color u-text-hover-palette-3-light-3"
-                            >
-                              <br />
+                              </g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                              <g></g>
+                            </svg>
+                          </span>
+                          <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-6">
+                            Call us:
+                          </h5>
+                          <a :href="'tel:' + site_location_info.phone"
+                            class="u-align-center u-custom-font u-font-ubuntu u-none u-text-alt-color u-text-hover-palette-3-light-3">
+                            <br />
 
-                              {{ site_location_info.phone }}
-                            </a>
-                          </div>
+                            {{ site_location_info.phone }}
+                          </a>
                         </div>
+                      </div>
 
-                        <div
-                          class="u-container-style u-layout-cell u-palette-5-light-3 u-size-30 u-layout-cell-4"
-                        >
-                          <div class="u-container-layout u-container-layout-4">
-                            <span
-                              class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-4"
-                              ><a
-                                :href="site_location_info.website"
-                                target="_blank"
-                              >
-                                <svg
-                                  class="u-svg-link"
-                                  preserveAspectRatio="xMidYMin slice"
-                                  viewBox="0 0 512.418 512.418"
-                                  style=""
-                                >
-                                  <use
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xlink:href="#svg-eb6d"
-                                  ></use></svg
-                              ></a>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                version="1.1"
-                                xml:space="preserve"
-                                class="u-svg-content"
-                                viewBox="0 0 512.418 512.418"
-                                id="svg-eb6d"
-                              >
-                                <path
-                                  d="m437.335 75.082c-100.1-100.102-262.136-100.118-362.252 0-100.103 100.102-100.118 262.136 0 362.253 100.1 100.102 262.136 100.117 362.252 0 100.103-100.102 100.117-262.136 0-362.253zm-10.706 325.739c-11.968-10.702-24.77-20.173-38.264-28.335 8.919-30.809 14.203-64.712 15.452-99.954h75.309c-3.405 47.503-21.657 92.064-52.497 128.289zm-393.338-128.289h75.309c1.249 35.242 6.533 69.145 15.452 99.954-13.494 8.162-26.296 17.633-38.264 28.335-30.84-36.225-49.091-80.786-52.497-128.289zm52.498-160.936c11.968 10.702 24.77 20.173 38.264 28.335-8.919 30.809-14.203 64.712-15.452 99.954h-75.31c3.406-47.502 21.657-92.063 52.498-128.289zm154.097 31.709c-26.622-1.904-52.291-8.461-76.088-19.278 13.84-35.639 39.354-78.384 76.088-88.977zm0 32.708v63.873h-98.625c1.13-29.812 5.354-58.439 12.379-84.632 27.043 11.822 56.127 18.882 86.246 20.759zm0 96.519v63.873c-30.119 1.877-59.203 8.937-86.246 20.759-7.025-26.193-11.249-54.82-12.379-84.632zm0 96.581v108.254c-36.732-10.593-62.246-53.333-76.088-88.976 23.797-10.817 49.466-17.374 76.088-19.278zm32.646 0c26.622 1.904 52.291 8.461 76.088 19.278-13.841 35.64-39.354 78.383-76.088 88.976zm0-32.708v-63.873h98.625c-1.13 29.812-5.354 58.439-12.379 84.632-27.043-11.822-56.127-18.882-86.246-20.759zm0-96.519v-63.873c30.119-1.877 59.203-8.937 86.246-20.759 7.025 26.193 11.249 54.82 12.379 84.632zm0-96.581v-108.254c36.734 10.593 62.248 53.338 76.088 88.977-23.797 10.816-49.466 17.373-76.088 19.277zm73.32-91.957c20.895 9.15 40.389 21.557 57.864 36.951-8.318 7.334-17.095 13.984-26.26 19.931-8.139-20.152-18.536-39.736-31.604-56.882zm-210.891 56.882c-9.165-5.947-17.941-12.597-26.26-19.931 17.475-15.394 36.969-27.801 57.864-36.951-13.068 17.148-23.465 36.732-31.604 56.882zm.001 295.958c8.138 20.151 18.537 39.736 31.604 56.882-20.895-9.15-40.389-21.557-57.864-36.951 8.318-7.334 17.095-13.984 26.26-19.931zm242.494 0c9.165 5.947 17.942 12.597 26.26 19.93-17.475 15.394-36.969 27.801-57.864 36.951 13.067-17.144 23.465-36.729 31.604-56.881zm26.362-164.302c-1.249-35.242-6.533-69.146-15.452-99.954 13.494-8.162 26.295-17.633 38.264-28.335 30.84 36.225 49.091 80.786 52.497 128.289z"
-                                ></path>
-                              </svg>
-                            </span>
-                            <h5
-                              class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-8"
-                            >
-                              Website:
-                            </h5>
-                            <a
-                              :href="site_location_info.website"
-                              target="_blank"
-                              class="u-border-2 u-border-grey-dark-1 u-border-radius-44 u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-none u-text-hover-white u-btn-2"
-                              ><b>Go to website</b>
-                            </a>
-                          </div>
+                      <div class="u-container-style u-layout-cell u-palette-5-light-3 u-size-30 u-layout-cell-4">
+                        <div class="u-container-layout u-container-layout-4">
+                          <span
+                            class="hvr-grow u-border-3 u-border-custom-color-5 u-icon u-icon-circle u-spacing-20 u-text-custom-color-5 u-icon-4"><a
+                              :href="site_location_info.website" target="_blank">
+                              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.418 512.418"
+                                style="">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-eb6d"></use>
+                              </svg></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.418 512.418"
+                              id="svg-eb6d">
+                              <path
+                                d="m437.335 75.082c-100.1-100.102-262.136-100.118-362.252 0-100.103 100.102-100.118 262.136 0 362.253 100.1 100.102 262.136 100.117 362.252 0 100.103-100.102 100.117-262.136 0-362.253zm-10.706 325.739c-11.968-10.702-24.77-20.173-38.264-28.335 8.919-30.809 14.203-64.712 15.452-99.954h75.309c-3.405 47.503-21.657 92.064-52.497 128.289zm-393.338-128.289h75.309c1.249 35.242 6.533 69.145 15.452 99.954-13.494 8.162-26.296 17.633-38.264 28.335-30.84-36.225-49.091-80.786-52.497-128.289zm52.498-160.936c11.968 10.702 24.77 20.173 38.264 28.335-8.919 30.809-14.203 64.712-15.452 99.954h-75.31c3.406-47.502 21.657-92.063 52.498-128.289zm154.097 31.709c-26.622-1.904-52.291-8.461-76.088-19.278 13.84-35.639 39.354-78.384 76.088-88.977zm0 32.708v63.873h-98.625c1.13-29.812 5.354-58.439 12.379-84.632 27.043 11.822 56.127 18.882 86.246 20.759zm0 96.519v63.873c-30.119 1.877-59.203 8.937-86.246 20.759-7.025-26.193-11.249-54.82-12.379-84.632zm0 96.581v108.254c-36.732-10.593-62.246-53.333-76.088-88.976 23.797-10.817 49.466-17.374 76.088-19.278zm32.646 0c26.622 1.904 52.291 8.461 76.088 19.278-13.841 35.64-39.354 78.383-76.088 88.976zm0-32.708v-63.873h98.625c-1.13 29.812-5.354 58.439-12.379 84.632-27.043-11.822-56.127-18.882-86.246-20.759zm0-96.519v-63.873c30.119-1.877 59.203-8.937 86.246-20.759 7.025 26.193 11.249 54.82 12.379 84.632zm0-96.581v-108.254c36.734 10.593 62.248 53.338 76.088 88.977-23.797 10.816-49.466 17.373-76.088 19.277zm73.32-91.957c20.895 9.15 40.389 21.557 57.864 36.951-8.318 7.334-17.095 13.984-26.26 19.931-8.139-20.152-18.536-39.736-31.604-56.882zm-210.891 56.882c-9.165-5.947-17.941-12.597-26.26-19.931 17.475-15.394 36.969-27.801 57.864-36.951-13.068 17.148-23.465 36.732-31.604 56.882zm.001 295.958c8.138 20.151 18.537 39.736 31.604 56.882-20.895-9.15-40.389-21.557-57.864-36.951 8.318-7.334 17.095-13.984 26.26-19.931zm242.494 0c9.165 5.947 17.942 12.597 26.26 19.93-17.475 15.394-36.969 27.801-57.864 36.951 13.067-17.144 23.465-36.729 31.604-56.881zm26.362-164.302c-1.249-35.242-6.533-69.146-15.452-99.954 13.494-8.162 26.295-17.633 38.264-28.335 30.84 36.225 49.091 80.786 52.497 128.289z">
+                              </path>
+                            </svg>
+                          </span>
+                          <h5 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-custom-color-5 u-text-8">
+                            Website:
+                          </h5>
+                          <a :href="site_location_info.website" target="_blank"
+                            class="u-border-2 u-border-grey-dark-1 u-border-radius-44 u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-none u-text-hover-white u-btn-2"><b>Go
+                              to website</b>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="u-size-30 u-size-60-md">
-                  <div class="u-layout-col">
-                    <div
-                      class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5"
-                    >
-                      <div class="u-container-layout u-container-layout-5">
-                        <div class="u-expanded u-grey-light-2 u-map">
-                          <div class="embed-responsive">
-                            <div
-                              id="google-map"
-                              style="width: 100%; height: 100%"
-                            ></div>
-                          </div>
+              </div>
+
+              <!-- Google map -->
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout u-container-layout-5">
+                      <div class="u-expanded u-grey-light-2 u-map">
+                        <div class="embed-responsive">
+                          <div id="google-map" style="width: 100%; height: 100%"></div>
                         </div>
                       </div>
                     </div>
@@ -1246,108 +698,74 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="u-clearfix u-section-4" id="sec-ab95">
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <h3
-            class="u-align-center u-text u-text-custom-color-4 u-custom-font u-font-ubuntu u-text-1"
-          >
-            Need an assistance to get there ?
-          </h3>
-        </div>
-      </section>
-      <section
-        class="u-align-center u-clearfix u-image u-shading u-section-5"
-        id="sec-84c6"
-        data-image-width="3441"
-        data-image-height="2294"
-      >
-        <div class="u-align-center u-clearfix u-sheet u-sheet-1">
-          <h2 class="u-custom-font u-font-ubuntu u-text u-text-1">
-            Disability Transportation Support
-          </h2>
-          <a
-            href="./travelsupport.html"
-            class="u-btn u-button-style u-custom-color-4 u-custom-font u-font-ubuntu u-hover-white u-text-hover-black u-btn-1"
-            >Read more</a
-          >
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="u-align-left u-clearfix u-footer u-white" id="sec-2e46">
-        <div class="u-clearfix u-sheet u-valign-middle-md u-sheet-1">
-          <a
-            href="index.html"
-            class="u-image u-logo u-image-1"
-            data-image-width="1600"
-            data-image-height="868"
-            title="index"
-          >
-            <img
-              src="images/logo_colorblind.jpg"
-              class="u-logo-image u-logo-image-1"
-              data-image-width="162.5337"
-            />
-          </a>
-          <p
-            class="u-align-right u-custom-font u-font-ubuntu u-text u-text-default u-text-1"
-          >
-            <a
-              class="u-btn u-button-style u-none u-text-palette-1-base  u-btn-1"
-              href="copyright.html"
-              >Copyright and Disclaimer</a
-            >
-          </p>
-          <img
-            src="images/CCattribution.jpg"
-            alt=""
-            class="u-image u-image-default u-image-2"
-            data-image-width="344"
-            data-image-height="164"
-          />
-          <p class="u-align-right u-custom-font u-font-arial u-text u-text-2">
-            <span style="font-weight: normal"
-              >© Commonwealth of Australia&nbsp;</span
-            >
-          </p>
-          <p class="u-align-right u-custom-font u-font-arial u-text u-text-3">
-            <i style=""
-              >Except where otherwise noted, content on this website is licensed
-              under&nbsp;<a
-                href="https://creativecommons.org/licenses/by/3.0/"
-                class="u-btn u-button-style u-none u-text-palette-1-base u-btn-2"
-                >CC BY 3.0 AU</a
-              >&nbsp;and</i
-            ><i>&nbsp;</i>
-            <a
-              href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
-              target="_blank"
-              rel="license noopener noreferrer"
-              class="u-btn u-button-style u-none u-text-palette-1-base u-btn-3"
-              ><i>CC BY 4.0</i>&nbsp;
-            </a>
-            <p class="u-align-right" style="color:rgb(19, 21, 24); font-size:0.8rem;font-family: Ubuntu;font-weight: 700;">
-              Contact us: <a style="color:rgb(5, 42, 97)" href= "mailto:desable.bright@gmail.com">&nbsp;&nbsp; desable.bright@gmail.com</a> 
-            </p>
-          </p>
-        </div>
-      </footer>
-      <section class="u-backlink u-clearfix u-grey-80">
-        <a
-          class="u-link"
-          href="https://nicepage.com/html-templates"
-          target="_blank"
-        >
-          <span>HTML Template</span>
+    <!-- text -->
+    <section class="u-clearfix u-section-4" id="sec-ab95">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-center u-text u-text-custom-color-4 u-custom-font u-font-ubuntu u-text-1">
+          Need an assistance to get there ?
+        </h3>
+      </div>
+    </section>
+    <!-- bottom banner -->
+    <section class="u-align-center u-clearfix u-image u-shading u-section-5" id="sec-84c6" data-image-width="3441"
+      data-image-height="2294">
+      <div class="u-align-center u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-custom-font u-font-ubuntu u-text u-text-1">
+          Disability Transportation Support
+        </h2>
+        <!-- direct to travel support page -->
+        <a href="./travelsupport.html"
+          class="u-btn u-button-style u-custom-color-4 u-custom-font u-font-ubuntu u-hover-white u-text-hover-black u-btn-1">Read
+          more</a>
+      </div>
+    </section>
+
+    <footer class="u-align-left u-clearfix u-footer u-white" id="sec-2e46">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-sheet-1">
+        <a href="index.html" class="u-image u-logo u-image-1" data-image-width="1600" data-image-height="868"
+          title="index">
+          <img src="images/logo_colorblind.jpg" class="u-logo-image u-logo-image-1" data-image-width="162.5337" />
         </a>
-        <p class="u-text">
-          <span>created with</span>
+        <p class="u-align-right u-custom-font u-font-ubuntu u-text u-text-default u-text-1">
+          <a class="u-btn u-button-style u-none u-text-palette-1-base  u-btn-1" href="copyright.html">Copyright and
+            Disclaimer</a>
         </p>
-        <a class="u-link" href="https://nicepage.com/html" target="_blank">
-          <span>Nicepage</span> </a
-        >.
-      </section>
-    </div>
-  </body>
-  <script src="app.js?v=1.5"></script>
+        <img src="images/CCattribution.jpg" alt="" class="u-image u-image-default u-image-2" data-image-width="344"
+          data-image-height="164" />
+        <p class="u-align-right u-custom-font u-font-arial u-text u-text-2">
+          <span style="font-weight: normal">© Commonwealth of Australia&nbsp;</span>
+        </p>
+        <p class="u-align-right u-custom-font u-font-arial u-text u-text-3">
+          <i style="">Except where otherwise noted, content on this website is licensed
+            under&nbsp;<a href="https://creativecommons.org/licenses/by/3.0/"
+              class="u-btn u-button-style u-none u-text-palette-1-base u-btn-2">CC BY 3.0
+              AU</a>&nbsp;and</i><i>&nbsp;</i>
+          <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+            rel="license noopener noreferrer" class="u-btn u-button-style u-none u-text-palette-1-base u-btn-3"><i>CC BY
+              4.0</i>&nbsp;
+          </a>
+        <p class="u-align-right" style="color:rgb(19, 21, 24); font-size:0.8rem;font-family: Ubuntu;font-weight: 700;">
+          Contact us: <a style="color:rgb(5, 42, 97)" href="mailto:desable.bright@gmail.com">&nbsp;&nbsp;
+            desable.bright@gmail.com</a>
+        </p>
+        </p>
+      </div>
+    </footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/html" target="_blank">
+        <span>Nicepage</span> </a>.
+    </section>
+  </div>
+</body>
+<script src="app.js?v=1.5"></script>
+
 </html>

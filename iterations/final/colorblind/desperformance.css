@@ -1,5 +1,13 @@
 /* DES performance page -  Color Blind version */
 
+/* u-section-1: top banner 
+u-section-2: DES performance dashboard 
+u-section-3: two buttons
+u-section-4: case status
+u-section-5: caseload trend 
+*/
+
+
 /* title with images */ 
 /* change of title image can be changed here */
 .u-section-1 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(85,92,102,0.45), rgba(85,92,102,0.45)), url("images/desperformance_colorblind1.jpg"); background-position: 50% 50%}
