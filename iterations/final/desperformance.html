@@ -1,3 +1,5 @@
+<!-- DES performance - Normal version -->
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
 
@@ -16,12 +18,9 @@
 
   <!-- vue dev env -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <!-- vue build env -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
   <!-- import stylesheet -->
-  <!-- 引入样式 -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
-  <!-- 引入组件库 -->
+  <!-- import component libraries -->
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
 
@@ -52,6 +51,7 @@
 
 <body class="u-body">
   <div id="vue-app">
+    <!-- return to the top button  -->
     <img v-if="btnFlag" class="go-top" src="./images/top_button.png" @click="backTop" style="position: fixed;
     bottom: 50px;
     right: 50px;
@@ -62,68 +62,127 @@
     border-radius: 50%;
     z-index: 99;">
 
-    
-    <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea"><div class="u-clearfix u-sheet u-sheet-1">
-      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-        <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
-          <a class="u-active-palette-1-dark-2 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
-          href="#" style="padding: 4px; font-size: calc(1em + 8px);">
-            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</symbol>
-</defs></svg>
-          </a>
-        </div>
-        <div class="u-custom-menu u-nav-container">
-          <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-palette-1-dark-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
-          </li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
-          </li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
-</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
-</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
-</li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
-</li></ul>
-        </div>
-        <div class="u-custom-menu u-nav-container-collapse">
-          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-            <div class="u-menu-close"></div>
-            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
-            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
-            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
-</li></ul>
+    <!-- Menu navigation bar  -->
+
+    <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse u-custom-font u-font-ubuntu"
+            style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
+            <a class="u-active-palette-1-dark-2 u-button-style u-custom-active-border-color u-custom-border u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hover-grey-10 u-nav-link u-white"
+              href="#" style="padding: 4px; font-size: calc(1em + 8px);">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                    <rect y="1" width="16" height="2"></rect>
+                    <rect y="7" width="16" height="2"></rect>
+                    <rect y="13" width="16" height="2"></rect>
+                  </symbol>
+                </defs>
+              </svg>
+            </a>
           </div>
-          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-        </div>
-      </nav>
-      <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600" data-image-height="875">
-        <img src="images/logo_normal.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
-      </a>
-      <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
-      <a href="./colorblind/desperformance.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
-        <span class="u-text-icon"></span>Color Blind Version&nbsp; &nbsp;
-      </a>
-      <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
-    </div></header>
-  
+          <div class="u-custom-menu u-nav-container">
+            <!-- name the tab and link tab to relevant page and  -->
+            <!-- change padding to adjust the margin of the tabs-->
+            <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-palette-1-dark-2 u-unstyled u-nav-1">
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./desperformance.html" style="padding: 10px 12px;">DES PERFORMANCE</a>
+              </li>
+              <li class="u-nav-item"><a
+                  class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white"
+                  href="./legalrights.html" style="padding: 10px 12px;">LEGAL RIGHTS</a>
+              </li>
+            </ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html"
+                    style="padding: 10px 12px;">HOME PAGE</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./providerinfo.html"
+                    style="padding: 10px 12px;">DES PROVIDER INFO</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./nearbyprovider.html"
+                    style="padding: 10px 12px;">NEARBY PROVIDER</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./travelsupport.html"
+                    style="padding: 10px 12px;">TRAVEL SUPPORT</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./desperformance.html"
+                    style="padding: 10px 12px;">DES PERFORMANCE</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./legalrights.html"
+                    style="padding: 10px 12px;">LEGAL RIGHTS</a>
+                </li>
+              </ul>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <!-- link logo to home page color blind version -->
+        <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600"
+          data-image-height="875">
+          <img src="images/logo_normal.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
+        </a>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+        <!-- link to color blind version-->
+        <a href="./colorblind/desperformance.html"
+          class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
+          <span class="u-text-icon"></span>Color Blind Version&nbsp; &nbsp;
+        </a>
+        <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
+      </div>
+    </header>
+
 
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="sec-f5ff" data-image-width="1920"
       data-image-height="1080">
       <div class="u-clearfix u-sheet u-sheet-1">
+        <!-- page title banner -->
         <h4 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-white u-text-1">Explore the
           DES
           performance</h4>
       </div>
     </section>
+
+    <!-- DES performance Dashboard -->
     <section class="u-align-center u-clearfix u-section-2" id="carousel_f5bd">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <p class="u-align-center u-custom-font u-text-palette-1-dark-2  u-text" style="font-family: Ubuntu; font-weight: 600; font-size:1.19rem; width:100%"> Wondering how many people have been successfully employed with the help of DES providers ?
-        <font style=" font-family: Ubuntu; font-weight: 500; font-size:1rem; width:100%;" >
-          <br>You can explore the current number of cases handled by DES providers and information from the past ten years. <br>
-          Furthermore, check out the case status and get the insight on the high and low seasons. </font>
+        <!-- page description message -->
+        <p class="u-align-center u-custom-font u-text-palette-1-dark-2  u-text"
+          style="font-family: Ubuntu; font-weight: 600; font-size:1.19rem; width:100%"> Wondering how many people have
+          been successfully employed with the help of DES providers ?
+          <font style=" font-family: Ubuntu; font-weight: 500; font-size:1rem; width:100%;">
+            <br>You can explore the current number of cases handled by DES providers and information from the past ten
+            years. <br>
+            Furthermore, check out the case status and get the insight on the high and low seasons. </font>
         </p>
         <p></p>
+        <!-- display year and month of selected period  -->
+
         <h3 class="u-text u-text-default u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-1">{{ init_month }},
           {{ init_year }}</h3>
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -131,6 +190,7 @@
             <div class="u-layout-col">
               <div class="u-size-60">
                 <div class="u-layout-row">
+                  <!-- dashboard -->
                   <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-1">
                     <div class="u-align-center  u-container-layout u-valign-top u-container-layout-1">
                       <h3 class="u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-2">Select the
@@ -144,6 +204,7 @@
                         <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
                           style="padding: 5px;" source="custom">
                           <div class="u-align-center u-form-group u-form-select u-form-group-1">
+                            <!-- dropdown selection for year -->
                             <label for="select-89cd"
                               class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-1">Year</label>
                             <div class="u-form-select-wrapper">
@@ -157,6 +218,7 @@
                               </svg>
                             </div>
                           </div>
+                          <!-- dropdown selection for month -->
                           <div class="u-form-group u-form-select u-form-group-2">
                             <label for="select-e0ce"
                               class="u-custom-font u-font-ubuntu u-label u-text-palette-1-dark-2 u-label-2">Month</label>
@@ -171,6 +233,7 @@
                               </svg>
                             </div>
                           </div>
+                          <!-- button to perform search -->
                           <div class="u-align-center u-form-group u-form-submit u-form-group-3">
                             <a @click="searchPerformance()"
                               class="u-border-radius-27 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-custom-font u-font-ubuntu u-btn-1">Submit</a>
@@ -189,6 +252,7 @@
                       <h3 class="u-align-center u-custom-font u-font-ubuntu u-text  u-text-white u-text-3">Number of
                         total
                         caseloads</h3>
+                      <!-- display number of caselaod and statistic of selected period -->
                       <p class="hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-4">
                         {{init_performance.total}}</p>
                     </div>
@@ -207,18 +271,29 @@
                   </div>
                   <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-15 u-layout-cell-4">
                     <div class=" u-container-layout u-valign-middle u-container-layout-4">
-                    
+
                       <p class="u-icon u-icon-circle u-text-palette-1-dark-1 u-icon-1">
-                        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 511.986 511.986" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b28f"></use></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 511.986 511.986" id="svg-b28f"><g><path d="m488.453 40.081c-12.976 0-23.532 10.557-23.532 23.532 0 3.757.89 7.309 2.463 10.463l-26.784 26.784c-28.083-46.022-78.772-76.811-136.518-76.811-88.117 0-159.806 71.689-159.806 159.806 0 41.366 15.8 79.111 41.681 107.519l-33.306 33.306c-11.571-6.844-26.766-5.299-36.7 4.636l-107.128 107.127c-11.764 11.765-11.764 30.907 0 42.671 5.882 5.882 13.609 8.823 21.335 8.823s15.454-2.941 21.335-8.823l62.833-62.832c2.929-2.929 2.929-7.678 0-10.607s-7.678-2.929-10.606 0l-62.833 62.832c-5.916 5.915-15.541 5.917-21.458 0-5.916-5.916-5.916-15.542 0-21.458l92.266-92.265 21.458 21.458-7.389 7.389c-2.929 2.929-2.929 7.677 0 10.606s7.678 2.929 10.606 0l22.25-22.25c5.699-5.699 8.838-13.276 8.838-21.335 0-5.496-1.462-10.765-4.197-15.37l33.301-33.301c28.408 25.881 66.153 41.681 107.519 41.681 88.118 0 159.807-71.689 159.807-159.807 0-24.801-5.679-48.3-15.805-69.266l29.906-29.906c3.154 1.573 6.706 2.463 10.463 2.463 12.976 0 23.532-10.557 23.532-23.532.002-12.977-10.555-23.533-23.531-23.533zm-340.438 321.299-4.255 4.255-21.458-21.458 4.255-4.255c5.916-5.916 15.542-5.916 21.458 0 2.866 2.866 4.444 6.676 4.444 10.729s-1.578 7.863-4.444 10.729zm300.874-177.525c0 79.847-64.96 144.807-144.807 144.807-79.846 0-144.806-64.96-144.806-144.807 0-79.846 64.96-144.806 144.806-144.806 53.634 0 100.551 29.31 125.575 72.754l-75.031 75.031c-3.154-1.573-6.706-2.463-10.463-2.463-5.663 0-10.865 2.011-14.93 5.357l-26.313-16.446c.418-1.753.646-3.58.646-5.459 0-12.976-10.557-23.532-23.532-23.532s-23.532 10.557-23.532 23.532c0 3.757.89 7.309 2.463 10.463l-55.796 55.796c-7.563-15.133-11.827-32.19-11.827-50.227 0-62.166 50.576-112.742 112.742-112.742 33.327 0 64.77 14.634 86.265 40.149 2.668 3.167 7.4 3.572 10.568.904 3.168-2.669 3.573-7.4.904-10.568-24.352-28.906-59.976-45.484-97.736-45.484-70.437 0-127.742 57.305-127.742 127.742s57.305 127.742 127.742 127.742c70.438 0 127.742-57.305 127.742-127.742 0-15.466-2.734-30.554-8.118-44.889l13.065-13.065c7.783 17.755 12.115 37.356 12.115 57.953zm-32.064 0c0 62.166-50.576 112.742-112.742 112.742-38.598 0-72.722-19.5-93.053-49.163l58.542-58.542c3.154 1.573 6.706 2.463 10.463 2.463 5.663 0 10.865-2.011 14.93-5.357l26.313 16.446c-.418 1.753-.646 3.58-.646 5.459 0 12.976 10.557 23.532 23.532 23.532s23.532-10.557 23.532-23.532c0-3.757-.89-7.309-2.462-10.463l46.659-46.659c3.27 10.665 4.932 21.752 4.932 33.074zm-136.791-7.5c-4.705 0-8.532-3.828-8.532-8.532s3.828-8.532 8.532-8.532 8.532 3.828 8.532 8.532-3.827 8.532-8.532 8.532zm72.661 31.548c0 4.705-3.828 8.532-8.532 8.532s-8.532-3.828-8.532-8.532c0-4.705 3.828-8.532 8.532-8.532s8.532 3.827 8.532 8.532zm135.758-135.758c-4.705 0-8.532-3.828-8.532-8.532 0-4.705 3.828-8.532 8.532-8.532s8.532 3.828 8.532 8.532c.001 4.705-3.827 8.532-8.532 8.532z"></path>
-</g></svg>
-</p>
+                        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 511.986 511.986"
+                          style="">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b28f"></use>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                          xml:space="preserve" class="u-svg-content" viewBox="0 0 511.986 511.986" id="svg-b28f">
+                          <g>
+                            <path
+                              d="m488.453 40.081c-12.976 0-23.532 10.557-23.532 23.532 0 3.757.89 7.309 2.463 10.463l-26.784 26.784c-28.083-46.022-78.772-76.811-136.518-76.811-88.117 0-159.806 71.689-159.806 159.806 0 41.366 15.8 79.111 41.681 107.519l-33.306 33.306c-11.571-6.844-26.766-5.299-36.7 4.636l-107.128 107.127c-11.764 11.765-11.764 30.907 0 42.671 5.882 5.882 13.609 8.823 21.335 8.823s15.454-2.941 21.335-8.823l62.833-62.832c2.929-2.929 2.929-7.678 0-10.607s-7.678-2.929-10.606 0l-62.833 62.832c-5.916 5.915-15.541 5.917-21.458 0-5.916-5.916-5.916-15.542 0-21.458l92.266-92.265 21.458 21.458-7.389 7.389c-2.929 2.929-2.929 7.677 0 10.606s7.678 2.929 10.606 0l22.25-22.25c5.699-5.699 8.838-13.276 8.838-21.335 0-5.496-1.462-10.765-4.197-15.37l33.301-33.301c28.408 25.881 66.153 41.681 107.519 41.681 88.118 0 159.807-71.689 159.807-159.807 0-24.801-5.679-48.3-15.805-69.266l29.906-29.906c3.154 1.573 6.706 2.463 10.463 2.463 12.976 0 23.532-10.557 23.532-23.532.002-12.977-10.555-23.533-23.531-23.533zm-340.438 321.299-4.255 4.255-21.458-21.458 4.255-4.255c5.916-5.916 15.542-5.916 21.458 0 2.866 2.866 4.444 6.676 4.444 10.729s-1.578 7.863-4.444 10.729zm300.874-177.525c0 79.847-64.96 144.807-144.807 144.807-79.846 0-144.806-64.96-144.806-144.807 0-79.846 64.96-144.806 144.806-144.806 53.634 0 100.551 29.31 125.575 72.754l-75.031 75.031c-3.154-1.573-6.706-2.463-10.463-2.463-5.663 0-10.865 2.011-14.93 5.357l-26.313-16.446c.418-1.753.646-3.58.646-5.459 0-12.976-10.557-23.532-23.532-23.532s-23.532 10.557-23.532 23.532c0 3.757.89 7.309 2.463 10.463l-55.796 55.796c-7.563-15.133-11.827-32.19-11.827-50.227 0-62.166 50.576-112.742 112.742-112.742 33.327 0 64.77 14.634 86.265 40.149 2.668 3.167 7.4 3.572 10.568.904 3.168-2.669 3.573-7.4.904-10.568-24.352-28.906-59.976-45.484-97.736-45.484-70.437 0-127.742 57.305-127.742 127.742s57.305 127.742 127.742 127.742c70.438 0 127.742-57.305 127.742-127.742 0-15.466-2.734-30.554-8.118-44.889l13.065-13.065c7.783 17.755 12.115 37.356 12.115 57.953zm-32.064 0c0 62.166-50.576 112.742-112.742 112.742-38.598 0-72.722-19.5-93.053-49.163l58.542-58.542c3.154 1.573 6.706 2.463 10.463 2.463 5.663 0 10.865-2.011 14.93-5.357l26.313 16.446c-.418 1.753-.646 3.58-.646 5.459 0 12.976 10.557 23.532 23.532 23.532s23.532-10.557 23.532-23.532c0-3.757-.89-7.309-2.462-10.463l46.659-46.659c3.27 10.665 4.932 21.752 4.932 33.074zm-136.791-7.5c-4.705 0-8.532-3.828-8.532-8.532s3.828-8.532 8.532-8.532 8.532 3.828 8.532 8.532-3.827 8.532-8.532 8.532zm72.661 31.548c0 4.705-3.828 8.532-8.532 8.532s-8.532-3.828-8.532-8.532c0-4.705 3.828-8.532 8.532-8.532s8.532 3.827 8.532 8.532zm135.758-135.758c-4.705 0-8.532-3.828-8.532-8.532 0-4.705 3.828-8.532 8.532-8.532s8.532 3.828 8.532 8.532c.001 4.705-3.827 8.532-8.532 8.532z">
+                            </path>
+                          </g>
+                        </svg>
+                      </p>
+
                       <h3 class="u-align-center u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-8">
                         Expected caseloads</h3>
 
                       <!-- Change the text to the predicted month -->
                       <h3 class="u-align-center u-text u-text-palette-1-dark-2 u-custom-font u-font-ubuntu u-text-9">
                         September, 2020</h3>
+                      <!-- Change the predicted value -->
                       <p class="hvr-highlight hvr-grow u-align-center u-custom-font u-font-ubuntu u-text u-text-10">
                         299,950
                       </p>
@@ -234,6 +309,8 @@
         </div>
       </div>
     </section>
+
+    <!-- two buttons -->
     <section class="u-align-left u-clearfix u-palette-1-light-3 u-section-3" id="sec-00ab">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
@@ -241,6 +318,7 @@
             <div class="u-layout-row">
               <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
                 <div class="hvr-grow u-container-layout u-container-layout-1">
+                  <!-- embed swich function to display case status when the button is clicked on-->
                   <div
                     class="u-border-radius-40 u-container-style u-expanded-width-xs u-group u-shape-round  u-group-1">
                     <a @click="switchCaseStatus()" style="cursor: pointer;"
@@ -265,6 +343,7 @@
               <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                 <div class="hvr-grow u-container-layout u-container-layout-3">
                   <div class="u-border-radius-40 u-container-style u-group u-shape-round u-white u-group-2">
+                    <!-- embed swich function to display caseload trend when the button is clicked on-->
                     <a @click="switchCaseloadTrend()" style="cursor: pointer;"
                       class="hvr-button u-container-layout u-valign-middle u-container-layout-4">
                       <span class="u-icon u-icon-circle u-icon-2">
@@ -289,20 +368,27 @@
         </div>
       </div>
     </section>
+
+    <!-- Case status -->
+    <!-- embed condition to display once case status is clicked -->
     <section v-show="isShowCaseStatus" class="u-align-left u-clearfix u-section-4" id="sec-d86a">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class="u-custom-font u-font-ubuntu u-text u-text-palette-1-dark-2 u-text-1">Case Status in {{ init_month }},
           {{ init_year }}</p>
+        <!-- display status of caseload in selected period (in section 2) -->
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
               <div class="u-size-20">
                 <div class="u-layout-row">
+
                   <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                    <!-- Referred case -->
                     <div class="u-container-layout u-valign-middle u-container-layout-1">
                       <p class="u-align-center u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-2">
                         Referred&nbsp;</p>
                       <div class="hvr-grow u-palette-3-light-1 u-shape u-shape-circle u-shape-1">
+                        <!-- referred case number -->
                         <p class="hvr-text u-custom-font u-align-center  u-font-ubuntu u-text-white u-text-12"
                           :data-hover=init_performance.referred> <span>{{init_performance.referred_p}}% </span>
                         </p>
@@ -317,11 +403,13 @@
               <div class="u-size-20">
                 <div class="u-layout-row">
                   <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-19 u-layout-cell-3">
+                    <!-- Commenced case -->
                     <div class="u-container-layout u-valign-top u-container-layout-3">
                       <p
                         class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-3">
                         Commenced</p>
                       <div class="hvr-grow u-palette-4-dark-1 u-shape u-shape-circle u-shape-2">
+                        <!-- commenced case number -->
                         <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-13"
                           :data-hover=init_performance.commenced> <span> {{init_performance.commenced_p}}% </span>
                         </p>
@@ -330,15 +418,18 @@
                   </div>
                   <div
                     class=" u-container-style u-layout-cell u-right-cell u-size-41 u-palette-4-light-3 u-layout-cell-4">
+                    <!-- Phases -->
                     <div class="u-container-layout u-valign-top u-container-layout-4">
                       <p class="u-align-center u-text u-text-default u-text-palette-1-dark-2 u-text-4">Phases of
                         commenced cases</p>
                       <div class="u-list u-repeater u-list-1">
                         <div
                           class="u-align-center u-border-2 u-border-palette-4-dark-2 u-container-style u-list-item u-repeater-item u-shape-round u-white">
+                          <!-- include data to appear when containter is hovered on -->
                           <div
                             class="hvr-phases u-container-layout u-similar-container u-valign-middle u-container-layout-5"
                             data-hover="Employment Assistance is the initial period of the program to assess job seeker's disability and capacity to find and maintain employment. Providers then focus on assisting the job seeker find sustainable employment.">
+                            <!-- icon -->
                             <span class="u-icon u-icon-circle u-palette-4-dark-2 u-spacing-10 u-icon-1">
                               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.04 512.04"
                                 style="">
@@ -363,9 +454,11 @@
                             <p
                               class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-5">
                               <span>Employment Assistance</span></p>
+                            <!-- commenced employment assistance percentage -->
                             <p
                               class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-6">
                               <span> {{init_performance.commenced_employment_p}}% </span> </p>
+                            <!-- commenced employment assistance in number -->
                             <p class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem"> <span>
                                 {{init_performance.commenced_employment}} cases</span> </p>
@@ -374,9 +467,11 @@
                         </div>
                         <div
                           class="u-align-center u-border-2 u-border-palette-4-dark-2 u-container-style u-list-item u-repeater-item u-shape-round u-white">
+                          <!-- include data to appear when containter is hovered on -->
                           <div
                             class="hvr-phases u-container-layout u-similar-container u-valign-middle u-container-layout-6"
                             data-hover="Post Placement Support occurs for up to six months following the placement of a job seeker in employment. Providers will ensure that job seekers are doing well with their placements.">
+                            <!-- icon -->
                             <span class="u-icon u-icon-circle u-palette-4-dark-2 u-spacing-10 u-icon-2">
                               <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 -31 512 512"
                                 style="">
@@ -393,9 +488,11 @@
                             <p
                               class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-7">
                               <span>Post Placment Support</span></p>
+                            <!-- commenced post placement support percentage -->
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-8">
                               <span>{{init_performance.commenced_placement_p}}%</span></p>
+                            <!-- commenced post placement support number -->
                             <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem">
                               <span>{{init_performance.commenced_placement}} cases</span></p>
@@ -426,9 +523,11 @@
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-9">
                               <span>Ongoing&nbsp; Support</span></p>
+                            <!-- commenced ongoing support case percentage -->
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-dark-2 u-text-10">
                               <span>{{init_performance.commenced_ongoing_p}}%</span></p>
+                            <!-- commenced ongoing support case number -->
                             <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem">
                               <span>{{init_performance.commenced_ongoing}} cases</span></p>
@@ -444,10 +543,12 @@
                 <div class="u-layout-row">
                   <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-5">
                     <div class="u-container-layout u-valign-middle u-container-layout-8">
+                      <!-- suspended case -->
                       <p
                         class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-10">
                         Suspended</p>
                       <div class="hvr-grow u-palette-2-light-1 u-shape u-shape-circle u-shape-3">
+                        <!-- suspended case number -->
                         <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-14"
                           :data-hover=init_performance.suspended> <span> {{init_performance.suspended_p}}% </span>
                         </p>
@@ -464,6 +565,10 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Caseload trend -->
+    <!-- embed condition to display once caseload trend is clicked -->
     <section v-show="isShowCaseloadTrend" class="u-align-left  u-clearfix u-section-5" id="carousel_c8c9">
       <div class="u-clearfix u-sheet u-valign-middle-xl u-sheet-1">
         <h3
@@ -493,7 +598,7 @@
                   </div>
                 </div>
               </div>
-              <!-- tableau -->
+              <!-- embed Tableau view (paste the code retrieve from Tableau public here) -->
               <div class='tableauPlaceholder' id='viz1602779135419' style='position: relative'><noscript><a
                     href='#'><img alt=' '
                       src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DE&#47;DESPerformance&#47;Dashboard2&#47;1_rss.png'
@@ -513,18 +618,20 @@
                   <param name='display_count' value='yes' />
                   <param name='language' value='en' />
                   <param name='filter' value='publish=yes' />
-                  <param name='device' value='desktop'/>
+                  <param name='device' value='desktop' />
                 </object></div>
-              <script
-                type='text/javascript'>                   
-                var divElement = document.getElementById('viz1602779135419'); 
-                var vizElement = divElement.getElementsByTagName('object')[0]; 
-                if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; 
-                vizElement.style.height = '627px'; } else if (divElement.offsetWidth > 500) 
-                { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } 
+              <script type='text/javascript'>
+                var divElement = document.getElementById('viz1602779135419');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                  vizElement.style.width = '1000px';
+                  vizElement.style.height = '627px';
+                } else if (divElement.offsetWidth > 500) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; }
                 else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script');
-                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                 </script>
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+              <!-- data details -->
+
               <p class="u-text u-text-default u-custom-font u-font-ubuntu u-text-black u-text-6">
 
                 The above dataset was created based on the original DES Monthly Data Reports between July 1, 2011 and
@@ -543,6 +650,7 @@
   </div>
   </section>
 
+  <!-- footer -->
   <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-white" id="sec-2e46">
     <div class="u-clearfix u-sheet u-sheet-1">
       <a href="index.html" class="u-image u-image-circle u-logo u-image-1" data-image-width="1600"

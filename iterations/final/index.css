@@ -1,17 +1,31 @@
-.u-section-1 .u-sheet-1 {min-height: 38px}.u-block-e78f-1 {background-image: url("images/homepage_normal1.jpg"); background-position: 50% 50%; margin-top: 0; margin-bottom: 0}
-.u-block-e78f-2 {position: absolute; bottom: 10px}
-.u-block-e78f-3 {position: absolute; left: 0; background-image: none}
-.u-block-e78f-4 {position: absolute; right: 0; background-image: none}.u-section-2-1 {background-image: url("images/homepage_normal1.jpg");background-position: 50% 50%}
+/* Home page - Normal version */
+
+/* 
+u-section-2: Image slider
+u-section-3: Hero function buttons
+u-section-4: DES definition
+u-section-5: Type of DES service
+u-section-6: VDO
+u-section-7: About
+u-section-8: Our services
+*/
+
+/* image display on sliders */
+/* Des definition */
+.u-section-2-1 {background-image: url("images/homepage_normal1.jpg");background-position: 50% 50%}
 .u-section-2-1 .u-sheet-1 {min-height: 452px} 
-
+/* adjust the size for different devices */
+/* desktop */
 @media (max-width: 1199px){ .u-section-2-1 .u-sheet-1 {min-height: 372px} }
-
+/* small screen, labtop */
 @media (max-width: 991px){ .u-section-2-1 .u-sheet-1 {min-height: 285px} }
-
+/* tablet */
 @media (max-width: 767px){ .u-section-2-1 .u-sheet-1 {min-height: 214px} }
-
+/* mobile */
 @media (max-width: 575px){ .u-section-2-1 .u-sheet-1 {min-height: 135px} }
 
+
+/* Unable image */
 .u-section-2-2 {background-image: linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url("images/homepage_normal2.jpg"); background-position: 50% 39.05%}
 .u-section-2-2 .u-sheet-1 {min-height: 452px} 
 
@@ -19,7 +33,7 @@
 @media (max-width: 991px){ .u-section-2-2 .u-sheet-1 {min-height: 285px} }
 @media (max-width: 767px){ .u-section-2-2 .u-sheet-1 {min-height: 214px} }
 @media (max-width: 575px){ .u-section-2-2 .u-sheet-1 {min-height: 135px} }
-
+/* Girl at meeting */
 .u-section-2-3 {background-image: url("images/homepage_normal3.jpg"); background-position: 50% 26.15%}
 .u-section-2-3 .u-sheet-1 {min-height: 452px}
 
@@ -31,6 +45,7 @@
 
 @media (max-width: 575px){ .u-section-2-3 .u-sheet-1 {min-height: 135px} }
 
+/* Girl with glasses */
 .u-section-2-4 {background-image: linear-gradient(
   0deg,
   rgba(0, 0, 0, 0.1),
@@ -45,19 +60,23 @@
 @media (max-width: 767px){ .u-section-2-4 .u-sheet-1 {min-height: 214px} }
 
 @media (max-width: 575px){ .u-section-2-4 .u-sheet-1 {min-height: 135px} }
-
+/* Two men */
 .u-section-2-5 {background-image: url("images/homepage_normal5.jpg")}
 .u-section-2-5 .u-sheet-1 {min-height: 452px} 
 @media (max-width: 1199px){ .u-section-2-5 .u-sheet-1 {min-height: 373px} }
 @media (max-width: 991px){ .u-section-2-5 .u-sheet-1 {min-height: 286px} }
 @media (max-width: 767px){ .u-section-2-5 .u-sheet-1 {min-height: 215px} }
-@media (max-width: 575px){ .u-section-2-5 .u-sheet-1 {min-height: 135px} }.u-section-3 {background-image: none; margin-top: 0; margin-bottom: 0}
+@media (max-width: 575px){ .u-section-2-5 .u-sheet-1 {min-height: 135px} }
+
+/* Hero function buttons */
+.u-section-3 {background-image: none; margin-top: 0; margin-bottom: 0}
 .u-section-3 .u-sheet-1 {min-height: 277px}
 .u-section-3 .u-layout-wrap-1 {width: 900px; margin: 32px auto}
 .u-section-3 .u-layout-cell-1 {min-height: 213px}
 .u-section-3 .u-container-layout-1 {padding: 20px 30px}
 .u-section-3 .u-text-1 {font-size: 2.375rem; margin: 0 30px}
 .u-section-3 .u-btn-1 {font-size: 1.5rem; padding: 0}
+/* Search button */
 .u-section-3 .u-btn-2 {border-style: solid; background-image: none; font-size: 1.25rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 20px auto 0; padding: 10px 61px 11px 59px}
 .u-section-3 .u-layout-cell-2 {min-height: 213px}
 .u-section-3 .u-container-layout-2 {padding: 30px}
@@ -65,6 +84,7 @@
 .u-section-3 .u-container-layout-3 {padding: 20px 30px}
 .u-section-3 .u-text-2 {font-size: 2.375rem; background-image: none; margin: 18px 30px 0}
 .u-section-3 .u-btn-3 {font-size: 1.5rem; padding: 0}
+/* Find button */
 .u-section-3 .u-btn-4 {border-style: solid; background-image: none; font-size: 1.25rem; text-transform: uppercase; animation-duration: 500ms; font-weight: 700; margin: 20px auto 0; padding: 10px 79px 11px 78px} 
 
 @media (max-width: 1199px){ .u-section-3 .u-layout-wrap-1 {min-height: 88px}
@@ -98,7 +118,7 @@
 .u-section-3 .u-container-layout-3 {padding-bottom: 18px}
 .u-section-3 .u-text-2 {margin-left: 43px; margin-right: 43px; font-size: 1.5rem} }
 
-
+/* DES definition */
 .u-section-4 {margin-top: 0; margin-bottom: 0}
 .u-section-4 .u-sheet-1 {min-height: 257px}
 .u-section-4 .u-layout-wrap-1 {width: 1304px; margin: 0 -82px 20px}
@@ -137,7 +157,10 @@
 .u-section-4 .u-image-1 {height: 93px; width: 244px; margin-top: 2px; margin-right: auto; margin-bottom: -16px}
 .u-section-4 .u-text-1 {font-size: 2.25rem}
 .u-section-4 .u-btn-1 {font-size: 1.875rem}
-.u-section-4 .u-text-2 {font-size: 1.25rem} }.u-section-5 {background-image: none}
+.u-section-4 .u-text-2 {font-size: 1.25rem} }
+
+/* Type of DES services */
+.u-section-5 {background-image: none}
 .u-section-5 .u-sheet-1 {min-height: 322px}
 .u-section-5 .u-layout-wrap-1 {width: 1140px; margin: 37px 0}
 .u-section-5 .u-layout-cell-1 {min-height: 230px}
@@ -187,7 +210,11 @@
 .u-section-5 .u-container-layout-3 {padding-bottom: 0}
 .u-section-5 .u-text-5 {font-size: 1.875rem; margin-right: 0}
 .u-section-5 .u-text-6 {font-size: 1.25rem; margin-right: 22px}
-.u-section-5 .u-text-7 {font-size: 0.875rem; width: auto; margin-top: 10px; margin-right: -2px; margin-left: 2px} }.u-section-6 .u-sheet-1 {min-height: 490px}
+.u-section-5 .u-text-7 {font-size: 0.875rem; width: auto; margin-top: 10px; margin-right: -2px; margin-left: 2px} }
+
+
+/* VDO container */
+.u-section-6 .u-sheet-1 {min-height: 490px}
 .u-section-6 .u-video-1 {height: 368px; width: 756px; margin: 42px 187px 0 auto}
 .u-section-6 .u-text-1 {font-size: 0.875rem; width: 680px; margin: 32px auto 20px}
 .u-section-6 .u-btn-1 {font-size: 0.875rem; padding: 0} 
@@ -203,7 +230,10 @@
 @media (max-width: 575px){ .u-section-6 .u-sheet-1 {min-height: 314px}
 .u-section-6 .u-video-1 {height: 195px; width: 340px; margin-top: 37px; margin-right: 7px; margin-left: -7px}
 .u-section-6 .u-text-1 {font-size: 0.625rem; width: 340px; margin-top: 11px; margin-bottom: 11px}
-.u-section-6 .u-btn-1 {font-size: 0.75rem} }.u-section-7 .u-sheet-1 {min-height: 194px}
+.u-section-6 .u-btn-1 {font-size: 0.75rem} }
+
+/* About */
+.u-section-7 .u-sheet-1 {min-height: 194px}
 .u-section-7 .u-text-1 {font-style: normal; font-size: 1.875rem; width: 85px; margin: 26px auto 0}
 .u-section-7 .u-text-2 {letter-spacing: 2px; line-height: 1.8; font-size: 1rem; font-weight: 700; margin: 26px 84px} 
 
@@ -221,25 +251,29 @@
 .u-section-7 .u-text-1 {font-size: 1.25rem; width: auto}
 .u-section-7 .u-text-2 {width: 340px} }
 
-
+/* Our services */
 .u-section-8 .u-sheet-1 {min-height: 440px}
 .u-section-8 .u-text-1 {width: 740px; font-size: 1.875rem; margin: 40px auto 40px }
 .u-section-8 .u-list-1 {min-height: 301px; grid-gap: 31px 31px; grid-template-columns: calc(20% - 25px) calc(20% - 25px) calc(20% - 25px) calc(20% - 25px) calc(20% - 25px); grid-template-rows: auto; height: auto; margin: 15px auto 60px 0}
+/* Easy Search */
 .u-section-8 .u-list-item-1 {background-size: auto; margin-top: 0; margin-bottom: 0; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-8 .u-container-layout-1 {padding: 20px 10px 10px}
 .u-section-8 .u-icon-1 {height: 82px; width: 82px; background-image: none; margin: 0 auto}
 .u-section-8 .u-text-2 {font-size: 1.25rem; font-weight: 500; margin: 15px 0 0}
 .u-section-8 .u-text-3 {font-size: 0.875rem; margin: 6px 0 0}
+/* Nearby Provider */
 .u-section-8 .u-list-item-2 {background-size: auto; margin-top: 0; margin-bottom: 0; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-8 .u-container-layout-2 {padding: 20px 10px 10px}
 .u-section-8 .u-icon-2 {height: 82px; width: 82px; background-image: none; margin: 0 auto}
 .u-section-8 .u-text-4 {font-size: 1.25rem; font-weight: 500; margin: 15px 0 0}
 .u-section-8 .u-text-5 {font-size: 0.875rem; margin: 6px 0 0}
+/* Travel Support */
 .u-section-8 .u-list-item-3 {background-size: auto; margin-top: 0; margin-bottom: 0; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-8 .u-container-layout-3 {padding: 20px 10px 10px}
 .u-section-8 .u-icon-3 {height: 82px; width: 82px; background-image: none; margin: 0 auto}
 .u-section-8 .u-text-6 {font-size: 1.25rem; font-weight: 500; margin: 15px 0 0}
 .u-section-8 .u-text-7 {font-size: 0.875rem; margin: 6px 0 0}
+/* DES performance */
 .u-section-8 .u-list-item-4 {background-size: auto; margin-top: 0; margin-bottom: 0; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-8 .u-container-layout-4 {padding: 20px 10px 10px}
 .u-section-8 .u-icon-4 {height: 82px; width: 82px; background-image: none; margin: 0 auto}
@@ -248,6 +282,7 @@
 .u-section-8 .u-list-item-3 {background-size: auto; margin-top: 0; margin-bottom: 0; box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4)}
 .u-section-8 .u-container-layout-3 {padding: 20px 10px 10px}
 .u-section-8 .u-icon-3 {height: 82px; width: 82px; background-image: none; margin: 0 auto}
+/* Legal services */
 .u-section-8 .u-text-10 {font-size: 1.25rem; font-weight: 500; margin: 15px 0 0}
 .u-section-8 .u-text-11 {font-size: 0.875rem; margin: 6px 0 0} 
 
@@ -276,23 +311,8 @@
 .u-section-8 .u-text-11 {margin-top: 5px} }
 
 /* Source: Hover.css Github under MIT license */
-.hvr-grow {
-    display: flex;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-  }
-  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  } */
+/* make icon grows bigger */
 
-/* Source: Hover.css Github under MIT license */
 .hvr-grow {
   display: flex;
   vertical-align: middle;
@@ -308,6 +328,8 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+/* highlight text */
 
 .hvr-text {
   align-items: center;

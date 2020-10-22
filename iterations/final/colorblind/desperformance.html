@@ -25,9 +25,6 @@
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
 
-
-
-
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet"
@@ -139,12 +136,12 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <!-- link logo to home page color blind version -->
+        <!-- link logo to home page normal version -->
         <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600"
           data-image-height="875">
           <img src="images/logo_colorblind.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
         </a>
-        <!-- link to color blind version -->
+        <!-- link to normal version -->
         <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
         <a href="../desperformance.html"
           class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
@@ -230,7 +227,7 @@
                               </svg>
                             </div>
                           </div>
-                          <!-- button to perform search the match data -->
+                          <!-- button to perform search -->
                           <div class="u-align-center u-form-group u-form-submit u-form-group-3">
                             <a @click="searchPerformance()"
                               class="u-border-radius-27 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-4 u-custom-font u-font-ubuntu u-btn-1">Submit</a>
@@ -379,11 +376,12 @@
               <div class="u-size-20">
                 <div class="u-layout-row">
                   <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
-                    <!-- Referred case -->
                     <div class="u-container-layout u-valign-middle u-container-layout-1">
                       <p class="u-align-center u-custom-font u-font-ubuntu u-text-palette-1-dark-2 u-text-2">
                         Referred&nbsp;</p>
                       <div class="hvr-grow u-palette-1-dark-1  u-shape u-shape-circle u-shape-1">
+                                            <!-- Referred case number -->
+
                         <p class="hvr-text u-custom-font u-align-center  u-font-ubuntu u-text-white u-text-12"
                           :data-hover=init_performance.referred> <span>{{init_performance.referred_p}}% </span>
                         </p>
@@ -404,6 +402,7 @@
                         class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-3">
                         Commenced</p>
                       <div class="hvr-grow u-custom-color-5  u-shape u-shape-circle u-shape-2">
+                        <!-- commenced case number -->
                         <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-13"
                           :data-hover=init_performance.commenced> <span> {{init_performance.commenced_p}}% </span>
                         </p>
@@ -448,9 +447,13 @@
                             <p
                               class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-3 u-text-5">
                               <span>Employment Assistance</span></p>
+                                                              <!-- commenced employment assistance percentage -->
+
                             <p
                               class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-custom-color-4 u-text-6">
                               <span> {{init_performance.commenced_employment_p}}% </span> </p>
+                                                              <!-- commenced employment assistance number -->
+
                               <p class=" u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem"> <span>
                                 {{init_performance.commenced_employment}} cases</span> </p>
@@ -482,9 +485,11 @@
                               <span>Post Placment Support</span></p>
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-custom-color-4 u-text-8">
+                                <!-- commenced post placement  support percentage -->
                               <span>{{init_performance.commenced_placement_p}}%</span></p>
                             <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem">
+                                <!-- commenced post placement  support  number -->
                               <span>{{init_performance.commenced_placement}} cases</span></p>
 
                           </div>
@@ -515,10 +520,12 @@
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-3 u-text-9">
                               <span>Ongoing&nbsp; Support</span></p>
+                              <!-- commenced ongoing support case percentage -->
                             <p
                               class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-custom-color-4 u-text-10">
                               <span>{{init_performance.commenced_ongoing_p}}%</span></p>
-                            <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
+                           <!-- commenced ongoing support case in number -->
+                              <p class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default"
                               style="margin-top:10px; color:rgb(78, 83, 78); font-size:1rem">
                               <span>{{init_performance.commenced_ongoing}} cases</span></p>
 
@@ -538,6 +545,8 @@
                         class="u-align-center u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-2 u-text-10">
                         Suspended</p>
                       <div class="hvr-grow u-palette-5-dark-1  u-shape u-shape-circle u-shape-3">
+                                                <!-- suspended case number -->
+
                         <p class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text-white u-text-14"
                           :data-hover=init_performance.suspended> <span> {{init_performance.suspended_p}}% </span>
                         </p>

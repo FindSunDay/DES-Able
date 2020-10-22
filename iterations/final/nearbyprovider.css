@@ -1,13 +1,29 @@
+/* Nearby Provider- Color Blind version */
+
+/* 
+u-section-1: Find DES provider
+u-section-2: Display top 5 des providers
+u-section-3: Map of DES
+u-section-4: Need an assistance
+u-section-5: Bottom banner
+
+*/
+
+/* Find DES provider */
 .u-section-1 .u-sheet-1 {min-height: 620px}
 .u-section-1 .u-icon-1 {height: 64px; width: 64px; background-image: none; margin: 50px auto 0}
 .u-section-1 .u-text-1 {font-weight: 700; font-size: 2.25rem; width: 489px; margin: 20px 326px 0}
+/* address input bar */
 .u-section-1 .u-form-1 {height: 139px; width: 570px; margin: 20px 285px 0}
 .u-section-1 .u-label-1 {font-weight: 700; font-size: 1.25rem}
 .u-section-1 .u-input-1 {background-image: none}
+ /* speciality dropdown */
 .u-section-1 .u-form-group-2 {margin-left: 0}
 .u-section-1 .u-label-2 {font-weight: 700; font-size: 1.25rem}
 .u-section-1 .u-input-2 {background-image: none}
+/* submit button */
 .u-section-1 .u-btn-1 {background-image: none; border-style: none; font-weight: 700}
+/* text sliders */
 .u-section-1 .u-slider-1 {min-height: 116px; margin: 30px auto 27px}
 .u-section-1 .u-carousel-indicators-1 {position: absolute; width: 72px; height: 3px; top: auto; bottom: 9px}
 .u-section-1 .u-container-layout-1 {padding: 30px 30px}
@@ -16,6 +32,8 @@
 .u-section-1 .u-text-3 {font-weight: 500; font-size: 1.25rem; font-style: normal; margin: 0 78px}
 .u-section-1 .u-carousel-control-1 {width: 50px; height: 50px}
 .u-section-1 .u-carousel-control-2 {width: 50px; height: 50px; left: auto; position: absolute; right: 0} 
+
+/* set layout for different devices */
 
 @media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 431px}
 .u-section-1 .u-text-1 {margin-left: 226px; margin-right: 226px}
@@ -47,9 +65,13 @@
 .u-section-1 .u-text-2 {width: 320px; font-size: 1.5rem}
 .u-section-1 .u-text-3 {width: 320px} }
 
+
+/* display top 5 des providers */
+/* background image */
 .u-section-2 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("images/nearbyprovider_normal1.jpg"); background-position: 50% 50%}
 .u-section-2 .u-sheet-1 {min-height: 869px}
 .u-section-2 .u-repeater-1 {height: 320px; width: 320px;grid-template-columns: calc(33.3333% - 13px) calc(33.3333% - 13px) calc(33.3333% - 13px); grid-gap: 19px 19px; width: 1018px; margin: 90px auto 0}
+/* 1st card */
 .u-section-2 .u-repeater-item-1 {height: 320px; width:320px; background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-1 { height: 320px; width: 320px; padding: 20px 20px 20px ; background-color:#a3cae4}
 .u-section-2 .u-icon-1 {height: 50px; width: 50px; margin: 0 auto 0 1px}
@@ -58,6 +80,7 @@
 .u-section-2 .u-text-3 {font-size: 1.25rem; font-weight: 700; margin: 10px 0 0}
 .u-section-2 .u-text-4 {font-size:0.9rem; margin: 2px 8px 0 0}
 .u-section-2 .u-text-5 {font-size:0.9rem; animation-duration: 1000ms; margin: 2px 7px 0 0}
+/* 2nd card */
 .u-section-2 .u-repeater-item-2 {height: 320px; width: 320px;background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-2 {height: 320px; width: 320px; padding: 20px 20px 20px; background-color: #91BAD6 ;}
 .u-section-2 .u-icon-2 {height: 50px; width: 50px; margin: 0 auto 0 1px}
@@ -66,6 +89,7 @@
 .u-section-2 .u-text-8 {font-size: 1.25rem; font-weight: 700; margin: 10px 0 0}
 .u-section-2 .u-text-9 {font-size:0.9rem; margin: 2px 8px 0 0}
 .u-section-2 .u-text-10 {font-size:0.9rem; animation-duration: 1000ms; margin: 2px 7px 0 0}
+/* 3rd card */
 .u-section-2 .u-repeater-item-3 {height: 320px; width: 320px; background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-3 {height: 320px; width: 320px; padding: 20px 20px 20px ; background-color: #73A5c6 }
 .u-section-2 .u-icon-3 {height: 50px; width: 50px; margin: 0 auto 0 1px}
@@ -75,6 +99,7 @@
 .u-section-2 .u-text-14 {font-size:0.9rem; margin: 2px 8px 0 0}
 .u-section-2 .u-text-15 {font-size:0.9rem; animation-duration: 1000ms; margin: 2px 7px 0 0}
 .u-section-2 .u-repeater-2 {width: 673px; height:320px;min-width: 320px; grid-template-columns: calc(((100% - 1140px) / 2) + 560px) calc(((100% - 1140px) / 2) + 560px); grid-gap: 19px 19px; background-image: none; background-size: auto; margin: 60px auto 60px 233px}
+/* 4th card */
 .u-section-2 .u-repeater-item-4 {height: 320px; width:320px ; background-size: auto; background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-4 {height: 320px; width: 320px; padding: 20px 20px 20px; background-color: #528AAE}
 .u-section-2 .u-icon-4 {height: 50px; width: 50px; margin: 0 auto 0 0}
@@ -83,6 +108,7 @@
 .u-section-2 .u-text-18 {font-size: 1.25rem; font-weight: 700; width: 286px; margin: 10px auto 0 0}
 .u-section-2 .u-text-19 {font-size:0.9rem; margin: 2px 8px 0 0}
 .u-section-2 .u-text-20 {font-size:0.9rem; margin: 2px 8px 0 0}
+/* 5th card */
 .u-section-2 .u-repeater-item-5 { height: 320px; width:320px;  background-size: auto; background-image: none; box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.4)}
 .u-section-2 .u-container-layout-5 {height: 320px; width: 320px; padding: 20px 20px 20px ; background-color: #2E5984}
 .u-section-2 .u-icon-5 {height: 50px; width: 50px; margin: 0 auto 0 0}
@@ -159,21 +185,27 @@
 .u-section-2 .u-repeater-item-5 {justify-self: center;margin-left: auto; margin-right: auto }
 }
 
+/* Map of DES */
+
 .u-section-3 {margin-top: 0; margin-bottom: 0; background-image: none}
 .u-section-3 .u-sheet-1 {min-height: 898px}
+/* title */
 .u-section-3 .u-text-1 {text-transform: uppercase; background-image: none; font-weight: 700; font-size: 2.25rem; width: 1000px; margin: 72px auto 0}
 .u-section-3 .u-text-2 {font-size: 1.5rem; text-transform: uppercase; background-image: none; font-weight: 700; width: 722px; margin: 27px 209px 0}
 .u-section-3 .u-layout-wrap-1 {background-image: none; width: 1017px; margin: 54px auto 60px}
+/* address */
 .u-section-3 .u-layout-cell-1 {min-height: 300px}
 .u-section-3 .u-container-layout-1 {padding: 30px}
 .u-section-3 .u-icon-1 {height: 80px; width: 80px; margin: 0 auto}
 .u-section-3 .u-text-3 {font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 20px -1px 0}
 .u-section-3 .u-text-4 {font-size: 1rem; margin: 20px -1px 0}
+/* email */
 .u-section-3 .u-layout-cell-2 {min-height: 300px}
 .u-section-3 .u-container-layout-2 {padding: 30px}
 .u-section-3 .u-icon-2 {height: 80px; width: 80px; background-image: none; margin: 0 auto}
 .u-section-3 .u-text-5 {font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 30px -1px 0}
 .u-section-3 .u-btn-1 {border-style: none; background-image: none; text-decoration: underline !important; margin: 20px auto 0; padding: 0}
+/* call us */
 .u-section-3 .u-layout-cell-3 {min-height: 290px}
 .u-section-3 .u-container-layout-3 {padding: 30px}
 .u-section-3 .u-icon-3 {height: 80px; width: 80px; margin: 0 auto}
@@ -181,9 +213,11 @@
 .u-section-3 .u-text-7 {margin: 21px -1px 0}
 .u-section-3 .u-icon-4 {height: 80px; width: 80px; margin: 0 auto}
 .u-section-3 .u-text-8 {font-size: 1.25rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 30px -1px 0}
+/* website */
 .u-section-3 .u-btn-2 {margin-left: auto; margin-right: auto; background-image: none; border-style: solid}
 .u-section-3 .u-layout-cell-4 {min-height: 290px}
 .u-section-3 .u-container-layout-4 {padding: 30px}
+/* google map container */
 .u-section-3 .u-layout-cell-5 {min-height: 590px}
 .u-section-3 .u-container-layout-5 {padding: 30px} 
 
@@ -230,13 +264,18 @@
 .u-section-3 .u-layout-cell-5 {min-height: 363px} }
 
 
+/* text - need an assistance */
 .u-section-4 {margin-top: 0; margin-bottom: 0}
 .u-section-4 .u-sheet-1 {min-height: 104px}
 .u-section-4 .u-text-1 {font-weight: 700; font-size: 2.25rem; margin: 21px auto 40px} 
 
-@media (max-width: 575px){ .u-section-4 .u-text-1 {font-size: 1.5rem} }.u-section-5 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/nearbyprovider_normal2.jpg")}
+@media (max-width: 575px){ .u-section-4 .u-text-1 {font-size: 1.5rem} }
+
+/* bottom banner */
+.u-section-5 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/nearbyprovider_normal2.jpg")}
 .u-section-5 .u-sheet-1 {min-height: 323px}
 .u-section-5 .u-text-1 {font-weight: 700; margin: 60px 20px 0}
+/* button */
 .u-section-5 .u-btn-1 {border-style: none; background-image: none; font-weight: 700; margin: 50px 497px 60px auto; justify-self: center} 
 
 @media (max-width: 1199px){ .u-section-5 .u-sheet-1 {min-height: 266px}
@@ -291,6 +330,8 @@ Source: from Hover.css GitHub under MIT License
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
+    /* change color of font after hover to white */
+
   .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
     color: white;
     
@@ -299,6 +340,8 @@ Source: from Hover.css GitHub under MIT License
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+
+    /* make the card grow bigger */
 
 .hvr-grow {
     display: flex;

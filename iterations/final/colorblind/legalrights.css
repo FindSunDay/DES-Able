@@ -850,6 +850,7 @@ u-section-8: Futher Help
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
+  /* color of text */
   .hvr-text:hover, .hvr-text:focus, .hvr-textt:active {
     font-weight: 600;
     color:rgb(57, 93, 226);

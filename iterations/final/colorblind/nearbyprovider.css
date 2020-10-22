@@ -328,7 +328,7 @@ Source: from Hover.css GitHub under MIT License
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  /* change color of font after hover */
+  /* change color of font after hover to white */
   .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
     color: white;
   }

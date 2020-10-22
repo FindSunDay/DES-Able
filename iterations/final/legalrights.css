@@ -1,24 +1,44 @@
+/* Legal rights - Normal version */
+/* 
+u-section-1: Top banner
+u-section-2: Disability Discrimination At Workplace
+u-section-3: Know your rights
+u-section-4: More about Laws 
+u-section-5: Make a complaint
+u-section-6: Get in touch
+u-section-7: What Happens After The Complaint
+u-section-8: Futher Help
+*/
+
+
+/* Imange at banner */
 .u-section-1 {min-height: 700px}
 .u-section-1 .u-sheet-1 {min-height: 700px}
 .u-section-1 .u-image-1 {height: 470px; margin: 1px auto 0 ;object-position: 50% 100%;}
+/* Text title */
 .u-section-1 .u-text-1 {font-size: 2.2rem; line-height:0.8 ; margin: -300px 400px 0 54px}
 .u-section-1 .u-layout-wrap-1 {margin: 100px 0 19px 0}
+/* Three cards at the top */
+/* 1. Disability Discrimination */
 .u-section-1 .u-layout-cell-1 {min-height: 355px;}
 .u-section-1 .u-container-layout-1 {padding: 30px; }
 .u-section-1 .u-text-2 {text-transform: uppercase; letter-spacing: 4px; font-size: 1.25rem; font-weight: 600; margin: 29px 0 0 0}
 .u-section-1 .u-text-3 {font-size: 1rem; margin: 38px auto 0 0}
+/* 2. Law and rights */
 .u-section-1 .u-link-1 {padding-bottom: 2px; border-style: solid; font-weight: 700; margin: 42px auto 0 0}
 .u-section-1 .u-layout-cell-2 {min-height: 355px}
 .u-section-1 .u-container-layout-2 {padding: 30px}
 .u-section-1 .u-text-4 {text-transform: uppercase; letter-spacing: 4px; font-size: 1.25rem; font-weight: 600; margin: 29px 0 0 0}
 .u-section-1 .u-text-5 {font-size: 1rem; margin: 38px auto 0 0}
 .u-section-1 .u-link-2 {padding-bottom: 2px; border-style: solid; font-weight: 700; margin: 42px auto 0 0}
+/* 3. Make a complaint */
 .u-section-1 .u-layout-cell-3 {min-height: 355px}
 .u-section-1 .u-container-layout-3 {padding: 30px}
 .u-section-1 .u-text-6 {text-transform: uppercase; letter-spacing: 4px; font-size: 1.25rem; font-weight: 600; margin: 29px 0 0 0}
 .u-section-1 .u-text-7 {font-size: 1rem; margin: 38px auto 0 0}
 .u-section-1 .u-link-3 {padding-bottom: 2px; border-style: solid; font-weight: 700; margin: 42px auto 0 0}
 
+/* adjust the size for different devices */
 @media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 820px}
 .u-section-1 .u-image-1 {height: 470px; margin: 1px auto 0 ;object-position: 50% 100%;}
 .u-section-1 .u-text-1 {margin-top: -300px; margin-right: 441px; margin-left: 45px}
@@ -64,28 +84,36 @@
 .u-section-1 .u-layout-wrap-1 {margin-top: 50px; margin-bottom: 1px; margin-right: initial; margin-left: initial}
 .u-section-1 .u-layout-cell-4 {min-height: 25px} }
 
+/* Disability Discrimination At Workplace */
 .u-section-2 .u-sheet-1 {min-height: 700px}
+/* title */
 .u-section-2 .u-text-1 {font-size: 1.875rem; font-weight: 700; margin: 100px auto 0}
 .u-section-2 .u-layout-wrap-1 {width: 997px; margin: 80px 67px 27px auto}
 .u-section-2 .u-layout-cell-1 {height: 280px; width: 250px}
+/* top left box */
 .u-section-2 .u-container-layout-1 {padding: 30px;width: 250px }
 .u-section-2 .u-text-2 {font-weight: 700; font-size: 1.875rem; margin: 0}
 .u-section-2 .u-icon-1 {font-size: 2em; animation-duration: 1000ms}
 .u-section-2 .u-text-3 {font-size: 1rem; line-height: 1.4; margin: 40px 0 0}
+ /* top middle box*/
 .u-section-2 .u-image-1 {height: 280px;  width: 250px; background-image: url("images/legalrights_normal2.jpeg"); background-position: 41.18% 0%}
 .u-section-2 .u-container-layout-2 {padding: 30px}
 .u-section-2 .u-layout-cell-3 {height: 280px; width: 250px}
 .u-section-2 .u-container-layout-3 {padding: 30px}
+/* top right box */
 .u-section-2 .u-text-4 {font-weight: 700; font-size: 1.875rem; margin: 0}
 .u-section-2 .u-icon-2 {font-size: 2em}
 .u-section-2 .u-text-5 {font-size: 1rem; letter-spacing: 0; line-height: 1.4; margin: 40px 0 0}
+/* bottom left box */
 .u-section-2 .u-image-2 {height: 280px; width:250px;background-image: url("images/legalrights_normal3.jpeg"); background-position: 45.27% 50%}
 .u-section-2 .u-container-layout-4 {padding: 30px}
 .u-section-2 .u-layout-cell-5 {height: 280px; width: 250px}
+/* bottom middle box */
 .u-section-2 .u-container-layout-5 {padding: 30px}
 .u-section-2 .u-text-6 {font-weight: 700; font-size: 1.875rem; margin: 0}
 .u-section-2 .u-icon-3 {font-size: 2em}
 .u-section-2 .u-text-7 {font-size: 1rem; line-height: 1.4; margin: 40px 0 0}
+/* bottom right box */
 .u-section-2 .u-image-3 {height: 280px; width:250px; background-image: url("images/legalrights_normal4.jpeg")}
 .u-section-2 .u-container-layout-6 {padding: 30px} 
 
@@ -148,30 +176,38 @@
 .u-section-2 .u-container-layout-5 {padding-left: 20px; padding-right: 20px}
 .u-section-2 .u-image-3 {min-height: 203px} }
 
+/* Law and Rights */
 .u-section-3 .u-sheet-1 {min-height: 495px}
+/* title */
 .u-section-3 .u-text-1 {font-size: 1.875rem; font-weight: 700; margin: 100px auto 0}
 .u-section-3 .u-text-2 {font-weight: 700; font-size: 1.5rem; margin: 20px auto 0}
 .u-section-3 .u-layout-wrap-1 {margin-top: 20px; margin-bottom: 20px}
+/* Equal opportunity */
 .u-section-3 .u-layout-cell-1 {min-height: 208px}
 .u-section-3 .u-container-layout-1 {padding: 10px}
 .u-section-3 .u-icon-1 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
 .u-section-3 .u-text-3 {margin: 20px auto 0 0}
+/* Lodge a complaint */
 .u-section-3 .u-layout-cell-2 {min-height: 208px}
 .u-section-3 .u-container-layout-2 {padding: 10px}
 .u-section-3 .u-icon-2 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
 .u-section-3 .u-text-4 {margin: 20px 22px 0}
+/* disablity support services */
 .u-section-3 .u-layout-cell-3 {min-height: 208px}
 .u-section-3 .u-container-layout-3 {padding: 10px}
 .u-section-3 .u-icon-3 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
 .u-section-3 .u-text-5 {margin: 20px auto 0 0}
+ /* safe and discrimination-free */
 .u-section-3 .u-layout-cell-4 {min-height: 208px}
 .u-section-3 .u-container-layout-4 {padding: 10px}
 .u-section-3 .u-icon-4 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
 .u-section-3 .u-text-6 {margin: 20px 0 0}
+/* information */
 .u-section-3 .u-layout-cell-5 {min-height: 208px}
 .u-section-3 .u-container-layout-5 {padding: 10px}
 .u-section-3 .u-icon-5 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
 .u-section-3 .u-text-7 {margin: 20px auto 0 0}
+/* evacuation plan */
 .u-section-3 .u-layout-cell-6 {min-height: 208px}
 .u-section-3 .u-container-layout-6 {padding: 10px}
 .u-section-3 .u-icon-6 {height: 65px; width: 65px; background-image: none; box-shadow: 2px 2px 8px 0 rgba(128,128,128,1); margin: 16px auto 0}
@@ -216,27 +252,32 @@
 .u-section-3 .u-text-1 {font-size: 1.5rem}
 .u-section-3 .u-text-8 {margin-left: 22px; margin-right: 22px} }
 
+/* Know more about the law */
 .u-section-4 .u-sheet-1 {font-size: 1.25rem; min-height: 400px}
 .u-section-4 .u-text-1 {font-weight: 700; margin: 0 auto 0 4px}
 .u-section-4 .u-list-1 {min-height: 200px; grid-template-columns: calc(((100% - 1140px) / 2) + 565px) calc(((100% - 1140px) / 2) + 565px); width: 1060px; grid-gap: 10px 10px; margin: 0px auto 0px}
+/* top left */
 .u-section-4 .u-container-layout-1 {padding: 30px; height:50px}
 .u-section-4 .u-icon-1 {height: 60px; width: 60px; background-image: none; margin: 0 auto 0 0}
 .u-section-4 .u-group-1 {width: 403px; min-height: 60px; margin: -65px 0 0 auto}
 .u-section-4 .u-container-layout-2 {padding: 0 30px 30px; height:80px}
 .u-section-4 .u-text-2 {font-size: 1.25rem; font-weight: 700; margin: 9px -11px 0 11px}
 .u-section-4 .u-btn-1 {font-size: 1.25rem; padding: 0}
+/* top right */
 .u-section-4 .u-container-layout-3 {padding: 30px}
 .u-section-4 .u-icon-2 {height: 60px; width: 60px; background-image: none; margin: 0 auto 0 0}
 .u-section-4 .u-group-2 {width: 403px; min-height: 60px; background-size: auto; margin: -65px 0 0 auto}
 .u-section-4 .u-container-layout-4 {padding: 0 30px 30px; height:50px}
 .u-section-4 .u-text-3 {font-size: 1.25rem; font-weight: 700; margin: 9px -11px 0 11px}
 .u-section-4 .u-btn-2 {padding: 0}
+/* bottom left */
 .u-section-4 .u-container-layout-5 {padding: 30px; height:50px}
 .u-section-4 .u-icon-3 {height: 60px; width: 60px; background-image: none; margin: 0 auto 0 0}
 .u-section-4 .u-group-3 {width: 403px; min-height: 60px; background-size: auto; margin: -65px 0 0 auto}
 .u-section-4 .u-container-layout-6 {padding: 0 30px 30px}
 .u-section-4 .u-text-4 {font-size: 1.25rem; font-weight: 700; margin: 9px -11px 0 11px}
 .u-section-4 .u-btn-3 {padding: 0}
+/* bottom right */
 .u-section-4 .u-container-layout-7 {padding: 30px; height:50px}
 .u-section-4 .u-icon-4 {height: 60px; width: 60px; background-image: none; margin: 0 auto 0 0}
 .u-section-4 .u-group-4 {width: 403px; min-height: 60px; background-size: auto; margin: -65px 0 0 auto}
@@ -299,7 +340,7 @@
 .u-section-4 .u-container-layout-8 {padding-bottom: 5px}
 .u-section-4 .u-text-5 {margin-right: 0; margin-left: 0} }
 
-
+/* How To Make A Complaint */
 .u-section-5 {background-image: none}
 .u-section-5 .u-sheet-1 {min-height: 800px}
 .u-section-5 .u-group-1 { min-height: 261px; margin: 50px auto 0 }
@@ -309,6 +350,7 @@
 .u-section-5 .u-btn-1 {font-weight: 700; padding: 0}
 .u-section-5 .u-btn-2 {padding: 0; }
 .u-section-5 .u-list-1 {min-height: 800px; grid-template-columns: calc(33.3333% - 29px) calc(33.3333%  - 29px) calc(33.3333% - 29px); grid-template-rows: auto; grid-gap: 44px 44px; margin: -70px auto 60px 0}
+/* 1st step */
 .u-section-5 .u-list-item-1 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-5 .u-container-layout-2 {padding: 40px 0 45px; height:200px}
 .u-section-5 .u-icon-1 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -316,6 +358,7 @@
 .u-section-5 .u-container-layout-3 {padding: 30px; height:200px}
 .u-section-5 .u-text-3 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0; width:50px}
 .u-section-5 .u-text-4 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px; line-height:1.4}
+/* 2nd step */
 .u-section-5 .u-list-item-2 {box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-5 .u-container-layout-4 {padding: 40px 0 45px; height:200px}
 .u-section-5 .u-icon-2 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -323,6 +366,7 @@
 .u-section-5 .u-container-layout-5 {padding: 30px; height:200px}
 .u-section-5 .u-text-5 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-5 .u-text-6 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 3rd step */
 .u-section-5 .u-list-item-3 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-5 .u-container-layout-6 {padding: 40px 0 45px; height:200px}
 .u-section-5 .u-icon-3 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -330,6 +374,7 @@
 .u-section-5 .u-container-layout-7 {padding: 30px; height:200px}
 .u-section-5 .u-text-7 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-5 .u-text-8 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 4th step */
 .u-section-5 .u-list-item-4 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-5 .u-container-layout-8 {padding: 40px 0 45px; height:200px}
 .u-section-5 .u-icon-4 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -337,6 +382,7 @@
 .u-section-5 .u-container-layout-9 {padding: 30px}
 .u-section-5 .u-text-9 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-5 .u-text-10 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 5th step */
 .u-section-5 .u-list-item-5 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-5 .u-container-layout-10 {padding: 40px 0 45px; height:200px}
 .u-section-5 .u-icon-5 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -433,8 +479,9 @@
 .u-section-5 .u-text-13 {margin-right: 228px}
 .u-section-5 .u-text-14 {width: auto} }
 
-
+/* Get in touch section */
 .u-section-6 .u-sheet-1 {min-height: 376px}
+/* background gradient color */
 .u-section-6 .u-layout-wrap-1 {background-image: linear-gradient(#eafdfc, #fbeced); margin: 1px auto 1px 0}
 .u-section-6 .u-layout-cell-1 {min-height: 375px}
 .u-section-6 .u-container-layout-1 {padding: 10px}
@@ -512,6 +559,7 @@
 .u-section-6 .u-text-13 {height: 50px; margin-left: 25px; margin-right: 25px} }
 
 
+/* What Happens After The Complaint */
 .u-section-7 {background-image: none}
 .u-section-7 .u-sheet-1 {min-height: 800px}
 .u-section-7 .u-group-1 {width: 550px; min-height: 200px; margin: 50px auto 0 }
@@ -520,6 +568,7 @@
 .u-section-7 .u-btn-1 {font-weight: 700; padding: 0}
 .u-section-7 .u-btn-2 {padding: 0; }
 .u-section-7 .u-list-1 {min-height: 800px; grid-template-columns: calc(33.3333% - 29px) calc(33.3333%  - 29px) calc(33.3333% - 29px); grid-template-rows: auto; grid-gap: 44px 44px; margin: -70px auto 60px 0}
+/* 1st step */
 .u-section-7 .u-list-item-1 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-7 .u-container-layout-2 {padding: 40px 0 45px; height:200px}
 .u-section-7 .u-icon-1 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -527,6 +576,7 @@
 .u-section-7 .u-container-layout-3 {padding: 30px; height:200px}
 .u-section-7 .u-text-2 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0; width:50px}
 .u-section-7 .u-text-3 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px; line-height:1.4}
+/* 2nd step */
 .u-section-7 .u-list-item-2 {box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-7 .u-container-layout-4 {padding: 40px 0 45px; height:200px}
 .u-section-7 .u-icon-2 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -534,6 +584,7 @@
 .u-section-7 .u-container-layout-5 {padding: 30px; height:200px}
 .u-section-7 .u-text-4 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-7 .u-text-5 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 3th step */
 .u-section-7 .u-list-item-3 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-7 .u-container-layout-6 {padding: 40px 0 45px; height:200px}
 .u-section-7 .u-icon-3 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -541,6 +592,7 @@
 .u-section-7 .u-container-layout-7 {padding: 30px; height:200px}
 .u-section-7 .u-text-6 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-7 .u-text-7 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 4th step */
 .u-section-7 .u-list-item-4 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-7 .u-container-layout-8 {padding: 40px 0 45px; height:200px}
 .u-section-7 .u-icon-4 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -548,6 +600,7 @@
 .u-section-7 .u-container-layout-9 {padding: 30px}
 .u-section-7 .u-text-8 {font-size: 3rem; font-weight: 700; margin: 0 229px 0 0}
 .u-section-7 .u-text-9 {font-size: 1rem; font-style: normal; margin: -52px 0 0 68px;  line-height:1.4}
+/* 5th step */
 .u-section-7 .u-list-item-5 {background-image: none; box-shadow: 0 0 18px 0 rgba(128,128,128,0.45); height: 380px}
 .u-section-7 .u-container-layout-10 {padding: 40px 0 45px; height:200px}
 .u-section-7 .u-icon-5 {height: 102px; width: 102px; background-image: none; margin: 0 auto}
@@ -636,11 +689,13 @@
 .u-section-7 .u-group-7 {min-height: 187px; margin-bottom: -30px; margin-right: initial; margin-left: initial}
 .u-section-7 .u-text-13 {width: auto} }
 
+/* Further Help */
 .u-section-8 .u-sheet-1 {min-height: 774px}
 .u-section-4 .u-btn-1 {padding: 0}
 .u-section-8 .u-text-1 {font-size: 1.875rem; font-weight: 700; font-family: Ubuntu; margin-top: 50px;}
 .u-section-8 .u-layout-wrap-1 {margin: 30px 0 -435px}
 .u-section-8 .u-layout-cell-1 {min-height: 637px}
+/* image container */
 .u-section-8 .u-container-layout-1 {padding: 30px}
 .u-section-8 .u-image-1 {height: 565px; object-position: 50% 62.47%; width: 369px; margin: 0 43px 0 auto}
 .u-section-8 .u-layout-cell-2 {min-height: 600px}
@@ -743,6 +798,7 @@
 .u-section-8 .u-text-9 {width: auto; margin-left: 80px} }
 
 /* Source: Hover.css Github under MIT license */
+/* make icon grows */
 .hvr-grow {
     display: flex;
     vertical-align: middle;
@@ -758,7 +814,7 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-  
+  /* highlight text */
   .hvr-text {
    
     display: flex;
@@ -792,6 +848,7 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
+  /* color of text */
   .hvr-text:hover, .hvr-text:focus, .hvr-textt:active {
     color:#eb7777;
     font-weight: 600;

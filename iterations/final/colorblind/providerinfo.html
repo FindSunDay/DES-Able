@@ -179,7 +179,7 @@
               </div>
             </div>
 
-            <!-- post code input -->
+            <!-- post code input bar -->
             <div class="u-form-group u-form-group-4">
               <el-input placeholder="Post Code" v-model="postInput" clearable style="width: 100%"
                 @keyup.native="debounce()" />
@@ -189,7 +189,7 @@
               <!-- Search button to handle search -->
               <el-button style="background-color:rgb(27, 27, 122); border-style: none;" type="primary" size="medium"
                 icon="el-icon-search" @click="handleSearch()">Search</el-button>
-                <!-- clear input -->
+              <!-- clear input -->
               <el-button type="danger" size="medium" icon="el-icon-refresh-left" @click="handleClear()">Clear
               </el-button>
             </div>
@@ -218,7 +218,7 @@
                   <div class="u-form u-form-1">
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
                       style="padding: 15px" source="custom">
-                        <!-- checkbox of rating 5 -->
+                      <!-- checkbox of rating 5 -->
 
                       <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-1">
                         <input type="checkbox" id="checkbox-9940" name="checkbox-6" value="5"
@@ -226,7 +226,7 @@
                         <label for="checkbox-9940"
                           class="u-custom-font u-font-ubuntu u-label u-text-custom-color-4 u-label-1">5</label>
                       </div>
-                       <!-- checkbox of rating 4 -->
+                      <!-- checkbox of rating 4 -->
                       <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-2">
                         <input type="checkbox" id="checkbox-59f2" name="checkbox-4" value="4"
                           v-model="checkedRatings" />
@@ -246,7 +246,7 @@
                   <div class="u-form u-form-2">
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
                       style="padding: 15px" source="custom">
-                       <!-- checkbox of rating 3 -->
+                      <!-- checkbox of rating 3 -->
 
                       <div class="u-form-checkbox u-form-group u-form-group-4">
                         <input type="checkbox" id="checkbox-9940" name="checkbox-3" value="3"
@@ -264,7 +264,7 @@
                     Below Average
                   </p>
                   <div class="u-form u-form-3">
-                   <!-- checkbox of rating 2 -->
+                    <!-- checkbox of rating 2 -->
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
                       style="padding: 15px" source="custom">
                       <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-6">
@@ -291,7 +291,7 @@
                     <br />
                   </p>
                   <div class="u-form u-form-4">
-                  <!-- checkbox for all ratings-->
+                    <!-- checkbox for all ratings-->
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
                       style="padding: 15px" source="custom">
                       <div class="u-form-checkbox u-form-group u-form-group-9">
@@ -327,10 +327,14 @@
               <div
                 class="u-align-left u-container-style u-layout-cell u-left-cell u-palette-5-light-3 u-size-40-md u-size-40-sm u-size-40-xs u-size-43-lg u-size-43-xl u-layout-cell-1">
                 <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <!-- DES provider name -->
+
                   <h3
                     class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-custom-color-4 u-text-default u-text-1">
                     {{item.name}}
                   </h3>
+                  <!-- DES provider service type (programe) -->
+
                   <h5 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-2">
                     {{item.program}}&nbsp;
                   </h5>
@@ -339,6 +343,8 @@
               <div
                 class="u-align-center-sm u-align-right-lg u-align-right-md u-align-right-xl u-container-style u-layout-cell u-palette-5-light-3 u-right-cell u-size-17-lg u-size-17-xl u-size-20-md u-size-20-sm u-size-20-xs u-layout-cell-2">
                 <div class="u-container-layout u-valign-top-xl u-container-layout-2">
+                  <!-- DES provider site location -->
+
                   <h3 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-palette-5-dark-3 u-text-3">
                     {{ item.site_location }}
                   </h3>
@@ -376,11 +382,16 @@
                       </g>
                     </svg>
                   </span>
+
                   <h5 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-5">
                     <b>Address</b>
                   </h5>
+                  <!-- link to google map -->
                   <p class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-4">
-                    <a :href="item.url" target="_blank"> {{item.address}} </a>
+                    <a :href="item.url" target="_blank">
+                      <!-- DES provider address -->
+
+                      {{item.address}} </a>
                   </p>
                 </div>
               </div>
@@ -413,6 +424,8 @@
                       Phone:
                     </p>
                     <p class="u-align-left-sm u-align-left-xs u-custom-font u-font-ubuntu u-text u-text-7">
+                      <!-- DES provider phone number -->
+
                       <a :href="'tel:'+ item.phone">{{item.phone}} </a>
                     </p>
                   </div>
@@ -421,12 +434,17 @@
                     class="u-align-center-sm u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-custom-color-4 u-text-default u-text-8">
                     Email:
                   </p>
+                  <!-- DES provider email -->
+
                   <p class="u-align-left-sm u-align-left-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-9">
                     {{item.email}}
                   </p>
                   <p class="u-custom-font u-font-ubuntu u-text u-text-custom-color-4 u-text-default u-text-10">
                     Website:
                   </p>
+                  <!-- DES provider website -->
+                  <!-- link to the website -->
+
                   <p class="u-align-left-sm u-align-left-xs u-custom-font u-font-ubuntu u-text u-text-11">
                     <a :href="item.website" target="_blank">{{item.website}}</a>
                   </p>
@@ -453,12 +471,17 @@
                   <h5 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-12">
                     Rating
                   </h5>
+                  <!-- DES provider rating -->
+
                   <p class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-13">
                     {{item.rating}}
                   </p>
+
                   <h5 class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-default u-text-14">
                     Speciality
                   </h5>
+                  <!-- DES provider speciality -->
+
                   <p class="u-align-center-xs u-custom-font u-font-ubuntu u-text u-text-15">
                     {{item.speciality}}
                   </p>

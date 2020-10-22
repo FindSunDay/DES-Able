@@ -1,3 +1,12 @@
+/* DES Provider Info - Color blind version */
+
+/* u-section 1 - search section  */
+/* u-section 2 - rating */
+/* u-section 3 - results */
+
+
+/* search section */
+
 .u-section-1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -48,7 +57,7 @@
   }
 }
 
-/* section 2  */
+/*  rating  */
 .u-section-2 {
   margin-top: 0;
   margin-bottom: 0;
@@ -66,6 +75,7 @@
   background-image: none;
   margin: 10px auto 10px 0;
 }
+/* above average */
 .u-section-2 .u-layout-cell-1 {
   min-height: 105px;
 }
@@ -96,6 +106,8 @@
   font-weight: 700;
   font-size: 1rem;
 }
+/* average */
+
 .u-section-2 .u-layout-cell-2 {
   min-height: 105px;
 }
@@ -120,6 +132,7 @@
   font-weight: 700;
   font-size: 1rem;
 }
+/* below average */
 .u-section-2 .u-layout-cell-3 {
   min-height: 105px;
 }
@@ -152,6 +165,8 @@
   font-size: 1rem;
   letter-spacing: 0;
 }
+
+/* select all */
 .u-section-2 .u-layout-cell-4 {
   min-height: 105px;
 }
@@ -329,7 +344,7 @@
   }
 }
 
-
+/* Results */
 .u-section-3 .u-sheet-1 {
   min-height: 502px;
 }
@@ -744,6 +759,8 @@
 }
 
 /* Source: Hover.css Github under MIT license */
+/* make icon grows bigger */
+
 
 .hvr-grow {
   display: flex;
