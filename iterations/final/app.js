@@ -41,15 +41,6 @@ new Vue({
       init_month: "August",
       year_list: [],
       month_list: [],
-      // performance_total: 0,
-      // performance_mom: 0,
-      // performance_direction: "",
-      // performance_referred: 0,
-      // performance_commenced: 0,
-      // performance_commenced_employment: 0,
-      // performance_commenced_placement: 0,
-      // performance_commenced_ongoing: 0,
-      // performance_suspended: 0,
       isShowCaseStatus: false,
       isShowCaseloadTrend: false,
       btnFlag: false,
@@ -58,14 +49,6 @@ new Vue({
     };
   },
   methods: {
-    // handleNameSelected(selectedName) {
-    //   // console.log(selectedName);
-    //   if(selectedName!="All Providers"){}
-    //   for(let item of infoList){
-    //   }
-    // }
-    // },
-
     // Click on the picture to go back to the top method, adding a timer is for smooth transition
     backTop() {
       const that = this;
@@ -93,6 +76,7 @@ new Vue({
         that.btnFlag = false;
       }
     },
+    // This function is to swtich to show the content of CaseStatus
     switchCaseStatus() {
       // console.log("111");
       this.isShowCaseloadTrend = false;
@@ -102,6 +86,7 @@ new Vue({
         this.isShowCaseStatus = false;
       }
     },
+    // This function is to swtich to show the content of CaseloadTrend
     switchCaseloadTrend() {
       // console.log("222");
       this.isShowCaseStatus = false;
@@ -111,6 +96,7 @@ new Vue({
         this.isShowCaseloadTrend = false;
       }
     },
+    // This function is to handle the search of performance by year and month
     searchPerformance() {
       // console.log(this.init_performance.year, this.init_performance.month);
       let requestOptions = {
@@ -132,12 +118,14 @@ new Vue({
         })
         .catch((error) => console.log("error", error));
     },
+    // This function is to make all the ratings selected on provider info page
     handleCheckAllChange() {
       console.log("test");
       if (this.checkedRatings.length !== 6) {
         this.checkedRatings = ["5", "4", "3", "2", "1", "All Ratings"];
       } else this.checkedRatings = [];
     },
+    // This function is to filter the selected ratings on provider info page
     handleCheckedRatingsChange() {
       console.log("submit");
       let resultData = [];
@@ -161,24 +149,8 @@ new Vue({
       this.showListLength_two = this.showList.length;
       console.log("showlist", this.showList);
     },
+    // This is a function for google api to gnenrate the map location and set the bound
     geolocate() {
-      // if (navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition((position) => {
-      //     const geolocation = {
-      //       // lat: position.coords.latitude,
-      //       // lng: position.coords.longitude,
-      //       lat: -37.881812,
-      //       lng: 145.058236,
-      //     };
-      //     const circle = new google.maps.Circle({
-      //       center: geolocation,
-      //       radius: position.coords.accuracy,
-      //       // radius: 50,
-      //       // language: en,
-      //     });
-      //     this.autocomplete.setBounds(circle.getBounds());
-      //   });
-      // }
       const geolocation = {
         // lat: position.coords.latitude,
         // lng: position.coords.longitude,
@@ -193,12 +165,14 @@ new Vue({
       });
       this.autocomplete.setBounds(circle.getBounds());
     },
+    // This is a function on provider info page to clear input
     handleClear() {
       this.providerName = "All Providers";
       this.specialityName = "Select All Specialities";
       this.selectedRatings = [];
       this.postInput = "";
     },
+    // This is a function on provider info page to search providers on server
     handleSearch() {
       var requestOptions1 = {
         method: "GET",
@@ -218,17 +192,17 @@ new Vue({
         .then((response) => response.text())
         .then((result) => {
           this.infoList = JSON.parse(result).All_Info;
-          console.log("infoList", this.infoList);
+          // console.log("infoList", this.infoList);
 
           //filter the results based on the values of selected ratings
-          console.log("selectedRatings", this.selectedRatings);
+          // console.log("selectedRatings", this.selectedRatings);
           let resultData = [];
           for (let selectedRating of this.selectedRatings) {
             //  combine filtered results
             resultData = resultData.concat(
               this.infoList.filter((info) => info.rating == selectedRating)
             );
-            console.log("resultData", resultData);
+            // console.log("resultData", resultData);
           }
 
           //use array.indexOf() to determine whether the ratings contains "All Ratings"
@@ -240,33 +214,13 @@ new Vue({
           this.showList = resultData;
           this.showList.sort((a, b) => b.rating - a.rating);
           this.showListLength = this.showList.length;
-          console.log("showlist", this.showList);
-
-          // this.showList = this.infoList;
-
-          // // remove duplicated values
-          // names = [...new Set(names)];
-          // names.sort();
-          // // console.log(names);
-          // specialities = [...new Set(specialities)];
-          // specialities.sort();
-
-          // //form as json list
-          // for (let info of names) {
-          //   this.nameList.push({ value: info });
-          // }
-
-          // for (let info of specialities) {
-          //   this.specialityList.push({ value: info });
-          // }
-
-          console.log(this.nameList);
-          console.log(this.specialityList);
-          // console.log("info:", this.infoList);
-          // console.log(this.homepage);
+          // console.log("showlist", this.showList);
+          // console.log(this.nameList);
+          // console.log(this.specialityList);
         })
         .catch((error) => console.log("error", error));
     },
+    // This is the function on nearby page to search nearby providers by address and speciality.
     handleSearchNearby() {
       if (this.entered_address == ""){
         try {
@@ -325,6 +279,7 @@ new Vue({
       }
       // this.is_nearby_button_loading = false;
     },
+    // This is the function to select provider on nearby provider page
     selectProvider1() {
       // console.log("click");
       let temp = {};
@@ -347,6 +302,7 @@ new Vue({
       this.provider_map_site = this.des_site_five.site_one.Site_Location;
       this.provider_map_program = this.des_site_five.site_one.Program;
     },
+    // This is the function to select provider on nearby provider page
     selectProvider2() {
       // console.log("click");
       let temp = {};
@@ -368,6 +324,7 @@ new Vue({
       this.provider_map_site = this.des_site_five.site_two.Site_Location;
       this.provider_map_program = this.des_site_five.site_two.Program;
     },
+    // This is the function to select provider on nearby provider page
     selectProvider3() {
       // console.log("click");
       let temp = {};
@@ -389,6 +346,7 @@ new Vue({
       this.provider_map_site = this.des_site_five.site_three.Site_Location;
       this.provider_map_program = this.des_site_five.site_three.Program;
     },
+    // This is the function to select provider on nearby provider page
     selectProvider4() {
       // console.log("click");
       let temp = {};
@@ -410,6 +368,7 @@ new Vue({
       this.provider_map_site = this.des_site_five.site_four.Site_Location;
       this.provider_map_program = this.des_site_five.site_four.Program;
     },
+    // This is the function to select provider on nearby provider page
     selectProvider5() {
       // console.log("click");
       let temp = {};
@@ -431,6 +390,7 @@ new Vue({
       this.provider_map_site = this.des_site_five.site_five.Site_Location;
       this.provider_map_program = this.des_site_five.site_five.Program;
     },
+    // This is the function to initialize the google map
     initMap(lat, lng, url, name) {
       const provider = {
         lat: Number(lat),
@@ -500,6 +460,7 @@ new Vue({
         provider.lng
       );
     },
+    // This is the function to gnenrate route on map
     calculateAndDisplayRoute(
       directionsService,
       directionsRenderer,
@@ -531,6 +492,7 @@ new Vue({
         }
       );
     },
+    // This is the funtion to initialize the autocomplete function
     initAutocomplete() {
       // Create the autocomplete object, restricting the search predictions to
       // geographical location types.
@@ -544,45 +506,23 @@ new Vue({
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
 
-      // this.autocomplete.setFields(["address_component"]);
-      // // When the user selects an address from the drop-down, populate the
-      // // address fields in the form.
 
       // this.autocomplete.addListener("place_changed", this.fillInAddress());
       console.log("auto-complete", this.autocomplete);
     },
+    // This is the function to fill the place of autocomplete function to the input frame
     fillInAddress() {
       const place = this.autocomplete.getPlace();
       console.log("fill",place);
-      // let str =
-      //   place.address_components[0].short_name +
-      //   " " +
-      //   place.address_components[1].short_name +
-      //   ", " +
-      //   place.address_components[2].short_name +
-      //   " " +
-      //   // place.address_components[3].short_name +
-      //   // " " +
-      //   place.address_components[4].long_name +
-      //   ", " +
-      //   place.address_components[5].long_name;
       let str = place.formatted_address;
       console.log("str", str);
       this.entered_address = str;
     },
+    // This is the function to auto generate an address based on the current location.
     getAddress() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
-            // let pos = {
-            //   lat: position.coords.latitude,
-            //   lng: position.coords.longitude,
-            // };
-            // infoWindow.setPosition(pos);
-            // infoWindow.setContent("Location found.");
-            // infoWindow.open(map);
-            // map.setCenter(pos);
-            // console.log("current location:",pos)
             var requestOptions = {
               method: "GET",
               redirect: "follow",
@@ -612,27 +552,6 @@ new Vue({
     },
   },
   mounted() {
-    // if (navigator.geolocation) {
-    //   navigator.geolocation.getCurrentPosition(
-    //     (position) => {
-    //       let pos = {
-    //         lat: position.coords.latitude,
-    //         lng: position.coords.longitude,
-    //       };
-    //       // infoWindow.setPosition(pos);
-    //       // infoWindow.setContent("Location found.");
-    //       // infoWindow.open(map);
-    //       // map.setCenter(pos);
-    //       console.log("current location:",pos)
-    //     },
-    //     () => {
-    //       handleLocationError(true, infoWindow, map.getCenter());
-    //     }
-    //   );
-    // } else {
-    //   // Browser doesn't support Geolocation
-    //   handleLocationError(false, infoWindow, map.getCenter());
-    // }
 
     window.addEventListener("scroll", this.scrollToTop);
     // this.initMap();
@@ -682,18 +601,6 @@ new Vue({
         let init_performance = JSON.parse(result).Latest_Performance[0];
         console.log(init_performance);
         this.init_performance = init_performance;
-        // console.log("init_performance", this.init_performance);
-        // this.performance_total = init_performance.total;
-        // this.performance_mom = init_performance.mom;
-        // this.performance_direction = init_performance.direction;
-        // this.performance_referred = init_performance.referred;
-        // this.performance_commenced = init_performance.commenced;
-        // this.performance_commenced_employment =
-        //   init_performance.commenced_employment;
-        // this.performance_commenced_placement =
-        //   init_performance.commenced_placement;
-        // this.performance_commenced_ongoing = init_performance.commenced_ongoing;
-        // this.performance_suspended = init_performance.suspended;
         let y_list = JSON.parse(result).Year_List;
         let m_list = JSON.parse(result).Month_List;
         // console.log(y_list, m_list);
