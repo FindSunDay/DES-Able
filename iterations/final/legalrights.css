@@ -735,7 +735,7 @@ u-section-8: Futher Help
 .u-section-8 .u-layout-cell-4 {min-height: 118px}
 .u-section-8 .u-text-5 {width: 134px}
 .u-section-8 .u-layout-cell-5 {min-height: 120px}
-.u-section-8 .u-text-7 {width: 134px}
+.u-section-8 .u-text-7 {width: auto;}
 .u-section-8 .u-layout-cell-6 {min-height: 152px}
 .u-section-8 .u-text-9 {width: 134px} }
 
@@ -769,7 +769,7 @@ u-section-8: Futher Help
 .u-section-8 .u-container-layout-5 {padding-left: 10px; padding-right: 10px}
 .u-section-8 .u-icon-3 {margin-right: 456px}
 .u-section-8 .u-text-6 {margin-left: 79px}
-.u-section-8 .u-text-7 {margin-left: 79px}
+.u-section-8 .u-text-7 {width: auto; margin-left: 79px}
 .u-section-8 .u-container-layout-6 {padding-left: 10px; padding-right: 10px}
 .u-section-8 .u-icon-4 {margin-right: 456px}
 .u-section-8 .u-text-8 {margin-left: 79px}
