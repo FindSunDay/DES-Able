@@ -14,7 +14,8 @@ Username and password are required.
 *For Iteration 3 and iteration 2.*
     1. Go to prefer iteration folder; 'iteration2' or 'iteration3'. 
     2. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
-    Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
+    Itertaion 2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html 
+    Iteration 3 website: https://des-able.ml/iteration3/DES-Normal/
 
 *For iteration 1 website*
     Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
