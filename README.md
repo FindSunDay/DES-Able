@@ -12,7 +12,7 @@ Username and password are required.
     3. To run normal version of the website, click on 'index.html. On the other hand, to run color blind version, visit 'colorblind' folder and open 'index.html'.
 
 *For Iteration 3 and iteration 2.*
-    1. Go to prefer iteration folder; 'iteration2' or 'iteration3'.
+    1. Go to prefer iteration folder; 'iteration2' or 'iteration3'. 
     2. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
     Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
 
@@ -26,7 +26,8 @@ The frontend code (based on vue.js), html and css files of the build from iterat
       - 'DES-Colorblind' contains colorblind version of iteration 1 website. 
       - 'iteration2' contains the build of iteration 2 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
       - 'iteration2_api'
-      - 'iteration3' contains the build of iteration 3 website which including 3 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
+      - 'iteration3' contains the build of iteration 3 website which including 3 sub folders; 'DES-Normal' and 'DES-Colorblind'. 
+      - 'final' contains the build of final system.
           
 For api code deployed on AWS Lambda, see informationProcessor folder.
 
