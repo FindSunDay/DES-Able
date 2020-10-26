@@ -2,20 +2,22 @@
 
 This project focus on showing the information of DES (Disability Employment Services) Providers for disabled people. 
 
-Our website: https://des-able.ml/iteration3/DES-Normal/
+Our website: https://des-able.ml
 Username and password are required. 
 
 # How to run the file locally.
+**Run Final System**
+    1. Go to 'Iterations' folder.
+    2. Choose 'final' folder.
+    3. To run normal version of the website, click on 'index.html. On the other hand, to run color blind version, visit 'colorblind' folder and open 'index.html'.
 
-*For **Iteration 3** and iteration 2.*
-    1. Download 'Iterations' folder.
-    2. Go to prefer iteration folder; 'iteration2' or **'iteration3'**.
-    3. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
+*For Iteration 3 and iteration 2.*
+    1. Go to prefer iteration folder; 'iteration2' or 'iteration3'.
+    2. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
     Itertaion2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html
 
 *For iteration 1 website*
-    1. Download 'Iterations' folder.
-    2. Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
+    Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
     Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
       
 ## Frontend Development - Folder 'iterations'
