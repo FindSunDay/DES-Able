@@ -11,6 +11,9 @@ u-section-8: Our services
 */
 
 /* image display on sliders */
+.u-block-e78f-2 {position: absolute; bottom: 10px}
+.u-block-e78f-3 {position: absolute; left: 0; background-image: none}
+.u-block-e78f-4 {position: absolute; right: 0; background-image: none}
 /* Des definition */
 .u-section-2-1 {background-image: url("images/homepage_normal1.jpg");background-position: 50% 50%}
 .u-section-2-1 .u-sheet-1 {min-height: 452px} 
@@ -50,7 +53,7 @@ u-section-8: Our services
   0deg,
   rgba(0, 0, 0, 0.1),
   rgba(0, 0, 0, 0.1)
-), url("images/homepage_normal4.jpeg"); background-position: 50% 41.83%; min-height: 452px}
+), url("images/homepage_normal4.jpeg"); background-position: 50% 41.83%; min-height: 372px}
 .u-section-2-4 .u-sheet-1 {min-height: 452px} 
 
 @media (max-width: 1199px){ .u-section-2-4 .u-sheet-1 {min-height: 372px} }
