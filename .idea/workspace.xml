@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4b1a1568-8ccb-499a-bffc-db604d8d8b63" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataset/DES_SERVICE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset/DES_SERVICE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/1.1des-star-ratings-march-2020.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/API_place_responses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/DES_PERFORMANCE_NUMERICAL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset/DES_full_list.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/des_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/des_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/nearbyprovider.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/nearbyprovider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/nearbyprovider.html" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Colorblind/nearbyprovider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/desperformance.html" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/desperformance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/nearbyprovider.css" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/nearbyprovider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/nearbyprovider.html" beforeDir="false" afterPath="$PROJECT_DIR$/iterations/iteration3/DES-Normal/nearbyprovider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/des_performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/des_performance.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,21 +18,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/des_performance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/des_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="645">
+                <caret line="43" column="130" lean-forward="true" selection-start-line="43" selection-start-column="130" selection-end-line="43" selection-end-column="130" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -69,20 +62,22 @@
         <option value="$PROJECT_DIR$/des_performace.py" />
         <option value="$PROJECT_DIR$/des_performance.py" />
         <option value="$PROJECT_DIR$/des_data.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="y" value="59" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="213" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="715" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,7 +89,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,9 +192,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="59" width="1280" height="715" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="708" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22647528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22647528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -211,7 +206,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34434783" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34330985" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32702237" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -227,44 +222,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py" />
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testMap/lambda_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_api/lambda_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informationProcessor/lambda_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informationProcessor/rds_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json" />
+    <entry file="file://$PROJECT_DIR$/testMap/lambda_function.py" />
+    <entry file="file://$PROJECT_DIR$/map_api/lambda_function.py" />
+    <entry file="file://$PROJECT_DIR$/informationProcessor/lambda_function.py" />
+    <entry file="file://$PROJECT_DIR$/informationProcessor/rds_config.py" />
     <entry file="file://$PROJECT_DIR$/distance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
@@ -274,15 +236,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/des_performance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="146">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/des_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="645">
+            <caret line="43" column="130" lean-forward="true" selection-start-line="43" selection-start-column="130" selection-end-line="43" selection-end-column="130" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

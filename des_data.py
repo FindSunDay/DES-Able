@@ -7,8 +7,6 @@ By: Supawee
 
 
 This file is to collect contact details of DES providers via Google Places APIs
-*** Due to limited of APIs budget, the APIs connection will only be used to update new data.
-Please use the previous response of API from 'API_place_responses.csv' file.
 
 
 run  pip3 install -r requirements.txt on terminal to install required libraries
@@ -24,7 +22,7 @@ import ast
 # import data
 
 # to obtain the list of DES providers registered with the government.
-des_full = pd.read_excel('Dataset/1.1des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
+des_full = pd.read_excel('Dataset/des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
 # to obtain the email address and website of DES providers in Victoria
 des_email = pd.read_excel('Dataset/DES contact list.xlsx')
 
@@ -64,45 +62,45 @@ api_place = 'AIzaSyAfzXtLUD3OfEnc4mZxn5UEkHNzGOgmKBk'
 
 # Loop through every rows
 
-# for index, row in des_unique.iterrows():
-#
-#     # search for place_id with company name and site location
-#
-#     place = des_unique.iloc[index,1].replace("–","").replace(" ","%20")
-#     site = '%20'+ des_unique.iloc[index,2]
-#     vic = '%20' + 'Victoria'
-#     aus = '%20' + 'Australia'
-#
-#     find_place_id = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='\
-#                 + place + site + vic + aus +\
-#                 '&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='\
-#                 + api_place).replace(" ","%20")
-#
-#     #  read the response in json
-#     response = urllib.request.urlopen(find_place_id).read()
-#     place_search = json.loads(response)
-#
-#     #  save in the column
-#     des_unique.loc[index,'API_Place_Search'] = [place_search]
-#
-#     #  search for place details (address, phone number, url)
-#     if 'candidates' in place_search.keys() and len(place_search['candidates']) >0:
-#         place_id = place_search['candidates'][0]['place_id']
-#
-#         find_phone = ('https://maps.googleapis.com/maps/api/place/details/json?place_id='\
-#                     +place_id\
-#                     +'&fields=address_component,formatted_address,formatted_phone_number,website,url&key='\
-#                     +api_place).replace(" ","%20")
-#
-#         # read as json
-#         response2 = urllib.request.urlopen(find_phone).read()
-#         place_detail = json.loads(response2)
-#
-#         # save the response
-#         des_unique.loc[index,'API_Place_Detail'] = [place_detail]
+for index, row in des_unique.iterrows():
+
+    # search for place_id with company name and site location
+
+    place = des_unique.iloc[index,1].replace("–","").replace(" ","%20")
+    site = '%20'+ des_unique.iloc[index,2]
+    vic = '%20' + 'Victoria'
+    aus = '%20' + 'Australia'
+
+    find_place_id = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='\
+                + place + site + vic + aus +\
+                '&inputtype=textquery&fields=name,place_id,opening_hours,geometry&key='\
+                + api_place).replace(" ","%20")
+
+    #  read the response in json
+    response = urllib.request.urlopen(find_place_id).read()
+    place_search = json.loads(response)
+
+    #  save in the column
+    des_unique.loc[index,'API_Place_Search'] = [place_search]
+
+    #  search for place details (address, phone number, url)
+    if 'candidates' in place_search.keys() and len(place_search['candidates']) >0:
+        place_id = place_search['candidates'][0]['place_id']
+
+        find_phone = ('https://maps.googleapis.com/maps/api/place/details/json?place_id='\
+                    +place_id\
+                    +'&fields=address_component,formatted_address,formatted_phone_number,website,url&key='\
+                    +api_place).replace(" ","%20")
+
+        # read as json
+        response2 = urllib.request.urlopen(find_phone).read()
+        place_detail = json.loads(response2)
+
+        # save the response
+        des_unique.loc[index,'API_Place_Detail'] = [place_detail]
 
 
-des_unique = pd.read_csv('Dataset/API_place_responses.csv')
+# des_unique = pd.read_csv('Dataset/API_place_responses.csv')
 
 # remove role with no API response
 des_unique = des_unique[des_unique['API_Place_Detail'].isna() == False]
@@ -293,7 +291,6 @@ des_service['Speciality_Group'] = des_service['Speciality_New'].apply(lambda x :
 
 
 # save to files
-des.to_csv('Dataset/DES_full_list.csv',index=False)
 des_name.to_csv('Dataset/DES_NAME.csv',index=False)
 des_site.to_csv('Dataset/DES_SITE.csv',index=False)
 des_service.to_csv('Dataset/DES_SERVICE.csv', index=False)

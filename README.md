@@ -14,9 +14,9 @@ Username and password are required.
 *For Iteration Development.*
 1) Go to prefer iteration folder; 'iteration1', 'iteration2' or 'iteration3'.
 2) Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
-Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
-Itertaion 2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html 
-Iteration 3 website: https://des-able.ml/iteration3/DES-Normal/
+- Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
+- Itertaion 2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html 
+- Iteration 3 website: https://des-able.ml/iteration3/DES-Normal/
 
       
 ## Frontend Development - Folder 'iterations'
@@ -31,20 +31,17 @@ For api code deployed on AWS Lambda, see informationProcessor folder.
 ## Dataset
 For the dataset and processing python script used in this project, see Dataset folder which contains the followings.
   - 'DES_monthly_report'subfolder - contains 111 excel files which are used to for DES performance analysis and projection. (Iteration 3 work) 
-  - 2 excel files, 7 csv files and a json file, which are the sources of the project virtual database. 
-      1) 1.1.des-star-ratings-march-2020.xlsx - original dataset with detail name list and rating of DES providers in Australia.
+  - 2 excel files, 5 csv files and a json file, which are the sources of the project virtual database. 
+      1) des-star-ratings-march-2020.xlsx - original dataset with detail name list and rating of DES providers in Australia.
       2) DES Contact list.xlsx - contain the website and email of DES providers in Victoria.
-      3) API_RESPONSE - API responses contain the address, latitude, longitude and contact details of DES providers in Victoria.
-      4) DES_full_list.csv - Integrated version of DES provider information. (Combination of DES_NAME, DES_SERVICE, and DES_SITE)
-      5) DES_NAME.csv - DES provider names and websites.
-      6) DES_SITE.csv - DES provider's address and location.
-      7) DES_SERVICE.csv - DES provider's program, speciality, and rating. 
-      8) DES_PERFORMANCE.csv - Number of caseloads, statuses and phases from 2011 to 2020. The number of caseloads are in string format which to be shown on the web.  
-      9) DES_PERFORMANCE_NUMERICAL.csv - Similar to 8) but the number of caseloads are in numerical types which to be used for line graph visualisation. 
-      10) DES_PERFORMANCE_NUMERICAL.json - Similar to 9) but in json. 
+      3) DES_NAME.csv - DES provider names and websites.
+      4) DES_SITE.csv - DES provider's address and location.
+      5) DES_SERVICE.csv - DES provider's program, speciality, and rating. 
+      6) DES_PERFORMANCE.csv - Number of caseloads, statuses and phases from 2011 to 2020. The number of caseloads are in string format which to be shown on the web.  
+      7) DES_PERFORMANCE_NUMERICAL.csv - Similar to 8) but the number of caseloads are in numerical types which to be used for line graph visualisation. 
 
 ### Collect DES providers detail from Google API -`des_data.py` (Python)
-This file is to collect contact details of DES providers via Google Places APIs (saved as `API_RESPONSE.csv`), then perform wrangling and integrated data from `1.1.des-star-ratings-march-2020.xlsx` and `DES Contact list.xlsx`. It produces 4 output files; `DES_full_list`, `DES_NAME`, `DES_SITE`, and `DES_SERVICE`.
+This file is to collect contact details of DES providers via Google Places APIs, then perform wrangling and integrated data from `des-star-ratings-march-2020.xlsx` and `DES Contact list.xlsx`. It produces 3 output files; `DES_NAME`, `DES_SITE`, and `DES_SERVICE`.
 
 ### Algorithm for Nearby Provider function - `distance.py` (Python)
 This file is to calculate the radial distance and retrieve travelling distance from user's location and DES providers

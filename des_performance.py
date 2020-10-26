@@ -270,9 +270,6 @@ data.replace({'Month':month2word},inplace=True)
 # save to csv
 data.to_csv('Dataset/DES_PERFORMANCE_NUMERICAL.csv', index=False)
 
-# save to json
-data.to_json('Dataset/DES_PERFORMANCE_NUMERICAL.json')
-
 #### Data to be displayed on website
 
 # convert number of cases to string format
