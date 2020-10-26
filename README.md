@@ -7,28 +7,24 @@ Username and password are required.
 
 # How to run the file locally.
 **Run Final System**
-    1. Go to 'Iterations' folder.
-    2. Choose 'final' folder.
-    3. To run normal version of the website, click on 'index.html. On the other hand, to run color blind version, visit 'colorblind' folder and open 'index.html'.
+1) Go to 'Iterations' folder.
+2) Choose 'final' folder.
+3) To run normal version of the website, click on 'index.html. On the other hand, to run color blind version, visit 'colorblind' folder and open 'index.html'.
 
-*For Iteration 3 and iteration 2.*
-    1. Go to prefer iteration folder; 'iteration2' or 'iteration3'. 
-    2. Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
-    Itertaion 2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html 
-    Iteration 3 website: https://des-able.ml/iteration3/DES-Normal/
+*For Iteration Development.*
+1) Go to prefer iteration folder; 'iteration1', 'iteration2' or 'iteration3'.
+2) Access the 'DES-Normal' folder and open 'index.html' file to start the website with normal version. In case, a color blind version is preferred instead go to 'DES-Colorblind' folder and open 'index.html'.
+Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
+Itertaion 2 website: https://des-able.ml/iteration2/vic/DES-Normal/index.html 
+Iteration 3 website: https://des-able.ml/iteration3/DES-Normal/
 
-*For iteration 1 website*
-    Go to 'DES-Normal' folder and open 'index.html' file to start the website with normal version.
-    Iteration 1 website: http://www.des-able.ml/iteration1/DES-Normal 
       
 ## Frontend Development - Folder 'iterations'
-The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 are stored in this folder.   
-      - 'DES-Normal' contains normal version of iteration 1 website.
-      - 'DES-Colorblind' contains colorblind version of iteration 1 website. 
-      - 'iteration2' contains the build of iteration 2 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
-      - 'iteration2_api'
-      - 'iteration3' contains the build of iteration 3 website which including 3 sub folders; 'DES-Normal' and 'DES-Colorblind'. 
-      - 'final' contains the build of final system.
+The frontend code (based on vue.js), html and css files of the build from iteration 1 to iteration 3 and the final system are stored in this folder.   
+    1) 'iteration1' contains the build of iteration 1 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.
+    2) 'iteration2' contains the build of iteration 2 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'.  
+    3) 'iteration3' contains the build of iteration 3 website which including 2 sub folders; 'DES-Normal' and 'DES-Colorblind'. 
+    4) 'final' contains the build of final system.
           
 For api code deployed on AWS Lambda, see informationProcessor folder.
 
