@@ -1,0 +1,591 @@
+/* DES performance page -  normal version */
+
+/* u-section-1: top banner 
+u-section-2: DES performance dashboard 
+u-section-3: two buttons
+u-section-4: case status
+u-section-5: caseload trend 
+*/
+
+/* title with images */ 
+/* change of title image can be changed here */
+
+.u-section-1 {margin-top: 0; margin-bottom: 0; background-image: linear-gradient(0deg, rgba(85,92,102,0.45), rgba(85,92,102,0.45)), url("images/desperformance_normal1.jpg"); background-position: 50% 50%}
+.u-section-1 .u-sheet-1 {min-height: 259px}
+.u-section-1 .u-text-1 {font-weight: 700; font-size: 2.25rem; margin: 108px auto 60px} 
+/* set layout for different devices */
+/* desktop */
+@media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 259px}
+.u-section-1 .u-text-1 {width: 562px; height: 43px} }
+/* tablet */
+@media (max-width: 767px){ .u-section-1 .u-sheet-1 {min-height: 225px} }
+/* mobile */
+@media (max-width: 575px){ .u-section-1 .u-sheet-1 {min-height: 225px}
+.u-section-1 .u-text-1 {margin-top: 60px; margin-left: 0; margin-right: 0; width: auto} 
+
+/* DES performance dashboard section */
+}.u-section-2 {margin-top: 0; margin-bottom: 0}
+.u-section-2 .u-sheet-1 {min-height: 437px}
+.u-section-2 .u-text-1 {font-size: 1.625rem; font-weight: 700; margin: 35px auto 0; width:200px}
+.u-section-2 .u-layout-wrap-1 {margin: 21px auto 35px}
+.u-section-2 .u-layout-cell-1 {min-height: 317px}
+/* dropdown section - Select the period */
+.u-section-2 .u-container-layout-1 {padding: 20px 30px}
+.u-section-2 .u-text-2 {font-size: 1.25rem; font-weight: 700; margin: 0}
+.u-section-2 .u-form-1 {height: 265px; margin: 3px 17px 0 0}
+.u-section-2 .u-form-group-1 {margin-left: 0}
+.u-section-2 .u-label-1 {font-weight: 700; font-size: 1rem}
+.u-section-2 .u-input-1 {background-image: none; font-size: 0.875rem}
+.u-section-2 .u-form-group-2 {margin-left: 0}
+.u-section-2 .u-label-2 {font-weight: 700; font-size: 1rem}
+.u-section-2 .u-input-2 {background-image: none; font-size: 0.875rem}
+.u-section-2 .u-btn-1 {background-image: none; border-style: none; font-weight: 700; padding-top: 5px; padding-bottom: 5px}
+/* number of caseloads */
+.u-section-2 .u-layout-cell-2 {min-height: 317px}
+.u-section-2 .u-container-layout-2 {padding: 20px}
+.u-section-2 .u-text-3 {font-size: 1.625rem; font-weight: 700; margin: 0 auto}
+.u-section-2 .u-text-4 {font-size: 3.75rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.4); animation-duration: 1000ms; width: 223px; font-weight: 700; margin: 19px auto 0}
+/* percentage changes */
+.u-section-2 .u-layout-cell-3 {min-height: 317px}
+.u-section-2 .u-container-layout-3 {padding: 10px}
+.u-section-2 .u-text-5 {font-weight: 700; font-size: 3.4375rem; margin: 10px auto 20px auto }
+.u-section-2 .u-text-6 {font-size: 1.5rem; font-weight: 700; margin: 2px 2px 0}
+.u-section-2 .u-text-7 {font-weight: normal; margin: 0}
+/* expected caseloads */
+.u-section-2 .u-layout-cell-4 {min-height: 317px}
+.u-section-2 .u-container-layout-4 {padding: 20px 30px}
+.u-section-2 .u-icon-1 {height: 50px; width: 50px; margin: 0 auto}
+.u-section-2 .u-text-8 {font-size: 1.25rem; font-weight: 700; margin: 30px 10px 0}
+.u-section-2 .u-text-9 {font-size: 1rem; width: 124px; margin: 10px auto 0}
+.u-section-2 .u-text-10 {font-size: 2rem; margin: 19px auto 0 53px}
+.u-section-2 .u-text-11 {font-size: 0.5rem; margin: 30px 10px 0} 
+
+/* DES performance dashboard - layout for different devices */
+/* desktop */
+@media (max-width: 1199px){ .u-section-2 .u-text-1 {width: 200px}
+.u-section-2 .u-layout-wrap-1 {position: relative; margin-right: initial; margin-left: initial}
+.u-section-2 .u-layout-cell-1 {min-height: 241px}
+.u-section-2 .u-form-1 {height: 245px; margin-top: 12px; margin-right: initial; margin-left: initial}
+.u-section-2 .u-layout-cell-2 {min-height: 241px}
+.u-section-2 .u-text-3 {margin-top: 51px; margin-left: 0; margin-right: 0}
+.u-section-2 .u-text-4 {margin-top: 0; margin-right: 17px; margin-left: 17px}
+.u-section-2 .u-layout-cell-3 {min-height: 241px}
+.u-section-2 .u-container-layout-3 {padding: 10px}
+.u-section-2 .u-text-5 {width: auto; margin-top: 44px; margin-right: auto; margin-left: auto; line-height: 88px}
+.u-section-2 .u-text-6 {width: auto; margin-top: 0; margin-right: auto; margin-left: auto}
+.u-section-2 .u-text-7 {width: 142px}
+.u-section-2 .u-layout-cell-4 {min-height: 241px}
+.u-section-2 .u-container-layout-4 {padding: 10px}
+.u-section-2 .u-text-8 {margin-left: -25px; margin-right: -25px}
+.u-section-2 .u-text-10 {margin-left: auto}
+.u-section-2 .u-text-11 {margin-left: 0; margin-right: 0} }
+/* small screen, labtop */
+@media (max-width: 991px){ .u-section-2 .u-sheet-1 {min-height: 466px}
+.u-section-2 .u-text-1 {margin-top: 20px}
+.u-section-2 .u-layout-wrap-1 {margin-bottom: 50px; margin-right: initial; margin-left: initial}
+.u-section-2 .u-layout-cell-1 {min-height: 100px}
+.u-section-2 .u-btn-1 {padding-left: 20px; padding-right: 20px}
+.u-section-2 .u-layout-cell-2 {min-height: 100px}
+.u-section-2 .u-text-3 {margin-top: 0}
+.u-section-2 .u-text-4 {font-size: 3rem; margin-left: 0; margin-right: 0; width: auto}
+.u-section-2 .u-layout-cell-3 {min-height: 100px}
+.u-section-2 .u-text-5 {font-size: 2.5rem; width: auto; margin-top: 20px; margin-right: auto; margin-left: auto; line-height: 58p}
+.u-section-2 .u-text-6 {margin-left: 0px; margin-right: 0px; width: auto}
+.u-section-2 .u-text-7 {width: 112px}
+.u-section-2 .u-layout-cell-4 {min-height: 100px}
+.u-section-2 .u-text-8 {margin-left: 1px; margin-right: 1px}
+.u-section-2 .u-text-9 {margin-left: 18px; margin-right: 18px}
+.u-section-2 .u-text-11 {width: 124px; margin-left: 17px} }
+/* tablet */
+@media (max-width: 767px){ .u-section-2 .u-sheet-1 {min-height: 1009px}
+.u-section-2 .u-text-1 {margin-top: 21px}
+.u-section-2 .u-layout-wrap-1 {margin-bottom: 21px; margin-right: initial; margin-left: initial}
+.u-section-2 .u-container-layout-1 {padding-left: 10px; padding-right: 10px}
+.u-section-2 .u-layout-cell-2 {min-height: 159px}
+.u-section-2 .u-container-layout-2 {padding-left: 10px; padding-right: 10px}
+.u-section-2 .u-text-3 {width: auto; margin-top: 12px; margin-right: auto; margin-left: 100px}
+.u-section-2 .u-text-4 {width: auto; margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-5 {font-size: 3rem; width: auto; margin-top: 20px; margin-right: auto; margin-left: auto; line-height: 1.6}
+.u-section-2 .u-text-6 {width: auto; margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-7 {width: 169px; margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-8 {width: 225px; margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-9 {margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-11 {width: 276px; margin-left: auto; margin-right: auto} }
+/* mobile */
+@media (max-width: 575px){ .u-section-2 .u-sheet-1 {min-height: 1092px}
+.u-section-2 .u-text-1 {font-size: 1.5rem; height: 31px; margin-top: 60px}
+.u-section-2 .u-layout-wrap-1 {margin-bottom: 45px; margin-right: initial; margin-left: initial}
+.u-section-2 .u-form-group-1 {width: 100%}
+.u-section-2 .u-form-group-2 {width: 100%}
+.u-section-2 .u-form-group-3 {width: 100%}
+.u-section-2 .u-layout-cell-2 {min-height: 100px}
+.u-section-2 .u-text-3 {font-size: 1.5rem; height: 24px; margin-left: 9px; margin-right: 9px}
+.u-section-2 .u-text-4 {width: auto; margin-left: auto; margin-right: auto}
+.u-section-2 .u-text-5 {height: 70px; width: auto; margin-left: auto; margin-right: auto }
+.u-section-2 .u-text-7 {width: 174px}
+.u-section-2 .u-text-8 {height: 24px}
+.u-section-2 .u-text-11 {width: 189px; height: 19px} 
+.u-section-2 .u-icon-1 {margin-top:10px;}}
+
+/* two buttons - see case status and see caseload trend */
+.u-section-3 {background-image: none; margin-top: 0; margin-bottom: 0}
+.u-section-3 .u-sheet-1 {min-height: 94px}
+.u-section-3 .u-layout-wrap-1 {width: 1140px; margin: 1px auto 1px -3px}
+.u-section-3 .u-layout-cell-1 {min-height: 58px}
+.u-section-3 .u-container-layout-1 {padding: 30px}
+.u-section-3 .u-group-1 {width: 429px; min-height: 60px; margin: 0 18px 0 auto}
+/* left button -  see case status*/
+.u-section-3 .u-container-layout-2 {padding: 10px 30px 10px 10px}
+.u-section-3 .u-icon-1 {height: 33px; width: 33px; margin: 0 auto 0 0}
+.u-section-3 .u-text-1 {font-size: 1.125rem; font-weight: 700; margin: -31px auto 3px 51px}
+.u-section-3 .u-layout-cell-2 {min-height: 58px}
+.u-section-3 .u-container-layout-3 {padding: 30px}
+.u-section-3 .u-group-2 {width: 429px; min-height: 60px; margin: 0 18px 0 auto}
+/* right button - see caseload trend */
+.u-section-3 .u-container-layout-4 {padding: 10px 30px 10px 10px}
+.u-section-3 .u-icon-2 {height: 33px; width: 33px; margin: 0 auto 0 0}
+.u-section-3 .u-text-2 {font-size: 1.125rem; font-weight: 700; width:auto ;margin: -31px auto 0 51px} 
+
+
+@media (max-width: 1199px){ .u-section-3 .u-sheet-1 {min-height: 95px}
+.u-section-3 .u-layout-wrap-1 {margin-top: 2px; margin-bottom: 2px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-3 .u-layout-cell-1 {min-height: 92px}
+.u-section-3 .u-container-layout-1 {padding-bottom: 18px}
+.u-section-3 .u-group-1 {width: 329px; min-height: 54px}
+.u-section-3 .u-icon-1 {margin-left: 11px}
+.u-section-3 .u-text-1 {width: auto; margin-top: -30px; margin-left: auto; margin-bottom: 2px}
+.u-section-3 .u-layout-cell-2 {min-height: 92px}
+.u-section-3 .u-container-layout-3 {padding-bottom: 18px}
+.u-section-3 .u-group-2 {width: 329px; min-height: 54px; margin-right: 0}
+.u-section-3 .u-icon-2 {margin-top: 0; margin-left: 18px}
+.u-section-3 .u-text-2 {width: auto; margin-top: -27px; margin-right: 55px; margin-left: 38px} }
+
+@media (max-width: 991px){ .u-section-3 .u-sheet-1 {min-height: 108px}
+.u-section-3 .u-layout-wrap-1 {width: 720px; margin: 0}
+.u-section-3 .u-layout-cell-1 {min-height: 100px}
+.u-section-3 .u-group-1 {width: 247px; min-height: 59px; margin-right: 0}
+.u-section-3 .u-text-1 {margin: -33px 11px 5px 56px}
+.u-section-3 .u-layout-cell-2 {min-height: 37px}
+.u-section-3 .u-group-2 {min-height: 59px; margin-top: 3px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-3 .u-text-2 {margin: -31px 24px 3px 51px} }
+
+@media (max-width: 767px){ .u-section-3 .u-sheet-1 {min-height: 178px}
+.u-section-3 .u-layout-wrap-1 {margin-top: 21px; margin-bottom: 21px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-3 .u-layout-cell-1 {min-height: 72px}
+.u-section-3 .u-container-layout-1 {padding-top: 0; padding-left: 10px; padding-right: 10px}
+.u-section-3 .u-group-1 {width: 300px; min-height: 60px; margin-right: auto}
+.u-section-3 .u-container-layout-2 {padding-right: 10px}
+.u-section-3 .u-icon-1 {margin-left: 16px}
+.u-section-3 .u-text-1 {margin: -30px 0 3px 10px}
+.u-section-3 .u-layout-cell-2 {min-height: 59px}
+.u-section-3 .u-container-layout-3 {padding-top: 0; padding-left: 10px; padding-right: 10px}
+.u-section-3 .u-group-2 {min-height: 60px; width: 300px; margin-top: -3px; margin-left: auto; margin-right: auto}
+.u-section-3 .u-container-layout-4 {padding-top: 0; padding-bottom: 0}
+.u-section-3 .u-icon-2 {margin-left: 16px}
+.u-section-3 .u-text-2 { margin: -30px 0 3px 58px} }
+
+@media (max-width: 575px){ .u-section-3 .u-sheet-1 {min-height: 193px}
+.u-section-3 .u-layout-wrap-1 {margin-top: 26px; margin-bottom: 10px; width: auto; margin-right: initial; margin-left: initial}
+.u-section-3 .u-layout-cell-1 {min-height: 47px}
+.u-section-3 .u-container-layout-1 {padding-bottom: 0}
+.u-section-3 .u-group-1 {min-height: 58px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-3 .u-text-1 {margin: -29px 73px 1px 90px}
+.u-section-3 .u-layout-cell-2 {min-height: 47px}
+.u-section-3 .u-container-layout-3 {padding-top: 10px; padding-bottom: 0px}
+.u-section-3 .u-group-2 {min-height: 58px; width: 320px; margin-top: 14px}
+.u-section-3 .u-text-2 {width: auto; margin-top: -31px; margin-right: 25px; margin-left: 69px} }
+
+/* Case status section */
+.u-section-4 {margin-top: 0; margin-bottom: 0}
+.u-section-4 .u-sheet-1 {min-height: 100px}
+.u-section-4 .u-text-1 {font-weight: 700; font-size: 1.625rem; margin: 25px 750px 0 0;width:400px}
+.u-section-4 .u-layout-wrap-1 {margin: 22px 0 25px}
+.u-section-4 .u-layout-cell-1 {min-height: 194px}
+.u-section-4 .u-container-layout-1 {padding: 10px}
+.u-section-4 .u-text-2 {font-weight: 700; font-size: 1.125rem; margin: 0 auto}
+/* referred bubble */
+.u-section-4 .u-shape-1 {width: 110px; height: 110px; background-image: none; margin: 20px auto 0}
+.u-section-4 .u-layout-cell-2 {min-height: 194px}
+.u-section-4 .u-container-layout-2 {padding: 10px}
+.u-section-4 .u-layout-cell-3 {min-height: 220px}
+.u-section-4 .u-container-layout-3 {padding: 10px}
+.u-section-4 .u-text-3 {font-weight: 700; font-size: 1.125rem; margin: 0 auto}
+/* commenced bubble */
+.u-section-4 .u-shape-2 {width: 151px; height: 151px; margin: 20px auto 0}
+.u-section-4 .u-layout-cell-4 {min-height: 220px}
+.u-section-4 .u-container-layout-4 {padding: 10px}
+.u-section-4 .u-list-1 {width: 751px; min-height: 190px; grid-template-columns: calc(33.3333% - 11px) calc(33.3333% - 11px) calc(33.3333% - 11px); grid-gap: 17px 17px; margin: 0 auto 0 0}
+/* employment assistance */
+.u-section-4 .u-container-layout-5 {padding: 10px}
+.u-section-4 .u-icon-1 {height: 64px; width: 64px; background-image: none; margin: 0 auto}
+.u-section-4 .u-text-4 {font-weight: 700; margin: 0 auto}
+.u-section-4 .u-text-5 {font-weight: 700; margin: 20px auto 0}
+.u-section-4 .u-text-6 {font-weight: 700; font-size: 1.375rem; margin: 20px auto 0}
+/* post placement support */
+.u-section-4 .u-container-layout-6 {padding: 10px}
+.u-section-4 .u-icon-2 {height: 64px; width: 64px; background-image: none; margin: 0 auto}
+.u-section-4 .u-text-7 {font-weight: 700; margin: 20px auto 0}
+.u-section-4 .u-text-8 {font-weight: 700; font-size: 1.375rem; margin: 20px auto 0}
+/* ongoing support */
+.u-section-4 .u-container-layout-7 {padding: 10px}
+.u-section-4 .u-icon-3 {height: 64px; width: 64px; background-image: none; margin: 0 auto}
+.u-section-4 .u-text-9 {font-weight: 700; margin: 20px auto 0}
+.u-section-4 .u-text-10 {font-weight: 700; font-size: 1.375rem; margin: 20px auto 0}
+.u-section-4 .u-layout-cell-5 {min-height: 158px}
+.u-section-4 .u-container-layout-8 {padding: 10px}
+.u-section-4 .u-text-11 {font-weight: 700; font-size: 1.125rem; width: 105px; margin: 0 auto}
+/* suspended bubble */
+.u-section-4 .u-shape-3 {width: 81px; height: 81px; margin: 20px auto 0}
+.u-section-4 .u-layout-cell-6 {min-height: 158px}
+.u-section-4 .u-container-layout-9 {padding: 10px}
+ /* for text in bubbles  */
+.u-section-4 .u-text-12 {font-size:1.5rem;  margin:auto; font-weight: 600} 
+.u-section-4 .u-text-13 {font-size:1.7rem;  margin:auto; font-weight: 600} 
+.u-section-4 .u-text-14 {font-size:1.1rem;  margin:auto; font-weight: 600} 
+
+
+@media (max-width: 1199px){ .u-section-4 .u-sheet-1 {min-height: 346px}
+.u-section-4 .u-text-1 {margin-right: 794px}
+.u-section-4 .u-layout-wrap-1 {position: relative; margin-right: initial; margin-left: initial}
+.u-section-4 .u-layout-cell-1 {min-height: 160px}
+.u-section-4 .u-layout-cell-2 {min-height: 160px}
+.u-section-4 .u-layout-cell-3 {min-height: 182px}
+.u-section-4 .u-layout-cell-4 {min-height: 182px}
+.u-section-4 .u-list-1 {width: auto; min-height: 139px; grid-template-columns:  calc(33.3333% - 11px) calc(33.3333% - 11px) calc(33.3333% - 11px); grid-gap: 17px 17px; margin: 0 auto 0 0}
+.u-section-4 .u-layout-cell-5 {min-height: 130px}
+.u-section-4 .u-text-10 {height: 28px}
+.u-section-4 .u-layout-cell-6 {min-height: 130px} }
+
+@media (max-width: 991px){ .u-section-4 .u-sheet-1 {min-height: 269px}
+.u-section-4 .u-text-1 {margin-right: 574px}
+.u-section-4 .u-layout-cell-1 {min-height: 100px}
+.u-section-4 .u-layout-cell-2 {min-height: 123px}
+.u-section-4 .u-layout-cell-3 {min-height: 100px}
+.u-section-4 .u-shape-2 {margin-top: 22px; margin-right: 0}
+.u-section-4 .u-layout-cell-4 {min-height: 100px}
+.u-section-4 .u-list-1 {width: 465px; min-height: 410px; grid-template-columns: calc(((100% - 720px) / 2) + 352px) calc(((100% - 720px) / 2) + 352px)}
+.u-section-4 .u-layout-cell-5 {min-height: 100px}
+.u-section-4 .u-layout-cell-6 {min-height: 100px} }
+
+@media (max-width: 767px){ .u-section-4 .u-sheet-1 {min-height: 1000px}
+.u-section-4 .u-text-1 {margin-right: 394px}
+.u-section-4 .u-layout-cell-2 {min-height: 0px}
+.u-section-4 .u-shape-2 {margin-right: auto}
+.u-section-4 .u-list-1 {grid-template-columns: 100%; margin-left: auto}
+.u-section-4 .u-layout-cell-6 {min-height: 0px} }
+
+@media (max-width: 575px){ .u-section-4 .u-sheet-1 {min-height: 732px}
+.u-section-4 .u-text-1 {margin-top: 37px; margin-right: 194px}
+.u-section-4 .u-layout-cell-2 {min-height: 0px}
+.u-section-4 .u-shape-2 {width: 150px}
+.u-section-4 .u-list-1 {width: 320px}
+.u-section-4 .u-layout-cell-6 {min-height: 0px} }
+
+/* Caseload trend section */
+.u-section-5 {margin-top: 0; margin-bottom: 0}
+.u-section-5 .u-sheet-1 {min-height: 768px}
+.u-section-5 .u-text-1 {font-size: 1.625rem; font-weight: 700; margin: 38px auto 0 0; width:200px}
+.u-section-5 .u-layout-wrap-1 {width: 1132px; margin: 21px auto 38px}
+.u-section-5 .u-layout-cell-1 {min-height: 85px}
+/* high season box */
+.u-section-5 .u-container-layout-1 {padding: 10px}
+.u-section-5 .u-text-2 {font-size: 1.125rem; margin: 0 auto}
+.u-section-5 .u-text-3 {font-weight: 700; font-size: 1.5rem; width: 100px; margin: 0 auto}
+.u-section-5 .u-layout-cell-2 {min-height: 85px}
+/* low season box */
+.u-section-5 .u-container-layout-2 {padding: 10px}
+.u-section-5 .u-text-4 {font-size: 1.125rem; margin: 0 auto}
+.u-section-5 .u-text-5 {font-weight: 700; font-size: 1.5rem; width: 249px; margin: 0 auto}
+/* footnote text */
+.u-section-5 .u-text-6 {font-size: 0.7rem; margin-top: 20px} 
+
+@media (max-width: 1199px){ .u-section-5 .u-sheet-1 {min-height: 796px}
+.u-section-5 .u-text-1 {width: auto}
+.u-section-5 .u-layout-wrap-1 {width: 940px; margin-left: 0}
+.u-section-5 .u-layout-cell-1 {min-height: 42px}
+.u-section-5 .u-layout-cell-2 {min-height: 42px}
+.u-section-5 .u-layout-cell-3 {min-height: 317px}
+.u-section-5 .u-form-1 {height: 407px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-5 .u-btn-1 {padding-left: 20px; padding-right: 20px}
+.u-section-5 .u-layout-cell-4 {min-height: 560px} }
+
+@media (max-width: 991px){ .u-section-5 .u-sheet-1 {min-height: 749px}
+.u-section-5 .u-layout-wrap-1 {margin-bottom: 60px; margin-right: initial; margin-left: initial; width: auto}
+.u-section-5 .u-layout-cell-1 {min-height: 105px}
+.u-section-5 .u-layout-cell-2 {min-height: 105px}
+.u-section-5 .u-layout-cell-3 {min-height: 537px}
+.u-section-5 .u-form-1 {height: 632px; width: auto; margin-right: initial; margin-left: initial}
+.u-section-5 .u-layout-cell-4 {min-height: 537px} }
+
+@media (max-width: 767px){ .u-section-5 .u-sheet-1 {min-height: 1459px}
+.u-section-5 .u-text-1 {height: 31px}
+.u-section-5 .u-layout-wrap-1 {position: relative; min-height: 684px; width: auto; margin-right: initial; margin-left: initial}
+.u-section-5 .u-layout-cell-1 {min-height: 100px}
+.u-section-5 .u-layout-cell-2 {min-height: 100px}
+.u-section-5 .u-layout-cell-3 {min-height: 100px}
+.u-section-5 .u-layout-cell-4 {min-height: 615px}
+.u-section-5 .u-container-layout-4 {padding-left: 10px; padding-right: 10px} }
+
+@media (max-width: 575px){ .u-section-5 .u-sheet-1 {min-height: 1212px}
+.u-section-5 .u-text-1 {font-size: 1.5rem}
+.u-section-5 .u-layout-wrap-1 {margin-top: 24px; width: auto; margin-right: initial; margin-left: initial}
+.u-section-5 .u-layout-cell-1 {min-height: 99px}
+.u-section-5 .u-layout-cell-2 {min-height: 99px}
+.u-section-5 .u-layout-cell-3 {min-height: 471px}
+.u-section-5 .u-form-group-1 {width: 100%}
+.u-section-5 .u-form-group-2 {width: 100%}
+.u-section-5 .u-form-group-3 {width: 100%}
+.u-section-5 .u-form-group-4 {width: 100%}
+.u-section-5 .u-form-group-5 {width: 100%}
+.u-section-5 .u-form-group-6 {width: 100%}
+.u-section-5 .u-form-group-7 {width: 100%}
+.u-section-5 .u-form-group-8 {width: 100%}
+.u-section-5 .u-form-group-9 {width: 100%}
+.u-section-5 .u-form-group-10 {width: 100%}
+.u-section-5 .u-form-group-11 {width: 100%}
+.u-section-5 .u-layout-cell-4 {min-height: 453px} }
+
+/* Sweep To Right 
+Source: from Hover.css GitHub under MIT License
+*/
+/* change text color */
+.hvr-highlight {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(176, 179, 190);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-highlight:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+    /* style after hover */
+  .hvr-highlight:hover, .hvr-highlight:focus, .hvr-highlight:active {
+    color: rgb(52, 111, 238);
+    font-weight: 800;
+    font-family: Ubuntu;
+  }
+  .hvr-highlight:hover:before, .hvr-highlight:focus:before, .hvr-highlight:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  .hvr-highlight:hover span {display:none;}
+  
+  .hvr-highlight:hover:after {
+  content: attr(data-hover);
+  }
+
+/* make text or icon grows bigger  */
+  .hvr-grow {
+    display: flex;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+  /* for text that appear in bubble after hover */
+  .hvr-text {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(176, 179, 190);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-text:before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-text:hover, .hvr-text:focus, .hvr-textt:active {
+    font-weight: 800;
+    font-family: Ubuntu;
+    text-align: center;
+
+  }
+  .hvr-text:hover:before, .hvr-text:focus:before, .hvr-text:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  .hvr-text:hover span {display:none;}
+  
+  .hvr-text:hover:after {
+  content: attr(data-hover);
+  }
+
+  /* change button color */
+  .hvr-button {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(52, 63, 105);
+    background-color: white;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-button:hover, .hvr-button:focus, .hvr-button:active {
+    color: rgb(247, 247, 248);
+    background-color: rgb(219, 148, 154);
+
+    /* background-color: rgb(65, 127, 241); */
+    font-weight: 800;
+    font-family: Ubuntu;
+  }
+  .hvr-button:hover:before, .hvr-button:focus:before, .hvr-button:active:before  {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+/* for text that appears in phases of commenced case */
+  .hvr-phases {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color:rgb(52, 63, 105);
+    background-color: white;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .hvr-phases:before {
+    content: "";
+    position: absolute;
+    
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Ubuntu;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  /* after hover style */
+  .hvr-phases:hover, .hvr-phases:focus, .hvr-phases:active {
+    color: rgb(247, 247, 248);
+    background-color: rgb(99, 134, 123);
+    font-weight: 500;
+    font-family: Ubuntu;
+    font-size: 0.88rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+  }
+  .hvr-phases:hover:before, .hvr-phases:focus:before, .hvr-phases:active:before  {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .hvr-phases:hover span {display:none;}
+  
+  .hvr-phases:hover:after {
+  content: attr(data-hover);
+  
+  }
+
+  
+
+

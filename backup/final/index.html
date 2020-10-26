@@ -1,5 +1,9 @@
+ <!-- Home page - normal version -->
+
+
 <!DOCTYPE html>
 <html style="font-size: 16px">
+  <!-- meta data, import style sheets and relevant scripts -->
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -9,10 +13,12 @@
     <title>HOME PAGE</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
     <link rel="stylesheet" href="index.css?v=1.5" media="screen" />
-    <!-- vue dev env -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- vue build env -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+<!-- vue dev env -->
+ <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->  
+     <!-- vue build env -->
+     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
     <script
       class="u-script"
       type="text/javascript"
@@ -58,7 +64,8 @@
     class="u-body"
   >
     <div id="vue-app">
-      <img v-if="btnFlag" class="go-top" src="./images/top.png" @click="backTop" style="position: fixed;
+      <!-- return to the top button  -->
+      <img v-if="btnFlag" class="go-top" src="./images/top_button.png" @click="backTop" style="position: fixed;
         bottom: 50px;
         right: 50px;
         width: 50px;
@@ -67,6 +74,7 @@
         background: #fff;
         border-radius: 50%;
         z-index: 99;">
+            <!-- Menu navigation bar  -->
       <header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-sticky u-white u-header" id="sec-05ea"><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse u-custom-font u-font-ubuntu" style="font-size: 0.75rem; letter-spacing: 0; text-transform: uppercase; font-weight: 700;">
@@ -80,6 +88,8 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-custom-font u-font-ubuntu u-nav u-spacing-2 u-text-palette-1-dark-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./index.html" style="padding: 10px 12px;">HOME PAGE</a>
+            <!-- name the tab and link tab to relevant page and  -->
+            <!-- change padding to adjust the margin of the tabs-->
             </li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./providerinfo.html" style="padding: 10px 12px;">DES PROVIDER INFO</a>
             </li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./nearbyprovider.html" style="padding: 10px 12px;">NEARBY PROVIDER</a>
   </li><li class="u-nav-item"><a class="u-active-palette-1-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-10 u-nav-link u-text-active-white u-text-hover-grey-90 u-text-palette-1-dark-2 u-white" href="./travelsupport.html" style="padding: 10px 12px;">TRAVEL SUPPORT</a>
@@ -101,16 +111,18 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
+        <!-- link logo to home page -->
         <a href="./index.html" class="u-image u-image-default u-logo u-image-1" data-image-width="1600" data-image-height="875">
-          <img src="images/Logo_HQ1.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
+          <img src="images/logo_normal.jpg" class="u-logo-image u-logo-image-1" data-image-width="186.2813">
         </a>
+        <!-- link to color blind version -->
         <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
-        <a href="../DES-Colorblind/index.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
+        <a href="./colorblind/index.html" class="u-active-white u-border-2 u-border-grey-75 u-btn u-btn-rectangle u-button-style u-custom-font u-font-ubuntu u-hover-black u-text-active-black u-white u-btn-1">
           <span class="u-text-icon"></span>Color Blind Version&nbsp; &nbsp;
         </a>
         <h1 class="u-custom-font u-text u-text-font u-text-1">WE ARE HERE TO GUIDE AND SUPPORT</h1>
       </div></header>
-    
+    <!-- Image slider -->
    
       <section
         id="carousel_b430"
@@ -118,6 +130,7 @@
         data-u-ride="carousel"
         data-interval="5000"
       >
+          <!-- slide indicators-->
         <ol class="u-absolute-hcenter u-carousel-indicators u-block-e78f-2">
           <li
             data-u-target="#carousel_b430"
@@ -150,6 +163,7 @@
             style="width: 30px; height: 10px"
           ></li>
         </ol>
+              <!-- slider images -->
         <div class="u-carousel-inner" role="listbox">
           <div
             class="u-active u-align-center u-carousel-item u-clearfix u-image u-section-2-1"
@@ -190,6 +204,7 @@
             <div class="u-clearfix u-sheet u-sheet-1"></div>
           </div>
         </div>
+              <!-- Previous arrow button -->
         <a
           class="u-absolute-vcenter u-carousel-control u-carousel-control-prev  u-text-grey u-block-e78f-3"
           href="#carousel_b430"
@@ -216,6 +231,7 @@ c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,23
             </svg>
           </span>
         </a>
+             <!-- Next arrow button -->
         <a
           class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey  u-block-e78f-4"
           href="#carousel_b430"
@@ -244,6 +260,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </a>
       </section>
     
+          <!-- Hero Functions : Search and Find DES provider -->
+
       <section class="u-clearfix u-palette-1-dark-1 u-section-3" id="carousel_6c30">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -279,6 +297,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
       </section>
 
+    <!-- DES provider definition -->
 
       <section class="u-clearfix u-section-4" id="sec-d16c">
         <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
@@ -291,7 +310,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 >
                   <div class="u-container-layout u-container-layout-1" src="">
                     <img
-                      src="images/P_DES_rgb_400.jpg"
+                      src="images/homepage_des_logo.jpg"
                       alt=""
                       class="u-image u-image-contain u-image-default u-image-1"
                       data-image-width="819"
@@ -308,6 +327,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     <h1
                       class="u-custom-font u-font-ubuntu u-text u-text-palette-1-dark-2 u-text-1"
                     >
+                    <!-- link to original source (department of social services) -->
                       <a
                         class="hvr-grow hvr-text u-btn u-button-style u-none u-text-palette-1-base u-btn-1"
                         href="https://www.dss.gov.au/our-responsibilities/disability-and-carers/programmes-services/disability-employment-services"
@@ -335,6 +355,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           </div>
         </div>
       </section>
+
+            <!-- Type of DES services -->
+
       <section class="u-clearfix u-grey-5 u-section-5" id="sec-7139">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <div
@@ -507,10 +530,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           </div>
         </div>
       </section>
+          <!-- VDO Youtube -->
       <section class="u-align-center u-clearfix u-section-6" id="sec-6919">
         <div class="u-clearfix u-sheet u-sheet-1">
           <div class="u-expanded-width-sm u-video u-video-contain u-video-1">
             <div style="position: absolute" class="embed-responsive">
+              <!-- embeded VDO -->
               <iframe
                 style="
                   position: absolute;
@@ -537,7 +562,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           </p>
         </div>
       </section>
-     
+      <!-- About -->
       <section class="u-align-center u-clearfix u-section-7" id="carousel_0d49">
         <div
           class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1"
@@ -556,12 +581,15 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
       </section>
 
+    <!-- Our services -->
       <section class="u-align-center u-clearfix u-section-8" id="sec-62f6">
         <div class="u-clearfix u-sheet u-sheet-1">
           <h2 class="u-custom-font u-font-ubuntu u-text u-text-1">Our Services</h2>
+                  <!-- Easy search -->
           <div class="u-expanded-width u-list u-repeater u-list-1">
             <div class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-1">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                              <!-- link to DES provider info page-->
                 <a href="./providerinfo.html">
                 <span class="hvr-grow u-custom-color-2 u-icon u-icon-circle u-spacing-19 u-icon-1">
                   <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9f40"></use></svg>
@@ -580,8 +608,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </p>
               </div>
             </div>
+                      <!-- Nearby Provider -->
             <div class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-2">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                              <!-- link to nearyby provider page -->
                 <a href="./nearbyprovider.html">
                 <span class="hvr-grow u-custom-color-2 u-icon u-icon-circle u-spacing-19 u-icon-2">
                   <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-44ba"></use></svg>
@@ -622,8 +652,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </p>
               </div>
             </div>
+                      <!-- Travel support -->
             <div class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-3">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                              <!-- link to travel support page -->
                 <a href="./travelsupport.html">
                 <span class="hvr-grow u-custom-color-2 u-icon u-icon-circle u-spacing-19 u-icon-3">
                   <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b9b5"></use></svg>
@@ -631,6 +663,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   </g>
   </g></svg>
                 </span></a>
+                              <!-- link to travel support page -->
                 <a href="./travelsupport.html" >
                 <h4 class="hvr-text u-align-center u-custom-font u-font-ubuntu u-text u-text-6">Travel&nbsp;<br>Support<br>
                   <br>
@@ -639,8 +672,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </p>
               </div>
             </div>
+                      <!-- DES performance -->
             <div class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-4">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                              <!-- link to des performance page -->
                 <a href="./desperformance.html">
                 <span class="hvr-grow u-custom-color-2 u-icon u-icon-circle u-spacing-19 u-icon-4">
                   <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9c20"></use></svg>
@@ -655,8 +690,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </p>
               </div>
             </div>
+                      <!-- Legal rights -->
             <div class="u-container-style u-list-item u-repeater-item u-video-cover u-list-item-3">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                              <!-- link to legal rights page -->
                 <a href="./legalrights.html">
                 <span class="hvr-grow u-custom-color-2 u-icon u-icon-circle u-spacing-19 u-icon-3">
                   <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-26c0"></use></svg>
@@ -690,7 +727,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           title="index"
         >
           <img
-            src="images/Logo_HQ1.jpg"
+            src="images/logo_normal.jpg"
             class="u-logo-image u-logo-image-1"
             data-image-width="188.2267"
           />
@@ -706,7 +743,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           >
         </p>
         <img
-          src="images/CCattribution2.jpg"
+          src="images/CCattribution.jpg"
           alt=""
           class="u-image u-image-default u-image-2"
           data-image-width="344"
