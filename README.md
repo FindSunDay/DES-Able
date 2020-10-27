@@ -44,7 +44,7 @@ For the dataset and processing python script used in this project, see Dataset f
 This file is to collect contact details of DES providers via Google Places APIs, then perform wrangling and integrated data from `des-star-ratings-march-2020.xlsx` and `DES Contact list.xlsx`. It produces 3 output files; `DES_NAME`, `DES_SITE`, and `DES_SERVICE`.
 
 ### DES Performance detail - `des_performance.py` (Python)
-This file is to integrate 110 files (excel and PDF) in DES_monthly_reports into a single dataframe. It produces `DES_PERFORMANCE.csv`, `DES_PERFORMANCE_NUMERICAL.csv` and `DES_PERFORMANCE_NUMERICAL.json` as outputs. 
+This file is to integrate 110 files (excel and PDF) in DES_monthly_reports into a single dataframe. It produces `DES_PERFORMANCE.csv` and `DES_PERFORMANCE_NUMERICAL.csv` as outputs. 
 
 ### Modeling and analysis on DES Performance - Folder 'analysis_model'.
 It contains 2 Jupyter notebooks. 
