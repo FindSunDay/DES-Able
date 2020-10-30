@@ -1,10 +1,9 @@
 /* Legal rights - Color Blind version */
 /* 
 u-section-1: Top banner
-u-section-2: Disability Discrimination At Workplace
 u-section-3: Know your rights
 u-section-4: More about Laws 
-u-section-5: Make a complaint
+u-section-5: Lodge a complaint
 u-section-6: Get in touch
 u-section-7: What Happens After The Complaint
 u-section-8: Futher Help
@@ -32,7 +31,7 @@ u-section-8: Futher Help
 .u-section-1 .u-text-4 {text-transform: uppercase; letter-spacing: 4px; font-size: 1.25rem; font-weight: 600; margin: 29px 0 0 0}
 .u-section-1 .u-text-5 {font-size: 1rem; margin: 38px auto 0 0}
 .u-section-1 .u-link-2 {padding-bottom: 2px; border-style: solid; font-weight: 700; margin: 42px auto 0 0}
-/* 3. Make a complaint */
+/* 3. Lodge a complaint */
 .u-section-1 .u-layout-cell-3 {min-height: 355px}
 .u-section-1 .u-container-layout-3 {padding: 30px}
 .u-section-1 .u-text-6 {text-transform: uppercase; letter-spacing: 4px; font-size: 1.25rem; font-weight: 600; margin: 29px 0 0 0}
@@ -85,97 +84,6 @@ u-section-8: Futher Help
 .u-section-1 .u-layout-wrap-1 {margin-top: 50px; margin-bottom: 1px; margin-right: initial; margin-left: initial}
 .u-section-1 .u-layout-cell-4 {min-height: 25px} }
 
-/* Disability Discrimination At Workplace */
-.u-section-2 .u-sheet-1 {min-height: 700px}
-/* title */
-.u-section-2 .u-text-1 {font-size: 1.875rem; font-weight: 700; margin: 100px auto 0}
-.u-section-2 .u-layout-wrap-1 {width: 997px; margin: 80px 67px 27px auto}
-.u-section-2 .u-layout-cell-1 {height: 280px; width: 250px}
-/* top left box */
-.u-section-2 .u-container-layout-1 {padding: 30px;width: 250px }
-.u-section-2 .u-text-2 {font-weight: 700; font-size: 1.875rem; margin: 0}
-.u-section-2 .u-icon-1 {font-size: 2em; animation-duration: 1000ms}
-.u-section-2 .u-text-3 {font-size: 1rem; line-height: 1.4; margin: 40px 0 0}
-/* top middle box*/
-.u-section-2 .u-image-1 {height: 280px;  width: 250px; background-image: url("images/legalrights_colorblind2.jpeg"); background-position: 41.18% 0%}
-.u-section-2 .u-container-layout-2 {padding: 30px}
-.u-section-2 .u-layout-cell-3 {height: 280px; width: 250px}
-/* top right box */
-.u-section-2 .u-container-layout-3 {padding: 30px}
-.u-section-2 .u-text-4 {font-weight: 700; font-size: 1.875rem; margin: 0}
-.u-section-2 .u-icon-2 {font-size: 2em}
-.u-section-2 .u-text-5 {font-size: 1rem; letter-spacing: 0; line-height: 1.4; margin: 40px 0 0}
-/* bottom left box */
-.u-section-2 .u-image-2 {height: 280px; width:250px;background-image: url("images/legalrights_colorblind3.jpeg"); background-position: 45.27% 50%}
-.u-section-2 .u-container-layout-4 {padding: 30px}
-.u-section-2 .u-layout-cell-5 {height: 280px; width: 250px}
-/* bottom middle box */
-.u-section-2 .u-container-layout-5 {padding: 30px}
-.u-section-2 .u-text-6 {font-weight: 700; font-size: 1.875rem; margin: 0}
-.u-section-2 .u-icon-3 {font-size: 2em}
-.u-section-2 .u-text-7 {font-size: 1rem; line-height: 1.4; margin: 40px 0 0}
-/* bottom right box */
-.u-section-2 .u-image-3 {height: 280px; width:250px; background-image: url("images/legalrights_colorblind4.jpeg")}
-.u-section-2 .u-container-layout-6 {padding: 30px} 
-
-@media (max-width: 1199px){ .u-section-2 .u-sheet-1 {min-height: 600px;}
-.u-section-2 .u-text-1 {font-size: 1.875rem; font-weight: 700; margin: 100px auto 0}
-.u-section-2 .u-layout-wrap-1 {width: 940px; margin-right: 0}
-.u-section-2 .u-layout-cell-1 {min-height: 286px}
-.u-section-2 .u-icon-1 {font-size: 3rem}
-.u-section-2 .u-image-1 {min-height: 286px; background-position: 50% 50%}
-.u-section-2 .u-layout-cell-3 {min-height: 286px}
-.u-section-2 .u-icon-2 {font-size: 3rem}
-.u-section-2 .u-image-2 {min-height: 286px}
-.u-section-2 .u-layout-cell-5 {min-height: 286px}
-.u-section-2 .u-icon-3 {font-size: 3rem}
-.u-section-2 .u-image-3 {min-height: 286px; background-position: 50% 50%}
-.u-section-2 .u-text-3 {font-size: 0.9rem; line-height: 1.4; margin: 40px 0 0}
-.u-section-2 .u-text-5 {font-size: 0.9rem; letter-spacing: 0; line-height: 1.4; margin: 40px 0 0}
-.u-section-2 .u-text-7 {font-size: 0.9rem; line-height: 1.4; margin: 40px 0 0}}
-
-@media (max-width: 991px){ .u-section-2 .u-sheet-1 {min-height: 600px}
-.u-section-2 .u-text-1 {font-size: 1.875rem; width: 800px; margin-top:30px; margin-bottom:30px}
-.u-section-2 .u-layout-wrap-1 {width: 720px}
-.u-section-2 .u-icon-1 {font-size: 3rem}
-.u-section-2 .u-layout-cell-1 {min-height: 100px}
-.u-section-2 .u-image-1 {min-height: 219px ;background-position: 50% 50%}
-.u-section-2 .u-icon-2 {font-size: 3rem}
-.u-section-2 .u-icon-3 {font-size: 3rem}
-.u-section-2 .u-layout-cell-3 {min-height: 100px}
-.u-section-2 .u-image-2 {min-height: 215px; background-position: 50% 50%}
-.u-section-2 .u-layout-cell-5 {min-height: 100px}
-.u-section-2 .u-image-3 {min-height: 215px;background-position: 50% 50%} }
-
-@media (max-width: 767px){ .u-section-2 .u-sheet-1 {min-height: 600px}
-.u-section-2 .u-text-1 {width: 540px}
-.u-section-2 .u-layout-wrap-1 {margin-right: initial; margin-left: initial; width: 540px}
-.u-section-2 .u-image-1 {min-height: 219px}
-.u-section-2 .u-container-layout-2 {padding-left: 10px; padding-right: 10px}
-.u-section-2 .u-image-2 {min-height: 219px}
-.u-section-2 .u-container-layout-4 {padding-left: 10px; padding-right: 10px}
-.u-section-2 .u-image-3 {min-height: 219px}
-.u-section-2 .u-container-layout-6 {padding-left: 10px; padding-right: 10px}
-.u-section-2 .u-layout-cell-1 {min-height: 200px}
-.u-section-2 .u-layout-cell-2 {min-height: 200px}
-.u-section-2 .u-layout-cell-3 {min-height: 200px}
-.u-section-2 .u-layout-cell-4 {min-height: 200px}
-.u-section-2 .u-layout-cell-5 {min-height: 200px}
-.u-section-2 .u-layout-cell-6 {min-height: 200px}
-}
-
-@media (max-width: 575px){ .u-section-2 .u-sheet-1 {min-height: 1500px}
-.u-section-2 .u-text-1 {width: 340px}
-.u-section-2 .u-layout-wrap-1 {margin-right: initial; margin-left: initial; width: auto}
-.u-section-2 .u-layout-cell-1 {min-height: 227px}
-.u-section-2 .u-container-layout-1 {padding-left: 20px; padding-right: 20px}
-.u-section-2 .u-image-1 {min-height: 233px}
-.u-section-2 .u-layout-cell-3 {min-height: 244px}
-.u-section-2 .u-container-layout-3 {padding-left: 20px; padding-right: 20px}
-.u-section-2 .u-image-2 {min-height: 195px}
-.u-section-2 .u-layout-cell-5 {min-height: 212px}
-.u-section-2 .u-container-layout-5 {padding-left: 20px; padding-right: 20px}
-.u-section-2 .u-image-3 {min-height: 203px} }
 
 /* Law and Rights */
 .u-section-3 .u-sheet-1 {min-height: 495px}
@@ -341,7 +249,7 @@ u-section-8: Futher Help
 .u-section-4 .u-text-5 {margin-right: 0; margin-left: 0} }
 
 
-/* How To Make A Complaint */
+/* How To Lodge A Complaint */
 .u-section-5 {background-image: none}
 .u-section-5 .u-sheet-1 {min-height: 800px}
 .u-section-5 .u-group-1 {min-height: 261px; margin: 50px auto 0 }
