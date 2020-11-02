@@ -214,6 +214,8 @@ new Vue({
           this.showList = resultData;
           this.showList.sort((a, b) => b.rating - a.rating);
           this.showListLength = this.showList.length;
+          console.log("show")
+          window.scrollTo({top: 3000, behavior: "smooth"});
           // console.log("showlist", this.showList);
           // console.log(this.nameList);
           // console.log(this.specialityList);
@@ -262,7 +264,7 @@ new Vue({
               // document.querySelector("#sec-b6d8").scrollTo();
               // window.scrollTo("#sec-b6d8");
 
-              window.scrollTo(0, 600);
+              window.scrollTo({top: 650, behavior: "smooth"});
               this.is_nearby_button_loading = false;
             }
           })
