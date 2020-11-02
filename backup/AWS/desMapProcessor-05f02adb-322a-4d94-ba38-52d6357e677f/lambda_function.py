@@ -43,7 +43,7 @@ def to_dict(filename):
 
 def get_user_loc(text):
     # Google Place API to gt user longitude and latitude
-    api_place = 'AIzaSyD69eksEStdVqffwHzc2L_Y5btC5ePv_Ls'
+    api_place = 'AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8'
 
     find_user_loc = ('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='
                      + text + '%20Victoria%20Australia' +
@@ -91,7 +91,7 @@ def lambda_handler(event, context):
     # user_loc = input('Please type down your address:', )
     
     
-    # user_loc = '5 Dudley street 3145'
+    # user_loc = '52 Osullivan Rd Glen Waverley VIC'
     user_loc = event['queryStringParameters']['user_loc']
 
     user_loc_detail = get_user_loc(user_loc)
@@ -153,7 +153,7 @@ def lambda_handler(event, context):
 
     # travel mode = transit
 
-    distance_api = 'AIzaSyDqCivn3sqBZLcraRZ5cwSp63BSYuqFZl0'
+    distance_api = 'AIzaSyDtU4wnc7N3-U9QMpRCG5CCaqCJc2nYuz8'
     start = 'origins=' + str(user_lat) + ',' + str(user_lng)
 
     find_top_5 = []
@@ -172,7 +172,10 @@ def lambda_handler(event, context):
         distance_detail = json.loads(distance_response)
 
         val['Distance_API'] = distance_detail
-
+        
+        print('1', val['Distance_API'])
+        
+        
         val['Distance'] = float(val['Distance_API']['rows'][0]['elements'][0]
                                 ['distance']['text'].replace('km', ''))
         # val['Duration'] = float(val['Distance_API']['rows'][0]['elements'][0] \
