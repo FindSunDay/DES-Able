@@ -22,9 +22,9 @@ import ast
 # import data
 
 # to obtain the list of DES providers registered with the government.
-des_full = pd.read_excel('../Dataset/des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
+des_full = pd.read_excel('../Dataset/original_dataset/des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
 # to obtain the email address and website of DES providers in Victoria
-des_email = pd.read_excel('../Dataset/DES contact list.xlsx')
+des_email = pd.read_excel('../Dataset/original_dataset/DES contact list.xlsx')
 
 # select site that only locate in Victoria
 des_full = des_full[des_full['State'] == 'VIC']
@@ -54,7 +54,7 @@ des_unique['API_Place_Detail'] = ''
 
 
 
-# take few minutes - UNCOMMENT TO RUN otherwise read from 'API_place_reponses.csv' below
+# take few minutes - UNCOMMENT TO RUN
 
 
 
@@ -290,6 +290,6 @@ des_service['Speciality_Group'] = des_service['Speciality_New'].apply(lambda x :
 
 
 # save to files
-des_name.to_csv('Dataset/DES_NAME.csv',index=False)
-des_site.to_csv('Dataset/DES_SITE.csv',index=False)
-des_service.to_csv('Dataset/DES_SERVICE.csv', index=False)
+des_name.to_csv('../Dataset/wrangled_dataset/DES_NAME.csv',index=False)
+des_site.to_csv('../Dataset/wrangled_dataset/DES_SITE.csv',index=False)
+des_service.to_csv('../Dataset/wrangled_dataset/DES_SERVICE.csv', index=False)
