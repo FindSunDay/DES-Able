@@ -214,8 +214,8 @@ new Vue({
           this.showList = resultData;
           this.showList.sort((a, b) => b.rating - a.rating);
           this.showListLength = this.showList.length;
-          console.log("show")
-          window.scrollTo({top: 3000, behavior: "smooth"});
+          console.log("show");
+          window.scrollTo({ top: 3000, behavior: "smooth" });
           // console.log("showlist", this.showList);
           // console.log(this.nameList);
           // console.log(this.specialityList);
@@ -224,7 +224,7 @@ new Vue({
     },
     // This is the function on nearby page to search nearby providers by address and speciality.
     handleSearchNearby() {
-      if (this.entered_address == ""){
+      if (this.entered_address != "") {
         try {
           this.fillInAddress();
         } catch {
@@ -264,7 +264,7 @@ new Vue({
               // document.querySelector("#sec-b6d8").scrollTo();
               // window.scrollTo("#sec-b6d8");
 
-              window.scrollTo({top: 650, behavior: "smooth"});
+              window.scrollTo({ top: 650, behavior: "smooth" });
               this.is_nearby_button_loading = false;
             }
           })
@@ -508,14 +508,13 @@ new Vue({
       ); // Avoid paying for data that you don't need by restricting the set of
       // place fields that are returned to just the address components.
 
-
       // this.autocomplete.addListener("place_changed", this.fillInAddress());
       console.log("auto-complete", this.autocomplete);
     },
     // This is the function to fill the place of autocomplete function to the input frame
     fillInAddress() {
       const place = this.autocomplete.getPlace();
-      console.log("fill",place);
+      console.log("fill", place);
       let str = place.formatted_address;
       console.log("str", str);
       this.entered_address = str;
@@ -554,7 +553,6 @@ new Vue({
     },
   },
   mounted() {
-
     window.addEventListener("scroll", this.scrollToTop);
     // this.initMap();
     var requestOptions = {
