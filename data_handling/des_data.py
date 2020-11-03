@@ -22,9 +22,9 @@ import ast
 # import data
 
 # to obtain the list of DES providers registered with the government.
-des_full = pd.read_excel('Dataset/des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
+des_full = pd.read_excel('../Dataset/des-star-ratings-march-2020.xlsx', sheet_name = 'Star Ratings', skiprows= 2)
 # to obtain the email address and website of DES providers in Victoria
-des_email = pd.read_excel('Dataset/DES contact list.xlsx')
+des_email = pd.read_excel('../Dataset/DES contact list.xlsx')
 
 # select site that only locate in Victoria
 des_full = des_full[des_full['State'] == 'VIC']
@@ -100,7 +100,6 @@ for index, row in des_unique.iterrows():
         des_unique.loc[index,'API_Place_Detail'] = [place_detail]
 
 
-# des_unique = pd.read_csv('Dataset/API_place_responses.csv')
 
 # remove role with no API response
 des_unique = des_unique[des_unique['API_Place_Detail'].isna() == False]

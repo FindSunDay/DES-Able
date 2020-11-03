@@ -114,7 +114,7 @@ for year in range(2011, 2021):
 
         # old template
         elif year < 2019:
-            df = pd.read_excel("Dataset/DES_monthly_reports/DES_" + str(month) + "_" + str(year) + ".xlsx", \
+            df = pd.read_excel("../Dataset/DES_monthly_reports/DES_" + str(month) + "_" + str(year) + ".xlsx", \
                                sheet_name="Current Caseload", \
                                skiprows=5)
             df = df.iloc[:, 0:4]
@@ -169,7 +169,7 @@ for year in range(2011, 2021):
         # new template
         elif year >= 2019:
 
-            df = pd.read_excel("Dataset/DES_monthly_reports/DES_" + str(month) + "_" + str(year) + ".xlsx", \
+            df = pd.read_excel("../Dataset/DES_monthly_reports/DES_" + str(month) + "_" + str(year) + ".xlsx", \
                                sheet_name="Summary", \
                                skiprows=8)
 
@@ -268,7 +268,7 @@ data.replace({'Month':month2word},inplace=True)
 #### Data to be used for D3
 
 # save to csv
-data.to_csv('Dataset/DES_PERFORMANCE_NUMERICAL.csv', index=False)
+data.to_csv('../Dataset/DES_PERFORMANCE_NUMERICAL.csv', index=False)
 
 #### Data to be displayed on website
 
@@ -279,4 +279,4 @@ for col in ['Referred','Suspended','Commenced','Total','Commenced_Employment',\
             'Commenced_Placement','Commenced_Ongoing']:
     data[col] = data[col].apply(to_string)
 
-data.to_csv('Dataset/DES_PERFORMANCE.csv', index=False)
+data.to_csv('../Dataset/DES_PERFORMANCE.csv', index=False)
